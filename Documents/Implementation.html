@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrgPulse — Implementation Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#09090d;--bg2:#111117;--bg3:#18181f;--bg4:#1f1f28;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);
+  --text:#ededf4;--muted:#70708a;--dim:#32324a;
+  --green:#00dfa0;--gd:rgba(0,223,160,0.1);--gb:rgba(0,223,160,0.25);
+  --blue:#5b9eff;--bd:rgba(91,158,255,0.1);--bb:rgba(91,158,255,0.25);
+  --amber:#ffbb4d;--ad:rgba(255,187,77,0.1);--ab:rgba(255,187,77,0.25);
+  --red:#ff5c7a;--rd:rgba(255,92,122,0.09);--rb:rgba(255,92,122,0.25);
+  --violet:#a78bfa;--vd:rgba(167,139,250,0.1);--vb:rgba(167,139,250,0.25);
+  --mono:'JetBrains Mono',monospace;
+  --display:'Syne',sans-serif;
+  --sans:'Inter',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:13px;line-height:1.6;min-height:100vh}
+
+/* HEADER */
+.hdr{height:54px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;background:rgba(9,9,13,0.97);backdrop-filter:blur(14px);z-index:100}
+.logo{font-family:var(--display);font-size:17px;font-weight:700;color:var(--green);letter-spacing:-.01em}
+.hdr-meta{display:flex;align-items:center;gap:8px}
+.hdr-badge{font-family:var(--mono);font-size:10px;padding:3px 9px;border-radius:4px;letter-spacing:.04em}
+.hb-g{border:1px solid var(--gb);color:var(--green)}
+.hb-b{border:1px solid var(--bb);color:var(--blue)}
+
+/* LAYOUT */
+.layout{display:flex;min-height:calc(100vh - 54px)}
+
+/* SIDEBAR */
+.sb{width:218px;flex-shrink:0;border-right:1px solid var(--border);padding:18px 0;position:sticky;top:54px;height:calc(100vh - 54px);overflow-y:auto}
+.sb-sec{margin-bottom:4px}
+.sb-lbl{font-family:var(--mono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);padding:0 14px;margin:14px 0 4px}
+.sb-item{display:flex;align-items:center;gap:8px;padding:6px 14px;cursor:pointer;font-size:12px;color:var(--muted);border-left:2px solid transparent;transition:all .15s;line-height:1.3}
+.sb-item:hover{color:var(--text);background:var(--bg2)}
+.sb-item.on{color:var(--green);border-left-color:var(--green);background:var(--gd)}
+.sb-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.sb-div{height:1px;background:var(--border);margin:7px 14px}
+.sb-progress{font-family:var(--mono);font-size:9px;color:var(--dim);padding:0 14px;margin-top:12px}
+.progress-bar{height:3px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden}
+.progress-fill{height:3px;background:var(--green);border-radius:2px;width:0%;transition:width .4s}
+
+/* MAIN */
+.main{flex:1;padding:36px 44px;max-width:880px}
+.sec{display:none}.sec.on{display:block}
+.pg-title{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-.03em;margin-bottom:6px}
+.pg-title span{color:var(--green)}
+.pg-sub{font-size:13px;color:var(--muted);margin-bottom:28px;max-width:580px;line-height:1.6}
+
+/* CARDS */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:10px}
+.card.hl{border-color:var(--gb);background:linear-gradient(135deg,var(--bg2) 0%,var(--gd) 100%)}
+.card.warn{border-color:var(--ab);background:var(--ad)}
+.card.info{border-color:var(--bb);background:var(--bd)}
+.ct{font-family:var(--display);font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px}
+.cb{font-size:12px;color:var(--muted);line-height:1.7}
+
+/* TAGS */
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;padding:2px 7px;border-radius:4px;margin:1px}
+.tg{background:var(--gd);color:var(--green);border:1px solid var(--gb)}
+.tb{background:var(--bd);color:var(--blue);border:1px solid var(--bb)}
+.ta{background:var(--ad);color:var(--amber);border:1px solid var(--ab)}
+.tr{background:var(--rd);color:var(--red);border:1px solid var(--rb)}
+.tv{background:var(--vd);color:var(--violet);border:1px solid var(--vb)}
+.tgr{background:var(--bg3);color:var(--muted);border:1px solid var(--border)}
+
+/* STAT ROW */
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.stat{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;text-align:center}
+.stat-num{font-family:var(--display);font-size:22px;font-weight:700;line-height:1;margin-bottom:3px}
+.stat-lbl{font-size:11px;color:var(--muted);line-height:1.3}
+
+/* MILESTONE FLOW */
+.milestones{display:flex;flex-direction:column;gap:0}
+.ms-item{display:flex;gap:14px;align-items:flex-start}
+.ms-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.ms-dot{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:600;flex-shrink:0;border:1px solid var(--border2)}
+.ms-line{width:1px;flex:1;min-height:14px;background:var(--border);margin:3px auto}
+.ms-content{flex:1;padding-bottom:18px}
+.ms-phase{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:2px}
+.ms-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:3px}
+.ms-body{font-size:12px;color:var(--muted);line-height:1.6}
+.ms-gate{background:var(--bg3);border-radius:6px;padding:6px 10px;margin-top:7px;font-size:11px;color:var(--muted);display:flex;gap:6px;align-items:flex-start}
+
+/* TASK BLOCKS */
+.sprint{margin-bottom:14px}
+.sprint-hdr{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg3);border-radius:8px 8px 0 0;border:1px solid var(--border);border-bottom:none;cursor:pointer;user-select:none}
+.sprint-label{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.sprint-title{font-size:13px;font-weight:500;color:var(--text);flex:1}
+.sprint-time{font-family:var(--mono);font-size:10px;color:var(--dim)}
+.sprint-chevron{font-size:14px;color:var(--dim);transition:transform .2s}
+.sprint.open .sprint-chevron{transform:rotate(180deg)}
+.sprint-body{display:none;border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;overflow:hidden}
+.sprint.open .sprint-body{display:block}
+.task{display:flex;gap:10px;align-items:flex-start;padding:9px 14px;border-bottom:1px solid var(--border)}
+.task:last-child{border-bottom:none}
+.task-cb{width:16px;height:16px;border-radius:3px;border:1px solid var(--border2);background:var(--bg3);flex-shrink:0;margin-top:1px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.task-cb.done{background:var(--green);border-color:var(--green)}
+.task-cb.done::after{content:'✓';font-size:10px;color:var(--bg)}
+.task-content{flex:1}
+.task-title{font-size:12px;color:var(--text);margin-bottom:1px;line-height:1.4}
+.task-sub{font-size:11px;color:var(--muted);line-height:1.4}
+.task-meta{display:flex;gap:4px;margin-top:3px}
+.task-effort{font-family:var(--mono);font-size:10px;color:var(--dim);margin-left:auto;flex-shrink:0}
+
+/* CODE */
+.code-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin:8px 0}
+.code-hdr{display:flex;align-items:center;justify-content:space-between;padding:7px 14px;background:var(--bg3);border-bottom:1px solid var(--border)}
+.code-fn{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.code-lang{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:3px;background:var(--bg);color:var(--dim)}
+pre{padding:14px;font-family:var(--mono);font-size:11.5px;line-height:1.75;color:#c8d0f0;overflow-x:auto;white-space:pre}
+.kw{color:#c792ea}.fn{color:#82aaff}.st{color:#c3e88d}.cm{color:#4a5070;font-style:italic}.nm{color:#f78c6c}.ty{color:#89ddff}
+
+/* DIVIDER / LABELS */
+.div{height:1px;background:var(--border);margin:18px 0}
+.sl{font-family:var(--mono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+
+/* FILE TREE */
+.tree{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-family:var(--mono);font-size:12px;line-height:1.9;color:var(--muted)}
+.tree .dir{color:var(--blue)}
+.tree .file{color:var(--text)}
+.tree .comment{color:var(--dim)}
+
+/* ENV TABLE */
+.env-table{width:100%;border-collapse:collapse;font-size:12px}
+.env-table th{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);padding:7px 12px;text-align:left;border-bottom:1px solid var(--border)}
+.env-table td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+.env-table tr:last-child td{border-bottom:none}
+.env-table td:first-child{font-family:var(--mono);font-size:11px;color:var(--green)}
+.env-table td:nth-child(2){color:var(--muted)}
+.env-table td:nth-child(3){font-size:11px;color:var(--dim)}
+
+/* DECISIONS */
+.decision{padding:10px 0;border-bottom:1px solid var(--border);display:flex;gap:10px}
+.decision:last-child{border-bottom:none}
+.d-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.d-title{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px}
+.d-body{font-size:12px;color:var(--muted);line-height:1.6}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="logo">OrgPulse</div>
+  <div class="hdr-meta">
+    <div class="hdr-badge hb-g">Scan Engine + Report</div>
+    <div class="hdr-badge hb-b">Solo · Starting from zero</div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <nav class="sb">
+    <div class="sb-lbl">Overview</div>
+    <div class="sb-item on" onclick="show('overview')"><div class="sb-dot" style="background:var(--green)"></div>Plan overview</div>
+    <div class="sb-item" onclick="show('structure')"><div class="sb-dot" style="background:var(--blue)"></div>Project structure</div>
+    <div class="sb-item" onclick="show('envvars')"><div class="sb-dot" style="background:var(--amber)"></div>Environment setup</div>
+    <div class="sb-div"></div>
+    <div class="sb-lbl">Phase 1 — Foundation</div>
+    <div class="sb-item" onclick="show('p1s1')"><div class="sb-dot" style="background:var(--green)"></div>Week 1 — Infra + OAuth</div>
+    <div class="sb-item" onclick="show('p1s2')"><div class="sb-dot" style="background:var(--green)"></div>Week 2 — Scan tools</div>
+    <div class="sb-item" onclick="show('p1s3')"><div class="sb-dot" style="background:var(--green)"></div>Week 3 — Scoring engine</div>
+    <div class="sb-div"></div>
+    <div class="sb-lbl">Phase 2 — Report</div>
+    <div class="sb-item" onclick="show('p2s1')"><div class="sb-dot" style="background:var(--blue)"></div>Week 4 — Report generator</div>
+    <div class="sb-item" onclick="show('p2s2')"><div class="sb-dot" style="background:var(--blue)"></div>Week 5 — Delivery pipeline</div>
+    <div class="sb-div"></div>
+    <div class="sb-lbl">Phase 3 — Pilot</div>
+    <div class="sb-item" onclick="show('p3s1')"><div class="sb-dot" style="background:var(--violet)"></div>Week 6 — End-to-end test</div>
+    <div class="sb-item" onclick="show('p3s2')"><div class="sb-dot" style="background:var(--violet)"></div>Week 7 — First pilot delivery</div>
+    <div class="sb-div"></div>
+    <div class="sb-item" onclick="show('decisions')"><div class="sb-dot" style="background:var(--amber)"></div>Key decisions</div>
+    <div class="sb-progress">
+      <div>Overall progress</div>
+      <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
+      <div id="prog-label" style="margin-top:4px">0 / 0 tasks done</div>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <!-- OVERVIEW -->
+    <div id="overview" class="sec on">
+      <div class="pg-title">OrgPulse — <span>Implementation Plan</span></div>
+      <div class="pg-sub">Solo build. 7 weeks from zero to first paid pilot delivery. Scope: OAuth connection, scan engine, scoring, report generation, and delivery pipeline. No frontend, no agent, no queue — just the core that earns revenue.</div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="stat-num" style="color:var(--green)">7</div><div class="stat-lbl">Weeks to first pilot delivery</div></div>
+        <div class="stat"><div class="stat-num" style="color:var(--blue)">3</div><div class="stat-lbl">Build phases</div></div>
+        <div class="stat"><div class="stat-num" style="color:var(--amber)">£0</div><div class="stat-lbl">Infrastructure cost</div></div>
+        <div class="stat"><div class="stat-num" style="color:var(--violet)">12</div><div class="stat-lbl">Scan tools to build</div></div>
+      </div>
+
+      <div class="card hl">
+        <div class="ct">The build philosophy</div>
+        <div class="cb">Build the smallest thing that earns money. The scan engine + report generator is the minimum viable product — it replaces the 6 most time-consuming manual steps in your delivery and compresses engagement time from 6–8 hours to 90 minutes. The agent, the frontend, and the job queue come later. Ship the core first. Every week you spend over-engineering is a week without revenue.</div>
+      </div>
+
+      <div class="div"></div>
+      <div class="sl">7-week milestone map</div>
+      <div class="milestones" id="milestones"></div>
+    </div>
+
+    <!-- PROJECT STRUCTURE -->
+    <div id="structure" class="sec">
+      <div class="pg-title">Project <span>Structure</span></div>
+      <div class="pg-sub">The exact folder layout to create before writing any code. Keep it flat — you're solo and this will grow. Don't over-architect up front.</div>
+
+      <div class="tree">
+<span class="dir">orgpulse/</span>
+├── <span class="dir">src/</span>
+│   ├── <span class="dir">auth/</span>
+│   │   ├── <span class="file">server.ts</span>          <span class="comment"># Express app — OAuth routes + /health</span>
+│   │   ├── <span class="file">oauth.ts</span>           <span class="comment"># OAuth2 flow, token exchange</span>
+│   │   └── <span class="file">connection.ts</span>      <span class="comment"># getConnection(orgId) — loads tokens, refreshes</span>
+│   ├── <span class="dir">scan/</span>
+│   │   ├── <span class="file">index.ts</span>           <span class="comment"># runAllScans(conn) — orchestrates all tools</span>
+│   │   ├── <span class="file">limits.ts</span>          <span class="comment"># Domain 7 — Limits API</span>
+│   │   ├── <span class="file">security.ts</span>        <span class="comment"># Domain 3 — Security Health Check</span>
+│   │   ├── <span class="file">data-quality.ts</span>    <span class="comment"># Domain 1 — field completeness + duplicates</span>
+│   │   ├── <span class="file">automation.ts</span>      <span class="comment"># Domain 2 — flows, triggers, legacy automation</span>
+│   │   ├── <span class="file">knowledge.ts</span>       <span class="comment"># Domain 4 — Knowledge articles + case coverage</span>
+│   │   ├── <span class="file">metadata.ts</span>        <span class="comment"># Domain 5 — unused fields, abandoned packages</span>
+│   │   ├── <span class="file">adoption.ts</span>        <span class="comment"># Domain 6 — login rate, activity logging</span>
+│   │   └── <span class="file">types.ts</span>           <span class="comment"># Signal interfaces — the zero-copy contract</span>
+│   ├── <span class="dir">scoring/</span>
+│   │   ├── <span class="file">engine.ts</span>          <span class="comment"># scoreFindings() — applies rubric, weighted index</span>
+│   │   ├── <span class="file">rubric.ts</span>          <span class="comment"># Thresholds, weights, band definitions</span>
+│   │   └── <span class="file">findings-builder.ts</span> <span class="comment"># Human-readable finding strings</span>
+│   ├── <span class="dir">report/</span>
+│   │   ├── <span class="file">generator.ts</span>       <span class="comment"># populateReportTemplate(data) → HTML string</span>
+│   │   ├── <span class="file">storage.ts</span>         <span class="comment"># uploadReport() → signed URL</span>
+│   │   └── <span class="file">json-schema.ts</span>     <span class="comment"># ReportData type — full JSON contract</span>
+│   ├── <span class="dir">db/</span>
+│   │   ├── <span class="file">supabase.ts</span>        <span class="comment"># Supabase client singleton</span>
+│   │   └── <span class="file">queries.ts</span>         <span class="comment"># DB read/write helpers</span>
+│   └── <span class="file">index.ts</span>               <span class="comment"># Entry point</span>
+├── <span class="dir">templates/</span>
+│   └── <span class="file">orgpulse-v2.html</span>       <span class="comment"># V2 report — reads window.REPORT_DATA</span>
+├── <span class="dir">scripts/</span>
+│   ├── <span class="file">test-connection.ts</span>     <span class="comment"># Verify OAuth works — runs COUNT query</span>
+│   ├── <span class="file">run-scan.ts</span>            <span class="comment"># Manual scan trigger — node scripts/run-scan.ts [orgId]</span>
+│   └── <span class="file">setup-db.sql</span>           <span class="comment"># Supabase schema SQL — run once</span>
+├── <span class="dir">reports/</span>                   <span class="comment"># Local report output (gitignored)</span>
+├── <span class="file">.env</span>                       <span class="comment"># Never commit</span>
+├── <span class="file">.env.example</span>               <span class="comment"># Commit this</span>
+├── <span class="file">CLAUDE.md</span>                  <span class="comment"># Project context for Claude Code</span>
+├── <span class="file">tsconfig.json</span>
+├── <span class="file">package.json</span>
+└── <span class="file">.gitignore</span>
+      </div>
+
+      <div class="div"></div>
+      <div class="code-wrap">
+        <div class="code-hdr"><span class="code-fn">package.json — scripts and dependencies</span><span class="code-lang">JSON</span></div>
+        <pre>{
+  <span class="st">"scripts"</span>: {
+    <span class="st">"dev"</span>:   <span class="st">"tsx watch src/server.ts"</span>,
+    <span class="st">"build"</span>: <span class="st">"tsc"</span>,
+    <span class="st">"start"</span>: <span class="st">"node dist/server.js"</span>,
+    <span class="st">"scan"</span>:  <span class="st">"tsx scripts/run-scan.ts"</span>,
+    <span class="st">"test-conn"</span>: <span class="st">"tsx scripts/test-connection.ts"</span>
+  },
+  <span class="st">"dependencies"</span>: {
+    <span class="st">"jsforce"</span>:            <span class="st">"^2.0.0"</span>,
+    <span class="st">"@supabase/supabase-js"</span>: <span class="st">"^2.0.0"</span>,
+    <span class="st">"@anthropic-ai/sdk"</span>:  <span class="st">"^0.24.0"</span>,
+    <span class="st">"express"</span>:            <span class="st">"^4.18.0"</span>,
+    <span class="st">"dotenv"</span>:             <span class="st">"^16.0.0"</span>
+  },
+  <span class="st">"devDependencies"</span>: {
+    <span class="st">"typescript"</span>: <span class="st">"^5.0.0"</span>,
+    <span class="st">"tsx"</span>:        <span class="st">"^4.0.0"</span>,
+    <span class="st">"@types/express"</span>: <span class="st">"^4.17.0"</span>,
+    <span class="st">"@types/node"</span>:    <span class="st">"^20.0.0"</span>
+  }
+}</pre>
+      </div>
+    </div>
+
+    <!-- ENV VARS -->
+    <div id="envvars" class="sec">
+      <div class="pg-title">Environment <span>Setup</span></div>
+      <div class="pg-sub">Every variable you need, where to get it, and what it's used for. Set these up before writing any code — you'll need them for the first test.</div>
+
+      <div class="card warn">
+        <div class="ct">Setup order matters</div>
+        <div class="cb">Create services in this exact order: Salesforce Dev Edition first (takes longest to activate — do it first), then Supabase, then ngrok. The Connected App callback URL needs your ngrok URL — but ngrok changes on every restart, so update it fresh each session before sending the auth link to a client.</div>
+      </div>
+
+      <div class="div"></div>
+
+      <table class="env-table">
+        <thead><tr><th>Variable</th><th>Value / where to get it</th><th>When needed</th></tr></thead>
+        <tbody id="env-table-body"></tbody>
+      </table>
+
+      <div class="div"></div>
+      <div class="sl">Supabase schema — run once in SQL Editor</div>
+      <div class="code-wrap">
+        <div class="code-hdr"><span class="code-fn">scripts/setup-db.sql</span><span class="code-lang">SQL</span></div>
+        <pre><span class="cm">-- Run in Supabase SQL Editor → New Query → Run</span>
+
+<span class="kw">CREATE TABLE</span> connected_orgs (
+  id               <span class="ty">UUID</span> <span class="kw">PRIMARY KEY DEFAULT</span> <span class="fn">gen_random_uuid</span>(),
+  salesforce_org_id <span class="ty">VARCHAR</span>(<span class="nm">18</span>) <span class="kw">UNIQUE NOT NULL</span>,
+  org_name         <span class="ty">TEXT</span>,
+  instance_url     <span class="ty">TEXT</span>,
+  status           <span class="ty">TEXT</span> <span class="kw">DEFAULT</span> <span class="st">'connected'</span>,
+  connected_at     <span class="ty">TIMESTAMPTZ</span> <span class="kw">DEFAULT NOW</span>()
+);
+
+<span class="kw">CREATE TABLE</span> scan_runs (
+  id               <span class="ty">UUID</span> <span class="kw">PRIMARY KEY DEFAULT</span> <span class="fn">gen_random_uuid</span>(),
+  org_id           <span class="ty">UUID</span> <span class="kw">REFERENCES</span> connected_orgs(id),
+  status           <span class="ty">TEXT</span> <span class="kw">DEFAULT</span> <span class="st">'pending'</span>,
+  ai_readiness_index <span class="ty">SMALLINT</span>,
+  has_hard_blocker <span class="ty">BOOLEAN</span>,
+  completed_at     <span class="ty">TIMESTAMPTZ</span>,
+  created_at       <span class="ty">TIMESTAMPTZ</span> <span class="kw">DEFAULT NOW</span>()
+);
+
+<span class="kw">CREATE TABLE</span> scan_domain_scores (
+  id          <span class="ty">UUID</span> <span class="kw">PRIMARY KEY DEFAULT</span> <span class="fn">gen_random_uuid</span>(),
+  scan_run_id <span class="ty">UUID</span> <span class="kw">REFERENCES</span> scan_runs(id),
+  domain      <span class="ty">TEXT</span> <span class="kw">NOT NULL</span>,
+  score       <span class="ty">SMALLINT</span>,
+  is_blocker  <span class="ty">BOOLEAN</span> <span class="kw">DEFAULT FALSE</span>
+);
+
+<span class="kw">CREATE TABLE</span> scan_findings (
+  id             <span class="ty">UUID</span> <span class="kw">PRIMARY KEY DEFAULT</span> <span class="fn">gen_random_uuid</span>(),
+  scan_run_id    <span class="ty">UUID</span> <span class="kw">REFERENCES</span> scan_runs(id),
+  domain         <span class="ty">TEXT</span>,
+  severity       <span class="ty">TEXT</span>,  <span class="cm">-- 'critical' | 'warning' | 'info'</span>
+  title          <span class="ty">TEXT</span>,
+  description    <span class="ty">TEXT</span>,
+  evidence       <span class="ty">TEXT</span>,  <span class="cm">-- e.g. "COUNT query: 142,844 / 420,130"</span>
+  effort_days    <span class="ty">NUMERIC</span>(<span class="nm">4</span>,<span class="nm">1</span>),
+  impact_score   <span class="ty">SMALLINT</span>
+);
+
+<span class="cm">-- Enable Realtime on scan_runs (for future dashboard)</span>
+<span class="kw">ALTER TABLE</span> scan_runs <span class="kw">REPLICA IDENTITY FULL</span>;
+</pre>
+      </div>
+    </div>
+
+    <!-- WEEK 1 -->
+    <div id="p1s1" class="sec">
+      <div class="pg-title">Week 1 — <span>Infra + OAuth</span></div>
+      <div class="pg-sub">Set up all services, create the project scaffold, and get OAuth working end-to-end against your own Dev Edition org. End goal: running <code style="font-family:var(--mono);font-size:12px;color:var(--green)">npm run test-conn</code> returns your user count.</div>
+
+      <div class="card info">
+        <div class="ct">Success criterion for Week 1</div>
+        <div class="cb">You click a URL in your browser → Salesforce login screen → you approve → your terminal logs "Connected. Active users: 12" (or whatever your Dev Edition count is). Everything after this is scan logic on top of a working connection.</div>
+      </div>
+      <div id="w1-tasks"></div>
+    </div>
+
+    <!-- WEEK 2 -->
+    <div id="p1s2" class="sec">
+      <div class="pg-title">Week 2 — <span>Scan Tools</span></div>
+      <div class="pg-sub">Build all 7 domain scan functions. Each one is a self-contained TypeScript function — build and test each against your Dev Edition org before moving to the next. Never return raw data from a scan function.</div>
+
+      <div class="card warn">
+        <div class="ct">The zero-copy rule in every scan function</div>
+        <div class="cb">Pattern for every function: (1) run SOQL/API call, (2) extract signal into typed variables, (3) null the raw response immediately, (4) return only the signal. TypeScript enforces this via the return type. If you're returning more than numbers, percentages, counts, and string labels — you're violating the contract.</div>
+      </div>
+      <div id="w2-tasks"></div>
+    </div>
+
+    <!-- WEEK 3 -->
+    <div id="p1s3" class="sec">
+      <div class="pg-title">Week 3 — <span>Scoring Engine</span></div>
+      <div class="pg-sub">Turn raw signals into domain scores (0–100), detect hard blockers, calculate the weighted AI Readiness Index, and build findings strings. This is your core IP — the rubric encoded as code.</div>
+
+      <div class="code-wrap">
+        <div class="code-hdr"><span class="code-fn">src/scoring/rubric.ts — the scoring weights and thresholds</span><span class="code-lang">TypeScript</span></div>
+        <pre><span class="kw">export const</span> DOMAIN_WEIGHTS = {
+  data_quality:   <span class="nm">0.25</span>,
+  automation:     <span class="nm">0.20</span>,
+  security:       <span class="nm">0.15</span>,
+  knowledge:      <span class="nm">0.15</span>,
+  metadata:       <span class="nm">0.10</span>,
+  adoption:       <span class="nm">0.10</span>,
+  limits:         <span class="nm">0.05</span>,
+} <span class="kw">as const</span>
+
+<span class="kw">export const</span> HARD_BLOCKER_THRESHOLD = <span class="nm">50</span>
+
+<span class="kw">export const</span> INDUSTRY_BENCHMARKS = {
+  data_quality:   <span class="nm">54</span>,
+  automation:     <span class="nm">58</span>,
+  security:       <span class="nm">69</span>,
+  knowledge:      <span class="nm">38</span>,
+  metadata:       <span class="nm">55</span>,
+  adoption:       <span class="nm">68</span>,
+  limits:         <span class="nm">77</span>,
+} <span class="cm">// IBM IBV 2025-26, 150-300 user orgs</span>
+
+<span class="cm">// Data quality scoring thresholds</span>
+<span class="kw">export const</span> DQ_BANDS = {
+  critical_completion: <span class="nm">0.50</span>,  <span class="cm">// < 50% → score 0-39</span>
+  risk_completion:     <span class="nm">0.70</span>,  <span class="cm">// 50-70% → score 40-64</span>
+  ok_completion:       <span class="nm">0.80</span>,  <span class="cm">// 70-80% → score 65-79</span>
+  critical_dup_rate:   <span class="nm">0.15</span>,  <span class="cm">// > 15% dupes → hard blocker</span>
+  risk_dup_rate:       <span class="nm">0.05</span>,  <span class="cm">// > 5% → deduct points</span>
+}</pre>
+      </div>
+      <div id="w3-tasks"></div>
+    </div>
+
+    <!-- WEEK 4 -->
+    <div id="p2s1" class="sec">
+      <div class="pg-title">Week 4 — <span>Report Generator</span></div>
+      <div class="pg-sub">Build the function that takes your scores JSON and produces a populated V2 HTML report. The template already exists — this week you wire the data to it and build the Supabase Storage upload + signed URL generation.</div>
+
+      <div class="code-wrap">
+        <div class="code-hdr"><span class="code-fn">src/report/generator.ts — core pattern</span><span class="code-lang">TypeScript</span></div>
+        <pre><span class="kw">import</span> fs <span class="kw">from</span> <span class="st">'fs'</span>
+<span class="kw">import</span> path <span class="kw">from</span> <span class="st">'path'</span>
+<span class="kw">import</span> { <span class="ty">ReportData</span> } <span class="kw">from</span> <span class="st">'./json-schema'</span>
+
+<span class="cm">// Load template once at module init</span>
+<span class="kw">const</span> TEMPLATE = fs.<span class="fn">readFileSync</span>(
+  path.<span class="fn">resolve</span>(__dirname, <span class="st">'../../templates/orgpulse-v2.html'</span>), <span class="st">'utf-8'</span>
+)
+
+<span class="kw">export function</span> <span class="fn">generateReport</span>(data: <span class="ty">ReportData</span>): <span class="ty">string</span> {
+  <span class="cm">// Inject data as window.REPORT_DATA before &lt;/head&gt;</span>
+  <span class="kw">const</span> script = <span class="st">`&lt;script&gt;window.REPORT_DATA=${JSON.stringify(data)}&lt;/script&gt;`</span>
+  <span class="kw">return</span> TEMPLATE.<span class="fn">replace</span>(<span class="st">'&lt;/head&gt;'</span>, script + <span class="st">'&lt;/head&gt;'</span>)
+}
+
+<span class="cm">// Required change to orgpulse-v2.html template:
+// At top of &lt;script&gt; block, add:
+// const REPORT_DATA = window.REPORT_DATA || ACME_SAMPLE_DATA
+// Replace all hardcoded "Acme Corp" values with REPORT_DATA.field</span></pre>
+      </div>
+      <div id="w4-tasks"></div>
+    </div>
+
+    <!-- WEEK 5 -->
+    <div id="p2s2" class="sec">
+      <div class="pg-title">Week 5 — <span>Delivery Pipeline</span></div>
+      <div class="pg-sub">Wire everything together into a single command: connect org → run scans → score → generate report → upload → get signed URL. By end of this week you can run one command and get a client-ready report URL.</div>
+
+      <div class="code-wrap">
+        <div class="code-hdr"><span class="code-fn">scripts/run-scan.ts — the one command that does everything</span><span class="code-lang">TypeScript</span></div>
+        <pre><span class="cm">#!/usr/bin/env tsx
+// Usage: npm run scan -- --org [orgId]</span>
+
+<span class="kw">import</span> { <span class="fn">getConnection</span> } <span class="kw">from</span> <span class="st">'../src/auth/connection'</span>
+<span class="kw">import</span> { <span class="fn">runAllScans</span> } <span class="kw">from</span> <span class="st">'../src/scan'</span>
+<span class="kw">import</span> { <span class="fn">scoreFindings</span> } <span class="kw">from</span> <span class="st">'../src/scoring/engine'</span>
+<span class="kw">import</span> { <span class="fn">buildReportData</span> } <span class="kw">from</span> <span class="st">'../src/report/json-schema'</span>
+<span class="kw">import</span> { <span class="fn">generateReport</span> } <span class="kw">from</span> <span class="st">'../src/report/generator'</span>
+<span class="kw">import</span> { <span class="fn">uploadReport</span> } <span class="kw">from</span> <span class="st">'../src/report/storage'</span>
+<span class="kw">import</span> { <span class="fn">saveResults</span> } <span class="kw">from</span> <span class="st">'../src/db/queries'</span>
+
+<span class="kw">async function</span> <span class="fn">main</span>() {
+  <span class="kw">const</span> orgId = process.argv[<span class="nm">3</span>]
+  <span class="kw">if</span> (!orgId) <span class="kw">throw new</span> <span class="ty">Error</span>(<span class="st">'Pass --org [orgId]'</span>)
+
+  console.<span class="fn">log</span>(<span class="st">'🔌 Connecting to org...'</span>)
+  <span class="kw">const</span> conn = <span class="kw">await</span> <span class="fn">getConnection</span>(orgId)
+
+  console.<span class="fn">log</span>(<span class="st">'🔍 Running scans...'</span>)
+  <span class="kw">const</span> signals = <span class="kw">await</span> <span class="fn">runAllScans</span>(conn)
+
+  console.<span class="fn">log</span>(<span class="st">'📊 Scoring domains...'</span>)
+  <span class="kw">const</span> scores = <span class="fn">scoreFindings</span>(signals)
+  console.<span class="fn">log</span>(<span class="st">`   Index: ${scores.overallIndex}/100`</span>)
+  console.<span class="fn">log</span>(<span class="st">`   Blockers: ${scores.hardBlockers.join(', ') || 'none'}`</span>)
+
+  console.<span class="fn">log</span>(<span class="st">'📄 Generating report...'</span>)
+  <span class="kw">const</span> reportData = <span class="fn">buildReportData</span>(orgId, signals, scores)
+  <span class="kw">const</span> html = <span class="fn">generateReport</span>(reportData)
+
+  console.<span class="fn">log</span>(<span class="st">'☁️  Uploading to Supabase Storage...'</span>)
+  <span class="kw">const</span> { signedUrl } = <span class="kw">await</span> <span class="fn">uploadReport</span>(orgId, html)
+
+  <span class="kw">await</span> <span class="fn">saveResults</span>(orgId, scores, reportData)
+
+  console.<span class="fn">log</span>(<span class="st">`\n✅ Done! Report URL (90 days):\n${signedUrl}`</span>)
+}
+
+<span class="fn">main</span>().<span class="fn">catch</span>(console.error)</pre>
+      </div>
+      <div id="w5-tasks"></div>
+    </div>
+
+    <!-- WEEK 6 -->
+    <div id="p3s1" class="sec">
+      <div class="pg-title">Week 6 — <span>End-to-End Test</span></div>
+      <div class="pg-sub">Run the full pipeline against your own Dev Edition org. Fix every rough edge before a client sees it. This week is about hardening, not building.</div>
+
+      <div class="card warn">
+        <div class="ct">Do not skip this week</div>
+        <div class="cb">The worst time to discover a bug is during a live client engagement. This week exists specifically to create a safe environment to break things. Run the full pipeline 3+ times. Intentionally test edge cases — what happens if the org has zero Knowledge articles? What if all users are active? What if the Security Health Check returns an unusual score? Every edge case you handle now is a client issue you prevent.</div>
+      </div>
+      <div id="w6-tasks"></div>
+    </div>
+
+    <!-- WEEK 7 -->
+    <div id="p3s2" class="sec">
+      <div class="pg-title">Week 7 — <span>First Pilot Delivery</span></div>
+      <div class="pg-sub">Your first real client org. This week is delivery, not development. Use the runbook from the pilot delivery guide. Log every step — what took longer than expected, what surprised you, what the client reacted to most.</div>
+
+      <div class="card hl">
+        <div class="ct">What success looks like at end of Week 7</div>
+        <div class="cb">A real client has received a signed URL to their V2 OrgPulse report. You have run the readout call. You have sent a follow-up email with a next-step proposal. You have a written feedback form response. And you have a "what I rebuilt manually" log with at least 5 items — this is your Phase 2 product backlog.</div>
+      </div>
+      <div id="w7-tasks"></div>
+    </div>
+
+    <!-- KEY DECISIONS -->
+    <div id="decisions" class="sec">
+      <div class="pg-title">Key <span>Decisions</span></div>
+      <div class="pg-sub">Decisions made in this build plan and why. Read this before you start so you don't accidentally undo them.</div>
+
+      <div class="card">
+        <div class="decision">
+          <div class="d-icon">🚫</div>
+          <div>
+            <div class="d-title">No BullMQ / job queue in this phase</div>
+            <div class="d-body">Scans run synchronously in the <code style="font-family:var(--mono);font-size:11px">run-scan.ts</code> script. For a single pilot client, this is fine — scans take 2–4 minutes. Add BullMQ when you're running concurrent scans (client 3+). Adding it now adds complexity with zero benefit.</div>
+          </div>
+        </div>
+        <div class="decision">
+          <div class="d-icon">🚫</div>
+          <div>
+            <div class="d-title">No frontend / Next.js in this phase</div>
+            <div class="d-body">You run scans via <code style="font-family:var(--mono);font-size:11px">npm run scan</code> from your terminal. Clients receive a signed URL — they never log into a dashboard. A frontend is only needed when clients need self-serve access. That's Phase 2.</div>
+          </div>
+        </div>
+        <div class="decision">
+          <div class="d-icon">🚫</div>
+          <div>
+            <div class="d-title">No Claude agent in this phase</div>
+            <div class="d-body">The narrative in the report is written by you, manually, in the <code style="font-family:var(--mono);font-size:11px">findings-builder.ts</code> templates. The Claude API is not called at all in this phase. Add the agent after engagement 5 when you know exactly what narrative patterns always appear.</div>
+          </div>
+        </div>
+        <div class="decision">
+          <div class="d-icon">✅</div>
+          <div>
+            <div class="d-title">ngrok instead of Render for pilot</div>
+            <div class="d-body">For a single pilot, your laptop runs the OAuth callback server. ngrok tunnels the Salesforce redirect to localhost:3000. Zero deployment overhead, zero cost. Switch to Render when you need the server to be always-on for multiple clients.</div>
+          </div>
+        </div>
+        <div class="decision">
+          <div class="d-icon">✅</div>
+          <div>
+            <div class="d-title">tsx for development, tsc for production</div>
+            <div class="d-body"><code style="font-family:var(--mono);font-size:11px">tsx</code> runs TypeScript directly without a compile step — fast for development and scripts. <code style="font-family:var(--mono);font-size:11px">tsc</code> compiles to <code style="font-family:var(--mono);font-size:11px">dist/</code> for production deployment on Render.</div>
+          </div>
+        </div>
+        <div class="decision">
+          <div class="d-icon">✅</div>
+          <div>
+            <div class="d-title">window.REPORT_DATA injection pattern</div>
+            <div class="d-body">The V2 HTML template reads from <code style="font-family:var(--mono);font-size:11px">window.REPORT_DATA</code> — injected as a script tag before <code style="font-family:var(--mono);font-size:11px">&lt;/head&gt;</code>. Same template works for sample display (hardcoded fallback data) and live client reports. One template, zero duplication, no templating engine needed.</div>
+          </div>
+        </div>
+        <div class="decision">
+          <div class="d-icon">⚠️</div>
+          <div>
+            <div class="d-title">Anthropic DPA — required before paid client</div>
+            <div class="d-body">The Claude API is not used in this phase, so this is not blocking. But before you add the agent (Phase 2), you must sign the Anthropic Data Processing Agreement. Contact enterprise@anthropic.com. Do not go live with the agent for EU clients without a signed DPA.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+// ── Section navigation ─────────────────────────────────────────
+function show(id) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'))
+  document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('on'))
+  document.getElementById(id).classList.add('on')
+  event.currentTarget.classList.add('on')
+}
+
+// ── Milestone data ─────────────────────────────────────────────
+const milestones = [
+  { week:'Week 1', color:'var(--green)', border:'var(--gb)', label:'Phase 1 — Foundation',
+    title:'Infrastructure + OAuth working', body:'All services created. Node.js project scaffolded. OAuth flow complete — test-connection.ts returns active user count from your Dev Edition org.',
+    gate:'Gate: npm run test-conn logs a user count without errors' },
+  { week:'Week 2', color:'var(--green)', border:'var(--gb)', label:'Phase 1 — Foundation',
+    title:'All 7 scan tools built and tested', body:'Each domain scan function written, tested against your Dev Edition org, and returning typed signal objects. Zero raw data in any return value.',
+    gate:'Gate: runAllScans(conn) completes without errors on your Dev Edition org' },
+  { week:'Week 3', color:'var(--green)', border:'var(--gb)', label:'Phase 1 — Foundation',
+    title:'Scoring engine producing domain scores + index', body:'scoreFindings() returns domain scores (0–100 each), hard blocker flags, weighted AI Readiness Index, and human-readable finding strings.',
+    gate:'Gate: Your Dev Edition org produces a score you can explain and defend' },
+  { week:'Week 4', color:'var(--blue)', border:'var(--bb)', label:'Phase 2 — Report',
+    title:'V2 report template wired to live data', body:'window.REPORT_DATA injection working. generateReport() produces a valid HTML file that opens correctly in Chrome with real scan data. Upload to Supabase Storage returns a signed URL.',
+    gate:'Gate: Open the signed URL in an incognito window — report displays correctly' },
+  { week:'Week 5', color:'var(--blue)', border:'var(--bb)', label:'Phase 2 — Report',
+    title:'Single command delivers a complete report', body:'npm run scan -- --org [id] runs end-to-end: connect → scan → score → generate → upload → log signed URL. Full pipeline in one command.',
+    gate:'Gate: Run it 3 times without manual intervention. Every run produces a valid signed URL.' },
+  { week:'Week 6', color:'var(--violet)', border:'var(--vb)', label:'Phase 3 — Pilot',
+    title:'End-to-end hardened against edge cases', body:'Pipeline tested with zero-record objects, no Knowledge base, all-active users, maximum security score. Error handling complete. QC checklist passes on every run.',
+    gate:'Gate: 5 full pipeline runs with no crashes, no broken report sections' },
+  { week:'Week 7', color:'var(--violet)', border:'var(--vb)', label:'Phase 3 — Pilot',
+    title:'First real pilot client delivered', body:'Real client org scanned. Report generated and shared. Readout call completed. Feedback form sent. "What I rebuilt manually" log started.',
+    gate:'Gate: Client has received the signed URL and you have a next-step conversation booked' },
+]
+
+const mc = document.getElementById('milestones')
+milestones.forEach((m, i) => {
+  const el = document.createElement('div')
+  el.className = 'ms-item'
+  el.innerHTML = `
+    <div class="ms-left">
+      <div class="ms-dot" style="background:rgba(0,0,0,0.3);border-color:${m.border};color:${m.color}">${i+1}</div>
+      ${i < milestones.length-1 ? '<div class="ms-line"></div>' : ''}
+    </div>
+    <div class="ms-content">
+      <div class="ms-phase" style="color:${m.color}">${m.week} · ${m.label}</div>
+      <div class="ms-title">${m.title}</div>
+      <div class="ms-body">${m.body}</div>
+      <div class="ms-gate"><span style="color:var(--green);flex-shrink:0">🚦</span>${m.gate}</div>
+    </div>`
+  mc.appendChild(el)
+})
+
+// ── Env vars ───────────────────────────────────────────────────
+const envVars = [
+  { name:'SF_CLIENT_ID', desc:'Salesforce Connected App Consumer Key', when:'Week 1 Day 1', how:'Setup → App Manager → New Connected App → OAuth → Consumer Key' },
+  { name:'SF_CLIENT_SECRET', desc:'Salesforce Connected App Consumer Secret', when:'Week 1 Day 1', how:'Same location as above' },
+  { name:'SF_REDIRECT_URI', desc:'ngrok URL + /auth/callback', when:'Week 1 Day 2', how:'Start ngrok, copy URL. Update each new session and update Connected App.' },
+  { name:'SF_LOGIN_URL', desc:'https://login.salesforce.com (or test.salesforce.com for sandbox)', when:'Week 1', how:'Hardcode based on org type' },
+  { name:'SUPABASE_URL', desc:'Your Supabase project URL', when:'Week 1 Day 1', how:'Supabase Dashboard → Settings → API → Project URL' },
+  { name:'SUPABASE_SERVICE_KEY', desc:'Service role key — backend only, never expose', when:'Week 1 Day 1', how:'Supabase Dashboard → Settings → API → service_role key' },
+  { name:'SUPABASE_ANON_KEY', desc:'Anon key — safe for frontend (not used in this phase)', when:'Later', how:'Same location' },
+  { name:'ANTHROPIC_API_KEY', desc:'Claude API key — not used in this phase, add now', when:'Phase 2', how:'console.anthropic.com → API Keys' },
+  { name:'NODE_ENV', desc:'development or production', when:'Always', how:'Set manually in .env' },
+]
+
+const tbody = document.getElementById('env-table-body')
+envVars.forEach(v => {
+  const tr = document.createElement('tr')
+  tr.innerHTML = `<td>${v.name}</td><td>${v.desc}</td><td>${v.when} — ${v.how}</td>`
+  tbody.appendChild(tr)
+})
+
+// ── Task data ──────────────────────────────────────────────────
+const weeks = {
+  'w1-tasks': {
+    sprints: [
+      { label:'Day 1', color:'var(--green)', title:'Create all external services', time:'~2h', tasks:[
+        { title:'Sign up for Salesforce Developer Edition', sub:'developer.salesforce.com/signup — takes 5–10 min to activate', effort:'5 min', tags:['setup'] },
+        { title:'Create Supabase project', sub:'supabase.com → New Project. Copy URL + service key. Enable Vault (Database → Vault). Run setup-db.sql in SQL Editor.', effort:'10 min', tags:['setup'] },
+        { title:'Register Connected App in Dev Edition', sub:'Setup → App Manager → New Connected App → Enable OAuth → Scopes: api, refresh_token, offline_access → Callback: http://localhost:3000/auth/callback', effort:'10 min', tags:['salesforce'] },
+        { title:'Install ngrok', sub:'ngrok.com/download → create account → ngrok config add-authtoken YOUR_TOKEN', effort:'5 min', tags:['setup'] },
+      ]},
+      { label:'Day 1–2', color:'var(--green)', title:'Scaffold the project', time:'~1h', tasks:[
+        { title:'mkdir orgpulse && npm init -y', sub:'Create the project directory and initialise npm', effort:'2 min', tags:['code'] },
+        { title:'Install all dependencies', sub:'npm install jsforce @supabase/supabase-js express dotenv && npm install -D typescript tsx @types/express @types/node', effort:'3 min', tags:['code'] },
+        { title:'Create tsconfig.json', sub:'target ES2022, moduleResolution bundler, strict: true, outDir: dist', effort:'5 min', tags:['code'] },
+        { title:'Create .env and .env.example', sub:'Add all env vars from the Environment Setup tab. Add .env to .gitignore immediately.', effort:'5 min', tags:['code'] },
+        { title:'Create folder structure', sub:'mkdir -p src/auth src/scan src/scoring src/report src/db scripts templates reports', effort:'2 min', tags:['code'] },
+      ]},
+      { label:'Day 2–3', color:'var(--green)', title:'Build OAuth server', time:'~3h', tasks:[
+        { title:'Create src/db/supabase.ts — Supabase client singleton', sub:'createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY). Export as singleton — never create multiple instances.', effort:'15 min', tags:['code'] },
+        { title:'Create src/auth/oauth.ts — OAuth2 config', sub:'new jsforce.OAuth2({ clientId, clientSecret, redirectUri }). Export the oauth2 instance.', effort:'20 min', tags:['code'] },
+        { title:'Create src/auth/server.ts — Express app', sub:'GET /auth/start → redirect to SF auth URL. GET /auth/callback → exchange code for tokens → upsert connected_orgs → store tokens in memory (global.orgTokens for pilot). GET /health → { status: "ok" }.', effort:'45 min', tags:['code'] },
+        { title:'Create src/auth/connection.ts — getConnection()', sub:'Returns a jsforce Connection from stored tokens. Handles token refresh automatically via jsforce.', effort:'30 min', tags:['code'] },
+        { title:'Create scripts/test-connection.ts', sub:'Calls getConnection() → runs SELECT COUNT(Id) cnt FROM User WHERE IsActive = true → logs count. This is your first smoke test.', effort:'20 min', tags:['code'] },
+      ]},
+      { label:'Day 3–4', color:'var(--green)', title:'Test OAuth end-to-end', time:'~1h', tasks:[
+        { title:'Start ngrok: ngrok http 3000', sub:'Copy the public URL (e.g. https://abc123.ngrok-free.app)', effort:'2 min', tags:['test'] },
+        { title:'Update SF callback URL to ngrok URL', sub:'Salesforce Setup → App Manager → Edit Connected App → Callback URL → save → wait 2 min', effort:'5 min', tags:['salesforce'] },
+        { title:'Update SF_REDIRECT_URI in .env', sub:'Set to https://abc123.ngrok-free.app/auth/callback', effort:'1 min', tags:['test'] },
+        { title:'Start server: npm run dev', sub:'Should log "Server running on port 3000"', effort:'1 min', tags:['test'] },
+        { title:'Open http://localhost:3000/auth/start in browser', sub:'Should redirect to Salesforce login → approve → server logs the org connection', effort:'2 min', tags:['test'] },
+        { title:'Run npm run test-conn', sub:'Should log "Connected. Active users: X". If this works, Week 1 is done.', effort:'1 min', tags:['test'] },
+      ]},
+    ]
+  },
+  'w2-tasks': {
+    sprints: [
+      { label:'Day 1', color:'var(--blue)', title:'Create scan types contract', time:'~1h', tasks:[
+        { title:'Create src/scan/types.ts — all signal interfaces', sub:'FieldCompletenessSignal, AutomationSignal, SecuritySignal, KnowledgeSignal, MetadataSignal, AdoptionSignal, LimitsSignal, AllSignals. Strict types — no any, no raw record objects allowed in return types.', effort:'45 min', tags:['code'] },
+      ]},
+      { label:'Day 1', color:'var(--blue)', title:'Domain 7 — Platform limits (easiest)', time:'~30 min', tasks:[
+        { title:'Create src/scan/limits.ts', sub:'conn.limits() → extract apiUsagePct, storageUsagePct, fileUsagePct. Null raw result. Return LimitsSignal. Test: npm run scan should call this first.', effort:'30 min', tags:['code'] },
+      ]},
+      { label:'Day 1–2', color:'var(--blue)', title:'Domain 3 — Security', time:'~45 min', tasks:[
+        { title:'Create src/scan/security.ts', sub:'conn.request("/services/data/v59.0/connect/security/health-check") → extract score (number), failingCheckCount, criticalCheckCount, guestUserRisk (boolean). Null raw. Return SecuritySignal.', effort:'45 min', tags:['code'] },
+      ]},
+      { label:'Day 2', color:'var(--blue)', title:'Domain 1 — Data quality', time:'~2h', tasks:[
+        { title:'Create src/scan/data-quality.ts — field completeness', sub:'Parameterised function scanFieldCompleteness(conn, objectName, fields[]). Builds COUNT aggregate SOQL. Returns { objectName, totalRecords, completionRates: Record<string,number> }. Test on Contact, Account, Case.', effort:'60 min', tags:['code'] },
+        { title:'Add duplicate detection to data-quality.ts', sub:'GROUP BY name+email SOQL. Returns { duplicateCount, duplicateRate }. Null raw result immediately.', effort:'30 min', tags:['code'] },
+      ]},
+      { label:'Day 3', color:'var(--blue)', title:'Domain 2 — Automation', time:'~2h', tasks:[
+        { title:'Create src/scan/automation.ts', sub:'Tooling API query on FlowDefinition: get active flows, count per object, count with no fault path. Query ApexOrgWideCoverage for test coverage %. Query ProcessDefinition for legacy automation. Return AutomationSignal.', effort:'90 min', tags:['code'] },
+      ]},
+      { label:'Day 3–4', color:'var(--blue)', title:'Domains 4, 5, 6 — Knowledge, Metadata, Adoption', time:'~3h', tasks:[
+        { title:'Create src/scan/knowledge.ts', sub:'KnowledgeArticleVersion COUNT + case reason frequency (top 20). Returns { articleCount, articleRecency, caseReasons[], coverageGap }. No article content ever returned.', effort:'45 min', tags:['code'] },
+        { title:'Create src/scan/metadata.ts', sub:'Tooling API FieldDefinition cross-ref for unused fields count. InstalledPackage query for abandoned packages. Returns { unusedFieldCount, abandonedPackageCount }. Never return field values.', effort:'45 min', tags:['code'] },
+        { title:'Create src/scan/adoption.ts', sub:'LoginHistory SOQL (last 90 days, ≥3 logins). Task SOQL for activity rate. Returns { loginRatePct, avgActivitiesPerUser }. No user names or IDs.', effort:'45 min', tags:['code'] },
+      ]},
+      { label:'Day 5', color:'var(--blue)', title:'Wire all scans together', time:'~1h', tasks:[
+        { title:'Create src/scan/index.ts — runAllScans(conn)', sub:'Calls all 7 scan functions. Runs limits, security, adoption, knowledge in parallel (Promise.all). Runs data quality sequentially per object. Returns AllSignals typed object.', effort:'45 min', tags:['code'] },
+        { title:'Test runAllScans against Dev Edition org', sub:'Should complete without errors in under 3 minutes. Log every signal value to console. Verify no raw data appears in any log.', effort:'20 min', tags:['test'] },
+      ]},
+    ]
+  },
+  'w3-tasks': {
+    sprints: [
+      { label:'Day 1–2', color:'var(--green)', title:'Scoring rubric and engine', time:'~3h', tasks:[
+        { title:'Create src/scoring/rubric.ts — weights, thresholds, benchmarks', sub:'DOMAIN_WEIGHTS object, HARD_BLOCKER_THRESHOLD = 50, INDUSTRY_BENCHMARKS per domain, band thresholds per domain (critical/risk/ok/strong).', effort:'45 min', tags:['code'] },
+        { title:'Create src/scoring/engine.ts — scoreFindings()', sub:'Takes AllSignals. For each domain: apply rubric thresholds → produce 0–100 score. Calculate weighted index. Flag hard blockers. Return ScoredResult with domains[], overallIndex, hardBlockers[].', effort:'90 min', tags:['code'] },
+        { title:'Unit test scoreFindings with synthetic inputs', sub:'Test with: all scores 50 (index ~50), all scores 80 (index ~80), one domain at 30 (hard blocker fires). Verify weights sum to 1.0.', effort:'30 min', tags:['test'] },
+      ]},
+      { label:'Day 3–4', color:'var(--green)', title:'Findings builder', time:'~2h', tasks:[
+        { title:'Create src/scoring/findings-builder.ts', sub:'buildFindings(signals, scores) → Finding[]. Each finding: domain, severity, title (short), description (business language, references specific numbers from signals), evidence (the query result as a string), effortDays, impactScore.', effort:'90 min', tags:['code'] },
+        { title:'Write finding templates for all 7 domains', sub:'At minimum 2 findings per domain (critical and warning bands). Reference signal values in the description strings — e.g. "Email field is blank on [100-completionRate]% of Contact records."', effort:'60 min', tags:['code'] },
+      ]},
+      { label:'Day 5', color:'var(--green)', title:'Validate scoring on your Dev Edition', time:'~1h', tasks:[
+        { title:'Run full scan + scoring against Dev Edition org', sub:'Log all 7 domain scores and the overall index. Do they make sense given what you know about the org? If not, adjust the rubric thresholds — this is expected on first run.', effort:'30 min', tags:['test'] },
+        { title:'Verify all finding strings contain numbers, not just labels', sub:'Every finding description must reference at least one specific number from the signals. "Data quality is low" is not acceptable. "Email completion is 45% — X contacts unreachable" is correct.', effort:'20 min', tags:['test'] },
+      ]},
+    ]
+  },
+  'w4-tasks': {
+    sprints: [
+      { label:'Day 1', color:'var(--amber)', title:'Update V2 HTML template', time:'~2h', tasks:[
+        { title:'Add window.REPORT_DATA fallback to orgpulse-v2.html', sub:'At top of the script block: const REPORT_DATA = window.REPORT_DATA || ACME_SAMPLE_DATA. Replace all hardcoded Acme Corp values with REPORT_DATA.field references throughout.', effort:'90 min', tags:['code'] },
+        { title:'Test template with ACME_SAMPLE_DATA still hardcoded', sub:'Open in browser. Verify all sections render. Check interactive elements (domain expanders, ROI slider, Flex Credit grid). Fix any JS errors.', effort:'20 min', tags:['test'] },
+      ]},
+      { label:'Day 2', color:'var(--amber)', title:'Build report JSON schema', time:'~2h', tasks:[
+        { title:'Create src/report/json-schema.ts — ReportData type', sub:'Full TypeScript interface matching every field the V2 template reads from window.REPORT_DATA. Include: reportMeta, orgProfile, index, costOfInaction, flexCredit, domains[], roadmap[], investmentOptions[].', effort:'60 min', tags:['code'] },
+        { title:'Create buildReportData(orgId, signals, scores) function', sub:'Maps ScoredResult + AllSignals → ReportData. Computes waste figures (inactive users × £800, case volume for flex credit). Sets pilotReadyDate (assessmentDate + 16 weeks).', effort:'60 min', tags:['code'] },
+      ]},
+      { label:'Day 3', color:'var(--amber)', title:'Build report generator + storage', time:'~2h', tasks:[
+        { title:'Create src/report/generator.ts — generateReport()', sub:'Reads orgpulse-v2.html template. Injects a script tag with window.REPORT_DATA = JSON.stringify(data) before the closing head tag. Returns complete HTML string.', effort:'30 min', tags:['code'] },
+        { title:'Create src/report/storage.ts — uploadReport()', sub:'Supabase storage.from("reports").upload(filename, html). createSignedUrl(filename, 90 days). Returns { signedUrl, filename }.', effort:'45 min', tags:['code'] },
+        { title:'Create Supabase Storage bucket "reports"', sub:'Supabase Dashboard → Storage → New Bucket → name: reports → Private (not public). Test upload via Node.js.', effort:'10 min', tags:['setup'] },
+      ]},
+      { label:'Day 4–5', color:'var(--amber)', title:'Test full report generation', time:'~2h', tasks:[
+        { title:'Run generateReport with real scan data from Dev Edition', sub:'Write a quick test script that calls runAllScans → scoreFindings → buildReportData → generateReport → write to reports/test.html locally.', effort:'30 min', tags:['test'] },
+        { title:'Open reports/test.html in Chrome — full QC check', sub:'Cover page correct? Domain scores match? Flex Credit grid calculates? ROI slider works? Appendix SOQL queries shown? No "Acme Corp" text remaining?', effort:'20 min', tags:['test'] },
+        { title:'Test uploadReport → verify signed URL opens correctly', sub:'Upload reports/test.html to Supabase Storage. Open the signed URL in an incognito window. Confirm report displays correctly without any local assets.', effort:'15 min', tags:['test'] },
+      ]},
+    ]
+  },
+  'w5-tasks': {
+    sprints: [
+      { label:'Day 1–2', color:'var(--blue)', title:'Build run-scan.ts pipeline script', time:'~2h', tasks:[
+        { title:'Create scripts/run-scan.ts — full pipeline', sub:'connect → runAllScans → scoreFindings → buildReportData → generateReport → uploadReport → saveResults → log signed URL. Uses getConnection(orgId) to load tokens.', effort:'60 min', tags:['code'] },
+        { title:'Create src/db/queries.ts — saveResults()', sub:'Insert scan_run row, insert scan_domain_scores rows (one per domain), insert scan_findings rows. Update scan_run status to "complete".', effort:'45 min', tags:['code'] },
+      ]},
+      { label:'Day 2–3', color:'var(--blue)', title:'Error handling + resilience', time:'~2h', tasks:[
+        { title:'Wrap each scan function in try/catch', sub:'If a scan fails (permissions, API error, SOQL error), log the error and return a default "unable to scan" signal rather than crashing the whole pipeline. A partial report is better than no report.', effort:'45 min', tags:['code'] },
+        { title:'Add scan_run status updates at each step', sub:'Update scan_run.status to "running" → "scoring" → "generating" → "complete" | "failed" as the pipeline progresses. Useful for debugging and future dashboard.', effort:'30 min', tags:['code'] },
+        { title:'Validate ReportData before generating HTML', sub:'Check that all required fields are present in the JSON before calling generateReport. If any are missing, fill with safe defaults rather than crashing.', effort:'20 min', tags:['code'] },
+      ]},
+      { label:'Day 4–5', color:'var(--blue)', title:'Test complete pipeline', time:'~1.5h', tasks:[
+        { title:'Run npm run scan -- --org [yourOrgId] end-to-end', sub:'Should log: Connecting → Scanning → Scoring → Generating → Uploading → Done! + URL. Total time should be under 4 minutes.', effort:'10 min', tags:['test'] },
+        { title:'Verify all DB rows created correctly', sub:'Check Supabase Table Editor: connected_orgs has your org, scan_runs has one row with status=complete, scan_domain_scores has 7 rows, scan_findings has multiple rows.', effort:'10 min', tags:['test'] },
+        { title:'Open the signed URL — final report check', sub:'Open in incognito. Check every section. Verify interactive elements. This is the exact experience your client will have.', effort:'15 min', tags:['test'] },
+      ]},
+    ]
+  },
+  'w6-tasks': {
+    sprints: [
+      { label:'Day 1–2', color:'var(--violet)', title:'Edge case testing', time:'~2h', tasks:[
+        { title:'Test with zero Knowledge articles', sub:'Create a temp Salesforce Developer org with no Knowledge setup. Run the scan. Does the Knowledge domain score correctly as a hard blocker? Does the report section render with zero articles?', effort:'45 min', tags:['test'] },
+        { title:'Test with all users active (adoption > 85%)', sub:'Does the adoption domain score in the "good" band? Does the benchmark bar render correctly when score is above median?', effort:'20 min', tags:['test'] },
+        { title:'Test Security Health Check at maximum score (100)', sub:'Does the security section correctly show "Healthy" status? Does nothing break when there are zero failing checks?', effort:'20 min', tags:['test'] },
+        { title:'Test with SOQL query failure (revoke a permission temporarily)', sub:'Remove api scope from your Connected App. Run a scan. Does the pipeline degrade gracefully with the partial data it can collect?', effort:'30 min', tags:['test'] },
+      ]},
+      { label:'Day 2–3', color:'var(--violet)', title:'Report QC checklist', time:'~1h', tasks:[
+        { title:'Run 10-point QC checklist 3 times with different orgs', sub:'Cover page correct, waste figures calculated not estimated, Flex Credit grid calculates, ROI slider defaults to Option B, no sample data remaining, all 7 domains render, SOQL queries match what was actually run, signed URL opens in incognito without errors.', effort:'30 min', tags:['test'] },
+      ]},
+      { label:'Day 3–5', color:'var(--violet)', title:'Documentation + runbook', time:'~1h', tasks:[
+        { title:'Update CLAUDE.md with any new decisions or patterns', sub:'Add anything that changed during build. Especially: any edge cases discovered, any rubric adjustments made, any scan functions that behave unexpectedly.', effort:'20 min', tags:['docs'] },
+        { title:'Write the pre-delivery checklist in a README', sub:'The exact steps you run before sending a report to a client: start ngrok, update callback URL, verify connection, run scan, QC report, upload, test signed URL in incognito, then send.', effort:'20 min', tags:['docs'] },
+      ]},
+    ]
+  },
+  'w7-tasks': {
+    sprints: [
+      { label:'Day 1', color:'var(--violet)', title:'Client access setup', time:'~1h', tasks:[
+        { title:'Start ngrok fresh — copy new URL', sub:'ngrok http 3000 → copy https://xxx.ngrok-free.app', effort:'2 min', tags:['delivery'] },
+        { title:'Update Connected App callback URL to new ngrok URL', sub:'Salesforce Setup → App Manager → Edit → save → wait 2 min', effort:'5 min', tags:['delivery'] },
+        { title:'Send auth link to client with 3-sentence brief', sub:'"Click this link, log in with your Salesforce admin credentials, approve the read-only access. Takes 60 seconds. Once you see a confirmation page, you\'re done." → send https://xxx.ngrok-free.app/auth/start', effort:'5 min', tags:['delivery'] },
+        { title:'Confirm connection after client authorises', sub:'Run npm run test-conn. If it returns a user count from their org — you\'re in.', effort:'2 min', tags:['delivery'] },
+      ]},
+      { label:'Day 1–2', color:'var(--violet)', title:'Run the scan + build report', time:'~2h', tasks:[
+        { title:'Run npm run scan -- --org [clientOrgId]', sub:'Full pipeline. Takes 2–4 minutes. Log everything to a file for your records.', effort:'5 min', tags:['delivery'] },
+        { title:'Review raw scores and findings', sub:'Do the scores make sense for this org? Are any findings unexpected? Are the waste figures defensible (can you show the SOQL that produced each number)?', effort:'20 min', tags:['delivery'] },
+        { title:'Add stakeholder interview context to the report', sub:'Open the reportData JSON. Add the qualitative context from your interviews: the CTO\'s timeline pressure, the admin\'s specific pain points, the Agentforce use case they mentioned. Edit the executiveSummary and domain summaries.', effort:'30 min', tags:['delivery'] },
+        { title:'Set the pilotReadyDate field', sub:'assessmentDate + 16 weeks (or 12 if their org is in better shape than average). Make it a specific named month.', effort:'2 min', tags:['delivery'] },
+        { title:'Re-generate report and run QC checklist', sub:'Regenerate with the updated JSON. Open in incognito. Run the full 10-point QC check.', effort:'20 min', tags:['delivery'] },
+      ]},
+      { label:'Day 2', color:'var(--violet)', title:'Deliver and run readout', time:'~2h', tasks:[
+        { title:'Upload final report to Supabase Storage, get signed URL', sub:'npm run scan handles this — or upload manually if you edited the JSON after the pipeline ran.', effort:'5 min', tags:['delivery'] },
+        { title:'Send pre-readout email with signed URL', sub:'24 hours before the call. Include the headline score in the email subject. One sentence on the verdict.', effort:'10 min', tags:['delivery'] },
+        { title:'Run the 60-minute readout call', sub:'Minutes 0–5: confirm headline number. 5–20: walk cost of inaction. 20–35: hard blockers. 35–45: ROI calculator live. 45–60: close with binary option.', effort:'60 min', tags:['delivery'] },
+        { title:'Send follow-up email within 2 hours', sub:'Summary of what you agreed, next step, specific date for SOW/proposal/feedback form.', effort:'15 min', tags:['delivery'] },
+        { title:'Send feedback form', sub:'5 questions: score surprise, most useful section, least useful, would pay, what price. This is non-negotiable for a pilot — it\'s your product research.', effort:'5 min', tags:['delivery'] },
+        { title:'Start "what I rebuilt manually" log', sub:'Every manual step in this delivery goes on the list. This becomes your Phase 2 build backlog.', effort:'10 min', tags:['delivery'] },
+      ]},
+    ]
+  },
+}
+
+// ── Render task sprints ────────────────────────────────────────
+let totalTasks = 0
+let doneTasks = 0
+
+Object.entries(weeks).forEach(([sectionId, weekData]) => {
+  const container = document.getElementById(sectionId)
+  if (!container) return
+
+  weekData.sprints.forEach((sprint, si) => {
+    const sprintEl = document.createElement('div')
+    sprintEl.className = 'sprint'
+    const sprintId = `${sectionId}-s${si}`
+
+    sprintEl.innerHTML = `
+      <div class="sprint-hdr" onclick="toggleSprint('${sprintId}')">
+        <span class="sprint-label" style="color:${sprint.color}">${sprint.label}</span>
+        <span class="sprint-title">${sprint.title}</span>
+        <span class="sprint-time">${sprint.time}</span>
+        <svg class="sprint-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="sprint-body" id="${sprintId}-body">
+        ${sprint.tasks.map((t, ti) => {
+          const taskId = `task-${sectionId}-s${si}-t${ti}`
+          totalTasks++
+          return `
+            <div class="task">
+              <div class="task-cb" id="${taskId}" onclick="tickTask('${taskId}')"></div>
+              <div class="task-content">
+                <div class="task-title">${t.title}</div>
+                <div class="task-sub">${t.sub}</div>
+                <div class="task-meta">
+                  ${t.tags.map(tag => `<span class="tag ${tag === 'code' ? 'tg' : tag === 'test' ? 'tb' : tag === 'setup' ? 'ta' : tag === 'salesforce' ? 'tv' : tag === 'delivery' ? 'tr' : 'tgr'}">${tag}</span>`).join('')}
+                </div>
+              </div>
+              <span class="task-effort">${t.effort}</span>
+            </div>`
+        }).join('')}
+      </div>`
+
+    container.appendChild(sprintEl)
+  })
+})
+
+function toggleSprint(id) {
+  const sprint = document.getElementById(id + '-body').closest('.sprint')
+  sprint.classList.toggle('open')
+}
+
+function tickTask(id) {
+  const cb = document.getElementById(id)
+  const wasDone = cb.classList.toggle('done')
+  if (wasDone) doneTasks++; else doneTasks--
+  document.getElementById('prog-label').textContent = `${doneTasks} / ${totalTasks} tasks done`
+  document.getElementById('prog-fill').style.width = `${(doneTasks / totalTasks) * 100}%`
+}
+</script>
+</body>
+</html>
