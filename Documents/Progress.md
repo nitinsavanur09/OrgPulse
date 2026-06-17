@@ -10,9 +10,9 @@
 
 ## Current State
 
-**Active phase:** Phase 1 — Infrastructure & OAuth
-**Last session:** 16 June 2026
-**Next task:** P1.1 (manual) — complete external service setup, then run end-to-end OAuth test (P1.5)
+**Active phase:** Phase 3 — Scoring Engine
+**Last session:** 17 June 2026
+**Next task:** P3.1 — `src/scoring/rubric.ts` (domain weights, hard blocker threshold, band definitions, industry benchmarks)
 
 ---
 
@@ -20,9 +20,9 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| Phase 1 — Infrastructure & OAuth | 🔄 In progress | Code complete; awaiting P1.1 manual steps + P1.5 live test |
-| Phase 2 — Scan Tools | 🔲 Not started | |
-| Phase 3 — Scoring Engine | 🔲 Not started | |
+| Phase 1 — Infrastructure & OAuth | ✅ Complete | OAuth live, `npm run test-conn` passes |
+| Phase 2 — Scan Tools | ✅ Complete | All 7 domains pass; `runAllScans()` gate passed |
+| Phase 3 — Scoring Engine | 🔄 In progress | |
 | Phase 4 — Report Generator | 🔲 Not started | |
 | Phase 5 — Full Pipeline | 🔲 Not started | |
 | Phase 6 — Hardening | 🔲 Not started | |
@@ -31,6 +31,20 @@
 ---
 
 ## Completed Tasks
+
+### Phase 2
+
+- [x] **P2.1** — `src/scan/config.ts` — `ScanConfig`, `ObjectScanConfig`, `DEFAULT_CONFIG`, `USE_CASE_OBJECTS`, `loadConfig()`
+- [x] **P2.1** — `src/scan/types.ts` — all signal interfaces + `AllSignals`
+- [x] **P2.2** — `src/scan/limits.ts` — Domain 7: Platform Limits via `conn.limits()`
+- [x] **P2.3** — `src/scan/security.ts` — Domain 3: Security Health Check REST endpoint (fallback for Dev Edition)
+- [x] **P2.4** — `src/scan/data-quality.ts` — Domain 1: `scanFieldCompleteness` + `scanDuplicateRate`, both config-driven
+- [x] **P2.5** — `src/scan/automation.ts` — Domain 2: `FlowVersionView` (fallback to `Flow`), `ApexOrgWideCoverage`, `ProcessDefinition` (isolated try/catch)
+- [x] **P2.6** — `src/scan/knowledge.ts` — Domain 4: `scanKnowledge` + `scanCaseVolume`
+- [x] **P2.7** — `src/scan/metadata.ts` — Domain 5: `CustomField` count + `InstalledSubscriberPackage` count
+- [x] **P2.8** — `src/scan/adoption.ts` — Domain 6: `LoginHistory` + `Task` counts
+- [x] **P2.9** — `src/scan/index.ts` — Orchestrator: Phase A parallel / Phase B per-object / Phase C Tooling API
+- [x] **Smoke test** — `scripts/test-scan.ts` — `runAllScans()` gate confirmed against live Dev Edition org
 
 ### Phase 1
 
@@ -42,47 +56,18 @@
 - [x] **P1.5** — `scripts/test-connection.ts` — smoke test: `COUNT(Id) FROM User WHERE IsActive = true`
 - [x] **SQL** — `scripts/setup-db.sql` — full Supabase schema (5 tables including optional `scan_configs`)
 - [x] `npm install` — all dependencies installed, `tsc --noEmit` passes clean
+- [x] **P1.1 (partial)** — Supabase project created; URL + Secret key in `.env`
+- [x] **P1.1 (partial)** — Salesforce External Client App created (Dev Edition uses External Client Apps, not Connected Apps)
+  - Scopes added: "Manage user data via APIs" (`api`) + "Perform requests at any time" (`refresh_token, offline_access`)
+  - Note: "Access the Salesforce API Platform" (`sfap_api`) intentionally NOT added — that is for Agentforce AI Platform APIs (Phase 8 only)
 
 ---
 
 ## In Progress
 
-**P1.1 — External services setup (manual steps — you must do these):**
+**P3.1 — Next task: `src/scoring/rubric.ts`**
 
-1. **Salesforce Developer Edition** — sign up at `developer.salesforce.com/signup` (takes 5–10 min to activate)
-2. **Supabase project** — create at `supabase.com/dashboard`, copy Project URL + Secret key into `.env`
-   - Enable Vault: Database → Vault → Enable
-   - Run `scripts/setup-db.sql` in SQL Editor
-   - Create Storage bucket named `reports` — set to **Private**
-3. **Salesforce Connected App** — Setup → Apps → App Manager → New Connected App
-   - Enable OAuth, scopes: `api`, `refresh_token`, `offline_access`
-   - Callback URL: `http://localhost:3000/auth/callback` (update to ngrok URL before testing)
-   - Copy Consumer Key → `SF_CLIENT_ID` in `.env`, Consumer Secret → `SF_CLIENT_SECRET` in `.env`
-4. **ngrok** — install from `ngrok.com/download`, authenticate: `ngrok config add-authtoken YOUR_TOKEN`
-
-**P1.5 — End-to-end test (after P1.1):**
-
-```bash
-# 1. Start ngrok, copy the URL it gives you
-ngrok http 3000
-
-# 2. Update Connected App callback URL in Salesforce to:
-#    https://xxx.ngrok-free.app/auth/callback
-# 3. Update SF_REDIRECT_URI in .env to match
-
-# 4. Fill in all other .env values (SUPABASE_URL, SUPABASE_SECRET_KEY, SF_CLIENT_ID, SF_CLIENT_SECRET)
-
-# 5. Start the dev server
-npm run dev
-# Should print: 🚀 Server running on port 3000
-
-# 6. Open in browser → log in → approve
-open http://localhost:3000/auth/start
-
-# 7. Run smoke test (in a new terminal)
-npm run test-conn
-# Should print: ✅ Active users in org: N
-```
+Define domain weights, hard blocker threshold (50), scoring band definitions per domain, and IBM IBV 2025–26 industry benchmarks. See `Documents/Implementation.md` P3.1 for the full spec.
 
 ---
 
@@ -90,6 +75,11 @@ npm run test-conn
 
 - **jsforce version:** `Implementation.md` references `^2.0.0` but jsforce never published a v2 stable. Updated to `^3.0.0` (latest stable: 3.10.16). API surface is compatible — all jsforce v3 types compile cleanly.
 - **Token persistence:** Pilot stores tokens in `.tokens.json` (gitignored). This lets `npm run test-conn` work as a separate process from the dev server. Replace with Supabase Vault before multi-client use (Phase 6).
+- **External Client Apps:** Salesforce Dev Edition (Summer '25+) uses External Client Apps instead of Connected Apps. The OAuth 2.0 flow is identical — jsforce config unchanged. Scope labels differ: `api` = "Manage user data via APIs", `refresh_token` = "Perform requests at any time". Do NOT add `sfap_api` ("Access the Salesforce API Platform") — that is for Agentforce AI APIs only.
+- **Security Health Check endpoint:** `/services/data/v59.0/connect/security/health-check` is not available in Dev Edition — returns 404. Safe fallback (zeros) in place. Will return real data on a client org.
+- **ProcessDefinition (Tooling API):** Not supported in Dev Edition. Wrapped in inner try/catch — `legacyAutomationCount` stays 0. Will work on client orgs.
+- **LoginHistory.Status filter:** SOQL does not allow filtering `LoginHistory` on the `Status` field. Removed filter — query counts all login events in last 90 days instead.
+- **KnowledgeArticle excluded from field completeness:** `KnowledgeArticle` object has no `Title`/`Summary` accessible via aggregate SOQL. Removed from `DEFAULT_CONFIG.objects` — Knowledge domain is handled entirely by `src/scan/knowledge.ts`.
 
 ---
 
@@ -99,6 +89,12 @@ npm run test-conn
 |----------|-----------|
 | jsforce `^3.0.0` instead of `^2.0.0` | jsforce skipped v2 stable; v3 is current and type-compatible |
 | Token persistence via `.tokens.json` | `test-conn` runs as a separate process — in-memory global not shared; Vault comes in Phase 6 |
+| External Client App instead of Connected App | Salesforce Dev Edition (Summer '25+) replaced Connected Apps with External Client Apps in the UI; OAuth flow is unchanged |
+| `sfap_api` scope excluded | "Access the Salesforce API Platform" is for Agentforce AI Platform APIs (Phase 8), not standard REST/SOQL access |
+| `FlowVersionView` with `Flow` fallback | `FlowVersionView` has fault-path columns; basic `Flow` object used as fallback with fault-path signals zeroed |
+| `ProcessDefinition` inner try/catch | Not supported in all editions — isolated so it can't bring down the whole automation domain |
+| `KnowledgeArticle` removed from objects config | Not queryable via aggregate SOQL field completeness; handled exclusively by `knowledge.ts` |
+| `LoginHistory` no Status filter | SOQL doesn't allow filtering on `Status` — counts all logins then approximates unique users via ÷3 heuristic |
 
 ---
 
@@ -129,4 +125,4 @@ Claude Code will orient itself and pick up exactly where you left off.
 
 ---
 
-_Last updated: 16 June 2026 — Phase 1 code complete; awaiting manual P1.1 setup_
+_Last updated: 17 June 2026 — Phase 1 and Phase 2 complete; `runAllScans()` gate passed against Dev Edition org. Starting Phase 3 next._
