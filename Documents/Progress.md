@@ -10,9 +10,9 @@
 
 ## Current State
 
-**Active phase:** Phase 3 — Scoring Engine
+**Active phase:** Phase 4 — Report Generator
 **Last session:** 17 June 2026
-**Next task:** P3.1 — `src/scoring/rubric.ts` (domain weights, hard blocker threshold, band definitions, industry benchmarks)
+**Next task:** P4.1 — Update `templates/orgpulse-v2.html` — add `const REPORT_DATA = window.REPORT_DATA || ACME_SAMPLE_DATA` at top of script block, replace all hardcoded Acme Corp values with `REPORT_DATA.field` references
 
 ---
 
@@ -22,7 +22,7 @@
 |-------|--------|-------|
 | Phase 1 — Infrastructure & OAuth | ✅ Complete | OAuth live, `npm run test-conn` passes |
 | Phase 2 — Scan Tools | ✅ Complete | All 7 domains pass; `runAllScans()` gate passed |
-| Phase 3 — Scoring Engine | 🔄 In progress | |
+| Phase 3 — Scoring Engine | ✅ Complete | All 7 domain scorers pass; gate: 57/100 on Dev Edition, 3 expected hard blockers |
 | Phase 4 — Report Generator | 🔲 Not started | |
 | Phase 5 — Full Pipeline | 🔲 Not started | |
 | Phase 6 — Hardening | 🔲 Not started | |
@@ -31,6 +31,13 @@
 ---
 
 ## Completed Tasks
+
+### Phase 3
+
+- [x] **P3.1** — `src/scoring/rubric.ts` — `DOMAIN_WEIGHTS`, `HARD_BLOCKER_THRESHOLD`, `INDUSTRY_BENCHMARKS`, `DomainScore`, `ScoredResult`, `bandScore`, `clamp`
+- [x] **P3.2** — `src/scoring/engine.ts` — 7 private domain scorers + `scoreFindings()` + 7-test inline unit suite (all pass)
+- [x] **P3.3** — `src/scoring/findings-builder.ts` — `Finding` interface + `buildFindings()`, ≥2 findings per domain with specific numbers
+- [x] **P3.4** — `scripts/test-scoring.ts` — Phase 3 gate script; confirmed against Dev Edition: 57/100 index, 3 expected hard blockers (security/knowledge/adoption), 14 findings, all gate checks pass
 
 ### Phase 2
 
@@ -65,9 +72,9 @@
 
 ## In Progress
 
-**P3.1 — Next task: `src/scoring/rubric.ts`**
+**P4.1 — Next task: Update `templates/orgpulse-v2.html`**
 
-Define domain weights, hard blocker threshold (50), scoring band definitions per domain, and IBM IBV 2025–26 industry benchmarks. See `Documents/Implementation.md` P3.1 for the full spec.
+Add `const REPORT_DATA = window.REPORT_DATA || ACME_SAMPLE_DATA` at the top of the `<script>` block. Replace all hardcoded Acme Corp values with `REPORT_DATA.field` references. Test in browser with `ACME_SAMPLE_DATA` active — all sections must render with no JS errors.
 
 ---
 
@@ -95,6 +102,9 @@ Define domain weights, hard blocker threshold (50), scoring band definitions per
 | `ProcessDefinition` inner try/catch | Not supported in all editions — isolated so it can't bring down the whole automation domain |
 | `KnowledgeArticle` removed from objects config | Not queryable via aggregate SOQL field completeness; handled exclusively by `knowledge.ts` |
 | `LoginHistory` no Status filter | SOQL doesn't allow filtering on `Status` — counts all logins then approximates unique users via ÷3 heuristic |
+| Arithmetic deduction model (not band interpolation) | `bandScore` helper is in `rubric.ts` but engine uses start-at-100 deductions per domain — simpler to tune per-domain in field |
+| `ACTIVITY_MEDIAN_PER_90_DAYS = 15` hardcoded in findings-builder | `INDUSTRY_BENCHMARKS.adoption` is a domain score (68/100), not an activity count — using separate constant avoids misleading copy |
+| Security score 0 on Dev Edition is expected | Health check endpoint returns 404; fallback zeros all security signals; score 0 is a hard blocker on Dev Edition only — client orgs return real data |
 
 ---
 
@@ -125,4 +135,4 @@ Claude Code will orient itself and pick up exactly where you left off.
 
 ---
 
-_Last updated: 17 June 2026 — Phase 1 and Phase 2 complete; `runAllScans()` gate passed against Dev Edition org. Starting Phase 3 next._
+_Last updated: 17 June 2026 — Phase 3 complete; `scoreFindings()` + `buildFindings()` gate passed against Dev Edition org (57/100, 3 expected hard blockers). Starting Phase 4 next._
