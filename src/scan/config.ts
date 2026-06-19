@@ -76,7 +76,7 @@ export const USE_CASE_OBJECTS: Record<ScanConfig['agentforceUseCase'], ObjectSca
     },
     {
       tier: 'tier2', apiName: 'Product2', label: 'Product',
-      fields: ['IsActive', 'Family', 'ProductCode'],
+      fields: ['Family', 'ProductCode'],
       checkDuplicates: false, minRecords: 100,
     },
   ],

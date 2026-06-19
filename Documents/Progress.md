@@ -10,9 +10,9 @@
 
 ## Current State
 
-**Active phase:** Phase 5 — Full Pipeline
-**Last session:** 17 June 2026
-**Next task:** P5.1 — `scripts/run-scan.ts` — full pipeline CLI: connect → scan → score → buildReportData → generateReport → uploadReport → saveResults → log signed URL
+**Active phase:** Phase 6 — Hardening
+**Last session:** 19 June 2026
+**Next task:** P6.1 — Edge case testing (zero Knowledge articles, all users active, security at 100, SOQL permission failure, org with no custom objects)
 
 ---
 
@@ -24,13 +24,20 @@
 | Phase 2 — Scan Tools | ✅ Complete | All 7 domains pass; `runAllScans()` gate passed |
 | Phase 3 — Scoring Engine | ✅ Complete | All 7 domain scorers pass; gate: 57/100 on Dev Edition, 3 expected hard blockers |
 | Phase 4 — Report Generator | ✅ Complete | `reports/test.html` generated; score 57/100 from Dev Edition confirmed |
-| Phase 5 — Full Pipeline | 🔲 Not started | |
+| Phase 5 — Full Pipeline | ✅ Complete | 3 clean runs; DB rows confirmed; storage bucket needs creating in Supabase dashboard |
 | Phase 6 — Hardening | 🔲 Not started | |
 | Phase 7 — First Pilot Delivery | 🔲 Not started | |
 
 ---
 
 ## Completed Tasks
+
+### Phase 5
+
+- [x] **P5.1** — `scripts/run-scan.ts` — full pipeline CLI: `--org`, `--use-case`, `--config` flags; always uploads with local fallback; step-by-step logging
+- [x] **P5.2** — `src/db/queries.ts` — `saveResults()` inserts `scan_runs` (1 row), `scan_domain_scores` (7 rows), `scan_findings` (all findings); graceful failure handling per step
+- [x] **P5.3** — Error resilience verified: scan fallbacks confirmed, `buildReportData` zero-guard for `caseVolume.monthlyVolume === 0` confirmed, upload fallback implemented
+- [x] **P5.4** — Three consecutive clean runs: 62/100, 7 domains, 14 findings, DB rows confirmed each run
 
 ### Phase 4
 
@@ -80,13 +87,18 @@
 
 ## In Progress
 
-**Phase 5 next: `scripts/run-scan.ts`**
+**Phase 6 next: P6.1 — Edge case testing**
 
-Wire the full pipeline: `getConnection → runAllScans → scoreFindings → buildReportData → generateReport → uploadReport → saveResults → log URL`. Then P5.2 `src/db/queries.ts` (saveResults), P5.3 error resilience, P5.4 three-run validation.
+See Phase 6 task list in `Implementation.md`. Key scenarios: zero Knowledge articles, all-active adoption, security at 100, SOQL permission failure, no custom objects.
 
 ---
 
 ## Blockers & Notes
+
+- **Supabase Storage bucket missing:** `uploadReport` returns "Bucket not found". The `reports` bucket must be created manually: Supabase Dashboard → Storage → New bucket → name `reports` → Private. Pipeline handles this gracefully (local fallback), but signed URLs won't work until the bucket exists.
+- **`Product2.IsActive` not COUNT-able in SOQL:** Boolean fields can't use `COUNT()` aggregate. Affects `--use-case sales` scan of Product2 — object is skipped via `safe()` fallback. Pre-existing config issue; fix in Phase 6 by changing `IsActive` to a non-boolean field (e.g. `ProductCode`).
+
+
 
 - **jsforce version:** `Implementation.md` references `^2.0.0` but jsforce never published a v2 stable. Updated to `^3.0.0` (latest stable: 3.10.16). API surface is compatible — all jsforce v3 types compile cleanly.
 - **Token persistence:** Pilot stores tokens in `.tokens.json` (gitignored). This lets `npm run test-conn` work as a separate process from the dev server. Replace with Supabase Vault before multi-client use (Phase 6).
@@ -143,4 +155,4 @@ Claude Code will orient itself and pick up exactly where you left off.
 
 ---
 
-_Last updated: 19 June 2026 — Phase 4 complete + v2 schema refactor complete. `client-intake.json` workflow live — no code edits needed per client. `Documents/Calculations.html` and `Documents/Calculations.md` updated: license cost $800/yr → $165/mo × 12, `annualWaste` → `totalVerifiedWaste`, Flex Credit table now shows pre-computed `monthlyCreditCost` and `monthlyNetSaving` per scenario, "Most Likely" tag → "Likely", ROI default fee $30k → $28k, inputs table reflects current `client-intake.json` field names and defaults. Starting Phase 5 next._
+_Last updated: 19 June 2026 — Phase 5 complete. `npm run scan` pipeline wired end-to-end: `getConnection → runAllScans → scoreFindings → buildFindings → buildReportData → generateReport → uploadReport (with local fallback) → saveResults`. Three clean runs confirmed: 62/100, 7 domains, 14 findings. DB rows created each run. Storage bucket missing — needs manual creation in Supabase dashboard before signed URLs work. Starting Phase 6 next._
