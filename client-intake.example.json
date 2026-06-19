@@ -1,0 +1,16 @@
+{
+  "_instructions": "Copy this file to client-intake.json, fill in the fields, then run npm run test-report. client-intake.json is gitignored.",
+
+  "orgName":                    "Acme Corp",
+  "licenseCount":               180,
+  "clouds":                     ["Sales Cloud", "Service Cloud"],
+
+  "licenseUnitCostMonthly":     165,
+  "packageWaste":               6000,
+  "abandonedPackageCount":      4,
+
+  "useCase":                    "service",
+  "handlingCostPerTransaction": 18,
+  "handlingCostLabel":          "per case",
+  "monthlyTransactionVolume":   null
+}

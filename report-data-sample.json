@@ -1,0 +1,110 @@
+{
+  "_comment": "OrgPulse sample data — Acme Corp fictional org. Used as window.SAMPLE_DATA fallback in the template. Never send this to a real client.",
+
+  "meta": {
+    "orgName": "Acme Corp",
+    "orgId": "00D000000000001AAA",
+    "licenseCount": 180,
+    "clouds": ["Sales Cloud", "Service Cloud"],
+    "scanDate": "2026-05-20",
+    "reportVersion": "v2"
+  },
+
+  "intake": {
+    "useCase": "service",
+    "useCaseLabel": "Service Cloud — case deflection",
+    "licenseUnitCostMonthly": 165,
+    "handlingCostPerTransaction": 18,
+    "handlingCostLabel": "per case",
+    "deflectionBenchmark": 0.40,
+    "deflectionBenchmarkSource": "Salesforce State of Service 2025, p.14"
+  },
+
+  "scanMetrics": {
+    "totalUsersLicensed": 180,
+    "inactiveUserCount": 23,
+    "inactiveUserCountSource": "UserLogin COUNT where logins = 0 in last 90 days",
+    "abandonedPackageCount": 4,
+    "abandonedPackageCost": 6000,
+    "contactEmailCompletionRate": 0.66,
+    "contactEmailMissingCount": 142844,
+    "duplicateRate": 0.11,
+    "activeFlowCount": 34,
+    "flowsWithNoFaultPath": 14,
+    "conflictingFlowObjects": ["Account"],
+    "processBuilderActiveCount": 2,
+    "apexCoveragePercent": 68,
+    "securityHealthCheckScore": 72,
+    "knowledgeArticleCount": 12,
+    "knowledgeDataCategoriesConfigured": false,
+    "monthlyTransactionVolume": 2840,
+    "monthlyTransactionVolumeObject": "Case",
+    "monthlyTransactionVolumeSource": "Case COUNT GROUP BY CALENDAR_MONTH(CreatedDate) last 90 days ÷ 3",
+    "unusedCustomFieldCount": 487,
+    "apiDailyUsagePercent": 38,
+    "loginRateLast90Days": 0.79
+  },
+
+  "aiReadinessIndex": 47,
+  "hardBlockerCount": 2,
+  "hardBlockerDomains": ["data_quality", "knowledge"],
+  "assessmentDate": "20 May 2026",
+  "targetScore": 82,
+  "verdict": "Conditionally Ready",
+  "verdictColor": "#d4830a",
+  "verdictSub": "Agentforce deployable in narrow use case only",
+  "fixTimeline": "12–16 weeks",
+  "riskCount": 3,
+  "goodCount": 2,
+  "headlineFinding": "Acme Corp has a solid Salesforce investment — Sales Cloud and Service Cloud are well configured at the process level. The scan found <strong>$51,540 in verified annual waste</strong> (23 inactive users × $165/user/month × 12, plus 4 abandoned AppExchange packages) and 2 hard blockers that must be resolved before any Agentforce deployment. Every blocker on this list is fixable. Complete the roadmap in Section 5 and your index moves from 47 to 82+ in 12–16 weeks. <strong>Start remediation in June 2026 and a monitored Service agent pilot can be live by September 2026.</strong>",
+
+  "costOfInaction": {
+    "licenseWaste": 45540,
+    "licenseWasteFormula": "23 inactive users × $165/user/month × 12 = $45,540",
+    "licenseUnitCostSource": "Salesforce list price — Sales Cloud Professional Edition, June 2026",
+    "packageWaste": 6000,
+    "packageWasteNote": "4 abandoned AppExchange packages — verified from InstalledPackage metadata",
+    "totalVerifiedWaste": 51540
+  },
+
+  "valueProjection": {
+    "available": true,
+    "transactionVolume": 2840,
+    "transactionVolumeSource": "Case COUNT last 90 days ÷ 3",
+    "handlingCostPerTransaction": 18,
+    "deflectionRate": 0.40,
+    "deflectionRateSource": "Salesforce State of Service 2025, p.14",
+    "deflectedTransactionsPerMonth": 1136,
+    "annualCapacityValueDollars": 245376,
+    "currentReadinessCapture": 0.15,
+    "flexCreditCostPerTransaction": 0.45,
+    "flexCreditScenarios": [
+      { "label": "30% deflection", "rate": 0.30, "tag": "Conservative", "deflectedCount": 852,  "monthlyCreditCost": 383, "monthlyNetSaving": 15953 },
+      { "label": "40% deflection", "rate": 0.40, "tag": "Likely",       "deflectedCount": 1136, "monthlyCreditCost": 511, "monthlyNetSaving": 20937 },
+      { "label": "55% deflection", "rate": 0.55, "tag": "Optimistic",   "deflectedCount": 1562, "monthlyCreditCost": 703, "monthlyNetSaving": 28413 }
+    ]
+  },
+
+  "roadmap": [
+    { "phase": "quick",    "owner": "Admin",    "text": "Deactivate 23 inactive users — recovers $45,540/yr in licence spend immediately",                         "effort": "0.5 days · Priority 1 — ROI on day 1" },
+    { "phase": "quick",    "owner": "Admin",    "text": "Remove 4 abandoned AppExchange packages — Conga legacy, MapAnything, survey tool, CTI adapter",            "effort": "0.5 days · Recovers $6,000/yr in subscriptions" },
+    { "phase": "quick",    "owner": "Admin",    "text": "Enable duplicate rules on Contact and Account — prevents new duplicates entering",                          "effort": "1 day · Prerequisite for data quality fix" },
+    { "phase": "quick",    "owner": "Admin",    "text": "Add fault paths to 14 active flows — prevents silent agent failures immediately",                           "effort": "2 days · Unblocks automation domain" },
+    { "phase": "medium",   "owner": "Dev",      "text": "Email enrichment + required field validation on Contact — lifts Data Quality score from 38 → 68+",         "effort": "5 days · Resolves Hard Blocker #1" },
+    { "phase": "medium",   "owner": "Dev",      "text": "Consolidate 3 conflicting Account flows into 1 governed flow — after fault paths added in Week 1",         "effort": "4 days · Resolves Automation blocker" },
+    { "phase": "medium",   "owner": "Admin",    "text": "Merge 4,200 duplicate Contact records — reduces duplicate rate from 11% → 3%",                            "effort": "3 days · After duplicate rules enabled" },
+    { "phase": "medium",   "owner": "Dev",      "text": "Build Knowledge base — 40 articles covering top 20 case reasons (Billing first)",                          "effort": "8 days · Prerequisite for Service agent" },
+    { "phase": "strategic","owner": "Architect","text": "Design agent user permission set — least-privilege, scoped to Service use case only",                       "effort": "3 days · Resolves security blocker" },
+    { "phase": "strategic","owner": "Architect","text": "Configure Agentforce Topics and Actions — case deflection for Billing, Technical, Account categories",     "effort": "5 days · First pilot configuration" },
+    { "phase": "strategic","owner": "Dev",      "text": "Retire 340 unused custom fields via governance process — lifts Metadata score 61 → 78+",                  "effort": "4 days · Can run in parallel" },
+    { "phase": "strategic","owner": "Architect","text": "Monitored pilot — deploy Service agent to 10% of inbound Billing case volume",                             "effort": "September 2026 · Measure and iterate" }
+  ],
+
+  "investmentOptions": {
+    "pilotReadyDate": "September 2026",
+    "optionA": { "label": "Internal team",        "internalDays": 35, "timelineMonths": 5  },
+    "optionB": { "label": "Yukti Global delivers","feeRangeLow": 28000, "feeRangeHigh": 35000, "timelineWeeks": 16 },
+    "optionC": { "label": "Hybrid model",          "feeRangeLow": 15000, "feeRangeHigh": 18000, "timelineWeeks": 20 },
+    "monitoringRetainerMonthly": 3000
+  }
+}

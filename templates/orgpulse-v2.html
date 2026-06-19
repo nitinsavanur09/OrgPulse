@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrgPulse — AI Readiness Assessment V2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f7f5f0;--bg2:#ffffff;--bg3:#f0ede6;--bg4:#e8e4db;
+  --border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.14);
+  --text:#1a1814;--muted:#6b6559;--dim:#b0a898;--ink:#2d2926;
+  --red:#c0392b;--red-dim:rgba(192,57,43,0.08);--red-border:rgba(192,57,43,0.2);
+  --amber:#d4830a;--amber-dim:rgba(212,131,10,0.08);--amber-border:rgba(212,131,10,0.2);
+  --green:#1a7a4a;--green-dim:rgba(26,122,74,0.08);--green-border:rgba(26,122,74,0.2);
+  --blue:#1a4fa0;--blue-dim:rgba(26,79,160,0.07);--blue-border:rgba(26,79,160,0.2);
+  --mono:'DM Mono',monospace;--display:'Fraunces',serif;--sans:'Instrument Sans',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.6}
+
+/* COVER */
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:48px 56px;background:var(--ink);position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%)}
+.cover::after{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%)}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start}
+.cover-logo{font-family:var(--display);font-size:18px;color:rgba(255,255,255,0.9);font-weight:400;letter-spacing:-.02em}
+.cover-date{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:.06em}
+.cover-mid{position:relative;z-index:1;padding:60px 0 40px}
+.cover-label{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
+.cover-title{font-family:var(--display);font-size:clamp(42px,6vw,64px);font-weight:300;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:8px}
+.cover-title em{font-style:italic;color:rgba(255,255,255,0.55)}
+.cover-client{font-family:var(--sans);font-size:18px;color:rgba(255,255,255,0.6);font-weight:400;margin-top:16px}
+.cover-score-wrap{display:flex;align-items:flex-end;gap:40px;margin-top:48px}
+.cover-score-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px 32px;display:flex;align-items:center;gap:20px}
+.score-ring{position:relative;width:80px;height:80px;flex-shrink:0}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:24px;font-weight:400;color:#fff}
+.score-box-label{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.score-box-verdict{font-size:15px;font-weight:500}
+.score-box-sub{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px}
+.cover-meta{display:flex;gap:32px}
+.cm-label{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.cm-val{font-size:13px;color:rgba(255,255,255,0.7)}
+.cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(255,255,255,0.08);padding-top:24px}
+.cover-prepared{font-size:12px;color:rgba(255,255,255,0.3)}
+.cover-cta{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:6px}
+
+/* LAYOUT */
+.report{max-width:860px;margin:0 auto;padding:0 40px 80px}
+
+/* SECTIONS */
+.section-break{border-top:1px solid var(--border2);padding-top:56px;margin-top:56px}
+.section-tag{font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-tag::after{content:'';flex:1;height:1px;background:var(--border)}
+.section-title{font-family:var(--display);font-size:28px;font-weight:300;letter-spacing:-.02em;color:var(--text);margin-bottom:6px}
+.section-title em{font-style:italic;color:var(--muted)}
+.section-sub{font-size:14px;color:var(--muted);margin-bottom:32px;max-width:560px;line-height:1.6}
+
+/* CARDS */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px 26px;margin-bottom:12px}
+.card.highlight{border-color:var(--border2);background:linear-gradient(135deg,var(--bg2) 0%,var(--bg3) 100%)}
+.ct{font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:-.01em}
+.cb{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* COI */
+.coi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.coi-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 22px;position:relative;overflow:hidden}
+.coi-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.coi-red::before{background:var(--red)}
+.coi-amber::before{background:var(--amber)}
+.coi-blue::before{background:var(--blue)}
+.coi-num{font-family:var(--display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-.03em;margin-bottom:6px}
+.coi-label{font-size:12px;color:var(--muted);line-height:1.4}
+.coi-sub{font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:6px}
+
+/* DOMAIN SCORES */
+.domain-grid{display:flex;flex-direction:column;gap:8px}
+.domain-row{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .15s}
+.domain-row:hover{border-color:var(--border2)}
+.domain-row.open{border-color:var(--border2)}
+.dr-num{font-family:var(--mono);font-size:12px;color:var(--dim);width:20px;flex-shrink:0}
+.dr-name{font-size:13px;font-weight:500;color:var(--text);flex:1}
+.dr-bar-wrap{width:180px;flex-shrink:0}
+.dr-bar-track{height:5px;background:var(--bg3);border-radius:3px}
+.dr-bar-fill{height:5px;border-radius:3px;transition:width .6s ease}
+.dr-score{font-family:var(--mono);font-size:13px;font-weight:500;width:36px;text-align:right;flex-shrink:0}
+.dr-status{font-size:11px;padding:2px 8px;border-radius:20px;flex-shrink:0}
+.s-blocker{background:var(--red-dim);color:var(--red);border:1px solid var(--red-border)}
+.s-risk{background:var(--amber-dim);color:var(--amber);border:1px solid var(--amber-border)}
+.s-good{background:var(--green-dim);color:var(--green);border:1px solid var(--green-border)}
+.dr-chevron{font-size:16px;color:var(--dim);transition:transform .2s;flex-shrink:0}
+.domain-row.open .dr-chevron{transform:rotate(180deg)}
+.domain-detail{display:none;background:var(--bg3);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;padding:16px 18px;margin-top:-8px;margin-bottom:8px}
+.domain-detail.open{display:block}
+.dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dd-label{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.finding-item{display:flex;gap:8px;font-size:12px;color:var(--muted);padding:5px 0;border-bottom:1px solid var(--border);line-height:1.5}
+.finding-item:last-child{border-bottom:none}
+.fi-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.fi-evidence{font-family:var(--mono);font-size:11px;color:var(--dim);margin-top:2px}
+.bench-label{display:flex;justify-content:space-between;font-size:10px;color:var(--dim);font-family:var(--mono);margin-bottom:3px}
+
+/* ROADMAP */
+.roadmap-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rm-col{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.rm-col-head{padding:14px 16px;border-bottom:1px solid var(--border)}
+.rm-col-title{font-size:12px;font-weight:600;color:var(--text)}
+.rm-col-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.rm-item{padding:10px 16px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:flex-start}
+.rm-item:last-child{border-bottom:none}
+.rm-owner{font-family:var(--mono);font-size:10px;padding:2px 6px;border-radius:4px;flex-shrink:0;margin-top:1px}
+.rm-admin{background:var(--green-dim);color:var(--green)}
+.rm-dev{background:var(--blue-dim);color:var(--blue)}
+.rm-arch{background:rgba(107,101,89,0.1);color:var(--muted)}
+.rm-text{font-size:12px;color:var(--text);line-height:1.5}
+.rm-effort{font-size:11px;color:var(--dim);margin-top:2px}
+
+/* NEXT STEP */
+.next-step-card{background:var(--ink);border-radius:16px;padding:32px 36px;display:flex;justify-content:space-between;align-items:center;gap:32px;margin-top:48px}
+.ns-left{flex:1}
+.ns-label{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.ns-title{font-family:var(--display);font-size:22px;font-weight:300;color:#fff;letter-spacing:-.02em;margin-bottom:8px}
+.ns-body{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;max-width:400px}
+.ns-options{display:flex;flex-direction:column;gap:10px;flex-shrink:0}
+.ns-option{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:14px 18px;min-width:200px}
+.ns-opt-label{font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.ns-opt-name{font-size:13px;font-weight:500;color:#fff;margin-bottom:2px}
+.ns-opt-price{font-family:var(--mono);font-size:13px;color:rgba(255,255,255,0.5)}
+
+/* APPENDIX */
+.appendix-note{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.soql-block{background:var(--ink);border-radius:8px;overflow:hidden;margin-bottom:10px}
+.soql-hdr{padding:8px 14px;background:rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.07);font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.35);display:flex;justify-content:space-between}
+.soql-body{padding:12px 14px;font-family:var(--mono);font-size:11.5px;color:#a6e3a1;line-height:1.7;overflow-x:auto}
+
+/* VALUE ADD BANNER */
+.value-add{background:linear-gradient(135deg,#1a1814 0%,#2d2926 100%);border-radius:12px;padding:24px 28px;margin-bottom:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.va-icon{font-size:20px;margin-bottom:8px}
+.va-title{font-size:12px;font-weight:600;color:rgba(255,255,255,0.85);margin-bottom:4px}
+.va-body{font-size:11px;color:rgba(255,255,255,0.4);line-height:1.5}
+
+/* FLEX CREDIT / ROI */
+.fc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.fc-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;position:relative;overflow:hidden}
+.fc-tag{font-family:var(--mono);font-size:10px;position:absolute;top:12px;right:12px;padding:2px 7px;border-radius:20px}
+.fc-conservative{border-top:3px solid var(--amber)}
+.fc-likely{border-top:3px solid var(--green)}
+.fc-optimistic{border-top:3px solid var(--blue)}
+.roi-slider-wrap{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px}
+.roi-slider-group{display:flex;flex-direction:column;gap:6px}
+.roi-slider-label{font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.06em;text-transform:uppercase}
+.roi-slider-val{font-family:var(--mono);font-size:13px;color:var(--text);font-weight:500}
+input[type=range]{width:200px;accent-color:var(--green);cursor:pointer}
+.roi-output{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+
+/* MISC */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+.kpi-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+.kpi-num{font-family:var(--display);font-size:26px;font-weight:300;letter-spacing:-.03em;line-height:1;margin-bottom:4px}
+.kpi-lbl{font-size:11px;color:var(--muted);line-height:1.4}
+.divider{height:1px;background:var(--border);margin:20px 0}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;padding:2px 7px;border-radius:4px;margin:1px}
+.tg{background:var(--green-dim);color:var(--green)}
+.tr{background:var(--red-dim);color:var(--red)}
+.ta{background:var(--amber-dim);color:var(--amber)}
+.tb{background:var(--blue-dim);color:var(--blue)}
+.v2-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;padding:3px 9px;border-radius:20px;background:var(--green-dim);color:var(--green);border:1px solid var(--green-border);margin-left:8px;vertical-align:middle}
+
+@media print{.cover{page-break-after:always}.section-break{page-break-before:always}.domain-detail{display:block!important}}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-logo">OrgPulse</div>
+    <div class="cover-date" id="cover-date"></div>
+  </div>
+  <div class="cover-mid">
+    <div class="cover-label">Agentforce AI Readiness Assessment</div>
+    <div class="cover-title" id="cover-title"></div>
+    <div class="cover-client" id="cover-client"></div>
+    <div class="cover-score-wrap">
+      <div class="cover-score-box">
+        <div class="score-ring">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6"/>
+            <circle id="score-ring-fill" cx="40" cy="40" r="32" fill="none" stroke="#d4830a" stroke-width="6"
+              stroke-dasharray="201" stroke-dashoffset="107" stroke-linecap="round"/>
+          </svg>
+          <div class="score-ring-num" id="score-ring-num"></div>
+        </div>
+        <div>
+          <div class="score-box-label">AI Readiness Index</div>
+          <div class="score-box-verdict" id="score-verdict"></div>
+          <div class="score-box-sub" id="score-verdict-sub"></div>
+        </div>
+      </div>
+      <div class="cover-meta">
+        <div><div class="cm-label">Hard blockers</div><div class="cm-val" id="meta-blockers"></div></div>
+        <div><div class="cm-label">Annual waste found</div><div class="cm-val" id="meta-waste"></div></div>
+        <div><div class="cm-label">Fix to reach 80+</div><div class="cm-val" id="meta-fix"></div></div>
+        <div><div class="cm-label">Pilot agent live by</div><div class="cm-val" id="meta-pilot"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-prepared">Prepared by OrgPulse · Confidential · Not for external distribution</div>
+    <div class="cover-cta">↓ Scroll to read the full assessment</div>
+  </div>
+</div>
+
+<div class="report">
+
+  <!-- WHAT SETS THIS APART -->
+  <div class="section-break" style="border-top:none;padding-top:48px;margin-top:0">
+    <div class="value-add">
+      <div><div class="va-icon">💰</div><div class="va-title">Waste calculated, not estimated</div><div class="va-body">Every $ figure is derived directly from scan data — inactive users × license cost, abandoned package subscriptions. No guesswork.</div></div>
+      <div><div class="va-icon">🤖</div><div class="va-title">Agentforce Flex Credit model</div><div class="va-body">Projected monthly running cost at 3 deflection scenarios — the number your CFO needs before approving AI budget.</div></div>
+      <div><div class="va-icon">📅</div><div class="va-title">A specific go-live date</div><div class="va-body">Not a vague "12–16 week timeline" — a named month when a monitored pilot agent can be live, based on your roadmap.</div></div>
+      <div><div class="va-icon">📊</div><div class="va-title">Industry benchmark comparison</div><div class="va-body">How you score against 150–300 user Salesforce orgs in your sector — so you know exactly where you stand.</div></div>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 1: EXECUTIVE SUMMARY ══ -->
+  <div class="section-break">
+    <div class="section-tag">Section 1 · Executive Summary</div>
+    <div class="section-title">What we found, and what it <em>costs you.</em></div>
+    <div class="section-sub">Three business-impact numbers before a single technical finding. These figures are calculated directly from your scan data — not estimated.</div>
+
+    <div class="coi-grid" id="coi-grid"></div>
+
+    <div class="card highlight" style="margin-bottom:24px">
+      <div class="ct">The headline finding in plain English</div>
+      <div class="cb" id="headline-finding"></div>
+    </div>
+
+    <div class="kpi-row" id="kpi-row"></div>
+  </div>
+
+  <!-- ══ SECTION 2: AI READINESS INDEX ══ -->
+  <div class="section-break">
+    <div class="section-tag">Section 2 · AI Readiness Index</div>
+    <div class="section-title">Your score across <em>7 domains.</em></div>
+    <div class="section-sub">Click any domain to expand the findings. The lighter bar shows the industry median for 150–300 user Salesforce orgs (IBM IBV 2025–26 research). Domains scoring below 50 are hard blockers — Agentforce will fail regardless of other scores.</div>
+    <div class="domain-grid" id="domain-grid"></div>
+  </div>
+
+  <!-- ══ SECTION 3: FLEX CREDIT COST MODEL ══ -->
+  <div class="section-break">
+    <div class="section-tag">Section 3 · Agentforce running cost <span class="v2-badge">New in V2</span></div>
+    <div class="section-title">What Agentforce will <em>cost to run.</em></div>
+    <div class="section-sub" id="flex-sub"></div>
+
+    <div class="fc-grid" id="flex-credit-grid"></div>
+
+    <div class="card" style="background:var(--bg3)">
+      <div class="ct">How to read this — and why the economics are strongly positive</div>
+      <div class="cb" id="flex-economics"></div>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 4: AGENTFORCE VALUE ══ -->
+  <div class="section-break">
+    <div class="section-tag">Section 4 · What Agentforce could deliver</div>
+    <div class="section-title">The value at stake once <em>you're ready.</em></div>
+    <div class="section-sub">Calculated from your actual case volume and handling cost — not industry averages. Every number below is derived from data in your Salesforce org or confirmed in your stakeholder interviews.</div>
+    <div id="agentforce-value-section"></div>
+  </div>
+
+  <!-- ══ SECTION 5: 90-DAY ROADMAP ══ -->
+  <div class="section-break">
+    <div class="section-tag">Section 5 · 90-Day Remediation Roadmap</div>
+    <div class="section-title">What to fix, in what <em>order.</em></div>
+    <div class="section-sub" id="roadmap-sub"></div>
+
+    <div class="roadmap-cols" id="roadmap-cols"></div>
+
+    <div class="card" style="margin-top:16px;background:var(--bg3)">
+      <div class="ct">Projected index after roadmap completion</div>
+      <div style="display:flex;align-items:center;gap:20px;margin-top:8px">
+        <div style="flex:1">
+          <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:4px">
+            <span id="roadmap-current-label"></span>
+            <span id="roadmap-target-label"></span>
+          </div>
+          <div style="height:8px;background:var(--bg4);border-radius:4px;overflow:hidden">
+            <div id="roadmap-current-bar" style="height:8px;background:#d4830a;border-radius:4px"></div>
+          </div>
+          <div style="height:8px;background:var(--bg4);border-radius:4px;overflow:hidden;margin-top:4px">
+            <div id="roadmap-target-bar" style="height:8px;background:var(--green);border-radius:4px"></div>
+          </div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div id="roadmap-improvement" style="font-family:var(--display);font-size:28px;font-weight:300;color:var(--green);letter-spacing:-.03em"></div>
+          <div style="font-size:11px;color:var(--muted)">Index improvement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 6: INVESTMENT OPTIONS + ROI CALCULATOR ══ -->
+  <div class="section-break">
+    <div class="section-tag">Section 6 · Investment options</div>
+    <div class="section-title">Three ways to get to <em>deployment-ready.</em></div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px" id="investment-options"></div>
+
+    <div class="card" style="border-color:var(--border2)">
+      <div class="ct">ROI payback calculator <span class="v2-badge">Interactive</span></div>
+      <div class="cb" id="roi-card-body" style="margin-bottom:16px"></div>
+      <div class="roi-slider-wrap">
+        <div class="roi-slider-group">
+          <div class="roi-slider-label">Engagement fee</div>
+          <input type="range" id="fee-slider" min="15000" max="35000" step="1000" oninput="updateROI()">
+          <div class="roi-slider-val" id="fee-val"></div>
+        </div>
+        <div class="roi-slider-group">
+          <div class="roi-slider-label">Annual Agentforce value (case deflection)</div>
+          <input type="range" id="val-slider" min="50000" max="300000" step="5000" oninput="updateROI()">
+          <div class="roi-slider-val" id="val-val"></div>
+        </div>
+      </div>
+      <div class="roi-output" id="roi-output"></div>
+      <div id="roi-disclaimer" style="margin-top:12px;padding:10px 14px;background:var(--bg3);border-radius:6px;font-family:var(--mono);font-size:10px;color:var(--dim);line-height:1.6"></div>
+    </div>
+  </div>
+
+  <!-- NEXT STEP -->
+  <div class="next-step-card">
+    <div class="ns-left">
+      <div class="ns-label">Recommended next step</div>
+      <div class="ns-title">Let's agree on a path forward.</div>
+      <div class="ns-body" id="next-step-body"></div>
+    </div>
+    <div class="ns-options" id="ns-options"></div>
+  </div>
+
+  <!-- ══ TECHNICAL APPENDIX ══ -->
+  <div class="section-break">
+    <div class="section-tag">Technical Appendix · For Salesforce admin &amp; architect</div>
+    <div class="section-title">Domain findings with <em>evidence.</em></div>
+    <div class="section-sub">Every finding includes the SOQL query or API call that produced it. Your admin can run each query in Developer Console to verify the number independently. All queries are read-only.</div>
+    <div class="appendix-note">ℹ️ This appendix uses only aggregate counts and percentages — no record-level data from your org is included in this report. See OrgPulse data handling policy for full details.</div>
+    <div id="appendix-domains"></div>
+  </div>
+
+</div><!-- /report -->
+
+<script>
+// ─── Sample data (Acme Corp — fictional) ─────────────────────────────────────
+window.SAMPLE_DATA = {
+  meta: { orgName:'Acme Corp', orgId:'00D000000000001AAA', licenseCount:180,
+          clouds:['Sales Cloud','Service Cloud'], scanDate:'2026-05-20', reportVersion:'v2' },
+  intake: { useCase:'service', useCaseLabel:'Service Cloud — case deflection',
+            licenseUnitCostMonthly:165, handlingCostPerTransaction:18, handlingCostLabel:'per case',
+            deflectionBenchmark:0.40, deflectionBenchmarkSource:'Salesforce State of Service 2025, p.14' },
+  scanMetrics: {
+    totalUsersLicensed:180, inactiveUserCount:23,
+    inactiveUserCountSource:'UserLogin COUNT where logins = 0 in last 90 days',
+    abandonedPackageCount:4, abandonedPackageCost:6000,
+    contactEmailCompletionRate:0.66, contactEmailMissingCount:142844,
+    duplicateRate:0.11, activeFlowCount:34, flowsWithNoFaultPath:14,
+    conflictingFlowObjects:['Account'], processBuilderActiveCount:2,
+    apexCoveragePercent:68, securityHealthCheckScore:72,
+    knowledgeArticleCount:12, knowledgeDataCategoriesConfigured:false,
+    monthlyTransactionVolume:2840, monthlyTransactionVolumeObject:'Case',
+    monthlyTransactionVolumeSource:'Case COUNT last 90 days ÷ 3',
+    unusedCustomFieldCount:487, apiDailyUsagePercent:38, loginRateLast90Days:0.79,
+  },
+  aiReadinessIndex:47, hardBlockerCount:2, hardBlockerDomains:['data_quality','knowledge'],
+  assessmentDate:'20 May 2026', targetScore:82,
+  verdict:'Conditionally Ready', verdictColor:'#d4830a',
+  verdictSub:'Agentforce deployable in narrow use case only',
+  fixTimeline:'12–16 weeks', riskCount:3, goodCount:2,
+  headlineFinding:'Acme Corp has a solid Salesforce investment — Sales Cloud and Service Cloud are well configured at the process level. The scan found <strong>$51,540 in verified annual waste</strong> (23 inactive users × $165/user/month × 12, plus 4 abandoned AppExchange packages) and 2 hard blockers that must be resolved before any Agentforce deployment. Every blocker on this list is fixable. Complete the roadmap in Section 5 and your index moves from 47 to 82+ in 12–16 weeks. <strong>Start remediation in June 2026 and a monitored Service agent pilot can be live by September 2026.</strong>',
+  costOfInaction: {
+    licenseWaste:45540,
+    licenseWasteFormula:'23 inactive users × $165/user/month × 12 = $45,540',
+    licenseUnitCostSource:'Salesforce list price — Sales Cloud Professional Edition, June 2026',
+    packageWaste:6000,
+    packageWasteNote:'4 abandoned AppExchange packages — verified from InstalledPackage metadata',
+    totalVerifiedWaste:51540,
+  },
+  valueProjection: {
+    available:true, transactionVolume:2840, transactionVolumeSource:'Case COUNT last 90 days ÷ 3',
+    handlingCostPerTransaction:18, deflectionRate:0.40,
+    deflectionRateSource:'Salesforce State of Service 2025, p.14',
+    deflectedTransactionsPerMonth:1136, annualCapacityValueDollars:245376,
+    currentReadinessCapture:0.15, flexCreditCostPerTransaction:0.45,
+    flexCreditScenarios:[
+      {label:'30% deflection',rate:0.30,tag:'Conservative',deflectedCount:852, monthlyCreditCost:383,monthlyNetSaving:15953},
+      {label:'40% deflection',rate:0.40,tag:'Likely',      deflectedCount:1136,monthlyCreditCost:511,monthlyNetSaving:20937},
+      {label:'55% deflection',rate:0.55,tag:'Optimistic',  deflectedCount:1562,monthlyCreditCost:703,monthlyNetSaving:28413},
+    ],
+  },
+  domainScores: [],
+  roadmap:[
+    {phase:'quick',    owner:'Admin',    text:'Deactivate 23 inactive users — recovers $45,540/yr in licence spend immediately',                              effort:'0.5 days · Priority 1 — ROI on day 1'},
+    {phase:'quick',    owner:'Admin',    text:'Remove 4 abandoned AppExchange packages — Conga legacy, MapAnything, survey tool, CTI adapter',                effort:'0.5 days · Recovers $6,000/yr in subscriptions'},
+    {phase:'quick',    owner:'Admin',    text:'Enable duplicate rules on Contact and Account — prevents new duplicates entering',                             effort:'1 day · Prerequisite for data quality fix'},
+    {phase:'quick',    owner:'Admin',    text:'Add fault paths to 14 active flows — prevents silent agent failures immediately',                              effort:'2 days · Unblocks automation domain'},
+    {phase:'medium',   owner:'Dev',      text:'Email enrichment + required field validation on Contact — lifts Data Quality score from 38 → 68+',            effort:'5 days · Resolves Hard Blocker #1'},
+    {phase:'medium',   owner:'Dev',      text:'Consolidate 3 conflicting Account flows into 1 governed flow — after fault paths added in Week 1',            effort:'4 days · Resolves Automation blocker'},
+    {phase:'medium',   owner:'Admin',    text:'Merge 4,200 duplicate Contact records — reduces duplicate rate from 11% → 3%',                               effort:'3 days · After duplicate rules enabled'},
+    {phase:'medium',   owner:'Dev',      text:'Build Knowledge base — 40 articles covering top 20 case reasons (Billing first)',                             effort:'8 days · Prerequisite for Service agent'},
+    {phase:'strategic',owner:'Architect',text:'Design agent user permission set — least-privilege, scoped to Service use case only',                         effort:'3 days · Resolves security blocker'},
+    {phase:'strategic',owner:'Architect',text:'Configure Agentforce Topics and Actions — case deflection for Billing, Technical, Account categories',        effort:'5 days · First pilot configuration'},
+    {phase:'strategic',owner:'Dev',      text:'Retire 340 unused custom fields via governance process — lifts Metadata score 61 → 78+',                      effort:'4 days · Can run in parallel'},
+    {phase:'strategic',owner:'Architect',text:'Monitored pilot — deploy Service agent to 10% of inbound Billing case volume',                               effort:'September 2026 · Measure and iterate'},
+  ],
+  investmentOptions:{
+    pilotReadyDate:'September 2026',
+    optionA:{label:'Internal team',        internalDays:35, timelineMonths:5},
+    optionB:{label:'Yukti Global delivers', feeRangeLow:28000, feeRangeHigh:35000, timelineWeeks:16},
+    optionC:{label:'Hybrid model',          feeRangeLow:15000, feeRangeHigh:18000, timelineWeeks:20},
+    monitoringRetainerMonthly:3000,
+  },
+};
+
+window.SAMPLE_DATA.domainScores = [
+  {num:1, name:'Data quality & completeness', score:38, weight:25,
+   benchmark:54, benchmarkLabel:'Industry median (150–300 user orgs, IBM IBV 2025–26)',
+   status:'blocker', statusLabel:'Hard blocker', color:'#c0392b', barColor:'#c0392b',
+   summary:'Core field completion is below the threshold required for reliable agent grounding. Agentforce agents retrieving customer context will fail or respond with incorrect information for a significant portion of records.',
+   findings:[
+     {text:'Contact.Email is null on 34% of records — agents cannot identify customers by email',evidence:'COUNT query: 142,844 / 420,130 contacts missing Email',dot:'#c0392b'},
+     {text:'Account.Industry is blank on 51% of records — agent segmentation and routing unreliable',evidence:'COUNT query: 26,520 / 52,000 accounts missing Industry',dot:'#c0392b'},
+     {text:'11% duplicate rate on Contact (name + email match) — agents retrieve and act on duplicate context',evidence:'GROUP BY dedupe query: 46,214 duplicate contact records identified',dot:'#c0392b'},
+     {text:'Contact.Title has 67 unique variations of "Chief Executive Officer" — picklist inconsistency',evidence:'SOQL GROUP BY Title: top variant "CEO" (4,200), others include "CEO ", "C.E.O", "Chief Exec"',dot:'#d4830a'},
+   ],
+   soql:`SELECT COUNT(Id) total, COUNT(Email) has_email,
+  COUNT(Phone) has_phone, COUNT(AccountId) has_account
+FROM Contact
+WHERE IsDeleted = false
+-- Result: total=420130, has_email=277286, has_phone=301204`},
+  {num:2, name:'Automation health & conflicts', score:44, weight:20,
+   benchmark:58, benchmarkLabel:'Industry median',
+   status:'blocker', statusLabel:'Hard blocker', color:'#c0392b', barColor:'#c0392b',
+   summary:'Three high-traffic objects have conflicting record-triggered flows that will cascade when agent actions fire. The Account object has 7 active flows — 3 with overlapping DML operations and no fault path.',
+   findings:[
+     {text:'Account object: 7 active record-triggered flows — 3 have conflicting update operations on the same fields',evidence:'FlowDefinition query: 7 flows on Account, HasFaultConnector=false on 3',dot:'#c0392b'},
+     {text:'Case object: Process Builder still active alongside 4 Flows — legacy/modern automation conflict',evidence:'ProcessDefinition query: 2 active Process Builder flows on Case',dot:'#c0392b'},
+     {text:'14 active flows have no fault path — silent failures when agents trigger them',evidence:'Tooling API: HasFaultConnector=false on 14 of 34 active flows',dot:'#d4830a'},
+     {text:'Apex test coverage at 68% — below the 75% threshold for safe agent-triggered Apex',evidence:'ApexOrgWideCoverage: 68.4% line coverage across 12 trigger classes',dot:'#d4830a'},
+   ],
+   soql:`SELECT TriggerObjectOrEventLabel, COUNT(Id) flow_count
+FROM FlowDefinition
+WHERE ActiveVersionId != null
+GROUP BY TriggerObjectOrEventLabel
+ORDER BY flow_count DESC`},
+  {num:3, name:'Security & permission model', score:61, weight:15,
+   benchmark:69, benchmarkLabel:'Industry median',
+   status:'risk', statusLabel:'At risk', color:'#d4830a', barColor:'#d4830a',
+   summary:'Security Health Check score of 72%. Guest user profile has broader access than recommended. Permission set architecture is Profile-heavy — refactoring needed to scope an agent user correctly.',
+   findings:[
+     {text:'Security Health Check score: 72% — below 80% recommended for customer-facing agents',evidence:'Connect API /connect/security/health-check: score=72, 8 high-severity failures',dot:'#d4830a'},
+     {text:'Guest User profile has access to 3 custom objects that should be restricted',evidence:'PermissionSet query: GuestUserProfile has read access on Order__c, Invoice__c, Contract__c',dot:'#d4830a'},
+     {text:'No permission set architecture — 94% of permissions managed via Profiles only',evidence:'SOQL on PermissionSetAssignment: only 6 permission sets assigned across 180 users',dot:'#d4830a'},
+   ],
+   soql:`SELECT Id, Name, PermissionsViewAllData, PermissionsModifyAllData
+FROM PermissionSet
+WHERE IsOwnedByProfile = false
+AND ProfileId = null
+ORDER BY Name`},
+  {num:4, name:'Knowledge base & grounding', score:22, weight:15,
+   benchmark:38, benchmarkLabel:'Industry median',
+   status:'blocker', statusLabel:'Service blocker', color:'#c0392b', barColor:'#c0392b',
+   summary:'Salesforce Knowledge is enabled but severely underpopulated. 12 published articles with no Data Category assignment. Top 20 case reason categories have zero Knowledge coverage — Service agent cannot be deployed without a Knowledge build.',
+   findings:[
+     {text:'Only 12 published Knowledge articles — top 20 case reasons have zero coverage',evidence:'KnowledgeArticleVersion SOQL: PublishStatus=Online, total=12',dot:'#c0392b'},
+     {text:'No Data Categories configured — agents cannot filter Knowledge by topic or product',evidence:'DataCategoryGroup metadata: 0 active data category groups',dot:'#c0392b'},
+     {text:'Case reason "Billing Query" = 2,840 cases/month — zero Knowledge articles on billing',evidence:'Case reason frequency report: top reason with 0 matching articles',dot:'#c0392b'},
+   ],
+   soql:`SELECT ArticleType, COUNT(Id) article_count,
+  MAX(LastPublishedDate) latest
+FROM KnowledgeArticleVersion
+WHERE PublishStatus = 'Online'
+AND IsLatestVersion = true
+GROUP BY ArticleType
+-- Result: total 12 articles, latest: March 2024`},
+  {num:5, name:'Metadata & technical debt', score:61, weight:10,
+   benchmark:55, benchmarkLabel:'Industry median — you score above median',
+   status:'risk', statusLabel:'At risk', color:'#d4830a', barColor:'#d4830a',
+   summary:'487 unused custom fields. 4 abandoned AppExchange packages still installed. Moderate debt — addressable without major refactoring. You score above median on this domain.',
+   findings:[
+     {text:'487 custom fields not referenced in any layout, flow, formula, Apex or report',evidence:'Field usage cross-reference: 487 fields with 0 references across all metadata types',dot:'#d4830a'},
+     {text:'4 abandoned packages: Conga legacy (127 fields), MapAnything (82 fields), old survey tool (74 fields), unused CTI adapter',evidence:'InstalledPackage metadata: 4 packages with last activity >18 months ago',dot:'#d4830a'},
+   ],
+   soql:`SELECT QualifiedApiName, Label, LastModifiedDate
+FROM FieldDefinition
+WHERE EntityDefinition.QualifiedApiName = 'Contact'
+AND IsLayoutable = true
+-- Cross-reference with layout, flow, formula, apex usage`},
+  {num:6, name:'User adoption & process alignment', score:74, weight:10,
+   benchmark:68, benchmarkLabel:'Industry median — you score above median',
+   status:'good', statusLabel:'Adequate', color:'#1a7a4a', barColor:'#1a7a4a',
+   summary:'Login rate of 79% and reasonable activity logging. You score above industry median. Opportunity stage discipline needs minor improvement — 22% of opportunities skip stages.',
+   findings:[
+     {text:'79% of licensed users logged in 3+ times in last 90 days — above industry median of 68%',evidence:'UserLogin history: 143 of 180 licensed users with 3+ logins in 90 days',dot:'#1a7a4a'},
+     {text:'22% of closed opportunities skipped stages 3–5 — agent sales context incomplete for these deals',evidence:'OpportunityHistory: 22% of Closed Won opps have no Stage 3–5 history entries',dot:'#d4830a'},
+   ],
+   soql:`SELECT UserId, COUNT(Id) login_count
+FROM LoginHistory
+WHERE LoginTime = LAST_N_DAYS:90
+GROUP BY UserId
+HAVING COUNT(Id) >= 3
+-- Result: 143 users / 180 total = 79%`},
+  {num:7, name:'Platform limits & API headroom', score:81, weight:5,
+   benchmark:77, benchmarkLabel:'Industry median — you score above median',
+   status:'good', statusLabel:'Healthy', color:'#1a7a4a', barColor:'#1a7a4a',
+   summary:'API consumption at 38% of daily limit — comfortable headroom for Agentforce load. No governor limit warnings in last 30 days. No action required.',
+   findings:[
+     {text:'Daily API usage at 38% of limit — strong headroom for agent conversations',evidence:'Limits API: DailyApiRequests.Max=15000, Remaining=9,300 (avg last 7 days)',dot:'#1a7a4a'},
+     {text:'Data storage at 61% — monitor as agent interactions create new records',evidence:'Limits API: DataStorageMB.Max=1024, Remaining=399',dot:'#d4830a'},
+   ],
+   soql:`GET /services/data/v59.0/limits/
+-- DailyApiRequests: { Max: 15000, Remaining: 9300 }
+-- DataStorageMB:   { Max: 1024,  Remaining: 399 }`},
+];
+
+// ─── Data source ──────────────────────────────────────────────────────────────
+const R = window.REPORT_DATA || window.SAMPLE_DATA;
+
+if (!R) {
+  document.body.innerHTML =
+    '<div style="padding:40px;font-family:sans-serif;color:#c0392b">' +
+    'No report data found. This template requires <code>window.REPORT_DATA</code> to be ' +
+    'injected before rendering. See <code>report-data-schema.json</code> for the required shape.' +
+    '</div>';
+  throw new Error('window.REPORT_DATA not defined');
+}
+
+// ─── Null-safe helpers ────────────────────────────────────────────────────────
+const fmt = {
+  dollar: (n, d=0) => n == null ? '—' : '$' + Number(n).toLocaleString('en-US', {minimumFractionDigits:d,maximumFractionDigits:d}),
+  pct:    (n, d=0) => n == null ? '—' : (n * 100).toFixed(d) + '%',
+  num:    (n)      => n == null ? '—' : Number(n).toLocaleString('en-US'),
+  weeks:  (n)      => n == null ? '—' : n + ' weeks',
+  months: (n)      => n == null ? '—' : n + ' months',
+};
+
+// ─── Derived shorthand ────────────────────────────────────────────────────────
+const coi            = R.costOfInaction;
+const vp             = R.valueProjection;
+const sm             = R.scanMetrics;
+const io             = R.investmentOptions;
+const totalWaste     = coi.totalVerifiedWaste;
+const quarterlyWaste = Math.round(totalWaste / 4);
+const pilotDate      = io?.pilotReadyDate || 'TBC';
+const txLabel        = sm.monthlyTransactionVolumeObject || 'cases';
+
+// ─── Cover ────────────────────────────────────────────────────────────────────
+document.title = `OrgPulse — AI Readiness Assessment V2 · ${R.meta.orgName}`;
+document.getElementById('cover-date').textContent = `Assessment date: ${R.assessmentDate} · V2 Report`;
+document.getElementById('cover-title').innerHTML = `Your Salesforce org scores<br><em>${R.aiReadinessIndex} out of 100.</em>`;
+document.getElementById('cover-client').textContent =
+  `Prepared for ${R.meta.orgName} · ${R.meta.licenseCount} Salesforce licenses · ${Array.isArray(R.meta.clouds) ? R.meta.clouds.join(' + ') : R.meta.clouds}`;
+
+const circumference = 201;
+const ringFill = document.getElementById('score-ring-fill');
+ringFill.setAttribute('stroke-dashoffset', Math.round(circumference - (R.aiReadinessIndex / 100) * circumference));
+ringFill.setAttribute('stroke', R.verdictColor);
+document.getElementById('score-ring-num').textContent = R.aiReadinessIndex;
+const verdictEl = document.getElementById('score-verdict');
+verdictEl.textContent = R.verdict;
+verdictEl.style.color = R.verdictColor;
+document.getElementById('score-verdict-sub').textContent = R.verdictSub;
+
+document.getElementById('meta-blockers').innerHTML = `<span style="color:#c0392b">${R.hardBlockerCount} domains</span>`;
+document.getElementById('meta-waste').innerHTML    = `<span style="color:#d4830a">${fmt.dollar(totalWaste)}</span>`;
+document.getElementById('meta-fix').textContent    = R.fixTimeline;
+document.getElementById('meta-pilot').innerHTML    = `<span style="color:#00c27a">${pilotDate}</span>`;
+
+// ─── Section 1 — Cost of inaction ────────────────────────────────────────────
+document.getElementById('coi-grid').innerHTML = `
+  <div class="coi-box coi-red">
+    <div class="coi-num" style="color:var(--red)">${fmt.dollar(coi.licenseWaste)}</div>
+    <div class="coi-label">Annual wasted license spend — ${fmt.num(sm.inactiveUserCount)} inactive users on full ${Array.isArray(R.meta.clouds) ? R.meta.clouds[0] : R.meta.clouds} licenses</div>
+    <div class="coi-sub">${(coi.licenseWasteFormula || '').toUpperCase()}</div>
+  </div>
+  <div class="coi-box coi-amber">
+    <div class="coi-num" style="color:var(--amber)">${fmt.dollar(coi.packageWaste)}</div>
+    <div class="coi-label">${coi.packageWasteNote || fmt.num(sm.abandonedPackageCount) + ' abandoned AppExchange packages still installed'}</div>
+    <div class="coi-sub">${coi.packageWaste ? 'VERIFIED FROM INSTALLED PACKAGES SCAN' : 'PACKAGE COST NOT YET DETERMINED'}</div>
+  </div>
+  <div class="coi-box coi-blue">
+    <div class="coi-num" style="color:var(--blue)">${fmt.pct(sm.contactEmailCompletionRate != null ? 1 - sm.contactEmailCompletionRate : null)}</div>
+    <div class="coi-label">Of Contact records missing email addresses — the primary field Agentforce agents use to identify customers</div>
+    <div class="coi-sub">${fmt.num(sm.contactEmailMissingCount)} UNREACHABLE CONTACTS</div>
+  </div>`;
+
+document.getElementById('headline-finding').innerHTML = R.headlineFinding;
+
+document.getElementById('kpi-row').innerHTML = `
+  <div class="kpi-box"><div class="kpi-num">7</div><div class="kpi-lbl">Domains assessed across your org</div></div>
+  <div class="kpi-box"><div class="kpi-num" style="color:var(--red)">${R.hardBlockerCount}</div><div class="kpi-lbl">Hard blockers — must fix before agent deployment</div></div>
+  <div class="kpi-box"><div class="kpi-num" style="color:var(--amber)">${R.riskCount}</div><div class="kpi-lbl">High-risk findings requiring priority attention</div></div>
+  <div class="kpi-box"><div class="kpi-num" style="color:var(--green)">${R.goodCount}</div><div class="kpi-lbl">Domains performing well — no action needed</div></div>`;
+
+// ─── Section 3 — Flex Credit cost model ──────────────────────────────────────
+document.getElementById('flex-sub').textContent = vp.available && vp.transactionVolume
+  ? `Based on your actual volume of ${fmt.num(vp.transactionVolume)} ${txLabel}/month. Three deflection scenarios at current Salesforce Flex Credit list pricing ($0.10/credit). Source: ${vp.deflectionRateSource}.`
+  : 'Flex Credit projections require transaction volume and handling cost — add these to your intake form.';
+
+const flexGrid = document.getElementById('flex-credit-grid');
+flexGrid.innerHTML = '';
+if (vp.available && vp.flexCreditScenarios?.length) {
+  vp.flexCreditScenarios.forEach(s => {
+    const color = s.rate < 0.4 ? 'var(--amber)' : 'var(--green)';
+    const cls   = s.rate <= 0.30 ? 'fc-conservative' : s.rate <= 0.40 ? 'fc-likely' : 'fc-optimistic';
+    const box   = document.createElement('div');
+    box.className = `coi-box ${cls}`;
+    box.innerHTML = `
+      <div style="font-family:var(--mono);font-size:10px;position:absolute;top:14px;right:14px;
+           padding:2px 7px;border-radius:20px;background:rgba(0,0,0,0.06);color:var(--muted)">${s.tag}</div>
+      <div class="coi-num" style="color:${color};font-size:28px">${fmt.dollar(s.monthlyCreditCost)}/mo</div>
+      <div class="coi-label">
+        <strong>${s.label} — ${fmt.num(s.deflectedCount)} ${txLabel}/mo</strong><br>
+        Flex Credits at $0.10/credit<br>
+        Saves ${fmt.dollar(s.monthlyNetSaving)}/mo vs manual handling
+      </div>
+      <div class="coi-sub">NET SAVING ${fmt.dollar(s.monthlyNetSaving)}/MO · ${s.tag.toUpperCase()} SCENARIO</div>`;
+    flexGrid.appendChild(box);
+  });
+  document.getElementById('flex-economics').innerHTML =
+    `Agentforce charges per conversation turn via Flex Credits. Each deflected ${txLabel.replace(/s$/,'')} consumes approximately 4–5 Credits at $0.10 each — a total cost of ${fmt.dollar(vp.flexCreditCostPerTransaction)} per deflected ${txLabel.replace(/s$/,'')}. ` +
+    `Your confirmed average handling cost is <strong>${fmt.dollar(vp.handlingCostPerTransaction)} ${R.intake.handlingCostLabel || 'per transaction'}</strong>. ` +
+    `The net saving per deflected ${txLabel.replace(/s$/,'')} exceeds <strong>${fmt.dollar(Math.floor((vp.handlingCostPerTransaction||0)-(vp.flexCreditCostPerTransaction||0)))}</strong> in every scenario. ` +
+    `Salesforce benchmark source: ${vp.deflectionRateSource}.`;
+} else {
+  document.getElementById('flex-economics').textContent = 'Add handling cost to your intake form to see Flex Credit economics.';
+}
+
+// ─── Section 4 — Value projection / Agentforce value ─────────────────────────
+const agentforceSection = document.getElementById('agentforce-value-section');
+if (!vp.available || vp.handlingCostPerTransaction == null) {
+  agentforceSection.innerHTML = `
+    <div class="card" style="border-color:var(--amber-border);background:var(--amber-dim)">
+      <div class="ct" style="color:var(--amber)">Value projection not yet available</div>
+      <div class="cb">We scanned ${fmt.num(vp.transactionVolume)} ${txLabel} per month from your org data. To calculate the value Agentforce could deliver, we need one additional input: your average cost to handle each ${R.intake.handlingCostLabel||'transaction'} manually. Add this to your intake form and re-run the report — all calculations will be generated from your actual data.</div>
+    </div>`;
+} else {
+  const captPct = Math.round((vp.currentReadinessCapture||0.15)*100);
+  agentforceSection.innerHTML = `
+    <div class="coi-grid" style="margin-bottom:20px">
+      <div class="coi-box" style="border-top:3px solid var(--green)">
+        <div class="coi-num" style="color:var(--green)">${fmt.num(vp.deflectedTransactionsPerMonth)}</div>
+        <div class="coi-label"><strong>${txLabel.charAt(0).toUpperCase()+txLabel.slice(1)} deflected per month</strong> — at ${fmt.pct(vp.deflectionRate)} deflection rate applied to your actual ${fmt.num(vp.transactionVolume)} ${txLabel}/month</div>
+        <div class="coi-sub">YOUR DATA · ${(vp.deflectionRateSource||'').toUpperCase()}</div>
+      </div>
+      <div class="coi-box" style="border-top:3px solid var(--green)">
+        <div class="coi-num" style="color:var(--green)">$${Math.round((vp.annualCapacityValueDollars||0)/1000)}k</div>
+        <div class="coi-label"><strong>Annual capacity value</strong> — ${fmt.num(vp.deflectedTransactionsPerMonth)} ${txLabel} × ${fmt.dollar(vp.handlingCostPerTransaction)} handling cost × 12 months</div>
+        <div class="coi-sub">CALCULATED FROM YOUR DATA · ${(vp.deflectionRateSource||'').toUpperCase()}</div>
+      </div>
+      <div class="coi-box" style="border-top:3px solid var(--amber)">
+        <div class="coi-num" style="color:var(--amber)">${captPct}%</div>
+        <div class="coi-label">What you'd capture <strong>today at score ${R.aiReadinessIndex}</strong> — agent failures from data quality gaps and automation conflicts limit real-world effectiveness</div>
+        <div class="coi-sub">THE COST OF DEPLOYING BEFORE FIXING</div>
+      </div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--amber);background:linear-gradient(135deg,#fff 0%,#fffbf4 100%)">
+      <div class="ct">The cost of waiting — calculated from your own numbers</div>
+      <div class="cb">At your current verified waste rate of ${fmt.dollar(totalWaste)}/year, every quarter of inaction costs approximately <strong>${fmt.dollar(quarterlyWaste)}</strong> in license and package waste alone — before accounting for the Agentforce value you are not yet capturing.${sm.conflictingFlowObjects?.length ? ` Automation debt also compounds: the conflicting flows on ${sm.conflictingFlowObjects.join(', ')} become harder and more expensive to consolidate with each new change.` : ''} The remediation work flagged in this report is cheaper to address now than in 6 months.</div>
+    </div>`;
+}
+
+// ─── Section 5 — Roadmap ──────────────────────────────────────────────────────
+document.getElementById('roadmap-sub').innerHTML =
+  `Sequenced by business impact and delivery dependency. Complete this roadmap and your AI Readiness Index moves from ${R.aiReadinessIndex} to an estimated ${R.targetScore}+, with a monitored pilot live by ${pilotDate}.`;
+
+const ownerClass = {Admin:'rm-admin',Dev:'rm-dev',Architect:'rm-arch'};
+const phases = [
+  {key:'quick',    title:'Quick wins — Week 1–2',   sub:'Zero cost · Admin-level · Start immediately',              headStyle:'background:#f7fff9;border-bottom-color:var(--green-border)', titleColor:'var(--green)'},
+  {key:'medium',   title:'Medium fixes — Month 1–2', sub:'Some development · Config changes · Depends on quick wins', headStyle:'background:#fffbf4;border-bottom-color:var(--amber-border)', titleColor:'var(--amber)'},
+  {key:'strategic',title:'Strategic — Month 2–3',    sub:'Architect-level · Agentforce-specific',                    headStyle:'background:#f7f8ff;border-bottom-color:var(--blue-border)',  titleColor:'var(--blue)'},
+];
+const roadmapFlat = Array.isArray(R.roadmap) ? R.roadmap :
+  [...(R.roadmap.quickWins||[]).map(i=>({...i,phase:'quick'})),
+   ...(R.roadmap.mediumFixes||[]).map(i=>({...i,phase:'medium'})),
+   ...(R.roadmap.strategic||[]).map(i=>({...i,phase:'strategic'}))];
+
+document.getElementById('roadmap-cols').innerHTML = phases.map(p => {
+  const items = roadmapFlat.filter(r => r.phase === p.key);
+  return `
+    <div class="rm-col">
+      <div class="rm-col-head" style="${p.headStyle}">
+        <div class="rm-col-title" style="color:${p.titleColor}">${p.title}</div>
+        <div class="rm-col-sub">${p.sub}</div>
+      </div>
+      ${items.map(item => `
+        <div class="rm-item">
+          <span class="rm-owner ${ownerClass[item.owner]||'rm-arch'}">${item.owner}</span>
+          <div><div class="rm-text">${item.text}</div><div class="rm-effort">${item.effort}</div></div>
+        </div>`).join('')}
+    </div>`;
+}).join('');
+
+document.getElementById('roadmap-current-label').textContent = `Current: ${R.aiReadinessIndex}`;
+document.getElementById('roadmap-target-label').textContent  = `Target: ${R.targetScore}+`;
+document.getElementById('roadmap-current-bar').style.width   = R.aiReadinessIndex + '%';
+document.getElementById('roadmap-target-bar').style.width    = R.targetScore + '%';
+document.getElementById('roadmap-improvement').textContent   = `+${R.targetScore - R.aiReadinessIndex} pts`;
+
+// ─── Section 6 — Investment options ──────────────────────────────────────────
+(function renderInvestmentOptions() {
+  if (!io) return;
+  const opts = [
+    {label:'Option A', sublabel:null, name:io.optionA.label,
+     price:`~${io.optionA.internalDays} internal days`,
+     body:`Your admin and developer handle all remediation using this roadmap. Yukti Global provides a monthly monitoring retainer to track progress. Timeline: ${io.optionA.timelineMonths}–${io.optionA.timelineMonths+1} months to pilot.`,
+     highlight:false},
+    {label:'Option B', sublabel:'Recommended', name:io.optionB.label,
+     price:`${fmt.dollar(io.optionB.feeRangeLow)}–${fmt.dollar(io.optionB.feeRangeHigh)} fixed fee`,
+     body:`Full remediation + Agentforce pilot. Fixed price, fixed timeline.${pilotDate!=='TBC'?' Pilot live by '+pilotDate+'.':''} License savings cover payback within months.`,
+     highlight:true},
+    {label:'Option C', sublabel:null, name:io.optionC.label,
+     price:`${fmt.dollar(io.optionC.feeRangeLow)}–${fmt.dollar(io.optionC.feeRangeHigh)}`,
+     body:`Yukti Global leads architecture and Agentforce configuration. Your admin executes remediation under our guidance. Reduced cost, longer timeline: ${io.optionC.timelineWeeks} weeks.`,
+     highlight:false},
+  ];
+  document.getElementById('investment-options').innerHTML = opts.map(o => `
+    <div class="card" ${o.highlight?'style="border-color:var(--border2);background:linear-gradient(135deg,#fff 0%,var(--bg3) 100%)"':''}>
+      <div style="font-family:var(--mono);font-size:10px;color:${o.highlight?'var(--green)':'var(--dim)'};letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px">${o.label}${o.sublabel?' · '+o.sublabel:''}</div>
+      <div style="font-family:var(--display);font-size:18px;font-weight:300;letter-spacing:-.02em;margin-bottom:4px">${o.name}</div>
+      <div style="font-family:var(--mono);font-size:14px;color:var(--muted);margin-bottom:12px">${o.price}</div>
+      <div class="cb" style="font-size:12px">${o.body}</div>
+    </div>`).join('');
+})();
+
+document.getElementById('roi-card-body').innerHTML =
+  `Adjust the engagement fee to match your chosen option. ` +
+  `<strong>Verified savings</strong> (${fmt.dollar(totalWaste)}/yr) are derived directly from scan data — ${coi.licenseWasteFormula}${coi.packageWaste?' plus $'+coi.packageWaste.toLocaleString()+' package waste':''}.` +
+  (vp.available
+    ? ` <strong>Projected agent value</strong> (${fmt.dollar(vp.annualCapacityValueDollars)}/yr) is modelled from your ${txLabel} volume and ${vp.deflectionRateSource}. Adjust both sliders independently.`
+    : ' Projected agent value requires handling cost from your intake form.');
+
+if (io) {
+  document.getElementById('fee-slider').min   = io.optionB.feeRangeLow;
+  document.getElementById('fee-slider').max   = io.optionB.feeRangeHigh;
+  document.getElementById('fee-slider').value = io.optionB.feeRangeLow;
+}
+document.getElementById('val-slider').value = vp.annualCapacityValueDollars || 245000;
+
+// ─── ROI calculator ───────────────────────────────────────────────────────────
+function updateROI() {
+  const fee  = parseInt(document.getElementById('fee-slider').value);
+  const proj = parseInt(document.getElementById('val-slider').value);
+  document.getElementById('fee-val').textContent = fmt.dollar(fee);
+  document.getElementById('val-val').textContent = vp.available ? fmt.dollar(proj) : 'N/A';
+
+  const totalAnnual = totalWaste + (vp.available ? proj : 0);
+  const paybackMo   = totalAnnual > 0 ? Math.ceil(fee / (totalAnnual / 12)) : null;
+  const yr1Net      = totalAnnual - fee;
+  const roi3yr      = fee > 0 ? Math.round(((totalAnnual * 3 - fee) / fee) * 100) : null;
+
+  document.getElementById('roi-output').innerHTML = `
+    <div class="coi-box" style="border-top:3px solid var(--green)">
+      <div class="coi-num" style="color:var(--text);font-size:24px">${fmt.dollar(fee)}</div>
+      <div class="coi-label">Engagement fee<br><span style="font-size:11px">Adjust slider above</span></div>
+    </div>
+    <div class="coi-box" style="border-top:3px solid var(--green)">
+      <div class="coi-num" style="color:var(--green);font-size:24px">${paybackMo?paybackMo+' mo':'—'}</div>
+      <div class="coi-label">Payback period<br><span style="font-size:11px">Verified savings + projected value</span></div>
+    </div>
+    <div class="coi-box" style="border-top:3px solid var(--green)">
+      <div class="coi-num" style="color:var(--green);font-size:24px">${fmt.dollar(yr1Net)}</div>
+      <div class="coi-label">Year 1 net benefit<br><span style="font-size:11px">After engagement fee</span></div>
+    </div>
+    <div class="coi-box" style="border-top:3px solid var(--green)">
+      <div class="coi-num" style="color:var(--green);font-size:24px">${roi3yr!=null?roi3yr+'%':'—'}</div>
+      <div class="coi-label">3-year ROI</div>
+    </div>`;
+
+  const disc = document.getElementById('roi-disclaimer');
+  if (disc) disc.textContent =
+    `VERIFIED SAVINGS: ${fmt.dollar(totalWaste)}/yr — ${coi.licenseWasteFormula}. Source: ${coi.licenseUnitCostSource}.` +
+    (vp.available
+      ? ` PROJECTED VALUE: ${fmt.dollar(vp.annualCapacityValueDollars)}/yr — ${vp.deflectionRateSource}.`
+      : ' PROJECTED VALUE: not available — provide handling cost in intake form.');
+}
+updateROI();
+
+// ─── Next step card ───────────────────────────────────────────────────────────
+document.getElementById('next-step-body').innerHTML =
+  `We can have a full SOW for Option B — with a fixed fee, week-by-week delivery schedule, and a confirmed ${pilotDate!=='TBC'?pilotDate+' pilot date':'pilot date'} — to you within 5 business days. Or if you'd prefer to start with the Monitoring Retainer while your team handles quick wins, we can activate that this week.`;
+
+document.getElementById('ns-options').innerHTML = `
+  <div class="ns-option">
+    <div class="ns-opt-label">Option B SOW</div>
+    <div class="ns-opt-name">Full remediation + pilot</div>
+    <div class="ns-opt-price">Ready within 5 business days</div>
+  </div>
+  <div class="ns-option">
+    <div class="ns-opt-label">Start immediately</div>
+    <div class="ns-opt-name">Monitoring Retainer</div>
+    <div class="ns-opt-price">${io ? fmt.dollar(io.monitoringRetainerMonthly) : '$3,000'} / month</div>
+  </div>`;
+
+// ─── Domain scores grid ───────────────────────────────────────────────────────
+const domainGrid = document.getElementById('domain-grid');
+R.domainScores.forEach(d => {
+  const row = document.createElement('div');
+  row.className = 'domain-row';
+  row.innerHTML = `
+    <div class="dr-num">${String(d.num).padStart(2,'0')}</div>
+    <div class="dr-name">${d.name}</div>
+    <div class="dr-bar-wrap">
+      <div class="bench-label">
+        <span style="color:${d.barColor};font-weight:500">${d.score}</span>
+        <span>median ${d.benchmark}</span>
+      </div>
+      <div class="dr-bar-track"><div class="dr-bar-fill" style="width:${d.score}%;background:${d.barColor}"></div></div>
+      <div class="dr-bar-track" style="margin-top:3px;opacity:0.35"><div class="dr-bar-fill" style="width:${d.benchmark}%;background:var(--dim)"></div></div>
+    </div>
+    <div class="dr-status s-${d.status}">${d.statusLabel}</div>
+    <div class="dr-chevron">▾</div>`;
+  const detail = document.createElement('div');
+  detail.className = 'domain-detail';
+  detail.innerHTML = `
+    <div class="dd-grid">
+      <div>
+        <div class="dd-label">Findings</div>
+        ${d.findings.map(f=>`
+          <div class="finding-item">
+            <div class="fi-dot" style="background:${f.dot}"></div>
+            <div><div>${f.text}</div><div class="fi-evidence">${f.evidence}</div></div>
+          </div>`).join('')}
+        <div style="margin-top:10px;font-size:11px;color:var(--dim)">Benchmark: ${d.benchmarkLabel}</div>
+      </div>
+      <div>
+        <div class="dd-label">SOQL evidence</div>
+        <div class="soql-block">
+          <div class="soql-hdr"><span>Verify in Developer Console</span><span>${d.weight}% weight</span></div>
+          <div class="soql-body">${d.soql}</div>
+        </div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted)">${d.summary}</div>
+      </div>
+    </div>`;
+  row.onclick = () => { row.classList.toggle('open'); detail.classList.toggle('open'); };
+  domainGrid.appendChild(row);
+  domainGrid.appendChild(detail);
+});
+
+// ─── Appendix ─────────────────────────────────────────────────────────────────
+const appendixDomains = document.getElementById('appendix-domains');
+R.domainScores.forEach(d => {
+  const div = document.createElement('div');
+  div.className = 'card';
+  div.style.marginBottom = '12px';
+  div.innerHTML = `
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+      <div style="font-family:var(--mono);font-size:11px;color:var(--dim)">Domain ${d.num}</div>
+      <div class="ct" style="margin:0">${d.name}</div>
+      <div class="dr-status s-${d.status}" style="margin-left:auto">${d.statusLabel}</div>
+      <div style="font-family:var(--mono);font-size:13px;font-weight:500;color:${d.barColor}">${d.score}/100</div>
+      <div style="font-family:var(--mono);font-size:11px;color:var(--dim)">median: ${d.benchmark}</div>
+    </div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:12px">${d.summary}</div>
+    ${d.findings.map(f=>`
+      <div class="finding-item">
+        <div class="fi-dot" style="background:${f.dot}"></div>
+        <div><div>${f.text}</div><div class="fi-evidence">${f.evidence}</div></div>
+      </div>`).join('')}
+    <div class="divider" style="margin:12px 0"></div>
+    <div class="soql-block">
+      <div class="soql-hdr"><span>Verification query — run in Developer Console</span><span>Weight: ${d.weight}%</span></div>
+      <div class="soql-body">${d.soql}</div>
+    </div>`;
+  appendixDomains.appendChild(div);
+});
+
+</script>
+</body>
+</html>

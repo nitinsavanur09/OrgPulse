@@ -10,9 +10,9 @@
 
 ## Current State
 
-**Active phase:** Phase 4 — Report Generator
+**Active phase:** Phase 5 — Full Pipeline
 **Last session:** 17 June 2026
-**Next task:** P4.1 — Update `templates/orgpulse-v2.html` — add `const REPORT_DATA = window.REPORT_DATA || ACME_SAMPLE_DATA` at top of script block, replace all hardcoded Acme Corp values with `REPORT_DATA.field` references
+**Next task:** P5.1 — `scripts/run-scan.ts` — full pipeline CLI: connect → scan → score → buildReportData → generateReport → uploadReport → saveResults → log signed URL
 
 ---
 
@@ -23,7 +23,7 @@
 | Phase 1 — Infrastructure & OAuth | ✅ Complete | OAuth live, `npm run test-conn` passes |
 | Phase 2 — Scan Tools | ✅ Complete | All 7 domains pass; `runAllScans()` gate passed |
 | Phase 3 — Scoring Engine | ✅ Complete | All 7 domain scorers pass; gate: 57/100 on Dev Edition, 3 expected hard blockers |
-| Phase 4 — Report Generator | 🔲 Not started | |
+| Phase 4 — Report Generator | ✅ Complete | `reports/test.html` generated; score 57/100 from Dev Edition confirmed |
 | Phase 5 — Full Pipeline | 🔲 Not started | |
 | Phase 6 — Hardening | 🔲 Not started | |
 | Phase 7 — First Pilot Delivery | 🔲 Not started | |
@@ -31,6 +31,14 @@
 ---
 
 ## Completed Tasks
+
+### Phase 4
+
+- [x] **P4.1** — `templates/orgpulse-v2.html` — `ACME_SAMPLE_DATA` + `REPORT_DATA` fallback; `renderReport()` populates all DOM elements; roadmap + investment options converted to JS-driven
+- [x] **P4.2** — `src/report/json-schema.ts` — `ReportData` interface + `buildReportData(orgId, signals, scores, meta?)` — computes waste, flex credit, agentforce value, domain objects, auto-generates roadmap from findings
+- [x] **P4.3a** — `src/report/generator.ts` — `generateReport(data)` — injects `window.REPORT_DATA` before `</head>`; template loaded once at module init
+- [x] **P4.3b** — `src/report/storage.ts` — `uploadReport(orgId, html)` — Supabase Storage upload + 90-day signed URL
+- [x] **P4.4** — `scripts/test-report.ts` + `npm run test-report` — generates `reports/test.html`; confirmed 57/100 from Dev Edition, real data injected, no Acme Corp in rendered output
 
 ### Phase 3
 
@@ -72,9 +80,9 @@
 
 ## In Progress
 
-**P4.1 — Next task: Update `templates/orgpulse-v2.html`**
+**Phase 5 next: `scripts/run-scan.ts`**
 
-Add `const REPORT_DATA = window.REPORT_DATA || ACME_SAMPLE_DATA` at the top of the `<script>` block. Replace all hardcoded Acme Corp values with `REPORT_DATA.field` references. Test in browser with `ACME_SAMPLE_DATA` active — all sections must render with no JS errors.
+Wire the full pipeline: `getConnection → runAllScans → scoreFindings → buildReportData → generateReport → uploadReport → saveResults → log URL`. Then P5.2 `src/db/queries.ts` (saveResults), P5.3 error resilience, P5.4 three-run validation.
 
 ---
 
@@ -135,4 +143,4 @@ Claude Code will orient itself and pick up exactly where you left off.
 
 ---
 
-_Last updated: 17 June 2026 — Phase 3 complete; `scoreFindings()` + `buildFindings()` gate passed against Dev Edition org (57/100, 3 expected hard blockers). Starting Phase 4 next._
+_Last updated: 19 June 2026 — Phase 4 complete + v2 schema refactor complete. `client-intake.json` workflow live — no code edits needed per client. `Documents/Calculations.html` and `Documents/Calculations.md` updated: license cost $800/yr → $165/mo × 12, `annualWaste` → `totalVerifiedWaste`, Flex Credit table now shows pre-computed `monthlyCreditCost` and `monthlyNetSaving` per scenario, "Most Likely" tag → "Likely", ROI default fee $30k → $28k, inputs table reflects current `client-intake.json` field names and defaults. Starting Phase 5 next._

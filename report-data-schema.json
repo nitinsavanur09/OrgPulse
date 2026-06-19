@@ -1,0 +1,150 @@
+{
+  "_comment": "OrgPulse report data schema v2. Every field the V2 template reads must exist here. Null fields suppress the relevant section — never default to invented values.",
+
+  "meta": {
+    "orgName": "string — from Salesforce identity API or intake form",
+    "orgId": "string — 18-char Salesforce org ID",
+    "licenseCount": "number — total licensed users",
+    "clouds": "string[] — e.g. ['Sales Cloud', 'Service Cloud']",
+    "scanDate": "string — ISO date",
+    "reportVersion": "string — e.g. 'v2'"
+  },
+
+  //"intake": {
+  //   "useCase": "string — 'service' | 'sales' | 'fieldService' | 'general' | null",
+  //   "useCaseLabel": "string — human label, e.g. 'Service Cloud — case deflection'",
+  //   "licenseUnitCostMonthly": "number — $/user/month; default 165 (Sales Cloud Professional list price, June 2026)",
+  //   "handlingCostPerTransaction": "number | null — $ per case/opportunity/work order handled manually; null = suppress value projection",
+  //   "handlingCostLabel": "string | null — e.g. 'per case' | 'per opportunity' | 'per work order'",
+  //   "deflectionBenchmark": "number — decimal, e.g. 0.40; always sourced, never invented",
+  //   "deflectionBenchmarkSource": "string — e.g. 'Salesforce State of Service 2025, p.14'"
+  // },
+
+  "intake": {
+    "useCase": "service",
+    "useCaseLabel": "Service Cloud — case deflection",
+    "licenseUnitCostMonthly": 165,
+    "handlingCostPerTransaction": 18,
+    "handlingCostLabel": "per case",
+    "deflectionBenchmark": 0.40,
+    "deflectionBenchmarkSource": "Salesforce State of Service 2025, p.14"
+  },
+
+  "scanMetrics": {
+    "totalUsersLicensed": "number — from User COUNT query",
+    "inactiveUserCount": "number — users with zero logins in last 90 days",
+    "inactiveUserCountSource": "string — SOQL query description",
+    "abandonedPackageCount": "number — packages with no activity in 18+ months",
+    "abandonedPackageCost": "number | null — $ annual if determinable from scan; null if not",
+    "contactEmailCompletionRate": "number — decimal e.g. 0.66 (66% complete)",
+    "contactEmailMissingCount": "number — absolute count of contacts missing email",
+    "duplicateRate": "number — decimal e.g. 0.11 (11%)",
+    "activeFlowCount": "number",
+    "flowsWithNoFaultPath": "number",
+    "conflictingFlowObjects": "string[] — object API names with conflicting flows",
+    "processBuilderActiveCount": "number",
+    "apexCoveragePercent": "number — 0-100",
+    "securityHealthCheckScore": "number | null — null if endpoint unavailable (e.g. Dev Edition)",
+    "knowledgeArticleCount": "number",
+    "knowledgeDataCategoriesConfigured": "boolean",
+    "monthlyTransactionVolume": "number | null — COUNT of primary transactional object in last 90 days ÷ 3; null if use case not set",
+    "monthlyTransactionVolumeObject": "string | null — e.g. 'Case' | 'Opportunity' | 'WorkOrder'",
+    "monthlyTransactionVolumeSource": "string | null — SOQL description used to derive it",
+    "unusedCustomFieldCount": "number",
+    "apiDailyUsagePercent": "number — 0-100",
+    "loginRateLast90Days": "number — decimal e.g. 0.79 (79%)"
+  },
+
+  "domainScores": [
+    {
+      "num": "number 1-7",
+      "name": "string",
+      "score": "number 0-100",
+      "weight": "number — percent weight in overall index",
+      "status": "string — 'blocker' | 'risk' | 'good'",
+      "statusLabel": "string",
+      "benchmark": "number | null — industry median score for this domain",
+      "benchmarkLabel": "string | null — source citation",
+      "color": "string — hex colour for score display",
+      "barColor": "string — hex colour for bar fill",
+      "summary": "string — top finding in business language, references scan metrics",
+      "findings": [
+        {
+          "text": "string — finding in business language",
+          "evidence": "string — SOQL or API call that produced it",
+          "dot": "string — hex color"
+        }
+      ],
+      "soql": "string — verification query"
+    }
+  ],
+
+  "aiReadinessIndex": "number 0-100 — weighted average of domain scores",
+  "hardBlockerCount": "number",
+  "hardBlockerDomains": "string[] — domain keys below threshold",
+  "assessmentDate": "string — formatted date, e.g. '20 May 2026'",
+  "targetScore": "number — MIN(aiReadinessIndex + 35, 95)",
+  "verdict": "string — 'Not Ready' | 'Conditionally Ready' | 'Ready for Pilot' | 'AI Ready'",
+  "verdictColor": "string — hex colour matching verdict",
+  "verdictSub": "string — one-line verdict description",
+  "fixTimeline": "string — e.g. '12-16 weeks'",
+  "riskCount": "number — domains scoring 50-69",
+  "goodCount": "number — domains scoring 70+",
+  "headlineFinding": "string — HTML string; may contain <strong> tags; references actual scan metrics",
+
+  "costOfInaction": {
+    "licenseWaste": "number — inactiveUserCount × licenseUnitCostMonthly × 12",
+    "licenseWasteFormula": "string — e.g. '23 inactive users × $165/user/month × 12 = $45,540'",
+    "licenseUnitCostSource": "string — 'client-provided' | 'Salesforce list price [edition] [date]'",
+    "packageWaste": "number | null — abandonedPackageCost if available",
+    "packageWasteNote": "string | null — how it was determined",
+    "totalVerifiedWaste": "number — sum of all verified waste items only"
+  },
+
+  "valueProjection": {
+    "available": "boolean — false if handlingCostPerTransaction is null; suppresses entire section",
+    "transactionVolume": "number | null — from scanMetrics.monthlyTransactionVolume",
+    "transactionVolumeSource": "string | null",
+    "handlingCostPerTransaction": "number | null — from intake",
+    "deflectionRate": "number — from intake.deflectionBenchmark",
+    "deflectionRateSource": "string — from intake.deflectionBenchmarkSource",
+    "deflectedTransactionsPerMonth": "number | null — calculated",
+    "annualCapacityValueDollars": "number | null — calculated",
+    "currentReadinessCapture": "number | null — decimal: what % of value org could capture today",
+    "flexCreditCostPerTransaction": "number — credits per transaction × $0.10",
+    "flexCreditScenarios": [
+      {
+        "label": "string — e.g. '30% deflection'",
+        "rate": "number — decimal",
+        "tag": "string — 'Conservative' | 'Likely' | 'Optimistic'",
+        "deflectedCount": "number | null — calculated",
+        "monthlyCreditCost": "number | null — calculated",
+        "monthlyNetSaving": "number | null — calculated"
+      }
+    ]
+  },
+
+  "roadmap": "RoadmapItem[] — flat array with phase: 'quick' | 'medium' | 'strategic'",
+
+  "investmentOptions": {
+    "pilotReadyDate": "string | null — named month, e.g. 'September 2026'",
+    "optionA": {
+      "label": "string — 'Internal team'",
+      "internalDays": "number — estimated from roadmap",
+      "timelineMonths": "number"
+    },
+    "optionB": {
+      "label": "string — 'Yukti Global delivers'",
+      "feeRangeLow": "number",
+      "feeRangeHigh": "number",
+      "timelineWeeks": "number"
+    },
+    "optionC": {
+      "label": "string — 'Hybrid model'",
+      "feeRangeLow": "number",
+      "feeRangeHigh": "number",
+      "timelineWeeks": "number"
+    },
+    "monitoringRetainerMonthly": "number"
+  }
+}

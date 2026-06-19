@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrgPulse — Calculations Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f7f5f0; --bg2:#ffffff; --bg3:#f0ede6; --bg4:#e8e4db;
+  --border:rgba(0,0,0,0.08); --border2:rgba(0,0,0,0.14);
+  --text:#1a1814; --muted:#6b6559; --dim:#b0a898; --ink:#2d2926;
+  --red:#c0392b; --red-dim:rgba(192,57,43,0.08); --red-border:rgba(192,57,43,0.2);
+  --amber:#d4830a; --amber-dim:rgba(212,131,10,0.08); --amber-border:rgba(212,131,10,0.2);
+  --green:#1a7a4a; --green-dim:rgba(26,122,74,0.08); --green-border:rgba(26,122,74,0.2);
+  --blue:#1a4fa0; --blue-dim:rgba(26,79,160,0.07); --blue-border:rgba(26,79,160,0.2);
+  --mono:'DM Mono',monospace; --display:'Fraunces',serif; --sans:'Instrument Sans',sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+
+/* ── HEADER ── */
+.page-header {
+  background: var(--ink);
+  padding: 48px 56px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.page-header::before {
+  content: '';
+  position: absolute; top: -100px; right: -100px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+}
+.header-label {
+  font-family: var(--mono); font-size: 10px;
+  color: rgba(255,255,255,0.35); letter-spacing: .1em;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.header-title {
+  font-family: var(--display); font-size: 42px; font-weight: 300;
+  color: #fff; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 10px;
+}
+.header-title em { font-style: italic; color: rgba(255,255,255,0.5); }
+.header-sub { font-size: 14px; color: rgba(255,255,255,0.45); max-width: 520px; line-height: 1.6; }
+.header-meta {
+  display: flex; gap: 28px; margin-top: 28px;
+  padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
+}
+.hm-item { display: flex; flex-direction: column; gap: 3px; }
+.hm-label { font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.3); letter-spacing: .1em; text-transform: uppercase; }
+.hm-val { font-size: 12px; color: rgba(255,255,255,0.6); }
+
+/* ── NAV ── */
+.nav-bar {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg2); border-bottom: 1px solid var(--border2);
+  padding: 0 40px;
+  display: flex; gap: 0; overflow-x: auto;
+}
+.nav-link {
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  padding: 14px 16px; text-decoration: none; white-space: nowrap;
+  border-bottom: 2px solid transparent; letter-spacing: .04em;
+  transition: color .15s, border-color .15s;
+}
+.nav-link:hover { color: var(--text); border-color: var(--border2); }
+.nav-link.active { color: var(--green); border-color: var(--green); }
+
+/* ── LAYOUT ── */
+.page-wrap { max-width: 900px; margin: 0 auto; padding: 0 40px 80px; }
+
+/* ── SECTIONS ── */
+.section { padding-top: 56px; margin-top: 8px; }
+.section-tag {
+  font-family: var(--mono); font-size: 10px; color: var(--dim);
+  letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: 10px; display: flex; align-items: center; gap: 10px;
+}
+.section-tag::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.section-title {
+  font-family: var(--display); font-size: 28px; font-weight: 300;
+  letter-spacing: -.02em; color: var(--text); margin-bottom: 6px;
+}
+.section-title em { font-style: italic; color: var(--muted); }
+.section-sub { font-size: 13px; color: var(--muted); margin-bottom: 28px; max-width: 580px; line-height: 1.6; }
+
+/* ── CARDS ── */
+.card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 22px 26px; margin-bottom: 12px; }
+.card-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; letter-spacing: -.01em; }
+.card-body { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ── FORMULA BLOCK ── */
+.formula-block {
+  background: var(--ink); border-radius: 10px; margin: 14px 0;
+  overflow: hidden;
+}
+.formula-header {
+  padding: 8px 16px; background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-family: var(--mono); font-size: 10px;
+  color: rgba(255,255,255,0.35); letter-spacing: .08em;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.formula-source {
+  font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.2);
+}
+.formula-body {
+  padding: 14px 16px; font-family: var(--mono);
+  font-size: 12px; color: #a6e3a1; line-height: 1.9; overflow-x: auto;
+}
+.formula-body .comment { color: rgba(255,255,255,0.3); }
+.formula-body .op { color: #89dceb; }
+.formula-body .num { color: #f9e2af; }
+.formula-body .var { color: #cba6f7; }
+
+/* ── DOMAIN GRID ── */
+.domain-scoring-grid { display: flex; flex-direction: column; gap: 8px; margin-bottom: 4px; }
+.domain-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; cursor: pointer;
+  transition: border-color .15s;
+}
+.domain-card:hover { border-color: var(--border2); }
+.domain-card.open { border-color: var(--border2); }
+.domain-card-head {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px;
+}
+.dc-num { font-family: var(--mono); font-size: 11px; color: var(--dim); width: 22px; flex-shrink: 0; }
+.dc-name { font-size: 13px; font-weight: 500; color: var(--text); flex: 1; }
+.dc-weight {
+  font-family: var(--mono); font-size: 11px;
+  padding: 2px 9px; border-radius: 20px;
+  background: var(--green-dim); color: var(--green);
+  border: 1px solid var(--green-border); flex-shrink: 0;
+}
+.dc-chevron { font-size: 16px; color: var(--dim); transition: transform .2s; flex-shrink: 0; }
+.domain-card.open .dc-chevron { transform: rotate(180deg); }
+.domain-card-body {
+  display: none; padding: 0 18px 18px;
+  border-top: 1px solid var(--border);
+}
+.domain-card.open .domain-card-body { display: block; }
+
+/* ── THRESHOLD TABLE ── */
+.threshold-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 12px; }
+.threshold-table th {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  color: var(--dim); letter-spacing: .08em; text-transform: uppercase;
+  padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border2);
+}
+.threshold-table td {
+  padding: 8px 12px; color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.threshold-table tr:last-child td { border-bottom: none; }
+.threshold-table td:first-child { font-family: var(--mono); font-size: 11px; color: var(--text); }
+.cell-red { color: var(--red) !important; font-weight: 500; }
+.cell-amber { color: var(--amber) !important; font-weight: 500; }
+.cell-green { color: var(--green) !important; font-weight: 500; }
+
+/* ── KPI GRID ── */
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+.kpi-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 18px 18px; }
+.kpi-num { font-family: var(--display); font-size: 28px; font-weight: 300; letter-spacing: -.03em; line-height: 1; margin-bottom: 5px; }
+.kpi-lbl { font-size: 11px; color: var(--muted); line-height: 1.4; }
+
+/* ── INPUT SOURCE TABLE ── */
+.source-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.source-col { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.source-col-head {
+  padding: 12px 16px; background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: .08em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+}
+.source-col-head.scan { color: var(--green); }
+.source-col-head.interview { color: var(--blue); }
+.source-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 9px 16px; border-bottom: 1px solid var(--border); gap: 12px;
+}
+.source-row:last-child { border-bottom: none; }
+.sr-name { font-family: var(--mono); font-size: 11px; color: var(--text); }
+.sr-desc { font-size: 11px; color: var(--muted); text-align: right; }
+
+/* ── VERDICT TABLE ── */
+.verdict-row { display: flex; gap: 12px; margin-bottom: 8px; }
+.verdict-box {
+  flex: 1; border-radius: 10px; padding: 14px 18px;
+  border: 1px solid var(--border);
+}
+.verdict-range { font-family: var(--mono); font-size: 18px; font-weight: 500; margin-bottom: 4px; }
+.verdict-label { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.verdict-sub { font-size: 11px; color: var(--muted); }
+.v-red { background: var(--red-dim); border-color: var(--red-border); }
+.v-red .verdict-range, .v-red .verdict-label { color: var(--red); }
+.v-amber { background: var(--amber-dim); border-color: var(--amber-border); }
+.v-amber .verdict-range, .v-amber .verdict-label { color: var(--amber); }
+.v-green { background: var(--green-dim); border-color: var(--green-border); }
+.v-green .verdict-range, .v-green .verdict-label { color: var(--green); }
+
+/* ── BENCHMARK TABLE ── */
+.benchmark-grid { display: flex; flex-direction: column; gap: 8px; }
+.bm-row {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px 16px;
+  display: flex; align-items: center; gap: 14px;
+}
+.bm-name { font-size: 12px; color: var(--text); flex: 1; }
+.bm-bar-wrap { width: 200px; flex-shrink: 0; }
+.bm-bar-track { height: 5px; background: var(--bg3); border-radius: 3px; }
+.bm-bar-fill { height: 5px; border-radius: 3px; background: var(--blue); }
+.bm-score { font-family: var(--mono); font-size: 12px; color: var(--muted); width: 36px; text-align: right; flex-shrink: 0; }
+.bm-source { font-family: var(--mono); font-size: 10px; color: var(--dim); width: 130px; text-align: right; flex-shrink: 0; }
+
+/* ── TIER SPLIT ── */
+.tier-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.tier-box { border-radius: 12px; padding: 20px 22px; }
+.tier-1 { background: var(--green-dim); border: 1px solid var(--green-border); }
+.tier-2 { background: var(--blue-dim); border: 1px solid var(--blue-border); }
+.tier-label { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+.tier-1 .tier-label { color: var(--green); }
+.tier-2 .tier-label { color: var(--blue); }
+.tier-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.tier-body { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* ── MISC ── */
+.tag-pill {
+  display: inline-block; font-family: var(--mono); font-size: 10px;
+  padding: 2px 8px; border-radius: 20px; margin-right: 4px;
+}
+.tp-green { background: var(--green-dim); color: var(--green); border: 1px solid var(--green-border); }
+.tp-amber { background: var(--amber-dim); color: var(--amber); border: 1px solid var(--amber-border); }
+.tp-blue { background: var(--blue-dim); color: var(--blue); border: 1px solid var(--blue-border); }
+.tp-red { background: var(--red-dim); color: var(--red); border: 1px solid var(--red-border); }
+.note {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px 16px;
+  font-size: 12px; color: var(--muted); line-height: 1.6;
+  margin: 12px 0;
+}
+.note strong { color: var(--text); }
+.divider { height: 1px; background: var(--border); margin: 32px 0; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+@media print { .nav-bar { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<div class="page-header">
+  <div class="header-label">Yukti Global · OrgPulse</div>
+  <div class="header-title">Calculations <em>reference.</em></div>
+  <div class="header-sub">Every number in the OrgPulse report — where it comes from, how it is computed, and what inputs it depends on.</div>
+  <div class="header-meta">
+    <div class="hm-item"><div class="hm-label">Version</div><div class="hm-val">V2 · June 2026</div></div>
+    <div class="hm-item"><div class="hm-label">Source</div><div class="hm-val">src/scoring/ · src/report/json-schema.ts</div></div>
+    <div class="hm-item"><div class="hm-label">Audience</div><div class="hm-val">Consultant quick reference</div></div>
+  </div>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="nav-bar">
+  <a class="nav-link active" href="#index">AI Index</a>
+  <a class="nav-link" href="#domains">Domain Scores</a>
+  <a class="nav-link" href="#verdict">Verdict</a>
+  <a class="nav-link" href="#waste">Waste (Tier 1)</a>
+  <a class="nav-link" href="#agentforce">Agentforce Value (Tier 2)</a>
+  <a class="nav-link" href="#flex">Flex Credit</a>
+  <a class="nav-link" href="#roi">ROI Calculator</a>
+  <a class="nav-link" href="#benchmarks">Benchmarks</a>
+  <a class="nav-link" href="#inputs">Inputs</a>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- ══ 1. AI READINESS INDEX ══ -->
+  <div class="section" id="index">
+    <div class="section-tag">Section 1</div>
+    <div class="section-title">AI Readiness <em>Index</em></div>
+    <div class="section-sub">The headline score shown on the cover. A weighted average of the 7 domain scores, rounded to the nearest integer.</div>
+
+    <div class="formula-block">
+      <div class="formula-header">
+        <span>OVERALL INDEX</span>
+        <span class="formula-source">src/scoring/engine.ts · scoreFindings()</span>
+      </div>
+      <div class="formula-body">
+<span class="comment">// Σ (domainScore × domainWeight) across all 7 domains</span>
+overallIndex <span class="op">=</span> ROUND<span class="op">(</span>
+  data_quality_score  <span class="op">×</span> <span class="num">0.25</span>  <span class="comment">// 25%</span>
+  <span class="op">+</span> automation_score   <span class="op">×</span> <span class="num">0.20</span>  <span class="comment">// 20%</span>
+  <span class="op">+</span> security_score     <span class="op">×</span> <span class="num">0.15</span>  <span class="comment">// 15%</span>
+  <span class="op">+</span> knowledge_score    <span class="op">×</span> <span class="num">0.15</span>  <span class="comment">// 15%</span>
+  <span class="op">+</span> metadata_score     <span class="op">×</span> <span class="num">0.10</span>  <span class="comment">// 10%</span>
+  <span class="op">+</span> adoption_score     <span class="op">×</span> <span class="num">0.10</span>  <span class="comment">// 10%</span>
+  <span class="op">+</span> limits_score       <span class="op">×</span> <span class="num">0.05</span>  <span class="comment">//  5%</span>
+<span class="op">)</span>                           <span class="comment">// weights must sum to 1.0</span>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-box"><div class="kpi-num" style="color:var(--green)">50</div><div class="kpi-lbl">Hard blocker threshold — domain below this becomes a blocker</div></div>
+      <div class="kpi-box"><div class="kpi-num">+35</div><div class="kpi-lbl">Points added to derive target score after remediation</div></div>
+      <div class="kpi-box"><div class="kpi-num" style="color:var(--amber)">95</div><div class="kpi-lbl">Target score cap — never promises perfection</div></div>
+      <div class="kpi-box"><div class="kpi-num">16 wk</div><div class="kpi-lbl">Weeks added to today to compute Pilot Ready Date</div></div>
+    </div>
+
+    <div class="note">
+      <strong>Target score formula:</strong> MIN(overallIndex + 35, 95) — represents where the org lands after completing the remediation roadmap in Section 5.
+    </div>
+  </div>
+
+  <!-- ══ 2. DOMAIN SCORES ══ -->
+  <div class="section" id="domains">
+    <div class="section-tag">Section 2</div>
+    <div class="section-title">Domain <em>scoring formulas</em></div>
+    <div class="section-sub">Each domain starts at 100 and deducts penalty points based on scan signals. All scores are clamped to 0–100. Click a domain to expand the formula.</div>
+
+    <div class="domain-scoring-grid">
+
+      <!-- D1 Data Quality -->
+      <div class="domain-card" onclick="this.classList.toggle('open')">
+        <div class="domain-card-head">
+          <div class="dc-num">01</div>
+          <div class="dc-name">Data Quality &amp; Completeness</div>
+          <div class="dc-weight">25%</div>
+          <div class="dc-chevron">›</div>
+        </div>
+        <div class="domain-card-body">
+          <div style="margin-top:14px">
+            <div class="formula-block">
+              <div class="formula-header"><span>FORMULA</span><span class="formula-source">scoreDataQuality()</span></div>
+              <div class="formula-body">
+<span class="comment">// Weighted average completion rate (weight = record count per object)</span>
+avgCompletionRate <span class="op">=</span> Σ(fieldCompletionRate <span class="op">×</span> totalRecords) <span class="op">/</span> Σ(totalRecords)
+
+<span class="comment">// fieldCompletionRate per field = COUNT(field) / COUNT(Id) × 100</span>
+
+maxDupRate <span class="op">=</span> MAX(duplicateRate across all scanned objects)
+dupPenalty <span class="op">=</span> maxDupRate <span class="op">></span> <span class="num">15</span>% <span class="op">→</span> <span class="num">30</span>
+             maxDupRate <span class="op">></span> <span class="num">10</span>% <span class="op">→</span> <span class="num">15</span>
+             maxDupRate <span class="op">></span>  <span class="num">5</span>% <span class="op">→</span>  <span class="num">5</span>
+             otherwise   <span class="op">→</span>  <span class="num">0</span>
+
+score <span class="op">=</span> CLAMP(avgCompletionRate <span class="op">−</span> dupPenalty, <span class="num">0</span>, <span class="num">100</span>)
+              </div>
+            </div>
+            <div class="note">Objects with fewer than 100 records are skipped. Duplicate rate = duplicateCount / totalRecords × 100.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- D2 Automation -->
+      <div class="domain-card" onclick="this.classList.toggle('open')">
+        <div class="domain-card-head">
+          <div class="dc-num">02</div>
+          <div class="dc-name">Automation Health &amp; Conflicts</div>
+          <div class="dc-weight">20%</div>
+          <div class="dc-chevron">›</div>
+        </div>
+        <div class="domain-card-body">
+          <div style="margin-top:14px">
+            <div class="formula-block">
+              <div class="formula-header"><span>FORMULA</span><span class="formula-source">scoreAutomation()</span></div>
+              <div class="formula-body">
+faultPathPct  <span class="op">=</span> flowsWithNoFaultPath <span class="op">/</span> totalActiveFlows <span class="op">×</span> <span class="num">100</span>
+
+faultPenalty  <span class="op">=</span> faultPathPct <span class="op">></span> <span class="num">50</span>% <span class="op">→</span> <span class="num">40</span>
+               faultPathPct <span class="op">></span> <span class="num">25</span>% <span class="op">→</span> <span class="num">20</span>
+               faultPathPct <span class="op">></span> <span class="num">10</span>% <span class="op">→</span> <span class="num">10</span>
+               otherwise    <span class="op">→</span>  <span class="num">0</span>
+
+apexPenalty   <span class="op">=</span> apexCoveragePct <span class="op"><</span> <span class="num">40</span>% <span class="op">→</span> <span class="num">30</span>
+               apexCoveragePct <span class="op"><</span> <span class="num">60</span>% <span class="op">→</span> <span class="num">15</span>
+               apexCoveragePct <span class="op"><</span> <span class="num">75</span>% <span class="op">→</span>  <span class="num">5</span>
+               otherwise        <span class="op">→</span>  <span class="num">0</span>
+
+legacyPenalty <span class="op">=</span> legacyAutomationCount <span class="op">></span> <span class="num">10</span> <span class="op">→</span> <span class="num">25</span>
+               legacyAutomationCount <span class="op">></span>  <span class="num">5</span> <span class="op">→</span> <span class="num">10</span>
+               legacyAutomationCount <span class="op">></span>  <span class="num">0</span> <span class="op">→</span>  <span class="num">5</span>
+               otherwise              <span class="op">→</span>  <span class="num">0</span>
+
+score <span class="op">=</span> CLAMP(<span class="num">100</span> <span class="op">−</span> faultPenalty <span class="op">−</span> apexPenalty <span class="op">−</span> legacyPenalty, <span class="num">0</span>, <span class="num">100</span>)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- D3 Security -->
+      <div class="domain-card" onclick="this.classList.toggle('open')">
+        <div class="domain-card-head">
+          <div class="dc-num">03</div>
+          <div class="dc-name">Security &amp; Permission Model</div>
+          <div class="dc-weight">15%</div>
+          <div class="dc-chevron">›</div>
+        </div>
+        <div class="domain-card-body">
+          <div style="margin-top:14px">
+            <div class="formula-block">
+              <div class="formula-header"><span>FORMULA</span><span class="formula-source">scoreSecurity()</span></div>
+              <div class="formula-body">
+criticalPenalty <span class="op">=</span> criticalCheckCount <span class="op">></span> <span class="num">5</span> <span class="op">→</span> <span class="num">20</span>
+                criticalCheckCount <span class="op">></span> <span class="num">2</span> <span class="op">→</span> <span class="num">10</span>
+                otherwise          <span class="op">→</span>  <span class="num">0</span>
+
+guestPenalty    <span class="op">=</span> guestUserRisk <span class="op">=</span> true <span class="op">→</span> <span class="num">15</span> | otherwise <span class="op">→</span> <span class="num">0</span>
+
+score <span class="op">=</span> CLAMP(healthCheckScore <span class="op">−</span> criticalPenalty <span class="op">−</span> guestPenalty, <span class="num">0</span>, <span class="num">100</span>)
+              </div>
+            </div>
+            <div class="note"><strong>Source:</strong> Salesforce REST endpoint <code style="font-family:var(--mono);font-size:11px">/services/data/v59.0/connect/security/health-check</code>. Returns 404 on Dev Edition — fallback returns 0, which triggers a hard blocker on Dev Edition only. Will return real data on client orgs.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- D4 Knowledge -->
+      <div class="domain-card" onclick="this.classList.toggle('open')">
+        <div class="domain-card-head">
+          <div class="dc-num">04</div>
+          <div class="dc-name">Knowledge Base &amp; Grounding</div>
+          <div class="dc-weight">15%</div>
+          <div class="dc-chevron">›</div>
+        </div>
+        <div class="domain-card-body">
+          <div style="margin-top:14px">
+            <div class="formula-block">
+              <div class="formula-header"><span>FORMULA</span><span class="formula-source">scoreKnowledge()</span></div>
+              <div class="formula-body">
+<span class="comment">// Hard floor — no knowledge base at all</span>
+IF articleCount <span class="op">=</span> <span class="num">0</span> <span class="op">→</span> score <span class="op">=</span> <span class="num">15</span> (hard blocker)
+
+staleRatio <span class="op">=</span> staleArticleCount <span class="op">/</span> articleCount <span class="op">×</span> <span class="num">100</span>
+gapRatio   <span class="op">=</span> coverageGapCount <span class="op">/</span> topCaseReasons.length <span class="op">×</span> <span class="num">100</span>
+
+stalePenalty <span class="op">=</span> staleRatio <span class="op">></span> <span class="num">50</span>% <span class="op">→</span> <span class="num">40</span> | <span class="op">></span><span class="num">30</span>% <span class="op">→</span> <span class="num">20</span> | <span class="op">></span><span class="num">15</span>% <span class="op">→</span> <span class="num">10</span> | else <span class="op">→</span> <span class="num">0</span>
+gapPenalty   <span class="op">=</span> gapRatio   <span class="op">></span> <span class="num">75</span>% <span class="op">→</span> <span class="num">40</span> | <span class="op">></span><span class="num">50</span>% <span class="op">→</span> <span class="num">25</span> | <span class="op">></span><span class="num">25</span>% <span class="op">→</span> <span class="num">10</span> | else <span class="op">→</span> <span class="num">0</span>
+
+score <span class="op">=</span> CLAMP(<span class="num">100</span> <span class="op">−</span> stalePenalty <span class="op">−</span> gapPenalty, <span class="num">0</span>, <span class="num">100</span>)
+
+<span class="comment">// Volume caps applied after penalty</span>
+articleCount <span class="op"><</span>  <span class="num">10</span> <span class="op">→</span> cap score at <span class="num">30</span>
+articleCount <span class="op"><</span>  <span class="num">50</span> <span class="op">→</span> cap score at <span class="num">60</span>
+articleCount <span class="op">≥</span>  <span class="num">50</span> <span class="op">→</span> no cap
+              </div>
+            </div>
+            <div class="note"><strong>coverageGapCount</strong> = number of top case reasons (from Case SOQL scan) with no matching published Knowledge article.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- D5 Metadata -->
+      <div class="domain-card" onclick="this.classList.toggle('open')">
+        <div class="domain-card-head">
+          <div class="dc-num">05</div>
+          <div class="dc-name">Metadata &amp; Technical Debt</div>
+          <div class="dc-weight">10%</div>
+          <div class="dc-chevron">›</div>
+        </div>
+        <div class="domain-card-body">
+          <div style="margin-top:14px">
+            <div class="formula-block">
+              <div class="formula-header"><span>FORMULA</span><span class="formula-source">scoreMetadata()</span></div>
+              <div class="formula-body">
+fieldPenalty <span class="op">=</span> unusedFieldCount <span class="op">></span> <span class="num">700</span> <span class="op">→</span> <span class="num">60</span>
+              unusedFieldCount <span class="op">></span> <span class="num">400</span> <span class="op">→</span> <span class="num">35</span>
+              unusedFieldCount <span class="op">></span> <span class="num">200</span> <span class="op">→</span> <span class="num">15</span>
+              otherwise        <span class="op">→</span>  <span class="num">0</span>
+
+pkgPenalty   <span class="op">=</span> abandonedPackageCount <span class="op">></span> <span class="num">10</span> <span class="op">→</span> <span class="num">30</span>
+              abandonedPackageCount <span class="op">></span>  <span class="num">5</span> <span class="op">→</span> <span class="num">15</span>
+              abandonedPackageCount <span class="op">></span>  <span class="num">2</span> <span class="op">→</span>  <span class="num">5</span>
+              otherwise              <span class="op">→</span>  <span class="num">0</span>
+
+score <span class="op">=</span> CLAMP(<span class="num">100</span> <span class="op">−</span> fieldPenalty <span class="op">−</span> pkgPenalty, <span class="num">0</span>, <span class="num">100</span>)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- D6 Adoption -->
+      <div class="domain-card" onclick="this.classList.toggle('open')">
+        <div class="domain-card-head">
+          <div class="dc-num">06</div>
+          <div class="dc-name">User Adoption &amp; Process Alignment</div>
+          <div class="dc-weight">10%</div>
+          <div class="dc-chevron">›</div>
+        </div>
+        <div class="domain-card-body">
+          <div style="margin-top:14px">
+            <div class="formula-block">
+              <div class="formula-header"><span>FORMULA</span><span class="formula-source">scoreAdoption()</span></div>
+              <div class="formula-body">
+bonus   <span class="op">=</span> avgActivitiesPerUser <span class="op">></span> <span class="num">20</span> <span class="op">→</span> <span class="num">5</span> | <span class="op">></span><span class="num">10</span> <span class="op">→</span> <span class="num">3</span> | <span class="op">></span><span class="num">3</span> <span class="op">→</span> <span class="num">1</span> | else <span class="op">→</span> <span class="num">0</span>
+penalty <span class="op">=</span> avgActivitiesPerUser <span class="op"><</span>  <span class="num">3</span> <span class="op">→</span> <span class="num">10</span> | else <span class="op">→</span> <span class="num">0</span>
+
+score <span class="op">=</span> CLAMP(loginRatePct <span class="op">+</span> bonus <span class="op">−</span> penalty, <span class="num">0</span>, <span class="num">100</span>)
+
+<span class="comment">// loginRatePct = COUNT(DISTINCT UserId in LoginHistory last 90 days)</span>
+<span class="comment">//               / activeUserCount × 100</span>
+<span class="comment">// avgActivitiesPerUser = COUNT(Task last 90 days) / activeUserCount</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- D7 Limits -->
+      <div class="domain-card" onclick="this.classList.toggle('open')">
+        <div class="domain-card-head">
+          <div class="dc-num">07</div>
+          <div class="dc-name">Platform Limits &amp; API Headroom</div>
+          <div class="dc-weight">5%</div>
+          <div class="dc-chevron">›</div>
+        </div>
+        <div class="domain-card-body">
+          <div style="margin-top:14px">
+            <div class="formula-block">
+              <div class="formula-header"><span>FORMULA</span><span class="formula-source">scoreLimits()</span></div>
+              <div class="formula-body">
+maxUsage <span class="op">=</span> MAX(apiUsagePct, storageUsagePct, fileUsagePct)
+score    <span class="op">=</span> CLAMP(<span class="num">100</span> <span class="op">−</span> maxUsage, <span class="num">0</span>, <span class="num">100</span>)
+
+<span class="comment">// Usage % from /services/data/v59.0/limits/</span>
+<span class="comment">// Key signals: DailyApiRequests, DataStorageMB, FileStorageMB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end domain-scoring-grid -->
+  </div>
+
+  <!-- ══ 3. SCORE VERDICT ══ -->
+  <div class="section" id="verdict">
+    <div class="section-tag">Section 3</div>
+    <div class="section-title">Score <em>verdict bands</em></div>
+    <div class="section-sub">The verdict shown on the cover and in the score ring. Derived solely from the overall index.</div>
+
+    <div class="verdict-row">
+      <div class="verdict-box v-red">
+        <div class="verdict-range">0 – 39</div>
+        <div class="verdict-label">Not Ready</div>
+        <div class="verdict-sub">Hard blockers must be resolved before any agent deployment</div>
+      </div>
+      <div class="verdict-box v-amber">
+        <div class="verdict-range">40 – 59</div>
+        <div class="verdict-label">Conditionally Ready</div>
+        <div class="verdict-sub">Agentforce deployable in narrow use case only</div>
+      </div>
+    </div>
+    <div class="verdict-row">
+      <div class="verdict-box v-amber">
+        <div class="verdict-range">60 – 79</div>
+        <div class="verdict-label">Ready for Pilot</div>
+        <div class="verdict-sub">Agentforce can be piloted with close monitoring</div>
+      </div>
+      <div class="verdict-box v-green">
+        <div class="verdict-range">80 – 100</div>
+        <div class="verdict-label">AI Ready</div>
+        <div class="verdict-sub">Org is ready for full Agentforce deployment</div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:16px">
+      <strong>Domain status labels:</strong> score &lt; 50 → <span class="tag-pill tp-red">Hard blocker</span> &nbsp; 50–69 → <span class="tag-pill tp-amber">At risk</span> &nbsp; ≥ 70 → <span class="tag-pill tp-green">Adequate / Healthy</span>
+    </div>
+  </div>
+
+  <!-- ══ 4. WASTE (TIER 1) ══ -->
+  <div class="section" id="waste">
+    <div class="section-tag">Section 4</div>
+    <div class="section-title">Waste calculations <em>(Tier 1 — Verified)</em></div>
+    <div class="section-sub">All Tier 1 numbers are derived directly from scan data and confirmed inputs. They are not estimated.</div>
+
+    <div class="tier-split">
+      <div class="tier-box tier-1">
+        <div class="tier-label">Tier 1 — Verified</div>
+        <div class="tier-title">Derived from scan data</div>
+        <div class="tier-body">Inactive user count, login rate, email gap — all from SOQL aggregates. License cost confirmed at interview. No modelling involved.</div>
+      </div>
+      <div class="tier-box tier-2">
+        <div class="tier-label">Tier 2 — Projected</div>
+        <div class="tier-title">Modelled from scan + benchmarks</div>
+        <div class="tier-body">Case deflection value uses scan case volume but applies Salesforce published deflection rates and a default cost-per-case. See Section 5.</div>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-header"><span>INACTIVE USER COUNT</span><span class="formula-source">buildReportData()</span></div>
+      <div class="formula-body">
+inactiveUserCount <span class="op">=</span> ROUND(licenseCount <span class="op">×</span> (<span class="num">1</span> <span class="op">−</span> loginRatePct <span class="op">/</span> <span class="num">100</span>))
+
+<span class="comment">// licenseCount — from stakeholder interview (total contracted seats)</span>
+<span class="comment">// loginRatePct — from Domain 6 scan (LoginHistory last 90 days)</span>
+<span class="comment">// Returns 0 if licenseCount not provided at interview</span>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-header"><span>ANNUAL LICENCE WASTE</span><span class="formula-source">buildReportData()</span></div>
+      <div class="formula-body">
+licenseWaste      <span class="op">=</span> inactiveUserCount <span class="op">×</span> licenseUnitCostMonthly <span class="op">×</span> <span class="num">12</span>
+totalVerifiedWaste <span class="op">=</span> licenseWaste <span class="op">+</span> packageWaste
+
+<span class="comment">// licenseUnitCostMonthly — default $165/user/month (SF Sales Cloud Professional list price, June 2026)</span>
+<span class="comment">// Override from client contract in client-intake.json → licenseUnitCostMonthly</span>
+<span class="comment">// packageWaste — from interview: AppExchange subscription cost on abandoned packages</span>
+<span class="comment">// Example: 23 inactive × $165/month × 12 = $45,540 licenseWaste</span>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-header"><span>EMAIL GAP &amp; UNREACHABLE CONTACTS</span><span class="formula-source">buildReportData()</span></div>
+      <div class="formula-body">
+emailGapPct              <span class="op">=</span> ROUND(<span class="num">100</span> <span class="op">−</span> emailCompletionRate)  <span class="comment">// Contact object</span>
+unreachableContactCount  <span class="op">=</span> ROUND(contactTotalRecords <span class="op">×</span> emailGapPct <span class="op">/</span> <span class="num">100</span>)
+
+<span class="comment">// emailCompletionRate = COUNT(Email) / COUNT(Id) × 100 on Contact</span>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-header"><span>QUARTERLY WASTE (cost-of-inaction section)</span><span class="formula-source">buildReportData()</span></div>
+      <div class="formula-body">
+quarterlyWaste <span class="op">=</span> ROUND(totalVerifiedWaste <span class="op">/</span> <span class="num">4</span>)
+
+<span class="comment">// Used in narrative: "every quarter of inaction costs approximately $X"</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 5. AGENTFORCE VALUE (TIER 2) ══ -->
+  <div class="section" id="agentforce">
+    <div class="section-tag">Section 5</div>
+    <div class="section-title">Agentforce value <em>(Tier 2 — Projected)</em></div>
+    <div class="section-sub">These numbers use actual scan case volume but apply published Salesforce deflection benchmarks. Update <code style="font-family:var(--mono);font-size:12px">currentCostPerCase</code> from the client interview.</div>
+
+    <div class="formula-block">
+      <div class="formula-header"><span>CASE DEFLECTION VALUE</span><span class="formula-source">buildReportData()</span></div>
+      <div class="formula-body">
+monthlyVolume               <span class="op">=</span> totalCasesLast3Months <span class="op">/</span> <span class="num">3</span>     <span class="comment">// from scan (COUNT Case last 90 days ÷ 3)</span>
+                            <span class="op">||</span> monthlyTransactionVolume         <span class="comment">// intake override if scan returns 0</span>
+
+deflectionRate              <span class="op">=</span> <span class="num">0.40</span>                               <span class="comment">// Salesforce State of Service 2025, p.14</span>
+deflectedTransactionsPerMonth <span class="op">=</span> ROUND(monthlyVolume <span class="op">×</span> deflectionRate)
+
+annualCapacityValueDollars  <span class="op">=</span> deflectedTransactionsPerMonth <span class="op">×</span> handlingCostPerTransaction <span class="op">×</span> <span class="num">12</span>
+
+<span class="comment">// handlingCostPerTransaction — from client-intake.json (client interview); null = suppress Section 4</span>
+<span class="comment">// Example: 2,840/mo × 40% = 1,136 deflected × $18 × 12 = $245,376/yr</span>
+<span class="comment">// Section 4 only renders when handlingCostPerTransaction != null (valueProjection.available = true)</span>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-header"><span>CURRENT ORG EFFECTIVENESS (narrative only)</span><span class="formula-source">buildReportData()</span></div>
+      <div class="formula-body">
+currentEffectivenessPct <span class="op">=</span> overallIndex <span class="op">≥</span> <span class="num">80</span> <span class="op">→</span> <span class="num">70</span>%
+                          overallIndex <span class="op">≥</span> <span class="num">60</span> <span class="op">→</span> <span class="num">40</span>%
+                          otherwise       <span class="op">→</span> <span class="num">15</span>%
+<span class="comment">// Used in narrative text only — not in ROI calculation</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Scenario range</strong> shown in the Flex Credit model: Conservative 30%, Most Likely 40%, Optimistic 55%.
+      The default ROI slider uses the Most Likely (40%) figure.
+    </div>
+  </div>
+
+  <!-- ══ 6. FLEX CREDIT ══ -->
+  <div class="section" id="flex">
+    <div class="section-tag">Section 6</div>
+    <div class="section-title">Flex Credit <em>model</em></div>
+    <div class="section-sub">Agentforce uses Flex Credits for consumption-based billing. The model shows what the client pays per case via agent vs. the current human handling cost.</div>
+
+    <div class="formula-block">
+      <div class="formula-header"><span>FLEX CREDIT ECONOMICS</span><span class="formula-source">buildReportData() · flexCreditScenarios[]</span></div>
+      <div class="formula-body">
+creditsPerTransaction        <span class="op">=</span> <span class="num">4.5</span>      <span class="comment">// avg turns per service case conversation</span>
+creditCostUSD                <span class="op">=</span> $<span class="num">0.10</span>    <span class="comment">// Salesforce Flex Credit list price</span>
+flexCreditCostPerTransaction <span class="op">=</span> <span class="num">4.5</span> <span class="op">×</span> $<span class="num">0.10</span> <span class="op">=</span> $<span class="num">0.45</span> per deflected case
+
+<span class="comment">// Per scenario (pre-computed in buildReportData, stored in flexCreditScenarios[]):</span>
+deflectedCount    <span class="op">=</span> ROUND(monthlyVolume <span class="op">×</span> scenarioRate)
+monthlyCreditCost <span class="op">=</span> ROUND(deflectedCount <span class="op">×</span> creditsPerTransaction <span class="op">×</span> creditCostUSD)
+monthlyNetSaving  <span class="op">=</span> ROUND(deflectedCount <span class="op">×</span> (handlingCostPerTransaction <span class="op">−</span> flexCreditCostPerTransaction))
+
+<span class="comment">// Example (Conservative, 2,840 cases/mo, $18/case):</span>
+<span class="comment">// deflectedCount    = ROUND(2840 × 0.30) = 852</span>
+<span class="comment">// monthlyCreditCost = ROUND(852 × 4.5 × 0.10) = $383</span>
+<span class="comment">// monthlyNetSaving  = ROUND(852 × (18 − 0.45)) = $14,953</span>
+      </div>
+    </div>
+
+    <table class="threshold-table" style="margin-top:16px">
+      <thead><tr><th>Scenario</th><th>Rate</th><th>Tag</th><th>Monthly credit cost (2,840 cases)</th><th>Monthly net saving</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative</td><td>30%</td><td><span class="tag-pill tp-amber">Conservative</span></td><td>$383</td><td>$14,953</td></tr>
+        <tr><td>Likely</td><td>40%</td><td><span class="tag-pill tp-green">Likely</span></td><td>$511</td><td>$19,937</td></tr>
+        <tr><td>Optimistic</td><td>55%</td><td><span class="tag-pill tp-blue">Optimistic</span></td><td>$703</td><td>$27,412</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:12px">All three scenarios are pre-computed in <code style="font-family:var(--mono);font-size:11px">buildReportData()</code> and stored in <code style="font-family:var(--mono);font-size:11px">valueProjection.flexCreditScenarios[]</code> — the template renders them directly, no calculations in the browser.</div>
+  </div>
+
+  <!-- ══ 7. ROI CALCULATOR ══ -->
+  <div class="section" id="roi">
+    <div class="section-tag">Section 7</div>
+    <div class="section-title">ROI Calculator <em>formulas</em></div>
+    <div class="section-sub">Two independent sliders. Tier 1 (verified) is scan-derived and fixed. Tier 2 (projected) is the adjustable Agentforce value estimate.</div>
+
+    <div class="formula-block">
+      <div class="formula-header"><span>ROI CALCULATION</span><span class="formula-source">templates/orgpulse-v2.html · updateROI()</span></div>
+      <div class="formula-body">
+engagementFee      <span class="op">=</span> fee-slider value       <span class="comment">// default: Option B low ($28,000); range $15k–$35k</span>
+agentforceValue    <span class="op">=</span> val-slider value       <span class="comment">// default: annualCapacityValueDollars from scan</span>
+
+tier1AnnualSavings <span class="op">=</span> totalVerifiedWaste     <span class="comment">// scan-derived — licenseWaste + packageWaste</span>
+tier2AnnualSavings <span class="op">=</span> agentforceValue        <span class="comment">// slider — client adjusts; suppressed if handlingCost null</span>
+totalAnnualBenefit <span class="op">=</span> tier1AnnualSavings <span class="op">+</span> tier2AnnualSavings
+
+paybackMonths      <span class="op">=</span> CEIL(engagementFee <span class="op">/</span> (totalAnnualBenefit <span class="op">/</span> <span class="num">12</span>))
+year1NetBenefit    <span class="op">=</span> totalAnnualBenefit <span class="op">−</span> engagementFee
+roi3yr             <span class="op">=</span> ROUND(((totalAnnualBenefit <span class="op">×</span> <span class="num">3</span> <span class="op">−</span> engagementFee) <span class="op">/</span> engagementFee) <span class="op">×</span> <span class="num">100</span>)%
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <div class="card-title">Default slider values</div>
+      <table class="threshold-table">
+        <thead><tr><th>Slider</th><th>Default</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>Engagement fee</td><td>$28,000</td><td>Option B low (feeRangeLow from investmentOptions)</td></tr>
+          <tr><td>Agentforce value</td><td>annualCapacityValueDollars</td><td>From scan — hidden if handlingCostPerTransaction is null</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══ 8. BENCHMARKS ══ -->
+  <div class="section" id="benchmarks">
+    <div class="section-tag">Section 8</div>
+    <div class="section-title">Industry <em>benchmarks</em></div>
+    <div class="section-sub">Used for the comparison bar in each domain card. Source: IBM IBV 2025–26, sample of 150–300 user Salesforce orgs.</div>
+
+    <div class="benchmark-grid">
+      <div class="bm-row">
+        <div class="bm-name">Data Quality &amp; Completeness</div>
+        <div class="bm-bar-wrap"><div class="bm-bar-track"><div class="bm-bar-fill" style="width:54%"></div></div></div>
+        <div class="bm-score">54</div>
+        <div class="bm-source">IBM IBV 2025–26</div>
+      </div>
+      <div class="bm-row">
+        <div class="bm-name">Automation Health &amp; Conflicts</div>
+        <div class="bm-bar-wrap"><div class="bm-bar-track"><div class="bm-bar-fill" style="width:58%"></div></div></div>
+        <div class="bm-score">58</div>
+        <div class="bm-source">IBM IBV 2025–26</div>
+      </div>
+      <div class="bm-row">
+        <div class="bm-name">Security &amp; Permission Model</div>
+        <div class="bm-bar-wrap"><div class="bm-bar-track"><div class="bm-bar-fill" style="width:69%"></div></div></div>
+        <div class="bm-score">69</div>
+        <div class="bm-source">IBM IBV 2025–26</div>
+      </div>
+      <div class="bm-row">
+        <div class="bm-name">Knowledge Base &amp; Grounding</div>
+        <div class="bm-bar-wrap"><div class="bm-bar-track"><div class="bm-bar-fill" style="width:38%"></div></div></div>
+        <div class="bm-score">38</div>
+        <div class="bm-source">IBM IBV 2025–26</div>
+      </div>
+      <div class="bm-row">
+        <div class="bm-name">Metadata &amp; Technical Debt</div>
+        <div class="bm-bar-wrap"><div class="bm-bar-track"><div class="bm-bar-fill" style="width:55%"></div></div></div>
+        <div class="bm-score">55</div>
+        <div class="bm-source">IBM IBV 2025–26</div>
+      </div>
+      <div class="bm-row">
+        <div class="bm-name">User Adoption &amp; Process Alignment</div>
+        <div class="bm-bar-wrap"><div class="bm-bar-track"><div class="bm-bar-fill" style="width:68%"></div></div></div>
+        <div class="bm-score">68</div>
+        <div class="bm-source">IBM IBV 2025–26</div>
+      </div>
+      <div class="bm-row">
+        <div class="bm-name">Platform Limits &amp; API Headroom</div>
+        <div class="bm-bar-wrap"><div class="bm-bar-track"><div class="bm-bar-fill" style="width:77%"></div></div></div>
+        <div class="bm-score">77</div>
+        <div class="bm-source">IBM IBV 2025–26</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 9. INPUTS ══ -->
+  <div class="section" id="inputs">
+    <div class="section-tag">Section 9</div>
+    <div class="section-title">Input <em>sources</em></div>
+    <div class="section-sub">Every input to the calculations comes from one of two places — the automated scan or the stakeholder interview. Nothing is guessed.</div>
+
+    <div class="source-grid">
+      <div class="source-col">
+        <div class="source-col-head scan">⬤ &nbsp;From automated scan</div>
+        <div class="source-row"><span class="sr-name">loginRatePct</span><span class="sr-desc">LoginHistory last 90 days</span></div>
+        <div class="source-row"><span class="sr-name">avgActivitiesPerUser</span><span class="sr-desc">Task count ÷ active users</span></div>
+        <div class="source-row"><span class="sr-name">totalActiveFlows</span><span class="sr-desc">FlowVersionView WHERE Status = Active</span></div>
+        <div class="source-row"><span class="sr-name">flowsWithNoFaultPath</span><span class="sr-desc">FlowVersionView fault-path columns</span></div>
+        <div class="source-row"><span class="sr-name">apexCoveragePct</span><span class="sr-desc">ApexOrgWideCoverage</span></div>
+        <div class="source-row"><span class="sr-name">legacyAutomationCount</span><span class="sr-desc">ProcessDefinition via Tooling API</span></div>
+        <div class="source-row"><span class="sr-name">healthCheckScore</span><span class="sr-desc">Security Health Check REST endpoint</span></div>
+        <div class="source-row"><span class="sr-name">criticalCheckCount</span><span class="sr-desc">Security Health Check REST endpoint</span></div>
+        <div class="source-row"><span class="sr-name">articleCount / staleArticleCount</span><span class="sr-desc">KnowledgeArticleVersion</span></div>
+        <div class="source-row"><span class="sr-name">coverageGapCount</span><span class="sr-desc">Top case reasons vs. KB articles</span></div>
+        <div class="source-row"><span class="sr-name">monthlyVolume</span><span class="sr-desc">Case last 3 months ÷ 3</span></div>
+        <div class="source-row"><span class="sr-name">unusedFieldCount</span><span class="sr-desc">CustomField WHERE unmanaged</span></div>
+        <div class="source-row"><span class="sr-name">abandonedPackageCount</span><span class="sr-desc">InstalledSubscriberPackage</span></div>
+        <div class="source-row"><span class="sr-name">completionRates / duplicateRate</span><span class="sr-desc">Per-object SOQL aggregates</span></div>
+        <div class="source-row"><span class="sr-name">apiUsagePct / storageUsagePct</span><span class="sr-desc">Limits API</span></div>
+      </div>
+      <div class="source-col">
+        <div class="source-col-head interview">⬤ &nbsp;From client-intake.json (interview)</div>
+        <div class="source-row"><span class="sr-name">orgName</span><span class="sr-desc">Client company name</span></div>
+        <div class="source-row"><span class="sr-name">licenseCount</span><span class="sr-desc">Total contracted seats</span></div>
+        <div class="source-row"><span class="sr-name">clouds</span><span class="sr-desc">e.g. Sales Cloud + Service Cloud</span></div>
+        <div class="source-row"><span class="sr-name">licenseUnitCostMonthly</span><span class="sr-desc">Default $165/mo — update from contract</span></div>
+        <div class="source-row"><span class="sr-name">handlingCostPerTransaction</span><span class="sr-desc">Default $18 — unlocks Section 4 &amp; Flex Credit</span></div>
+        <div class="source-row"><span class="sr-name">packageWaste</span><span class="sr-desc">AppExchange subs on abandoned packages ($/yr)</span></div>
+        <div class="source-row"><span class="sr-name">monthlyTransactionVolume</span><span class="sr-desc">Override only — leave null for real client orgs</span></div>
+        <div class="source-row"><span class="sr-name">useCase</span><span class="sr-desc">service · sales · fieldService · general</span></div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:20px">
+      <strong>Zero raw data stored.</strong> All scan functions return only aggregate signals (counts, percentages, rates). No Salesforce record values are returned, stored, or sent anywhere. See CLAUDE.md for the zero-copy contract.
+    </div>
+  </div>
+
+  <div style="height:48px"></div>
+</div><!-- end page-wrap -->
+
+<script>
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('.section[id]')
+const navLinks  = document.querySelectorAll('.nav-link')
+const observer  = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'))
+      const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`)
+      if (active) active.classList.add('active')
+    }
+  })
+}, { rootMargin: '-30% 0px -60% 0px' })
+sections.forEach(s => observer.observe(s))
+</script>
+</body>
+</html>
