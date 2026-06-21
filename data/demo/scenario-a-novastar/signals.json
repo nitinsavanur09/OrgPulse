@@ -1,0 +1,57 @@
+{
+  "orgId": "demo-novastar",
+  "signals": {
+    "limits": { "apiUsagePct": 5, "storageUsagePct": 8, "fileUsagePct": 6 },
+    "security": { "healthCheckScore": 80, "failingCheckCount": 12, "criticalCheckCount": 3, "guestUserRisk": false },
+    "dataQuality": [
+      { "objectName": "Contact",      "totalRecords": 25000, "completionRates": { "Email": 82, "Phone": 65, "Title": 58, "AccountId": 94, "FirstName": 100, "LastName": 100 } },
+      { "objectName": "Account",      "totalRecords": 8500,  "completionRates": { "Industry": 74, "Phone": 68, "BillingCity": 82, "BillingCountry": 77, "Website": 64 } },
+      { "objectName": "Lead",         "totalRecords": 4200,  "completionRates": { "Email": 84, "Phone": 71, "Company": 100, "LeadSource": 82, "Status": 100 } },
+      { "objectName": "Opportunity",  "totalRecords": 12000, "completionRates": { "CloseDate": 100, "StageName": 100, "Amount": 84, "AccountId": 92 } },
+      { "objectName": "Case",         "totalRecords": 38000, "completionRates": { "Reason": 58, "Status": 100, "ContactId": 71, "AccountId": 88, "Priority": 67 } },
+      { "objectName": "EmailMessage", "totalRecords": 12000, "completionRates": { "Status": 100, "FromAddress": 94 } }
+    ],
+    "duplicates": [
+      { "objectName": "Contact", "duplicateCount": 850,  "duplicateRate": 3.4 },
+      { "objectName": "Account", "duplicateCount": 170,  "duplicateRate": 2.0 }
+    ],
+    "automation": {
+      "totalActiveFlows": 52,
+      "flowsWithNoFaultPath": 18,
+      "legacyAutomationCount": 3,
+      "apexCoveragePct": 57,
+      "highRiskObjects": ["Contact", "Case", "Opportunity", "Lead", "Account"]
+    },
+    "knowledge": {
+      "articleCount": 8,
+      "staleArticleCount": 2,
+      "topCaseReasons": [
+        "Billing Issue", "Policy Change", "Claim Status", "Coverage Question",
+        "Payment Problem", "Cancellation Request", "Document Request", "Renewal Query",
+        "Fraud Report", "Beneficiary Update", "Premium Dispute", "Address Change",
+        "New Claim", "Claim Denial Appeal", "Agent Transfer", "Underwriting Question",
+        "Risk Assessment", "Policy Lapse", "Early Termination", "General Enquiry"
+      ],
+      "coverageGapCount": 12
+    },
+    "caseVolume": {
+      "monthlyVolume": 2400,
+      "topReasons": [
+        { "reason": "Billing Issue",       "count": 432 },
+        { "reason": "Policy Change",       "count": 312 },
+        { "reason": "Claim Status",        "count": 264 },
+        { "reason": "Coverage Question",   "count": 216 },
+        { "reason": "Payment Problem",     "count": 192 }
+      ]
+    },
+    "metadata": { "unusedFieldCount": 260, "abandonedPackageCount": 0 },
+    "adoption":  { "loginRatePct": 85, "avgActivitiesPerUser": 12 },
+    "configUsed": {
+      "agentforceUseCase": "service",
+      "maxCustomObjects": 20,
+      "adoptionLookbackDays": 90,
+      "analysisWindowMonths": 12,
+      "objects": []
+    }
+  }
+}

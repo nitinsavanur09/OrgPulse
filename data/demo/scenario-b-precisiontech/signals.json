@@ -1,0 +1,59 @@
+{
+  "orgId": "demo-precisiontech",
+  "signals": {
+    "limits": { "apiUsagePct": 12, "storageUsagePct": 22, "fileUsagePct": 15 },
+    "security": { "healthCheckScore": 72, "failingCheckCount": 18, "criticalCheckCount": 3, "guestUserRisk": false },
+    "dataQuality": [
+      { "objectName": "Contact",     "totalRecords": 18000, "completionRates": { "Email": 38, "Phone": 28, "Title": 20, "AccountId": 65, "FirstName": 100, "LastName": 100 } },
+      { "objectName": "Account",     "totalRecords": 5200,  "completionRates": { "Industry": 45, "Phone": 41, "BillingCity": 55, "BillingCountry": 50, "Website": 32 } },
+      { "objectName": "Lead",        "totalRecords": 3800,  "completionRates": { "Email": 52, "Phone": 38, "Company": 100, "LeadSource": 44, "Status": 100 } },
+      { "objectName": "Opportunity", "totalRecords": 9500,  "completionRates": { "CloseDate": 100, "StageName": 100, "Amount": 55, "AccountId": 68 } },
+      { "objectName": "Case",        "totalRecords": 14000, "completionRates": { "Reason": 38, "Status": 100, "ContactId": 48, "AccountId": 66, "Priority": 42 } },
+      { "objectName": "Quote",       "totalRecords": 3200,  "completionRates": { "Status": 100, "ExpirationDate": 55, "AccountId": 68 } },
+      { "objectName": "Contract",    "totalRecords": 2100,  "completionRates": { "Status": 100, "StartDate": 72, "AccountId": 82 } },
+      { "objectName": "Product2",    "totalRecords": 620,   "completionRates": { "Family": 64, "ProductCode": 78 } }
+    ],
+    "duplicates": [
+      { "objectName": "Contact", "duplicateCount": 2016, "duplicateRate": 11.2 },
+      { "objectName": "Account", "duplicateCount": 405,  "duplicateRate": 7.8  }
+    ],
+    "automation": {
+      "totalActiveFlows": 34,
+      "flowsWithNoFaultPath": 10,
+      "legacyAutomationCount": 14,
+      "apexCoveragePct": 55,
+      "highRiskObjects": ["Opportunity", "Quote", "Contract", "Account", "Lead"]
+    },
+    "knowledge": {
+      "articleCount": 0,
+      "staleArticleCount": 0,
+      "topCaseReasons": [
+        "Order Delay", "Wrong Item Shipped", "Defective Product", "Invoice Dispute",
+        "Return Request", "Warranty Claim", "Shipping Damage", "Product Spec Question",
+        "Installation Support", "Delivery Not Received", "Partial Shipment", "Quote Discrepancy",
+        "Contract Amendment", "Price Dispute", "Technical Documentation", "Credit Request",
+        "Backorder Status", "Custom Order Issue", "Compliance Question", "General Enquiry"
+      ],
+      "coverageGapCount": 20
+    },
+    "caseVolume": {
+      "monthlyVolume": 850,
+      "topReasons": [
+        { "reason": "Order Delay",        "count": 180 },
+        { "reason": "Wrong Item Shipped", "count": 140 },
+        { "reason": "Defective Product",  "count": 120 },
+        { "reason": "Invoice Dispute",    "count": 95  },
+        { "reason": "Return Request",     "count": 85  }
+      ]
+    },
+    "metadata": { "unusedFieldCount": 420, "abandonedPackageCount": 0 },
+    "adoption":  { "loginRatePct": 67, "avgActivitiesPerUser": 4 },
+    "configUsed": {
+      "agentforceUseCase": "sales",
+      "maxCustomObjects": 20,
+      "adoptionLookbackDays": 90,
+      "analysisWindowMonths": 12,
+      "objects": []
+    }
+  }
+}

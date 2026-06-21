@@ -1,0 +1,601 @@
+ExternalId,FirstName,LastName,Company,Email,Phone,LeadSource,Status
+LEAD000001,Jennifer,Gonzalez,BlueSky Protection Services,,,,New
+LEAD000002,Michael,Wilson,Cornerstone Risk Management,michael.wilson@cornerstoneriskmanagement.com,+1-301-001-005,Phone Inquiry,Working
+LEAD000003,Linda,Anderson,Evergreen Coverage Co.,linda.anderson@evergreencoverageco.com,+1-302-002-010,Partner Referral,Converted
+LEAD000004,William,Thomas,Pinnacle Insurance Brokers,william.thomas@pinnacleinsurancebrokers.com,,Purchased List,Unqualified
+LEAD000005,Barbara,Taylor,Heritage Mutual Group,barbara.taylor@heritagemutualgroup.com,+1-304-004-020,Trade Show,Nurturing
+LEAD000006,David,Moore,Coastal Risk Advisors,david.moore@coastalriskadvisors.com,+1-305-005-025,Other,New
+LEAD000007,Elizabeth,Jackson,Summit Protection Alliance,,,,Working
+LEAD000008,Richard,Martin,Lighthouse Insurance Services,richard.martin@lighthouseinsuranceservices.com,+1-307-007-035,Phone Inquiry,Converted
+LEAD000009,Susan,Lee,Cascade Financial Security,susan.lee@cascadefinancialsecurity.com,+1-308-008-040,Partner Referral,Unqualified
+LEAD000010,Joseph,Perez,Premier Risk Solutions,joseph.perez@premierrisksolutions.com,,Purchased List,Nurturing
+LEAD000011,Jessica,Thompson,Horizon Assurance Group,jessica.thompson@horizonassurancegroup.com,+1-310-010-050,Trade Show,New
+LEAD000012,Thomas,White,Keystone Benefits Co.,thomas.white@keystonebenefitsco.com,+1-311-011-055,Other,Working
+LEAD000013,Sarah,Harris,Streamline Coverage Partners,,,,Converted
+LEAD000014,Charles,Sanchez,Apex Insurance Holdings,charles.sanchez@apexinsuranceholdings.com,+1-313-013-065,Phone Inquiry,Unqualified
+LEAD000015,Karen,Clark,Valley Risk Management,karen.clark@valleyriskmanagement.com,+1-314-014-070,Partner Referral,Nurturing
+LEAD000016,Christopher,Ramirez,Crestview Financial Services,christopher.ramirez@crestviewfinancialservices.com,,Purchased List,New
+LEAD000017,Lisa,Lewis,Lakeside Protection Group,lisa.lewis@lakesideprotectiongroup.com,+1-316-016-080,Trade Show,Working
+LEAD000018,Daniel,Robinson,Sterling Risk Partners,daniel.robinson@sterlingriskpartners.com,+1-317-017-085,Other,Converted
+LEAD000019,Nancy,Walker,Westpoint Insurance Alliance,,,,Unqualified
+LEAD000020,Matthew,Young,Clearwater Benefits Group,matthew.young@clearwaterbenefitsgroup.com,+1-319-019-095,Phone Inquiry,Nurturing
+LEAD000021,Betty,Allen,Redwood Assurance Co.,betty.allen@redwoodassuranceco.com,+1-320-020-100,Partner Referral,New
+LEAD000022,Anthony,King,Oakridge Financial Partners,anthony.king@oakridgefinancialpartners.com,,Purchased List,Working
+LEAD000023,Margaret,Wright,Sunrise Financial Group,margaret.wright@sunrisefinancialgroup.com,+1-322-022-110,Trade Show,Converted
+LEAD000024,Mark,Scott,Meridian Life Partners,mark.scott@meridianlifepartners.com,+1-323-023-115,Other,Unqualified
+LEAD000025,Sandra,Torres,Pacific Coast Assurance,,,,Nurturing
+LEAD000026,Donald,Nguyen,BlueSky Protection Services,donald.nguyen@blueskyprotectionservices.com,+1-325-025-125,Phone Inquiry,New
+LEAD000027,Ashley,Hill,Cornerstone Risk Management,ashley.hill@cornerstoneriskmanagement.com,+1-326-026-130,Partner Referral,Working
+LEAD000028,Steven,Flores,Evergreen Coverage Co.,steven.flores@evergreencoverageco.com,,Purchased List,Converted
+LEAD000029,Dorothy,Green,Pinnacle Insurance Brokers,dorothy.green@pinnacleinsurancebrokers.com,+1-328-028-140,Trade Show,Unqualified
+LEAD000030,Paul,Adams,Heritage Mutual Group,paul.adams@heritagemutualgroup.com,+1-329-029-145,Other,Nurturing
+LEAD000031,Kimberly,Nelson,Coastal Risk Advisors,,,,New
+LEAD000032,Andrew,Baker,Summit Protection Alliance,andrew.baker@summitprotectionalliance.com,+1-331-031-155,Phone Inquiry,Working
+LEAD000033,Emily,Hall,Lighthouse Insurance Services,emily.hall@lighthouseinsuranceservices.com,+1-332-032-160,Partner Referral,Converted
+LEAD000034,Kenneth,Rivera,Cascade Financial Security,kenneth.rivera@cascadefinancialsecurity.com,,Purchased List,Unqualified
+LEAD000035,Donna,Campbell,Premier Risk Solutions,donna.campbell@premierrisksolutions.com,+1-334-034-170,Trade Show,Nurturing
+LEAD000036,Joshua,Mitchell,Horizon Assurance Group,joshua.mitchell@horizonassurancegroup.com,+1-335-035-175,Other,New
+LEAD000037,Michelle,Carter,Keystone Benefits Co.,,,,Working
+LEAD000038,Kevin,Roberts,Streamline Coverage Partners,kevin.roberts@streamlinecoveragepartners.com,+1-337-037-185,Phone Inquiry,Converted
+LEAD000039,Carol,Phillips,Apex Insurance Holdings,carol.phillips@apexinsuranceholdings.com,+1-338-038-190,Partner Referral,Unqualified
+LEAD000040,Brian,Evans,Valley Risk Management,brian.evans@valleyriskmanagement.com,,Purchased List,Nurturing
+LEAD000041,Amanda,Turner,Crestview Financial Services,amanda.turner@crestviewfinancialservices.com,+1-340-040-200,Trade Show,New
+LEAD000042,George,Torres,Lakeside Protection Group,george.torres@lakesideprotectiongroup.com,+1-341-041-205,Other,Working
+LEAD000043,Melissa,Parker,Sterling Risk Partners,,,,Converted
+LEAD000044,Edward,Collins,Westpoint Insurance Alliance,edward.collins@westpointinsurancealliance.com,+1-343-043-215,Phone Inquiry,Unqualified
+LEAD000045,Deborah,Edwards,Clearwater Benefits Group,deborah.edwards@clearwaterbenefitsgroup.com,+1-344-044-220,Partner Referral,Nurturing
+LEAD000046,Ronald,Stewart,Redwood Assurance Co.,ronald.stewart@redwoodassuranceco.com,,Purchased List,New
+LEAD000047,Stephanie,Flores,Oakridge Financial Partners,stephanie.flores@oakridgefinancialpartners.com,+1-346-046-230,Trade Show,Working
+LEAD000048,Timothy,Morris,Sunrise Financial Group,timothy.morris@sunrisefinancialgroup.com,+1-347-047-235,Other,Converted
+LEAD000049,Rebecca,Nguyen,Meridian Life Partners,,,,Unqualified
+LEAD000050,Jason,Murphy,Pacific Coast Assurance,jason.murphy@pacificcoastassurance.com,+1-349-049-245,Phone Inquiry,Nurturing
+LEAD000051,Sharon,Rivera,BlueSky Protection Services,sharon.rivera@blueskyprotectionservices.com,+1-350-050-250,Partner Referral,New
+LEAD000052,Jeffrey,Cook,Cornerstone Risk Management,jeffrey.cook@cornerstoneriskmanagement.com,,Purchased List,Working
+LEAD000053,Laura,Rogers,Evergreen Coverage Co.,laura.rogers@evergreencoverageco.com,+1-352-052-260,Trade Show,Converted
+LEAD000054,Ryan,Morgan,Pinnacle Insurance Brokers,ryan.morgan@pinnacleinsurancebrokers.com,+1-353-053-265,Other,Unqualified
+LEAD000055,Cynthia,Peterson,Heritage Mutual Group,,,,Nurturing
+LEAD000056,James,Cooper,Coastal Risk Advisors,james.cooper@coastalriskadvisors.com,+1-355-055-275,Phone Inquiry,New
+LEAD000057,Mary,Reed,Summit Protection Alliance,mary.reed@summitprotectionalliance.com,+1-356-056-280,Partner Referral,Working
+LEAD000058,John,Bailey,Lighthouse Insurance Services,john.bailey@lighthouseinsuranceservices.com,,Purchased List,Converted
+LEAD000059,Patricia,Bell,Cascade Financial Security,patricia.bell@cascadefinancialsecurity.com,+1-358-058-290,Trade Show,Unqualified
+LEAD000060,Robert,Gomez,Premier Risk Solutions,robert.gomez@premierrisksolutions.com,+1-359-059-295,Other,Nurturing
+LEAD000061,Jennifer,Kelly,Horizon Assurance Group,,,,New
+LEAD000062,Michael,Howard,Keystone Benefits Co.,michael.howard@keystonebenefitsco.com,+1-361-061-305,Phone Inquiry,Working
+LEAD000063,Linda,Ward,Streamline Coverage Partners,linda.ward@streamlinecoveragepartners.com,+1-362-062-310,Partner Referral,Converted
+LEAD000064,William,Cox,Apex Insurance Holdings,william.cox@apexinsuranceholdings.com,,Purchased List,Unqualified
+LEAD000065,Barbara,Diaz,Valley Risk Management,barbara.diaz@valleyriskmanagement.com,+1-364-064-320,Trade Show,Nurturing
+LEAD000066,David,Richardson,Crestview Financial Services,david.richardson@crestviewfinancialservices.com,+1-365-065-325,Other,New
+LEAD000067,Elizabeth,Wood,Lakeside Protection Group,,,,Working
+LEAD000068,Richard,Watson,Sterling Risk Partners,richard.watson@sterlingriskpartners.com,+1-367-067-335,Phone Inquiry,Converted
+LEAD000069,Susan,Smith,Westpoint Insurance Alliance,susan.smith@westpointinsurancealliance.com,+1-368-068-340,Partner Referral,Unqualified
+LEAD000070,Joseph,Johnson,Clearwater Benefits Group,joseph.johnson@clearwaterbenefitsgroup.com,,Purchased List,Nurturing
+LEAD000071,Jessica,Williams,Redwood Assurance Co.,jessica.williams@redwoodassuranceco.com,+1-370-070-350,Trade Show,New
+LEAD000072,Thomas,Brown,Oakridge Financial Partners,thomas.brown@oakridgefinancialpartners.com,+1-371-071-355,Other,Working
+LEAD000073,Sarah,Jones,Sunrise Financial Group,,,,Converted
+LEAD000074,Charles,Garcia,Meridian Life Partners,charles.garcia@meridianlifepartners.com,+1-373-073-365,Phone Inquiry,Unqualified
+LEAD000075,Karen,Miller,Pacific Coast Assurance,karen.miller@pacificcoastassurance.com,+1-374-074-370,Partner Referral,Nurturing
+LEAD000076,Christopher,Davis,BlueSky Protection Services,christopher.davis@blueskyprotectionservices.com,,Purchased List,New
+LEAD000077,Lisa,Rodriguez,Cornerstone Risk Management,lisa.rodriguez@cornerstoneriskmanagement.com,+1-376-076-380,Trade Show,Working
+LEAD000078,Daniel,Martinez,Evergreen Coverage Co.,daniel.martinez@evergreencoverageco.com,+1-377-077-385,Other,Converted
+LEAD000079,Nancy,Hernandez,Pinnacle Insurance Brokers,,,,Unqualified
+LEAD000080,Matthew,Lopez,Heritage Mutual Group,matthew.lopez@heritagemutualgroup.com,+1-379-079-395,Phone Inquiry,Nurturing
+LEAD000081,Betty,Gonzalez,Coastal Risk Advisors,betty.gonzalez@coastalriskadvisors.com,+1-380-080-400,Partner Referral,New
+LEAD000082,Anthony,Wilson,Summit Protection Alliance,anthony.wilson@summitprotectionalliance.com,,Purchased List,Working
+LEAD000083,Margaret,Anderson,Lighthouse Insurance Services,margaret.anderson@lighthouseinsuranceservices.com,+1-382-082-410,Trade Show,Converted
+LEAD000084,Mark,Thomas,Cascade Financial Security,mark.thomas@cascadefinancialsecurity.com,+1-383-083-415,Other,Unqualified
+LEAD000085,Sandra,Taylor,Premier Risk Solutions,,,,Nurturing
+LEAD000086,Donald,Moore,Horizon Assurance Group,donald.moore@horizonassurancegroup.com,+1-385-085-425,Phone Inquiry,New
+LEAD000087,Ashley,Jackson,Keystone Benefits Co.,ashley.jackson@keystonebenefitsco.com,+1-386-086-430,Partner Referral,Working
+LEAD000088,Steven,Martin,Streamline Coverage Partners,steven.martin@streamlinecoveragepartners.com,,Purchased List,Converted
+LEAD000089,Dorothy,Lee,Apex Insurance Holdings,dorothy.lee@apexinsuranceholdings.com,+1-388-088-440,Trade Show,Unqualified
+LEAD000090,Paul,Perez,Valley Risk Management,paul.perez@valleyriskmanagement.com,+1-389-089-445,Other,Nurturing
+LEAD000091,Kimberly,Thompson,Crestview Financial Services,,,,New
+LEAD000092,Andrew,White,Lakeside Protection Group,andrew.white@lakesideprotectiongroup.com,+1-391-091-455,Phone Inquiry,Working
+LEAD000093,Emily,Harris,Sterling Risk Partners,emily.harris@sterlingriskpartners.com,+1-392-092-460,Partner Referral,Converted
+LEAD000094,Kenneth,Sanchez,Westpoint Insurance Alliance,kenneth.sanchez@westpointinsurancealliance.com,,Purchased List,Unqualified
+LEAD000095,Donna,Clark,Clearwater Benefits Group,donna.clark@clearwaterbenefitsgroup.com,+1-394-094-470,Trade Show,Nurturing
+LEAD000096,Joshua,Ramirez,Redwood Assurance Co.,joshua.ramirez@redwoodassuranceco.com,+1-395-095-475,Other,New
+LEAD000097,Michelle,Lewis,Oakridge Financial Partners,,,,Working
+LEAD000098,Kevin,Robinson,Sunrise Financial Group,kevin.robinson@sunrisefinancialgroup.com,+1-397-097-485,Phone Inquiry,Converted
+LEAD000099,Carol,Walker,Meridian Life Partners,carol.walker@meridianlifepartners.com,+1-398-098-490,Partner Referral,Unqualified
+LEAD000100,Brian,Young,Pacific Coast Assurance,brian.young@pacificcoastassurance.com,,Purchased List,Nurturing
+LEAD000101,Amanda,Allen,BlueSky Protection Services,amanda.allen@blueskyprotectionservices.com,+1-400-100-500,Trade Show,New
+LEAD000102,George,King,Cornerstone Risk Management,george.king@cornerstoneriskmanagement.com,+1-401-101-505,Other,Working
+LEAD000103,Melissa,Wright,Evergreen Coverage Co.,,,,Converted
+LEAD000104,Edward,Scott,Pinnacle Insurance Brokers,edward.scott@pinnacleinsurancebrokers.com,+1-403-103-515,Phone Inquiry,Unqualified
+LEAD000105,Deborah,Torres,Heritage Mutual Group,deborah.torres@heritagemutualgroup.com,+1-404-104-520,Partner Referral,Nurturing
+LEAD000106,Ronald,Nguyen,Coastal Risk Advisors,ronald.nguyen@coastalriskadvisors.com,,Purchased List,New
+LEAD000107,Stephanie,Hill,Summit Protection Alliance,stephanie.hill@summitprotectionalliance.com,+1-406-106-530,Trade Show,Working
+LEAD000108,Timothy,Flores,Lighthouse Insurance Services,timothy.flores@lighthouseinsuranceservices.com,+1-407-107-535,Other,Converted
+LEAD000109,Rebecca,Green,Cascade Financial Security,,,,Unqualified
+LEAD000110,Jason,Adams,Premier Risk Solutions,jason.adams@premierrisksolutions.com,+1-409-109-545,Phone Inquiry,Nurturing
+LEAD000111,Sharon,Nelson,Horizon Assurance Group,sharon.nelson@horizonassurancegroup.com,+1-410-110-550,Partner Referral,New
+LEAD000112,Jeffrey,Baker,Keystone Benefits Co.,jeffrey.baker@keystonebenefitsco.com,,Purchased List,Working
+LEAD000113,Laura,Hall,Streamline Coverage Partners,laura.hall@streamlinecoveragepartners.com,+1-412-112-560,Trade Show,Converted
+LEAD000114,Ryan,Rivera,Apex Insurance Holdings,ryan.rivera@apexinsuranceholdings.com,+1-413-113-565,Other,Unqualified
+LEAD000115,Cynthia,Campbell,Valley Risk Management,,,,Nurturing
+LEAD000116,James,Mitchell,Crestview Financial Services,james.mitchell@crestviewfinancialservices.com,+1-415-115-575,Phone Inquiry,New
+LEAD000117,Mary,Carter,Lakeside Protection Group,mary.carter@lakesideprotectiongroup.com,+1-416-116-580,Partner Referral,Working
+LEAD000118,John,Roberts,Sterling Risk Partners,john.roberts@sterlingriskpartners.com,,Purchased List,Converted
+LEAD000119,Patricia,Phillips,Westpoint Insurance Alliance,patricia.phillips@westpointinsurancealliance.com,+1-418-118-590,Trade Show,Unqualified
+LEAD000120,Robert,Evans,Clearwater Benefits Group,robert.evans@clearwaterbenefitsgroup.com,+1-419-119-595,Other,Nurturing
+LEAD000121,Jennifer,Turner,Redwood Assurance Co.,,,,New
+LEAD000122,Michael,Torres,Oakridge Financial Partners,michael.torres@oakridgefinancialpartners.com,+1-421-121-605,Phone Inquiry,Working
+LEAD000123,Linda,Parker,Sunrise Financial Group,linda.parker@sunrisefinancialgroup.com,+1-422-122-610,Partner Referral,Converted
+LEAD000124,William,Collins,Meridian Life Partners,william.collins@meridianlifepartners.com,,Purchased List,Unqualified
+LEAD000125,Barbara,Edwards,Pacific Coast Assurance,barbara.edwards@pacificcoastassurance.com,+1-424-124-620,Trade Show,Nurturing
+LEAD000126,David,Stewart,BlueSky Protection Services,david.stewart@blueskyprotectionservices.com,+1-425-125-625,Other,New
+LEAD000127,Elizabeth,Flores,Cornerstone Risk Management,,,,Working
+LEAD000128,Richard,Morris,Evergreen Coverage Co.,richard.morris@evergreencoverageco.com,+1-427-127-635,Phone Inquiry,Converted
+LEAD000129,Susan,Nguyen,Pinnacle Insurance Brokers,susan.nguyen@pinnacleinsurancebrokers.com,+1-428-128-640,Partner Referral,Unqualified
+LEAD000130,Joseph,Murphy,Heritage Mutual Group,joseph.murphy@heritagemutualgroup.com,,Purchased List,Nurturing
+LEAD000131,Jessica,Rivera,Coastal Risk Advisors,jessica.rivera@coastalriskadvisors.com,+1-430-130-650,Trade Show,New
+LEAD000132,Thomas,Cook,Summit Protection Alliance,thomas.cook@summitprotectionalliance.com,+1-431-131-655,Other,Working
+LEAD000133,Sarah,Rogers,Lighthouse Insurance Services,,,,Converted
+LEAD000134,Charles,Morgan,Cascade Financial Security,charles.morgan@cascadefinancialsecurity.com,+1-433-133-665,Phone Inquiry,Unqualified
+LEAD000135,Karen,Peterson,Premier Risk Solutions,karen.peterson@premierrisksolutions.com,+1-434-134-670,Partner Referral,Nurturing
+LEAD000136,Christopher,Cooper,Horizon Assurance Group,christopher.cooper@horizonassurancegroup.com,,Purchased List,New
+LEAD000137,Lisa,Reed,Keystone Benefits Co.,lisa.reed@keystonebenefitsco.com,+1-436-136-680,Trade Show,Working
+LEAD000138,Daniel,Bailey,Streamline Coverage Partners,daniel.bailey@streamlinecoveragepartners.com,+1-437-137-685,Other,Converted
+LEAD000139,Nancy,Bell,Apex Insurance Holdings,,,,Unqualified
+LEAD000140,Matthew,Gomez,Valley Risk Management,matthew.gomez@valleyriskmanagement.com,+1-439-139-695,Phone Inquiry,Nurturing
+LEAD000141,Betty,Kelly,Crestview Financial Services,betty.kelly@crestviewfinancialservices.com,+1-440-140-700,Partner Referral,New
+LEAD000142,Anthony,Howard,Lakeside Protection Group,anthony.howard@lakesideprotectiongroup.com,,Purchased List,Working
+LEAD000143,Margaret,Ward,Sterling Risk Partners,margaret.ward@sterlingriskpartners.com,+1-442-142-710,Trade Show,Converted
+LEAD000144,Mark,Cox,Westpoint Insurance Alliance,mark.cox@westpointinsurancealliance.com,+1-443-143-715,Other,Unqualified
+LEAD000145,Sandra,Diaz,Clearwater Benefits Group,,,,Nurturing
+LEAD000146,Donald,Richardson,Redwood Assurance Co.,donald.richardson@redwoodassuranceco.com,+1-445-145-725,Phone Inquiry,New
+LEAD000147,Ashley,Wood,Oakridge Financial Partners,ashley.wood@oakridgefinancialpartners.com,+1-446-146-730,Partner Referral,Working
+LEAD000148,Steven,Watson,Sunrise Financial Group,steven.watson@sunrisefinancialgroup.com,,Purchased List,Converted
+LEAD000149,Dorothy,Smith,Meridian Life Partners,dorothy.smith@meridianlifepartners.com,+1-448-148-740,Trade Show,Unqualified
+LEAD000150,Paul,Johnson,Pacific Coast Assurance,paul.johnson@pacificcoastassurance.com,+1-449-149-745,Other,Nurturing
+LEAD000151,Kimberly,Williams,BlueSky Protection Services,,,,New
+LEAD000152,Andrew,Brown,Cornerstone Risk Management,andrew.brown@cornerstoneriskmanagement.com,+1-451-151-755,Phone Inquiry,Working
+LEAD000153,Emily,Jones,Evergreen Coverage Co.,emily.jones@evergreencoverageco.com,+1-452-152-760,Partner Referral,Converted
+LEAD000154,Kenneth,Garcia,Pinnacle Insurance Brokers,kenneth.garcia@pinnacleinsurancebrokers.com,,Purchased List,Unqualified
+LEAD000155,Donna,Miller,Heritage Mutual Group,donna.miller@heritagemutualgroup.com,+1-454-154-770,Trade Show,Nurturing
+LEAD000156,Joshua,Davis,Coastal Risk Advisors,joshua.davis@coastalriskadvisors.com,+1-455-155-775,Other,New
+LEAD000157,Michelle,Rodriguez,Summit Protection Alliance,,,,Working
+LEAD000158,Kevin,Martinez,Lighthouse Insurance Services,kevin.martinez@lighthouseinsuranceservices.com,+1-457-157-785,Phone Inquiry,Converted
+LEAD000159,Carol,Hernandez,Cascade Financial Security,carol.hernandez@cascadefinancialsecurity.com,+1-458-158-790,Partner Referral,Unqualified
+LEAD000160,Brian,Lopez,Premier Risk Solutions,brian.lopez@premierrisksolutions.com,,Purchased List,Nurturing
+LEAD000161,Amanda,Gonzalez,Horizon Assurance Group,amanda.gonzalez@horizonassurancegroup.com,+1-460-160-800,Trade Show,New
+LEAD000162,George,Wilson,Keystone Benefits Co.,george.wilson@keystonebenefitsco.com,+1-461-161-805,Other,Working
+LEAD000163,Melissa,Anderson,Streamline Coverage Partners,,,,Converted
+LEAD000164,Edward,Thomas,Apex Insurance Holdings,edward.thomas@apexinsuranceholdings.com,+1-463-163-815,Phone Inquiry,Unqualified
+LEAD000165,Deborah,Taylor,Valley Risk Management,deborah.taylor@valleyriskmanagement.com,+1-464-164-820,Partner Referral,Nurturing
+LEAD000166,Ronald,Moore,Crestview Financial Services,ronald.moore@crestviewfinancialservices.com,,Purchased List,New
+LEAD000167,Stephanie,Jackson,Lakeside Protection Group,stephanie.jackson@lakesideprotectiongroup.com,+1-466-166-830,Trade Show,Working
+LEAD000168,Timothy,Martin,Sterling Risk Partners,timothy.martin@sterlingriskpartners.com,+1-467-167-835,Other,Converted
+LEAD000169,Rebecca,Lee,Westpoint Insurance Alliance,,,,Unqualified
+LEAD000170,Jason,Perez,Clearwater Benefits Group,jason.perez@clearwaterbenefitsgroup.com,+1-469-169-845,Phone Inquiry,Nurturing
+LEAD000171,Sharon,Thompson,Redwood Assurance Co.,sharon.thompson@redwoodassuranceco.com,+1-470-170-850,Partner Referral,New
+LEAD000172,Jeffrey,White,Oakridge Financial Partners,jeffrey.white@oakridgefinancialpartners.com,,Purchased List,Working
+LEAD000173,Laura,Harris,Sunrise Financial Group,laura.harris@sunrisefinancialgroup.com,+1-472-172-860,Trade Show,Converted
+LEAD000174,Ryan,Sanchez,Meridian Life Partners,ryan.sanchez@meridianlifepartners.com,+1-473-173-865,Other,Unqualified
+LEAD000175,Cynthia,Clark,Pacific Coast Assurance,,,,Nurturing
+LEAD000176,James,Ramirez,BlueSky Protection Services,james.ramirez@blueskyprotectionservices.com,+1-475-175-875,Phone Inquiry,New
+LEAD000177,Mary,Lewis,Cornerstone Risk Management,mary.lewis@cornerstoneriskmanagement.com,+1-476-176-880,Partner Referral,Working
+LEAD000178,John,Robinson,Evergreen Coverage Co.,john.robinson@evergreencoverageco.com,,Purchased List,Converted
+LEAD000179,Patricia,Walker,Pinnacle Insurance Brokers,patricia.walker@pinnacleinsurancebrokers.com,+1-478-178-890,Trade Show,Unqualified
+LEAD000180,Robert,Young,Heritage Mutual Group,robert.young@heritagemutualgroup.com,+1-479-179-895,Other,Nurturing
+LEAD000181,Jennifer,Allen,Coastal Risk Advisors,,,,New
+LEAD000182,Michael,King,Summit Protection Alliance,michael.king@summitprotectionalliance.com,+1-481-181-905,Phone Inquiry,Working
+LEAD000183,Linda,Wright,Lighthouse Insurance Services,linda.wright@lighthouseinsuranceservices.com,+1-482-182-910,Partner Referral,Converted
+LEAD000184,William,Scott,Cascade Financial Security,william.scott@cascadefinancialsecurity.com,,Purchased List,Unqualified
+LEAD000185,Barbara,Torres,Premier Risk Solutions,barbara.torres@premierrisksolutions.com,+1-484-184-920,Trade Show,Nurturing
+LEAD000186,David,Nguyen,Horizon Assurance Group,david.nguyen@horizonassurancegroup.com,+1-485-185-925,Other,New
+LEAD000187,Elizabeth,Hill,Keystone Benefits Co.,,,,Working
+LEAD000188,Richard,Flores,Streamline Coverage Partners,richard.flores@streamlinecoveragepartners.com,+1-487-187-935,Phone Inquiry,Converted
+LEAD000189,Susan,Green,Apex Insurance Holdings,susan.green@apexinsuranceholdings.com,+1-488-188-940,Partner Referral,Unqualified
+LEAD000190,Joseph,Adams,Valley Risk Management,joseph.adams@valleyriskmanagement.com,,Purchased List,Nurturing
+LEAD000191,Jessica,Nelson,Crestview Financial Services,jessica.nelson@crestviewfinancialservices.com,+1-490-190-950,Trade Show,New
+LEAD000192,Thomas,Baker,Lakeside Protection Group,thomas.baker@lakesideprotectiongroup.com,+1-491-191-955,Other,Working
+LEAD000193,Sarah,Hall,Sterling Risk Partners,,,,Converted
+LEAD000194,Charles,Rivera,Westpoint Insurance Alliance,charles.rivera@westpointinsurancealliance.com,+1-493-193-965,Phone Inquiry,Unqualified
+LEAD000195,Karen,Campbell,Clearwater Benefits Group,karen.campbell@clearwaterbenefitsgroup.com,+1-494-194-970,Partner Referral,Nurturing
+LEAD000196,Christopher,Mitchell,Redwood Assurance Co.,christopher.mitchell@redwoodassuranceco.com,,Purchased List,New
+LEAD000197,Lisa,Carter,Oakridge Financial Partners,lisa.carter@oakridgefinancialpartners.com,+1-496-196-980,Trade Show,Working
+LEAD000198,Daniel,Roberts,Sunrise Financial Group,daniel.roberts@sunrisefinancialgroup.com,+1-497-197-985,Other,Converted
+LEAD000199,Nancy,Phillips,Meridian Life Partners,,,,Unqualified
+LEAD000200,Matthew,Evans,Pacific Coast Assurance,matthew.evans@pacificcoastassurance.com,+1-499-199-995,Phone Inquiry,Nurturing
+LEAD000201,Betty,Turner,BlueSky Protection Services,betty.turner@blueskyprotectionservices.com,+1-500-200-000,Partner Referral,New
+LEAD000202,Anthony,Torres,Cornerstone Risk Management,anthony.torres@cornerstoneriskmanagement.com,,Purchased List,Working
+LEAD000203,Margaret,Parker,Evergreen Coverage Co.,margaret.parker@evergreencoverageco.com,+1-502-202-010,Trade Show,Converted
+LEAD000204,Mark,Collins,Pinnacle Insurance Brokers,mark.collins@pinnacleinsurancebrokers.com,+1-503-203-015,Other,Unqualified
+LEAD000205,Sandra,Edwards,Heritage Mutual Group,,,,Nurturing
+LEAD000206,Donald,Stewart,Coastal Risk Advisors,donald.stewart@coastalriskadvisors.com,+1-505-205-025,Phone Inquiry,New
+LEAD000207,Ashley,Flores,Summit Protection Alliance,ashley.flores@summitprotectionalliance.com,+1-506-206-030,Partner Referral,Working
+LEAD000208,Steven,Morris,Lighthouse Insurance Services,steven.morris@lighthouseinsuranceservices.com,,Purchased List,Converted
+LEAD000209,Dorothy,Nguyen,Cascade Financial Security,dorothy.nguyen@cascadefinancialsecurity.com,+1-508-208-040,Trade Show,Unqualified
+LEAD000210,Paul,Murphy,Premier Risk Solutions,paul.murphy@premierrisksolutions.com,+1-509-209-045,Other,Nurturing
+LEAD000211,Kimberly,Rivera,Horizon Assurance Group,,,,New
+LEAD000212,Andrew,Cook,Keystone Benefits Co.,andrew.cook@keystonebenefitsco.com,+1-511-211-055,Phone Inquiry,Working
+LEAD000213,Emily,Rogers,Streamline Coverage Partners,emily.rogers@streamlinecoveragepartners.com,+1-512-212-060,Partner Referral,Converted
+LEAD000214,Kenneth,Morgan,Apex Insurance Holdings,kenneth.morgan@apexinsuranceholdings.com,,Purchased List,Unqualified
+LEAD000215,Donna,Peterson,Valley Risk Management,donna.peterson@valleyriskmanagement.com,+1-514-214-070,Trade Show,Nurturing
+LEAD000216,Joshua,Cooper,Crestview Financial Services,joshua.cooper@crestviewfinancialservices.com,+1-515-215-075,Other,New
+LEAD000217,Michelle,Reed,Lakeside Protection Group,,,,Working
+LEAD000218,Kevin,Bailey,Sterling Risk Partners,kevin.bailey@sterlingriskpartners.com,+1-517-217-085,Phone Inquiry,Converted
+LEAD000219,Carol,Bell,Westpoint Insurance Alliance,carol.bell@westpointinsurancealliance.com,+1-518-218-090,Partner Referral,Unqualified
+LEAD000220,Brian,Gomez,Clearwater Benefits Group,brian.gomez@clearwaterbenefitsgroup.com,,Purchased List,Nurturing
+LEAD000221,Amanda,Kelly,Redwood Assurance Co.,amanda.kelly@redwoodassuranceco.com,+1-520-220-100,Trade Show,New
+LEAD000222,George,Howard,Oakridge Financial Partners,george.howard@oakridgefinancialpartners.com,+1-521-221-105,Other,Working
+LEAD000223,Melissa,Ward,Sunrise Financial Group,,,,Converted
+LEAD000224,Edward,Cox,Meridian Life Partners,edward.cox@meridianlifepartners.com,+1-523-223-115,Phone Inquiry,Unqualified
+LEAD000225,Deborah,Diaz,Pacific Coast Assurance,deborah.diaz@pacificcoastassurance.com,+1-524-224-120,Partner Referral,Nurturing
+LEAD000226,Ronald,Richardson,BlueSky Protection Services,ronald.richardson@blueskyprotectionservices.com,,Purchased List,New
+LEAD000227,Stephanie,Wood,Cornerstone Risk Management,stephanie.wood@cornerstoneriskmanagement.com,+1-526-226-130,Trade Show,Working
+LEAD000228,Timothy,Watson,Evergreen Coverage Co.,timothy.watson@evergreencoverageco.com,+1-527-227-135,Other,Converted
+LEAD000229,Rebecca,Smith,Pinnacle Insurance Brokers,,,,Unqualified
+LEAD000230,Jason,Johnson,Heritage Mutual Group,jason.johnson@heritagemutualgroup.com,+1-529-229-145,Phone Inquiry,Nurturing
+LEAD000231,Sharon,Williams,Coastal Risk Advisors,sharon.williams@coastalriskadvisors.com,+1-530-230-150,Partner Referral,New
+LEAD000232,Jeffrey,Brown,Summit Protection Alliance,jeffrey.brown@summitprotectionalliance.com,,Purchased List,Working
+LEAD000233,Laura,Jones,Lighthouse Insurance Services,laura.jones@lighthouseinsuranceservices.com,+1-532-232-160,Trade Show,Converted
+LEAD000234,Ryan,Garcia,Cascade Financial Security,ryan.garcia@cascadefinancialsecurity.com,+1-533-233-165,Other,Unqualified
+LEAD000235,Cynthia,Miller,Premier Risk Solutions,,,,Nurturing
+LEAD000236,James,Davis,Horizon Assurance Group,james.davis@horizonassurancegroup.com,+1-535-235-175,Phone Inquiry,New
+LEAD000237,Mary,Rodriguez,Keystone Benefits Co.,mary.rodriguez@keystonebenefitsco.com,+1-536-236-180,Partner Referral,Working
+LEAD000238,John,Martinez,Streamline Coverage Partners,john.martinez@streamlinecoveragepartners.com,,Purchased List,Converted
+LEAD000239,Patricia,Hernandez,Apex Insurance Holdings,patricia.hernandez@apexinsuranceholdings.com,+1-538-238-190,Trade Show,Unqualified
+LEAD000240,Robert,Lopez,Valley Risk Management,robert.lopez@valleyriskmanagement.com,+1-539-239-195,Other,Nurturing
+LEAD000241,Jennifer,Gonzalez,Crestview Financial Services,,,,New
+LEAD000242,Michael,Wilson,Lakeside Protection Group,michael.wilson@lakesideprotectiongroup.com,+1-541-241-205,Phone Inquiry,Working
+LEAD000243,Linda,Anderson,Sterling Risk Partners,linda.anderson@sterlingriskpartners.com,+1-542-242-210,Partner Referral,Converted
+LEAD000244,William,Thomas,Westpoint Insurance Alliance,william.thomas@westpointinsurancealliance.com,,Purchased List,Unqualified
+LEAD000245,Barbara,Taylor,Clearwater Benefits Group,barbara.taylor@clearwaterbenefitsgroup.com,+1-544-244-220,Trade Show,Nurturing
+LEAD000246,David,Moore,Redwood Assurance Co.,david.moore@redwoodassuranceco.com,+1-545-245-225,Other,New
+LEAD000247,Elizabeth,Jackson,Oakridge Financial Partners,,,,Working
+LEAD000248,Richard,Martin,Sunrise Financial Group,richard.martin@sunrisefinancialgroup.com,+1-547-247-235,Phone Inquiry,Converted
+LEAD000249,Susan,Lee,Meridian Life Partners,susan.lee@meridianlifepartners.com,+1-548-248-240,Partner Referral,Unqualified
+LEAD000250,Joseph,Perez,Pacific Coast Assurance,joseph.perez@pacificcoastassurance.com,,Purchased List,Nurturing
+LEAD000251,Jessica,Thompson,BlueSky Protection Services,jessica.thompson@blueskyprotectionservices.com,+1-550-250-250,Trade Show,New
+LEAD000252,Thomas,White,Cornerstone Risk Management,thomas.white@cornerstoneriskmanagement.com,+1-551-251-255,Other,Working
+LEAD000253,Sarah,Harris,Evergreen Coverage Co.,,,,Converted
+LEAD000254,Charles,Sanchez,Pinnacle Insurance Brokers,charles.sanchez@pinnacleinsurancebrokers.com,+1-553-253-265,Phone Inquiry,Unqualified
+LEAD000255,Karen,Clark,Heritage Mutual Group,karen.clark@heritagemutualgroup.com,+1-554-254-270,Partner Referral,Nurturing
+LEAD000256,Christopher,Ramirez,Coastal Risk Advisors,christopher.ramirez@coastalriskadvisors.com,,Purchased List,New
+LEAD000257,Lisa,Lewis,Summit Protection Alliance,lisa.lewis@summitprotectionalliance.com,+1-556-256-280,Trade Show,Working
+LEAD000258,Daniel,Robinson,Lighthouse Insurance Services,daniel.robinson@lighthouseinsuranceservices.com,+1-557-257-285,Other,Converted
+LEAD000259,Nancy,Walker,Cascade Financial Security,,,,Unqualified
+LEAD000260,Matthew,Young,Premier Risk Solutions,matthew.young@premierrisksolutions.com,+1-559-259-295,Phone Inquiry,Nurturing
+LEAD000261,Betty,Allen,Horizon Assurance Group,betty.allen@horizonassurancegroup.com,+1-560-260-300,Partner Referral,New
+LEAD000262,Anthony,King,Keystone Benefits Co.,anthony.king@keystonebenefitsco.com,,Purchased List,Working
+LEAD000263,Margaret,Wright,Streamline Coverage Partners,margaret.wright@streamlinecoveragepartners.com,+1-562-262-310,Trade Show,Converted
+LEAD000264,Mark,Scott,Apex Insurance Holdings,mark.scott@apexinsuranceholdings.com,+1-563-263-315,Other,Unqualified
+LEAD000265,Sandra,Torres,Valley Risk Management,,,,Nurturing
+LEAD000266,Donald,Nguyen,Crestview Financial Services,donald.nguyen@crestviewfinancialservices.com,+1-565-265-325,Phone Inquiry,New
+LEAD000267,Ashley,Hill,Lakeside Protection Group,ashley.hill@lakesideprotectiongroup.com,+1-566-266-330,Partner Referral,Working
+LEAD000268,Steven,Flores,Sterling Risk Partners,steven.flores@sterlingriskpartners.com,,Purchased List,Converted
+LEAD000269,Dorothy,Green,Westpoint Insurance Alliance,dorothy.green@westpointinsurancealliance.com,+1-568-268-340,Trade Show,Unqualified
+LEAD000270,Paul,Adams,Clearwater Benefits Group,paul.adams@clearwaterbenefitsgroup.com,+1-569-269-345,Other,Nurturing
+LEAD000271,Kimberly,Nelson,Redwood Assurance Co.,,,,New
+LEAD000272,Andrew,Baker,Oakridge Financial Partners,andrew.baker@oakridgefinancialpartners.com,+1-571-271-355,Phone Inquiry,Working
+LEAD000273,Emily,Hall,Sunrise Financial Group,emily.hall@sunrisefinancialgroup.com,+1-572-272-360,Partner Referral,Converted
+LEAD000274,Kenneth,Rivera,Meridian Life Partners,kenneth.rivera@meridianlifepartners.com,,Purchased List,Unqualified
+LEAD000275,Donna,Campbell,Pacific Coast Assurance,donna.campbell@pacificcoastassurance.com,+1-574-274-370,Trade Show,Nurturing
+LEAD000276,Joshua,Mitchell,BlueSky Protection Services,joshua.mitchell@blueskyprotectionservices.com,+1-575-275-375,Other,New
+LEAD000277,Michelle,Carter,Cornerstone Risk Management,,,,Working
+LEAD000278,Kevin,Roberts,Evergreen Coverage Co.,kevin.roberts@evergreencoverageco.com,+1-577-277-385,Phone Inquiry,Converted
+LEAD000279,Carol,Phillips,Pinnacle Insurance Brokers,carol.phillips@pinnacleinsurancebrokers.com,+1-578-278-390,Partner Referral,Unqualified
+LEAD000280,Brian,Evans,Heritage Mutual Group,brian.evans@heritagemutualgroup.com,,Purchased List,Nurturing
+LEAD000281,Amanda,Turner,Coastal Risk Advisors,amanda.turner@coastalriskadvisors.com,+1-580-280-400,Trade Show,New
+LEAD000282,George,Torres,Summit Protection Alliance,george.torres@summitprotectionalliance.com,+1-581-281-405,Other,Working
+LEAD000283,Melissa,Parker,Lighthouse Insurance Services,,,,Converted
+LEAD000284,Edward,Collins,Cascade Financial Security,edward.collins@cascadefinancialsecurity.com,+1-583-283-415,Phone Inquiry,Unqualified
+LEAD000285,Deborah,Edwards,Premier Risk Solutions,deborah.edwards@premierrisksolutions.com,+1-584-284-420,Partner Referral,Nurturing
+LEAD000286,Ronald,Stewart,Horizon Assurance Group,ronald.stewart@horizonassurancegroup.com,,Purchased List,New
+LEAD000287,Stephanie,Flores,Keystone Benefits Co.,stephanie.flores@keystonebenefitsco.com,+1-586-286-430,Trade Show,Working
+LEAD000288,Timothy,Morris,Streamline Coverage Partners,timothy.morris@streamlinecoveragepartners.com,+1-587-287-435,Other,Converted
+LEAD000289,Rebecca,Nguyen,Apex Insurance Holdings,,,,Unqualified
+LEAD000290,Jason,Murphy,Valley Risk Management,jason.murphy@valleyriskmanagement.com,+1-589-289-445,Phone Inquiry,Nurturing
+LEAD000291,Sharon,Rivera,Crestview Financial Services,sharon.rivera@crestviewfinancialservices.com,+1-590-290-450,Partner Referral,New
+LEAD000292,Jeffrey,Cook,Lakeside Protection Group,jeffrey.cook@lakesideprotectiongroup.com,,Purchased List,Working
+LEAD000293,Laura,Rogers,Sterling Risk Partners,laura.rogers@sterlingriskpartners.com,+1-592-292-460,Trade Show,Converted
+LEAD000294,Ryan,Morgan,Westpoint Insurance Alliance,ryan.morgan@westpointinsurancealliance.com,+1-593-293-465,Other,Unqualified
+LEAD000295,Cynthia,Peterson,Clearwater Benefits Group,,,,Nurturing
+LEAD000296,James,Cooper,Redwood Assurance Co.,james.cooper@redwoodassuranceco.com,+1-595-295-475,Phone Inquiry,New
+LEAD000297,Mary,Reed,Oakridge Financial Partners,mary.reed@oakridgefinancialpartners.com,+1-596-296-480,Partner Referral,Working
+LEAD000298,John,Bailey,Sunrise Financial Group,john.bailey@sunrisefinancialgroup.com,,Purchased List,Converted
+LEAD000299,Patricia,Bell,Meridian Life Partners,patricia.bell@meridianlifepartners.com,+1-598-298-490,Trade Show,Unqualified
+LEAD000300,Robert,Gomez,Pacific Coast Assurance,robert.gomez@pacificcoastassurance.com,+1-599-299-495,Other,Nurturing
+LEAD000301,Jennifer,Kelly,BlueSky Protection Services,,,,New
+LEAD000302,Michael,Howard,Cornerstone Risk Management,michael.howard@cornerstoneriskmanagement.com,+1-601-301-505,Phone Inquiry,Working
+LEAD000303,Linda,Ward,Evergreen Coverage Co.,linda.ward@evergreencoverageco.com,+1-602-302-510,Partner Referral,Converted
+LEAD000304,William,Cox,Pinnacle Insurance Brokers,william.cox@pinnacleinsurancebrokers.com,,Purchased List,Unqualified
+LEAD000305,Barbara,Diaz,Heritage Mutual Group,barbara.diaz@heritagemutualgroup.com,+1-604-304-520,Trade Show,Nurturing
+LEAD000306,David,Richardson,Coastal Risk Advisors,david.richardson@coastalriskadvisors.com,+1-605-305-525,Other,New
+LEAD000307,Elizabeth,Wood,Summit Protection Alliance,,,,Working
+LEAD000308,Richard,Watson,Lighthouse Insurance Services,richard.watson@lighthouseinsuranceservices.com,+1-607-307-535,Phone Inquiry,Converted
+LEAD000309,Susan,Smith,Cascade Financial Security,susan.smith@cascadefinancialsecurity.com,+1-608-308-540,Partner Referral,Unqualified
+LEAD000310,Joseph,Johnson,Premier Risk Solutions,joseph.johnson@premierrisksolutions.com,,Purchased List,Nurturing
+LEAD000311,Jessica,Williams,Horizon Assurance Group,jessica.williams@horizonassurancegroup.com,+1-610-310-550,Trade Show,New
+LEAD000312,Thomas,Brown,Keystone Benefits Co.,thomas.brown@keystonebenefitsco.com,+1-611-311-555,Other,Working
+LEAD000313,Sarah,Jones,Streamline Coverage Partners,,,,Converted
+LEAD000314,Charles,Garcia,Apex Insurance Holdings,charles.garcia@apexinsuranceholdings.com,+1-613-313-565,Phone Inquiry,Unqualified
+LEAD000315,Karen,Miller,Valley Risk Management,karen.miller@valleyriskmanagement.com,+1-614-314-570,Partner Referral,Nurturing
+LEAD000316,Christopher,Davis,Crestview Financial Services,christopher.davis@crestviewfinancialservices.com,,Purchased List,New
+LEAD000317,Lisa,Rodriguez,Lakeside Protection Group,lisa.rodriguez@lakesideprotectiongroup.com,+1-616-316-580,Trade Show,Working
+LEAD000318,Daniel,Martinez,Sterling Risk Partners,daniel.martinez@sterlingriskpartners.com,+1-617-317-585,Other,Converted
+LEAD000319,Nancy,Hernandez,Westpoint Insurance Alliance,,,,Unqualified
+LEAD000320,Matthew,Lopez,Clearwater Benefits Group,matthew.lopez@clearwaterbenefitsgroup.com,+1-619-319-595,Phone Inquiry,Nurturing
+LEAD000321,Betty,Gonzalez,Redwood Assurance Co.,betty.gonzalez@redwoodassuranceco.com,+1-620-320-600,Partner Referral,New
+LEAD000322,Anthony,Wilson,Oakridge Financial Partners,anthony.wilson@oakridgefinancialpartners.com,,Purchased List,Working
+LEAD000323,Margaret,Anderson,Sunrise Financial Group,margaret.anderson@sunrisefinancialgroup.com,+1-622-322-610,Trade Show,Converted
+LEAD000324,Mark,Thomas,Meridian Life Partners,mark.thomas@meridianlifepartners.com,+1-623-323-615,Other,Unqualified
+LEAD000325,Sandra,Taylor,Pacific Coast Assurance,,,,Nurturing
+LEAD000326,Donald,Moore,BlueSky Protection Services,donald.moore@blueskyprotectionservices.com,+1-625-325-625,Phone Inquiry,New
+LEAD000327,Ashley,Jackson,Cornerstone Risk Management,ashley.jackson@cornerstoneriskmanagement.com,+1-626-326-630,Partner Referral,Working
+LEAD000328,Steven,Martin,Evergreen Coverage Co.,steven.martin@evergreencoverageco.com,,Purchased List,Converted
+LEAD000329,Dorothy,Lee,Pinnacle Insurance Brokers,dorothy.lee@pinnacleinsurancebrokers.com,+1-628-328-640,Trade Show,Unqualified
+LEAD000330,Paul,Perez,Heritage Mutual Group,paul.perez@heritagemutualgroup.com,+1-629-329-645,Other,Nurturing
+LEAD000331,Kimberly,Thompson,Coastal Risk Advisors,,,,New
+LEAD000332,Andrew,White,Summit Protection Alliance,andrew.white@summitprotectionalliance.com,+1-631-331-655,Phone Inquiry,Working
+LEAD000333,Emily,Harris,Lighthouse Insurance Services,emily.harris@lighthouseinsuranceservices.com,+1-632-332-660,Partner Referral,Converted
+LEAD000334,Kenneth,Sanchez,Cascade Financial Security,kenneth.sanchez@cascadefinancialsecurity.com,,Purchased List,Unqualified
+LEAD000335,Donna,Clark,Premier Risk Solutions,donna.clark@premierrisksolutions.com,+1-634-334-670,Trade Show,Nurturing
+LEAD000336,Joshua,Ramirez,Horizon Assurance Group,joshua.ramirez@horizonassurancegroup.com,+1-635-335-675,Other,New
+LEAD000337,Michelle,Lewis,Keystone Benefits Co.,,,,Working
+LEAD000338,Kevin,Robinson,Streamline Coverage Partners,kevin.robinson@streamlinecoveragepartners.com,+1-637-337-685,Phone Inquiry,Converted
+LEAD000339,Carol,Walker,Apex Insurance Holdings,carol.walker@apexinsuranceholdings.com,+1-638-338-690,Partner Referral,Unqualified
+LEAD000340,Brian,Young,Valley Risk Management,brian.young@valleyriskmanagement.com,,Purchased List,Nurturing
+LEAD000341,Amanda,Allen,Crestview Financial Services,amanda.allen@crestviewfinancialservices.com,+1-640-340-700,Trade Show,New
+LEAD000342,George,King,Lakeside Protection Group,george.king@lakesideprotectiongroup.com,+1-641-341-705,Other,Working
+LEAD000343,Melissa,Wright,Sterling Risk Partners,,,,Converted
+LEAD000344,Edward,Scott,Westpoint Insurance Alliance,edward.scott@westpointinsurancealliance.com,+1-643-343-715,Phone Inquiry,Unqualified
+LEAD000345,Deborah,Torres,Clearwater Benefits Group,deborah.torres@clearwaterbenefitsgroup.com,+1-644-344-720,Partner Referral,Nurturing
+LEAD000346,Ronald,Nguyen,Redwood Assurance Co.,ronald.nguyen@redwoodassuranceco.com,,Purchased List,New
+LEAD000347,Stephanie,Hill,Oakridge Financial Partners,stephanie.hill@oakridgefinancialpartners.com,+1-646-346-730,Trade Show,Working
+LEAD000348,Timothy,Flores,Sunrise Financial Group,timothy.flores@sunrisefinancialgroup.com,+1-647-347-735,Other,Converted
+LEAD000349,Rebecca,Green,Meridian Life Partners,,,,Unqualified
+LEAD000350,Jason,Adams,Pacific Coast Assurance,jason.adams@pacificcoastassurance.com,+1-649-349-745,Phone Inquiry,Nurturing
+LEAD000351,Sharon,Nelson,BlueSky Protection Services,sharon.nelson@blueskyprotectionservices.com,+1-650-350-750,Partner Referral,New
+LEAD000352,Jeffrey,Baker,Cornerstone Risk Management,jeffrey.baker@cornerstoneriskmanagement.com,,Purchased List,Working
+LEAD000353,Laura,Hall,Evergreen Coverage Co.,laura.hall@evergreencoverageco.com,+1-652-352-760,Trade Show,Converted
+LEAD000354,Ryan,Rivera,Pinnacle Insurance Brokers,ryan.rivera@pinnacleinsurancebrokers.com,+1-653-353-765,Other,Unqualified
+LEAD000355,Cynthia,Campbell,Heritage Mutual Group,,,,Nurturing
+LEAD000356,James,Mitchell,Coastal Risk Advisors,james.mitchell@coastalriskadvisors.com,+1-655-355-775,Phone Inquiry,New
+LEAD000357,Mary,Carter,Summit Protection Alliance,mary.carter@summitprotectionalliance.com,+1-656-356-780,Partner Referral,Working
+LEAD000358,John,Roberts,Lighthouse Insurance Services,john.roberts@lighthouseinsuranceservices.com,,Purchased List,Converted
+LEAD000359,Patricia,Phillips,Cascade Financial Security,patricia.phillips@cascadefinancialsecurity.com,+1-658-358-790,Trade Show,Unqualified
+LEAD000360,Robert,Evans,Premier Risk Solutions,robert.evans@premierrisksolutions.com,+1-659-359-795,Other,Nurturing
+LEAD000361,Jennifer,Turner,Horizon Assurance Group,,,,New
+LEAD000362,Michael,Torres,Keystone Benefits Co.,michael.torres@keystonebenefitsco.com,+1-661-361-805,Phone Inquiry,Working
+LEAD000363,Linda,Parker,Streamline Coverage Partners,linda.parker@streamlinecoveragepartners.com,+1-662-362-810,Partner Referral,Converted
+LEAD000364,William,Collins,Apex Insurance Holdings,william.collins@apexinsuranceholdings.com,,Purchased List,Unqualified
+LEAD000365,Barbara,Edwards,Valley Risk Management,barbara.edwards@valleyriskmanagement.com,+1-664-364-820,Trade Show,Nurturing
+LEAD000366,David,Stewart,Crestview Financial Services,david.stewart@crestviewfinancialservices.com,+1-665-365-825,Other,New
+LEAD000367,Elizabeth,Flores,Lakeside Protection Group,,,,Working
+LEAD000368,Richard,Morris,Sterling Risk Partners,richard.morris@sterlingriskpartners.com,+1-667-367-835,Phone Inquiry,Converted
+LEAD000369,Susan,Nguyen,Westpoint Insurance Alliance,susan.nguyen@westpointinsurancealliance.com,+1-668-368-840,Partner Referral,Unqualified
+LEAD000370,Joseph,Murphy,Clearwater Benefits Group,joseph.murphy@clearwaterbenefitsgroup.com,,Purchased List,Nurturing
+LEAD000371,Jessica,Rivera,Redwood Assurance Co.,jessica.rivera@redwoodassuranceco.com,+1-670-370-850,Trade Show,New
+LEAD000372,Thomas,Cook,Oakridge Financial Partners,thomas.cook@oakridgefinancialpartners.com,+1-671-371-855,Other,Working
+LEAD000373,Sarah,Rogers,Sunrise Financial Group,,,,Converted
+LEAD000374,Charles,Morgan,Meridian Life Partners,charles.morgan@meridianlifepartners.com,+1-673-373-865,Phone Inquiry,Unqualified
+LEAD000375,Karen,Peterson,Pacific Coast Assurance,karen.peterson@pacificcoastassurance.com,+1-674-374-870,Partner Referral,Nurturing
+LEAD000376,Christopher,Cooper,BlueSky Protection Services,christopher.cooper@blueskyprotectionservices.com,,Purchased List,New
+LEAD000377,Lisa,Reed,Cornerstone Risk Management,lisa.reed@cornerstoneriskmanagement.com,+1-676-376-880,Trade Show,Working
+LEAD000378,Daniel,Bailey,Evergreen Coverage Co.,daniel.bailey@evergreencoverageco.com,+1-677-377-885,Other,Converted
+LEAD000379,Nancy,Bell,Pinnacle Insurance Brokers,,,,Unqualified
+LEAD000380,Matthew,Gomez,Heritage Mutual Group,matthew.gomez@heritagemutualgroup.com,+1-679-379-895,Phone Inquiry,Nurturing
+LEAD000381,Betty,Kelly,Coastal Risk Advisors,betty.kelly@coastalriskadvisors.com,+1-680-380-900,Partner Referral,New
+LEAD000382,Anthony,Howard,Summit Protection Alliance,anthony.howard@summitprotectionalliance.com,,Purchased List,Working
+LEAD000383,Margaret,Ward,Lighthouse Insurance Services,margaret.ward@lighthouseinsuranceservices.com,+1-682-382-910,Trade Show,Converted
+LEAD000384,Mark,Cox,Cascade Financial Security,mark.cox@cascadefinancialsecurity.com,+1-683-383-915,Other,Unqualified
+LEAD000385,Sandra,Diaz,Premier Risk Solutions,,,,Nurturing
+LEAD000386,Donald,Richardson,Horizon Assurance Group,donald.richardson@horizonassurancegroup.com,+1-685-385-925,Phone Inquiry,New
+LEAD000387,Ashley,Wood,Keystone Benefits Co.,ashley.wood@keystonebenefitsco.com,+1-686-386-930,Partner Referral,Working
+LEAD000388,Steven,Watson,Streamline Coverage Partners,steven.watson@streamlinecoveragepartners.com,,Purchased List,Converted
+LEAD000389,Dorothy,Smith,Apex Insurance Holdings,dorothy.smith@apexinsuranceholdings.com,+1-688-388-940,Trade Show,Unqualified
+LEAD000390,Paul,Johnson,Valley Risk Management,paul.johnson@valleyriskmanagement.com,+1-689-389-945,Other,Nurturing
+LEAD000391,Kimberly,Williams,Crestview Financial Services,,,,New
+LEAD000392,Andrew,Brown,Lakeside Protection Group,andrew.brown@lakesideprotectiongroup.com,+1-691-391-955,Phone Inquiry,Working
+LEAD000393,Emily,Jones,Sterling Risk Partners,emily.jones@sterlingriskpartners.com,+1-692-392-960,Partner Referral,Converted
+LEAD000394,Kenneth,Garcia,Westpoint Insurance Alliance,kenneth.garcia@westpointinsurancealliance.com,,Purchased List,Unqualified
+LEAD000395,Donna,Miller,Clearwater Benefits Group,donna.miller@clearwaterbenefitsgroup.com,+1-694-394-970,Trade Show,Nurturing
+LEAD000396,Joshua,Davis,Redwood Assurance Co.,joshua.davis@redwoodassuranceco.com,+1-695-395-975,Other,New
+LEAD000397,Michelle,Rodriguez,Oakridge Financial Partners,,,,Working
+LEAD000398,Kevin,Martinez,Sunrise Financial Group,kevin.martinez@sunrisefinancialgroup.com,+1-697-397-985,Phone Inquiry,Converted
+LEAD000399,Carol,Hernandez,Meridian Life Partners,carol.hernandez@meridianlifepartners.com,+1-698-398-990,Partner Referral,Unqualified
+LEAD000400,Brian,Lopez,Pacific Coast Assurance,brian.lopez@pacificcoastassurance.com,,Purchased List,Nurturing
+LEAD000401,Amanda,Gonzalez,BlueSky Protection Services,amanda.gonzalez@blueskyprotectionservices.com,+1-700-400-000,Trade Show,New
+LEAD000402,George,Wilson,Cornerstone Risk Management,george.wilson@cornerstoneriskmanagement.com,+1-701-401-005,Other,Working
+LEAD000403,Melissa,Anderson,Evergreen Coverage Co.,,,,Converted
+LEAD000404,Edward,Thomas,Pinnacle Insurance Brokers,edward.thomas@pinnacleinsurancebrokers.com,+1-703-403-015,Phone Inquiry,Unqualified
+LEAD000405,Deborah,Taylor,Heritage Mutual Group,deborah.taylor@heritagemutualgroup.com,+1-704-404-020,Partner Referral,Nurturing
+LEAD000406,Ronald,Moore,Coastal Risk Advisors,ronald.moore@coastalriskadvisors.com,,Purchased List,New
+LEAD000407,Stephanie,Jackson,Summit Protection Alliance,stephanie.jackson@summitprotectionalliance.com,+1-706-406-030,Trade Show,Working
+LEAD000408,Timothy,Martin,Lighthouse Insurance Services,timothy.martin@lighthouseinsuranceservices.com,+1-707-407-035,Other,Converted
+LEAD000409,Rebecca,Lee,Cascade Financial Security,,,,Unqualified
+LEAD000410,Jason,Perez,Premier Risk Solutions,jason.perez@premierrisksolutions.com,+1-709-409-045,Phone Inquiry,Nurturing
+LEAD000411,Sharon,Thompson,Horizon Assurance Group,sharon.thompson@horizonassurancegroup.com,+1-710-410-050,Partner Referral,New
+LEAD000412,Jeffrey,White,Keystone Benefits Co.,jeffrey.white@keystonebenefitsco.com,,Purchased List,Working
+LEAD000413,Laura,Harris,Streamline Coverage Partners,laura.harris@streamlinecoveragepartners.com,+1-712-412-060,Trade Show,Converted
+LEAD000414,Ryan,Sanchez,Apex Insurance Holdings,ryan.sanchez@apexinsuranceholdings.com,+1-713-413-065,Other,Unqualified
+LEAD000415,Cynthia,Clark,Valley Risk Management,,,,Nurturing
+LEAD000416,James,Ramirez,Crestview Financial Services,james.ramirez@crestviewfinancialservices.com,+1-715-415-075,Phone Inquiry,New
+LEAD000417,Mary,Lewis,Lakeside Protection Group,mary.lewis@lakesideprotectiongroup.com,+1-716-416-080,Partner Referral,Working
+LEAD000418,John,Robinson,Sterling Risk Partners,john.robinson@sterlingriskpartners.com,,Purchased List,Converted
+LEAD000419,Patricia,Walker,Westpoint Insurance Alliance,patricia.walker@westpointinsurancealliance.com,+1-718-418-090,Trade Show,Unqualified
+LEAD000420,Robert,Young,Clearwater Benefits Group,robert.young@clearwaterbenefitsgroup.com,+1-719-419-095,Other,Nurturing
+LEAD000421,Jennifer,Allen,Redwood Assurance Co.,,,,New
+LEAD000422,Michael,King,Oakridge Financial Partners,michael.king@oakridgefinancialpartners.com,+1-721-421-105,Phone Inquiry,Working
+LEAD000423,Linda,Wright,Sunrise Financial Group,linda.wright@sunrisefinancialgroup.com,+1-722-422-110,Partner Referral,Converted
+LEAD000424,William,Scott,Meridian Life Partners,william.scott@meridianlifepartners.com,,Purchased List,Unqualified
+LEAD000425,Barbara,Torres,Pacific Coast Assurance,barbara.torres@pacificcoastassurance.com,+1-724-424-120,Trade Show,Nurturing
+LEAD000426,David,Nguyen,BlueSky Protection Services,david.nguyen@blueskyprotectionservices.com,+1-725-425-125,Other,New
+LEAD000427,Elizabeth,Hill,Cornerstone Risk Management,,,,Working
+LEAD000428,Richard,Flores,Evergreen Coverage Co.,richard.flores@evergreencoverageco.com,+1-727-427-135,Phone Inquiry,Converted
+LEAD000429,Susan,Green,Pinnacle Insurance Brokers,susan.green@pinnacleinsurancebrokers.com,+1-728-428-140,Partner Referral,Unqualified
+LEAD000430,Joseph,Adams,Heritage Mutual Group,joseph.adams@heritagemutualgroup.com,,Purchased List,Nurturing
+LEAD000431,Jessica,Nelson,Coastal Risk Advisors,jessica.nelson@coastalriskadvisors.com,+1-730-430-150,Trade Show,New
+LEAD000432,Thomas,Baker,Summit Protection Alliance,thomas.baker@summitprotectionalliance.com,+1-731-431-155,Other,Working
+LEAD000433,Sarah,Hall,Lighthouse Insurance Services,,,,Converted
+LEAD000434,Charles,Rivera,Cascade Financial Security,charles.rivera@cascadefinancialsecurity.com,+1-733-433-165,Phone Inquiry,Unqualified
+LEAD000435,Karen,Campbell,Premier Risk Solutions,karen.campbell@premierrisksolutions.com,+1-734-434-170,Partner Referral,Nurturing
+LEAD000436,Christopher,Mitchell,Horizon Assurance Group,christopher.mitchell@horizonassurancegroup.com,,Purchased List,New
+LEAD000437,Lisa,Carter,Keystone Benefits Co.,lisa.carter@keystonebenefitsco.com,+1-736-436-180,Trade Show,Working
+LEAD000438,Daniel,Roberts,Streamline Coverage Partners,daniel.roberts@streamlinecoveragepartners.com,+1-737-437-185,Other,Converted
+LEAD000439,Nancy,Phillips,Apex Insurance Holdings,,,,Unqualified
+LEAD000440,Matthew,Evans,Valley Risk Management,matthew.evans@valleyriskmanagement.com,+1-739-439-195,Phone Inquiry,Nurturing
+LEAD000441,Betty,Turner,Crestview Financial Services,betty.turner@crestviewfinancialservices.com,+1-740-440-200,Partner Referral,New
+LEAD000442,Anthony,Torres,Lakeside Protection Group,anthony.torres@lakesideprotectiongroup.com,,Purchased List,Working
+LEAD000443,Margaret,Parker,Sterling Risk Partners,margaret.parker@sterlingriskpartners.com,+1-742-442-210,Trade Show,Converted
+LEAD000444,Mark,Collins,Westpoint Insurance Alliance,mark.collins@westpointinsurancealliance.com,+1-743-443-215,Other,Unqualified
+LEAD000445,Sandra,Edwards,Clearwater Benefits Group,,,,Nurturing
+LEAD000446,Donald,Stewart,Redwood Assurance Co.,donald.stewart@redwoodassuranceco.com,+1-745-445-225,Phone Inquiry,New
+LEAD000447,Ashley,Flores,Oakridge Financial Partners,ashley.flores@oakridgefinancialpartners.com,+1-746-446-230,Partner Referral,Working
+LEAD000448,Steven,Morris,Sunrise Financial Group,steven.morris@sunrisefinancialgroup.com,,Purchased List,Converted
+LEAD000449,Dorothy,Nguyen,Meridian Life Partners,dorothy.nguyen@meridianlifepartners.com,+1-748-448-240,Trade Show,Unqualified
+LEAD000450,Paul,Murphy,Pacific Coast Assurance,paul.murphy@pacificcoastassurance.com,+1-749-449-245,Other,Nurturing
+LEAD000451,Kimberly,Rivera,BlueSky Protection Services,,,,New
+LEAD000452,Andrew,Cook,Cornerstone Risk Management,andrew.cook@cornerstoneriskmanagement.com,+1-751-451-255,Phone Inquiry,Working
+LEAD000453,Emily,Rogers,Evergreen Coverage Co.,emily.rogers@evergreencoverageco.com,+1-752-452-260,Partner Referral,Converted
+LEAD000454,Kenneth,Morgan,Pinnacle Insurance Brokers,kenneth.morgan@pinnacleinsurancebrokers.com,,Purchased List,Unqualified
+LEAD000455,Donna,Peterson,Heritage Mutual Group,donna.peterson@heritagemutualgroup.com,+1-754-454-270,Trade Show,Nurturing
+LEAD000456,Joshua,Cooper,Coastal Risk Advisors,joshua.cooper@coastalriskadvisors.com,+1-755-455-275,Other,New
+LEAD000457,Michelle,Reed,Summit Protection Alliance,,,,Working
+LEAD000458,Kevin,Bailey,Lighthouse Insurance Services,kevin.bailey@lighthouseinsuranceservices.com,+1-757-457-285,Phone Inquiry,Converted
+LEAD000459,Carol,Bell,Cascade Financial Security,carol.bell@cascadefinancialsecurity.com,+1-758-458-290,Partner Referral,Unqualified
+LEAD000460,Brian,Gomez,Premier Risk Solutions,brian.gomez@premierrisksolutions.com,,Purchased List,Nurturing
+LEAD000461,Amanda,Kelly,Horizon Assurance Group,amanda.kelly@horizonassurancegroup.com,+1-760-460-300,Trade Show,New
+LEAD000462,George,Howard,Keystone Benefits Co.,george.howard@keystonebenefitsco.com,+1-761-461-305,Other,Working
+LEAD000463,Melissa,Ward,Streamline Coverage Partners,,,,Converted
+LEAD000464,Edward,Cox,Apex Insurance Holdings,edward.cox@apexinsuranceholdings.com,+1-763-463-315,Phone Inquiry,Unqualified
+LEAD000465,Deborah,Diaz,Valley Risk Management,deborah.diaz@valleyriskmanagement.com,+1-764-464-320,Partner Referral,Nurturing
+LEAD000466,Ronald,Richardson,Crestview Financial Services,ronald.richardson@crestviewfinancialservices.com,,Purchased List,New
+LEAD000467,Stephanie,Wood,Lakeside Protection Group,stephanie.wood@lakesideprotectiongroup.com,+1-766-466-330,Trade Show,Working
+LEAD000468,Timothy,Watson,Sterling Risk Partners,timothy.watson@sterlingriskpartners.com,+1-767-467-335,Other,Converted
+LEAD000469,Rebecca,Smith,Westpoint Insurance Alliance,,,,Unqualified
+LEAD000470,Jason,Johnson,Clearwater Benefits Group,jason.johnson@clearwaterbenefitsgroup.com,+1-769-469-345,Phone Inquiry,Nurturing
+LEAD000471,Sharon,Williams,Redwood Assurance Co.,sharon.williams@redwoodassuranceco.com,+1-770-470-350,Partner Referral,New
+LEAD000472,Jeffrey,Brown,Oakridge Financial Partners,jeffrey.brown@oakridgefinancialpartners.com,,Purchased List,Working
+LEAD000473,Laura,Jones,Sunrise Financial Group,laura.jones@sunrisefinancialgroup.com,+1-772-472-360,Trade Show,Converted
+LEAD000474,Ryan,Garcia,Meridian Life Partners,ryan.garcia@meridianlifepartners.com,+1-773-473-365,Other,Unqualified
+LEAD000475,Cynthia,Miller,Pacific Coast Assurance,,,,Nurturing
+LEAD000476,James,Davis,BlueSky Protection Services,james.davis@blueskyprotectionservices.com,+1-775-475-375,Phone Inquiry,New
+LEAD000477,Mary,Rodriguez,Cornerstone Risk Management,mary.rodriguez@cornerstoneriskmanagement.com,+1-776-476-380,Partner Referral,Working
+LEAD000478,John,Martinez,Evergreen Coverage Co.,john.martinez@evergreencoverageco.com,,Purchased List,Converted
+LEAD000479,Patricia,Hernandez,Pinnacle Insurance Brokers,patricia.hernandez@pinnacleinsurancebrokers.com,+1-778-478-390,Trade Show,Unqualified
+LEAD000480,Robert,Lopez,Heritage Mutual Group,robert.lopez@heritagemutualgroup.com,+1-779-479-395,Other,Nurturing
+LEAD000481,Jennifer,Gonzalez,Coastal Risk Advisors,,,,New
+LEAD000482,Michael,Wilson,Summit Protection Alliance,michael.wilson@summitprotectionalliance.com,+1-781-481-405,Phone Inquiry,Working
+LEAD000483,Linda,Anderson,Lighthouse Insurance Services,linda.anderson@lighthouseinsuranceservices.com,+1-782-482-410,Partner Referral,Converted
+LEAD000484,William,Thomas,Cascade Financial Security,william.thomas@cascadefinancialsecurity.com,,Purchased List,Unqualified
+LEAD000485,Barbara,Taylor,Premier Risk Solutions,barbara.taylor@premierrisksolutions.com,+1-784-484-420,Trade Show,Nurturing
+LEAD000486,David,Moore,Horizon Assurance Group,david.moore@horizonassurancegroup.com,+1-785-485-425,Other,New
+LEAD000487,Elizabeth,Jackson,Keystone Benefits Co.,,,,Working
+LEAD000488,Richard,Martin,Streamline Coverage Partners,richard.martin@streamlinecoveragepartners.com,+1-787-487-435,Phone Inquiry,Converted
+LEAD000489,Susan,Lee,Apex Insurance Holdings,susan.lee@apexinsuranceholdings.com,+1-788-488-440,Partner Referral,Unqualified
+LEAD000490,Joseph,Perez,Valley Risk Management,joseph.perez@valleyriskmanagement.com,,Purchased List,Nurturing
+LEAD000491,Jessica,Thompson,Crestview Financial Services,jessica.thompson@crestviewfinancialservices.com,+1-790-490-450,Trade Show,New
+LEAD000492,Thomas,White,Lakeside Protection Group,thomas.white@lakesideprotectiongroup.com,+1-791-491-455,Other,Working
+LEAD000493,Sarah,Harris,Sterling Risk Partners,,,,Converted
+LEAD000494,Charles,Sanchez,Westpoint Insurance Alliance,charles.sanchez@westpointinsurancealliance.com,+1-793-493-465,Phone Inquiry,Unqualified
+LEAD000495,Karen,Clark,Clearwater Benefits Group,karen.clark@clearwaterbenefitsgroup.com,+1-794-494-470,Partner Referral,Nurturing
+LEAD000496,Christopher,Ramirez,Redwood Assurance Co.,christopher.ramirez@redwoodassuranceco.com,,Purchased List,New
+LEAD000497,Lisa,Lewis,Oakridge Financial Partners,lisa.lewis@oakridgefinancialpartners.com,+1-796-496-480,Trade Show,Working
+LEAD000498,Daniel,Robinson,Sunrise Financial Group,daniel.robinson@sunrisefinancialgroup.com,+1-797-497-485,Other,Converted
+LEAD000499,Nancy,Walker,Meridian Life Partners,,,,Unqualified
+LEAD000500,Matthew,Young,Pacific Coast Assurance,matthew.young@pacificcoastassurance.com,+1-799-499-495,Phone Inquiry,Nurturing
+LEAD000501,Betty,Allen,BlueSky Protection Services,betty.allen@blueskyprotectionservices.com,+1-800-500-500,Partner Referral,New
+LEAD000502,Anthony,King,Cornerstone Risk Management,anthony.king@cornerstoneriskmanagement.com,,Purchased List,Working
+LEAD000503,Margaret,Wright,Evergreen Coverage Co.,margaret.wright@evergreencoverageco.com,+1-802-502-510,Trade Show,Converted
+LEAD000504,Mark,Scott,Pinnacle Insurance Brokers,mark.scott@pinnacleinsurancebrokers.com,+1-803-503-515,Other,Unqualified
+LEAD000505,Sandra,Torres,Heritage Mutual Group,,,,Nurturing
+LEAD000506,Donald,Nguyen,Coastal Risk Advisors,donald.nguyen@coastalriskadvisors.com,+1-805-505-525,Phone Inquiry,New
+LEAD000507,Ashley,Hill,Summit Protection Alliance,ashley.hill@summitprotectionalliance.com,+1-806-506-530,Partner Referral,Working
+LEAD000508,Steven,Flores,Lighthouse Insurance Services,steven.flores@lighthouseinsuranceservices.com,,Purchased List,Converted
+LEAD000509,Dorothy,Green,Cascade Financial Security,dorothy.green@cascadefinancialsecurity.com,+1-808-508-540,Trade Show,Unqualified
+LEAD000510,Paul,Adams,Premier Risk Solutions,paul.adams@premierrisksolutions.com,+1-809-509-545,Other,Nurturing
+LEAD000511,Kimberly,Nelson,Horizon Assurance Group,,,,New
+LEAD000512,Andrew,Baker,Keystone Benefits Co.,andrew.baker@keystonebenefitsco.com,+1-811-511-555,Phone Inquiry,Working
+LEAD000513,Emily,Hall,Streamline Coverage Partners,emily.hall@streamlinecoveragepartners.com,+1-812-512-560,Partner Referral,Converted
+LEAD000514,Kenneth,Rivera,Apex Insurance Holdings,kenneth.rivera@apexinsuranceholdings.com,,Purchased List,Unqualified
+LEAD000515,Donna,Campbell,Valley Risk Management,donna.campbell@valleyriskmanagement.com,+1-814-514-570,Trade Show,Nurturing
+LEAD000516,Joshua,Mitchell,Crestview Financial Services,joshua.mitchell@crestviewfinancialservices.com,+1-815-515-575,Other,New
+LEAD000517,Michelle,Carter,Lakeside Protection Group,,,,Working
+LEAD000518,Kevin,Roberts,Sterling Risk Partners,kevin.roberts@sterlingriskpartners.com,+1-817-517-585,Phone Inquiry,Converted
+LEAD000519,Carol,Phillips,Westpoint Insurance Alliance,carol.phillips@westpointinsurancealliance.com,+1-818-518-590,Partner Referral,Unqualified
+LEAD000520,Brian,Evans,Clearwater Benefits Group,brian.evans@clearwaterbenefitsgroup.com,,Purchased List,Nurturing
+LEAD000521,Amanda,Turner,Redwood Assurance Co.,amanda.turner@redwoodassuranceco.com,+1-820-520-600,Trade Show,New
+LEAD000522,George,Torres,Oakridge Financial Partners,george.torres@oakridgefinancialpartners.com,+1-821-521-605,Other,Working
+LEAD000523,Melissa,Parker,Sunrise Financial Group,,,,Converted
+LEAD000524,Edward,Collins,Meridian Life Partners,edward.collins@meridianlifepartners.com,+1-823-523-615,Phone Inquiry,Unqualified
+LEAD000525,Deborah,Edwards,Pacific Coast Assurance,deborah.edwards@pacificcoastassurance.com,+1-824-524-620,Partner Referral,Nurturing
+LEAD000526,Ronald,Stewart,BlueSky Protection Services,ronald.stewart@blueskyprotectionservices.com,,Purchased List,New
+LEAD000527,Stephanie,Flores,Cornerstone Risk Management,stephanie.flores@cornerstoneriskmanagement.com,+1-826-526-630,Trade Show,Working
+LEAD000528,Timothy,Morris,Evergreen Coverage Co.,timothy.morris@evergreencoverageco.com,+1-827-527-635,Other,Converted
+LEAD000529,Rebecca,Nguyen,Pinnacle Insurance Brokers,,,,Unqualified
+LEAD000530,Jason,Murphy,Heritage Mutual Group,jason.murphy@heritagemutualgroup.com,+1-829-529-645,Phone Inquiry,Nurturing
+LEAD000531,Sharon,Rivera,Coastal Risk Advisors,sharon.rivera@coastalriskadvisors.com,+1-830-530-650,Partner Referral,New
+LEAD000532,Jeffrey,Cook,Summit Protection Alliance,jeffrey.cook@summitprotectionalliance.com,,Purchased List,Working
+LEAD000533,Laura,Rogers,Lighthouse Insurance Services,laura.rogers@lighthouseinsuranceservices.com,+1-832-532-660,Trade Show,Converted
+LEAD000534,Ryan,Morgan,Cascade Financial Security,ryan.morgan@cascadefinancialsecurity.com,+1-833-533-665,Other,Unqualified
+LEAD000535,Cynthia,Peterson,Premier Risk Solutions,,,,Nurturing
+LEAD000536,James,Cooper,Horizon Assurance Group,james.cooper@horizonassurancegroup.com,+1-835-535-675,Phone Inquiry,New
+LEAD000537,Mary,Reed,Keystone Benefits Co.,mary.reed@keystonebenefitsco.com,+1-836-536-680,Partner Referral,Working
+LEAD000538,John,Bailey,Streamline Coverage Partners,john.bailey@streamlinecoveragepartners.com,,Purchased List,Converted
+LEAD000539,Patricia,Bell,Apex Insurance Holdings,patricia.bell@apexinsuranceholdings.com,+1-838-538-690,Trade Show,Unqualified
+LEAD000540,Robert,Gomez,Valley Risk Management,robert.gomez@valleyriskmanagement.com,+1-839-539-695,Other,Nurturing
+LEAD000541,Jennifer,Kelly,Crestview Financial Services,,,,New
+LEAD000542,Michael,Howard,Lakeside Protection Group,michael.howard@lakesideprotectiongroup.com,+1-841-541-705,Phone Inquiry,Working
+LEAD000543,Linda,Ward,Sterling Risk Partners,linda.ward@sterlingriskpartners.com,+1-842-542-710,Partner Referral,Converted
+LEAD000544,William,Cox,Westpoint Insurance Alliance,william.cox@westpointinsurancealliance.com,,Purchased List,Unqualified
+LEAD000545,Barbara,Diaz,Clearwater Benefits Group,barbara.diaz@clearwaterbenefitsgroup.com,+1-844-544-720,Trade Show,Nurturing
+LEAD000546,David,Richardson,Redwood Assurance Co.,david.richardson@redwoodassuranceco.com,+1-845-545-725,Other,New
+LEAD000547,Elizabeth,Wood,Oakridge Financial Partners,,,,Working
+LEAD000548,Richard,Watson,Sunrise Financial Group,richard.watson@sunrisefinancialgroup.com,+1-847-547-735,Phone Inquiry,Converted
+LEAD000549,Susan,Smith,Meridian Life Partners,susan.smith@meridianlifepartners.com,+1-848-548-740,Partner Referral,Unqualified
+LEAD000550,Joseph,Johnson,Pacific Coast Assurance,joseph.johnson@pacificcoastassurance.com,,Purchased List,Nurturing
+LEAD000551,Jessica,Williams,BlueSky Protection Services,jessica.williams@blueskyprotectionservices.com,+1-850-550-750,Trade Show,New
+LEAD000552,Thomas,Brown,Cornerstone Risk Management,thomas.brown@cornerstoneriskmanagement.com,+1-851-551-755,Other,Working
+LEAD000553,Sarah,Jones,Evergreen Coverage Co.,,,,Converted
+LEAD000554,Charles,Garcia,Pinnacle Insurance Brokers,charles.garcia@pinnacleinsurancebrokers.com,+1-853-553-765,Phone Inquiry,Unqualified
+LEAD000555,Karen,Miller,Heritage Mutual Group,karen.miller@heritagemutualgroup.com,+1-854-554-770,Partner Referral,Nurturing
+LEAD000556,Christopher,Davis,Coastal Risk Advisors,christopher.davis@coastalriskadvisors.com,,Purchased List,New
+LEAD000557,Lisa,Rodriguez,Summit Protection Alliance,lisa.rodriguez@summitprotectionalliance.com,+1-856-556-780,Trade Show,Working
+LEAD000558,Daniel,Martinez,Lighthouse Insurance Services,daniel.martinez@lighthouseinsuranceservices.com,+1-857-557-785,Other,Converted
+LEAD000559,Nancy,Hernandez,Cascade Financial Security,,,,Unqualified
+LEAD000560,Matthew,Lopez,Premier Risk Solutions,matthew.lopez@premierrisksolutions.com,+1-859-559-795,Phone Inquiry,Nurturing
+LEAD000561,Betty,Gonzalez,Horizon Assurance Group,betty.gonzalez@horizonassurancegroup.com,+1-860-560-800,Partner Referral,New
+LEAD000562,Anthony,Wilson,Keystone Benefits Co.,anthony.wilson@keystonebenefitsco.com,,Purchased List,Working
+LEAD000563,Margaret,Anderson,Streamline Coverage Partners,margaret.anderson@streamlinecoveragepartners.com,+1-862-562-810,Trade Show,Converted
+LEAD000564,Mark,Thomas,Apex Insurance Holdings,mark.thomas@apexinsuranceholdings.com,+1-863-563-815,Other,Unqualified
+LEAD000565,Sandra,Taylor,Valley Risk Management,,,,Nurturing
+LEAD000566,Donald,Moore,Crestview Financial Services,donald.moore@crestviewfinancialservices.com,+1-865-565-825,Phone Inquiry,New
+LEAD000567,Ashley,Jackson,Lakeside Protection Group,ashley.jackson@lakesideprotectiongroup.com,+1-866-566-830,Partner Referral,Working
+LEAD000568,Steven,Martin,Sterling Risk Partners,steven.martin@sterlingriskpartners.com,,Purchased List,Converted
+LEAD000569,Dorothy,Lee,Westpoint Insurance Alliance,dorothy.lee@westpointinsurancealliance.com,+1-868-568-840,Trade Show,Unqualified
+LEAD000570,Paul,Perez,Clearwater Benefits Group,paul.perez@clearwaterbenefitsgroup.com,+1-869-569-845,Other,Nurturing
+LEAD000571,Kimberly,Thompson,Redwood Assurance Co.,,,,New
+LEAD000572,Andrew,White,Oakridge Financial Partners,andrew.white@oakridgefinancialpartners.com,+1-871-571-855,Phone Inquiry,Working
+LEAD000573,Emily,Harris,Sunrise Financial Group,emily.harris@sunrisefinancialgroup.com,+1-872-572-860,Partner Referral,Converted
+LEAD000574,Kenneth,Sanchez,Meridian Life Partners,kenneth.sanchez@meridianlifepartners.com,,Purchased List,Unqualified
+LEAD000575,Donna,Clark,Pacific Coast Assurance,donna.clark@pacificcoastassurance.com,+1-874-574-870,Trade Show,Nurturing
+LEAD000576,Joshua,Ramirez,BlueSky Protection Services,joshua.ramirez@blueskyprotectionservices.com,+1-875-575-875,Other,New
+LEAD000577,Michelle,Lewis,Cornerstone Risk Management,,,,Working
+LEAD000578,Kevin,Robinson,Evergreen Coverage Co.,kevin.robinson@evergreencoverageco.com,+1-877-577-885,Phone Inquiry,Converted
+LEAD000579,Carol,Walker,Pinnacle Insurance Brokers,carol.walker@pinnacleinsurancebrokers.com,+1-878-578-890,Partner Referral,Unqualified
+LEAD000580,Brian,Young,Heritage Mutual Group,brian.young@heritagemutualgroup.com,,Purchased List,Nurturing
+LEAD000581,Amanda,Allen,Coastal Risk Advisors,amanda.allen@coastalriskadvisors.com,+1-880-580-900,Trade Show,New
+LEAD000582,George,King,Summit Protection Alliance,george.king@summitprotectionalliance.com,+1-881-581-905,Other,Working
+LEAD000583,Melissa,Wright,Lighthouse Insurance Services,,,,Converted
+LEAD000584,Edward,Scott,Cascade Financial Security,edward.scott@cascadefinancialsecurity.com,+1-883-583-915,Phone Inquiry,Unqualified
+LEAD000585,Deborah,Torres,Premier Risk Solutions,deborah.torres@premierrisksolutions.com,+1-884-584-920,Partner Referral,Nurturing
+LEAD000586,Ronald,Nguyen,Horizon Assurance Group,ronald.nguyen@horizonassurancegroup.com,,Purchased List,New
+LEAD000587,Stephanie,Hill,Keystone Benefits Co.,stephanie.hill@keystonebenefitsco.com,+1-886-586-930,Trade Show,Working
+LEAD000588,Timothy,Flores,Streamline Coverage Partners,timothy.flores@streamlinecoveragepartners.com,+1-887-587-935,Other,Converted
+LEAD000589,Rebecca,Green,Apex Insurance Holdings,,,,Unqualified
+LEAD000590,Jason,Adams,Valley Risk Management,jason.adams@valleyriskmanagement.com,+1-889-589-945,Phone Inquiry,Nurturing
+LEAD000591,Sharon,Nelson,Crestview Financial Services,sharon.nelson@crestviewfinancialservices.com,+1-890-590-950,Partner Referral,New
+LEAD000592,Jeffrey,Baker,Lakeside Protection Group,jeffrey.baker@lakesideprotectiongroup.com,,Purchased List,Working
+LEAD000593,Laura,Hall,Sterling Risk Partners,laura.hall@sterlingriskpartners.com,+1-892-592-960,Trade Show,Converted
+LEAD000594,Ryan,Rivera,Westpoint Insurance Alliance,ryan.rivera@westpointinsurancealliance.com,+1-893-593-965,Other,Unqualified
+LEAD000595,Cynthia,Campbell,Clearwater Benefits Group,,,,Nurturing
+LEAD000596,James,Mitchell,Redwood Assurance Co.,james.mitchell@redwoodassuranceco.com,+1-895-595-975,Phone Inquiry,New
+LEAD000597,Mary,Carter,Oakridge Financial Partners,mary.carter@oakridgefinancialpartners.com,+1-896-596-980,Partner Referral,Working
+LEAD000598,John,Roberts,Sunrise Financial Group,john.roberts@sunrisefinancialgroup.com,,Purchased List,Converted
+LEAD000599,Patricia,Phillips,Meridian Life Partners,patricia.phillips@meridianlifepartners.com,+1-898-598-990,Trade Show,Unqualified
+LEAD000600,Robert,Evans,Pacific Coast Assurance,robert.evans@pacificcoastassurance.com,+1-899-599-995,Other,Nurturing

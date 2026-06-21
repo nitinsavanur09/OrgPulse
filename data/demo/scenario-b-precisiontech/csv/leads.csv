@@ -1,0 +1,401 @@
+ExternalId,FirstName,LastName,Company,Email,Phone,LeadSource,Status
+LEAD000001,Jennifer,Gonzalez,Ironclad Production Group,,,,New
+LEAD000002,Michael,Wilson,Velocity Parts & Assembly,michael.wilson@velocitypartsassembly.com,+1-301-001-005,Phone Inquiry,Working
+LEAD000003,Linda,Anderson,Summit Engineering Works,,,,Converted
+LEAD000004,William,Thomas,BlueForge Manufacturing,william.thomas@blueforgemanufacturing.com,+1-303-003-015,Purchased List,Unqualified
+LEAD000005,Barbara,Taylor,Strata Industrial Solutions,,,,Nurturing
+LEAD000006,David,Moore,Crestline Fabrication Inc.,david.moore@crestlinefabricationinc.com,+1-305-005-025,Other,New
+LEAD000007,Elizabeth,Jackson,Meridian Parts Systems,,,,Working
+LEAD000008,Richard,Martin,Ridgeline Manufacturing Group,richard.martin@ridgelinemanufacturinggroup.com,+1-307-007-035,Phone Inquiry,Converted
+LEAD000009,Susan,Lee,Cascade Production Works,,,,Unqualified
+LEAD000010,Joseph,Perez,CoreTech Assembly Co.,joseph.perez@coretechassemblyco.com,+1-309-009-045,Purchased List,Nurturing
+LEAD000011,Jessica,Thompson,Highpoint Industrial Ltd,,,,New
+LEAD000012,Thomas,White,Streamline Parts & Components,thomas.white@streamlinepartscomponents.com,+1-311-011-055,Other,Working
+LEAD000013,Sarah,Harris,Keystone Manufacturing Alliance,,,,Converted
+LEAD000014,Charles,Sanchez,Pacific Fabrication Systems,charles.sanchez@pacificfabricationsystems.com,+1-313-013-065,Phone Inquiry,Unqualified
+LEAD000015,Karen,Clark,Pinnacle Parts Group,,,,Nurturing
+LEAD000016,Christopher,Ramirez,Centennial Industrial Co.,christopher.ramirez@centennialindustrialco.com,+1-315-015-075,Purchased List,New
+LEAD000017,Lisa,Lewis,Northgate Manufacturing Inc.,,,,Working
+LEAD000018,Daniel,Robinson,Lakeside Engineering Works,daniel.robinson@lakesideengineeringworks.com,+1-317-017-085,Other,Converted
+LEAD000019,Nancy,Walker,Thornton Components Group,,,,Unqualified
+LEAD000020,Matthew,Young,Broadfield Production Inc.,matthew.young@broadfieldproductioninc.com,+1-319-019-095,Phone Inquiry,Nurturing
+LEAD000021,Betty,Allen,Sterling Assembly Systems,,,,New
+LEAD000022,Anthony,King,Clearwater Industrial Corp.,anthony.king@clearwaterindustrialcorp.com,+1-321-021-105,Purchased List,Working
+LEAD000023,Margaret,Wright,Apex Industrial Systems,,,,Converted
+LEAD000024,Mark,Scott,Precision Components Ltd,mark.scott@precisioncomponentsltd.com,+1-323-023-115,Other,Unqualified
+LEAD000025,Sandra,Torres,Granite Manufacturing Co.,,,,Nurturing
+LEAD000026,Donald,Nguyen,Ironclad Production Group,donald.nguyen@ironcladproductiongroup.com,+1-325-025-125,Phone Inquiry,New
+LEAD000027,Ashley,Hill,Velocity Parts & Assembly,,,,Working
+LEAD000028,Steven,Flores,Summit Engineering Works,steven.flores@summitengineeringworks.com,+1-327-027-135,Purchased List,Converted
+LEAD000029,Dorothy,Green,BlueForge Manufacturing,,,,Unqualified
+LEAD000030,Paul,Adams,Strata Industrial Solutions,paul.adams@strataindustrialsolutions.com,+1-329-029-145,Other,Nurturing
+LEAD000031,Kimberly,Nelson,Crestline Fabrication Inc.,,,,New
+LEAD000032,Andrew,Baker,Meridian Parts Systems,andrew.baker@meridianpartssystems.com,+1-331-031-155,Phone Inquiry,Working
+LEAD000033,Emily,Hall,Ridgeline Manufacturing Group,,,,Converted
+LEAD000034,Kenneth,Rivera,Cascade Production Works,kenneth.rivera@cascadeproductionworks.com,+1-333-033-165,Purchased List,Unqualified
+LEAD000035,Donna,Campbell,CoreTech Assembly Co.,,,,Nurturing
+LEAD000036,Joshua,Mitchell,Highpoint Industrial Ltd,joshua.mitchell@highpointindustrialltd.com,+1-335-035-175,Other,New
+LEAD000037,Michelle,Carter,Streamline Parts & Components,,,,Working
+LEAD000038,Kevin,Roberts,Keystone Manufacturing Alliance,kevin.roberts@keystonemanufacturingalliance.com,+1-337-037-185,Phone Inquiry,Converted
+LEAD000039,Carol,Phillips,Pacific Fabrication Systems,,,,Unqualified
+LEAD000040,Brian,Evans,Pinnacle Parts Group,brian.evans@pinnaclepartsgroup.com,+1-339-039-195,Purchased List,Nurturing
+LEAD000041,Amanda,Turner,Centennial Industrial Co.,,,,New
+LEAD000042,George,Torres,Northgate Manufacturing Inc.,george.torres@northgatemanufacturinginc.com,+1-341-041-205,Other,Working
+LEAD000043,Melissa,Parker,Lakeside Engineering Works,,,,Converted
+LEAD000044,Edward,Collins,Thornton Components Group,edward.collins@thorntoncomponentsgroup.com,+1-343-043-215,Phone Inquiry,Unqualified
+LEAD000045,Deborah,Edwards,Broadfield Production Inc.,,,,Nurturing
+LEAD000046,Ronald,Stewart,Sterling Assembly Systems,ronald.stewart@sterlingassemblysystems.com,+1-345-045-225,Purchased List,New
+LEAD000047,Stephanie,Flores,Clearwater Industrial Corp.,,,,Working
+LEAD000048,Timothy,Morris,Apex Industrial Systems,timothy.morris@apexindustrialsystems.com,+1-347-047-235,Other,Converted
+LEAD000049,Rebecca,Nguyen,Precision Components Ltd,,,,Unqualified
+LEAD000050,Jason,Murphy,Granite Manufacturing Co.,jason.murphy@granitemanufacturingco.com,+1-349-049-245,Phone Inquiry,Nurturing
+LEAD000051,Sharon,Rivera,Ironclad Production Group,,,,New
+LEAD000052,Jeffrey,Cook,Velocity Parts & Assembly,jeffrey.cook@velocitypartsassembly.com,+1-351-051-255,Purchased List,Working
+LEAD000053,Laura,Rogers,Summit Engineering Works,,,,Converted
+LEAD000054,Ryan,Morgan,BlueForge Manufacturing,ryan.morgan@blueforgemanufacturing.com,+1-353-053-265,Other,Unqualified
+LEAD000055,Cynthia,Peterson,Strata Industrial Solutions,,,,Nurturing
+LEAD000056,James,Cooper,Crestline Fabrication Inc.,james.cooper@crestlinefabricationinc.com,+1-355-055-275,Phone Inquiry,New
+LEAD000057,Mary,Reed,Meridian Parts Systems,,,,Working
+LEAD000058,John,Bailey,Ridgeline Manufacturing Group,john.bailey@ridgelinemanufacturinggroup.com,+1-357-057-285,Purchased List,Converted
+LEAD000059,Patricia,Bell,Cascade Production Works,,,,Unqualified
+LEAD000060,Robert,Gomez,CoreTech Assembly Co.,robert.gomez@coretechassemblyco.com,+1-359-059-295,Other,Nurturing
+LEAD000061,Jennifer,Kelly,Highpoint Industrial Ltd,,,,New
+LEAD000062,Michael,Howard,Streamline Parts & Components,michael.howard@streamlinepartscomponents.com,+1-361-061-305,Phone Inquiry,Working
+LEAD000063,Linda,Ward,Keystone Manufacturing Alliance,,,,Converted
+LEAD000064,William,Cox,Pacific Fabrication Systems,william.cox@pacificfabricationsystems.com,+1-363-063-315,Purchased List,Unqualified
+LEAD000065,Barbara,Diaz,Pinnacle Parts Group,,,,Nurturing
+LEAD000066,David,Richardson,Centennial Industrial Co.,david.richardson@centennialindustrialco.com,+1-365-065-325,Other,New
+LEAD000067,Elizabeth,Wood,Northgate Manufacturing Inc.,,,,Working
+LEAD000068,Richard,Watson,Lakeside Engineering Works,richard.watson@lakesideengineeringworks.com,+1-367-067-335,Phone Inquiry,Converted
+LEAD000069,Susan,Smith,Thornton Components Group,,,,Unqualified
+LEAD000070,Joseph,Johnson,Broadfield Production Inc.,joseph.johnson@broadfieldproductioninc.com,+1-369-069-345,Purchased List,Nurturing
+LEAD000071,Jessica,Williams,Sterling Assembly Systems,,,,New
+LEAD000072,Thomas,Brown,Clearwater Industrial Corp.,thomas.brown@clearwaterindustrialcorp.com,+1-371-071-355,Other,Working
+LEAD000073,Sarah,Jones,Apex Industrial Systems,,,,Converted
+LEAD000074,Charles,Garcia,Precision Components Ltd,charles.garcia@precisioncomponentsltd.com,+1-373-073-365,Phone Inquiry,Unqualified
+LEAD000075,Karen,Miller,Granite Manufacturing Co.,,,,Nurturing
+LEAD000076,Christopher,Davis,Ironclad Production Group,christopher.davis@ironcladproductiongroup.com,+1-375-075-375,Purchased List,New
+LEAD000077,Lisa,Rodriguez,Velocity Parts & Assembly,,,,Working
+LEAD000078,Daniel,Martinez,Summit Engineering Works,daniel.martinez@summitengineeringworks.com,+1-377-077-385,Other,Converted
+LEAD000079,Nancy,Hernandez,BlueForge Manufacturing,,,,Unqualified
+LEAD000080,Matthew,Lopez,Strata Industrial Solutions,matthew.lopez@strataindustrialsolutions.com,+1-379-079-395,Phone Inquiry,Nurturing
+LEAD000081,Betty,Gonzalez,Crestline Fabrication Inc.,,,,New
+LEAD000082,Anthony,Wilson,Meridian Parts Systems,anthony.wilson@meridianpartssystems.com,+1-381-081-405,Purchased List,Working
+LEAD000083,Margaret,Anderson,Ridgeline Manufacturing Group,,,,Converted
+LEAD000084,Mark,Thomas,Cascade Production Works,mark.thomas@cascadeproductionworks.com,+1-383-083-415,Other,Unqualified
+LEAD000085,Sandra,Taylor,CoreTech Assembly Co.,,,,Nurturing
+LEAD000086,Donald,Moore,Highpoint Industrial Ltd,donald.moore@highpointindustrialltd.com,+1-385-085-425,Phone Inquiry,New
+LEAD000087,Ashley,Jackson,Streamline Parts & Components,,,,Working
+LEAD000088,Steven,Martin,Keystone Manufacturing Alliance,steven.martin@keystonemanufacturingalliance.com,+1-387-087-435,Purchased List,Converted
+LEAD000089,Dorothy,Lee,Pacific Fabrication Systems,,,,Unqualified
+LEAD000090,Paul,Perez,Pinnacle Parts Group,paul.perez@pinnaclepartsgroup.com,+1-389-089-445,Other,Nurturing
+LEAD000091,Kimberly,Thompson,Centennial Industrial Co.,,,,New
+LEAD000092,Andrew,White,Northgate Manufacturing Inc.,andrew.white@northgatemanufacturinginc.com,+1-391-091-455,Phone Inquiry,Working
+LEAD000093,Emily,Harris,Lakeside Engineering Works,,,,Converted
+LEAD000094,Kenneth,Sanchez,Thornton Components Group,kenneth.sanchez@thorntoncomponentsgroup.com,+1-393-093-465,Purchased List,Unqualified
+LEAD000095,Donna,Clark,Broadfield Production Inc.,,,,Nurturing
+LEAD000096,Joshua,Ramirez,Sterling Assembly Systems,joshua.ramirez@sterlingassemblysystems.com,+1-395-095-475,Other,New
+LEAD000097,Michelle,Lewis,Clearwater Industrial Corp.,,,,Working
+LEAD000098,Kevin,Robinson,Apex Industrial Systems,kevin.robinson@apexindustrialsystems.com,+1-397-097-485,Phone Inquiry,Converted
+LEAD000099,Carol,Walker,Precision Components Ltd,,,,Unqualified
+LEAD000100,Brian,Young,Granite Manufacturing Co.,brian.young@granitemanufacturingco.com,+1-399-099-495,Purchased List,Nurturing
+LEAD000101,Amanda,Allen,Ironclad Production Group,,,,New
+LEAD000102,George,King,Velocity Parts & Assembly,george.king@velocitypartsassembly.com,+1-401-101-505,Other,Working
+LEAD000103,Melissa,Wright,Summit Engineering Works,,,,Converted
+LEAD000104,Edward,Scott,BlueForge Manufacturing,edward.scott@blueforgemanufacturing.com,+1-403-103-515,Phone Inquiry,Unqualified
+LEAD000105,Deborah,Torres,Strata Industrial Solutions,,,,Nurturing
+LEAD000106,Ronald,Nguyen,Crestline Fabrication Inc.,ronald.nguyen@crestlinefabricationinc.com,+1-405-105-525,Purchased List,New
+LEAD000107,Stephanie,Hill,Meridian Parts Systems,,,,Working
+LEAD000108,Timothy,Flores,Ridgeline Manufacturing Group,timothy.flores@ridgelinemanufacturinggroup.com,+1-407-107-535,Other,Converted
+LEAD000109,Rebecca,Green,Cascade Production Works,,,,Unqualified
+LEAD000110,Jason,Adams,CoreTech Assembly Co.,jason.adams@coretechassemblyco.com,+1-409-109-545,Phone Inquiry,Nurturing
+LEAD000111,Sharon,Nelson,Highpoint Industrial Ltd,,,,New
+LEAD000112,Jeffrey,Baker,Streamline Parts & Components,jeffrey.baker@streamlinepartscomponents.com,+1-411-111-555,Purchased List,Working
+LEAD000113,Laura,Hall,Keystone Manufacturing Alliance,,,,Converted
+LEAD000114,Ryan,Rivera,Pacific Fabrication Systems,ryan.rivera@pacificfabricationsystems.com,+1-413-113-565,Other,Unqualified
+LEAD000115,Cynthia,Campbell,Pinnacle Parts Group,,,,Nurturing
+LEAD000116,James,Mitchell,Centennial Industrial Co.,james.mitchell@centennialindustrialco.com,+1-415-115-575,Phone Inquiry,New
+LEAD000117,Mary,Carter,Northgate Manufacturing Inc.,,,,Working
+LEAD000118,John,Roberts,Lakeside Engineering Works,john.roberts@lakesideengineeringworks.com,+1-417-117-585,Purchased List,Converted
+LEAD000119,Patricia,Phillips,Thornton Components Group,,,,Unqualified
+LEAD000120,Robert,Evans,Broadfield Production Inc.,robert.evans@broadfieldproductioninc.com,+1-419-119-595,Other,Nurturing
+LEAD000121,Jennifer,Turner,Sterling Assembly Systems,,,,New
+LEAD000122,Michael,Torres,Clearwater Industrial Corp.,michael.torres@clearwaterindustrialcorp.com,+1-421-121-605,Phone Inquiry,Working
+LEAD000123,Linda,Parker,Apex Industrial Systems,,,,Converted
+LEAD000124,William,Collins,Precision Components Ltd,william.collins@precisioncomponentsltd.com,+1-423-123-615,Purchased List,Unqualified
+LEAD000125,Barbara,Edwards,Granite Manufacturing Co.,,,,Nurturing
+LEAD000126,David,Stewart,Ironclad Production Group,david.stewart@ironcladproductiongroup.com,+1-425-125-625,Other,New
+LEAD000127,Elizabeth,Flores,Velocity Parts & Assembly,,,,Working
+LEAD000128,Richard,Morris,Summit Engineering Works,richard.morris@summitengineeringworks.com,+1-427-127-635,Phone Inquiry,Converted
+LEAD000129,Susan,Nguyen,BlueForge Manufacturing,,,,Unqualified
+LEAD000130,Joseph,Murphy,Strata Industrial Solutions,joseph.murphy@strataindustrialsolutions.com,+1-429-129-645,Purchased List,Nurturing
+LEAD000131,Jessica,Rivera,Crestline Fabrication Inc.,,,,New
+LEAD000132,Thomas,Cook,Meridian Parts Systems,thomas.cook@meridianpartssystems.com,+1-431-131-655,Other,Working
+LEAD000133,Sarah,Rogers,Ridgeline Manufacturing Group,,,,Converted
+LEAD000134,Charles,Morgan,Cascade Production Works,charles.morgan@cascadeproductionworks.com,+1-433-133-665,Phone Inquiry,Unqualified
+LEAD000135,Karen,Peterson,CoreTech Assembly Co.,,,,Nurturing
+LEAD000136,Christopher,Cooper,Highpoint Industrial Ltd,christopher.cooper@highpointindustrialltd.com,+1-435-135-675,Purchased List,New
+LEAD000137,Lisa,Reed,Streamline Parts & Components,,,,Working
+LEAD000138,Daniel,Bailey,Keystone Manufacturing Alliance,daniel.bailey@keystonemanufacturingalliance.com,+1-437-137-685,Other,Converted
+LEAD000139,Nancy,Bell,Pacific Fabrication Systems,,,,Unqualified
+LEAD000140,Matthew,Gomez,Pinnacle Parts Group,matthew.gomez@pinnaclepartsgroup.com,+1-439-139-695,Phone Inquiry,Nurturing
+LEAD000141,Betty,Kelly,Centennial Industrial Co.,,,,New
+LEAD000142,Anthony,Howard,Northgate Manufacturing Inc.,anthony.howard@northgatemanufacturinginc.com,+1-441-141-705,Purchased List,Working
+LEAD000143,Margaret,Ward,Lakeside Engineering Works,,,,Converted
+LEAD000144,Mark,Cox,Thornton Components Group,mark.cox@thorntoncomponentsgroup.com,+1-443-143-715,Other,Unqualified
+LEAD000145,Sandra,Diaz,Broadfield Production Inc.,,,,Nurturing
+LEAD000146,Donald,Richardson,Sterling Assembly Systems,donald.richardson@sterlingassemblysystems.com,+1-445-145-725,Phone Inquiry,New
+LEAD000147,Ashley,Wood,Clearwater Industrial Corp.,,,,Working
+LEAD000148,Steven,Watson,Apex Industrial Systems,steven.watson@apexindustrialsystems.com,+1-447-147-735,Purchased List,Converted
+LEAD000149,Dorothy,Smith,Precision Components Ltd,,,,Unqualified
+LEAD000150,Paul,Johnson,Granite Manufacturing Co.,paul.johnson@granitemanufacturingco.com,+1-449-149-745,Other,Nurturing
+LEAD000151,Kimberly,Williams,Ironclad Production Group,,,,New
+LEAD000152,Andrew,Brown,Velocity Parts & Assembly,andrew.brown@velocitypartsassembly.com,+1-451-151-755,Phone Inquiry,Working
+LEAD000153,Emily,Jones,Summit Engineering Works,,,,Converted
+LEAD000154,Kenneth,Garcia,BlueForge Manufacturing,kenneth.garcia@blueforgemanufacturing.com,+1-453-153-765,Purchased List,Unqualified
+LEAD000155,Donna,Miller,Strata Industrial Solutions,,,,Nurturing
+LEAD000156,Joshua,Davis,Crestline Fabrication Inc.,joshua.davis@crestlinefabricationinc.com,+1-455-155-775,Other,New
+LEAD000157,Michelle,Rodriguez,Meridian Parts Systems,,,,Working
+LEAD000158,Kevin,Martinez,Ridgeline Manufacturing Group,kevin.martinez@ridgelinemanufacturinggroup.com,+1-457-157-785,Phone Inquiry,Converted
+LEAD000159,Carol,Hernandez,Cascade Production Works,,,,Unqualified
+LEAD000160,Brian,Lopez,CoreTech Assembly Co.,brian.lopez@coretechassemblyco.com,+1-459-159-795,Purchased List,Nurturing
+LEAD000161,Amanda,Gonzalez,Highpoint Industrial Ltd,,,,New
+LEAD000162,George,Wilson,Streamline Parts & Components,george.wilson@streamlinepartscomponents.com,+1-461-161-805,Other,Working
+LEAD000163,Melissa,Anderson,Keystone Manufacturing Alliance,,,,Converted
+LEAD000164,Edward,Thomas,Pacific Fabrication Systems,edward.thomas@pacificfabricationsystems.com,+1-463-163-815,Phone Inquiry,Unqualified
+LEAD000165,Deborah,Taylor,Pinnacle Parts Group,,,,Nurturing
+LEAD000166,Ronald,Moore,Centennial Industrial Co.,ronald.moore@centennialindustrialco.com,+1-465-165-825,Purchased List,New
+LEAD000167,Stephanie,Jackson,Northgate Manufacturing Inc.,,,,Working
+LEAD000168,Timothy,Martin,Lakeside Engineering Works,timothy.martin@lakesideengineeringworks.com,+1-467-167-835,Other,Converted
+LEAD000169,Rebecca,Lee,Thornton Components Group,,,,Unqualified
+LEAD000170,Jason,Perez,Broadfield Production Inc.,jason.perez@broadfieldproductioninc.com,+1-469-169-845,Phone Inquiry,Nurturing
+LEAD000171,Sharon,Thompson,Sterling Assembly Systems,,,,New
+LEAD000172,Jeffrey,White,Clearwater Industrial Corp.,jeffrey.white@clearwaterindustrialcorp.com,+1-471-171-855,Purchased List,Working
+LEAD000173,Laura,Harris,Apex Industrial Systems,,,,Converted
+LEAD000174,Ryan,Sanchez,Precision Components Ltd,ryan.sanchez@precisioncomponentsltd.com,+1-473-173-865,Other,Unqualified
+LEAD000175,Cynthia,Clark,Granite Manufacturing Co.,,,,Nurturing
+LEAD000176,James,Ramirez,Ironclad Production Group,james.ramirez@ironcladproductiongroup.com,+1-475-175-875,Phone Inquiry,New
+LEAD000177,Mary,Lewis,Velocity Parts & Assembly,,,,Working
+LEAD000178,John,Robinson,Summit Engineering Works,john.robinson@summitengineeringworks.com,+1-477-177-885,Purchased List,Converted
+LEAD000179,Patricia,Walker,BlueForge Manufacturing,,,,Unqualified
+LEAD000180,Robert,Young,Strata Industrial Solutions,robert.young@strataindustrialsolutions.com,+1-479-179-895,Other,Nurturing
+LEAD000181,Jennifer,Allen,Crestline Fabrication Inc.,,,,New
+LEAD000182,Michael,King,Meridian Parts Systems,michael.king@meridianpartssystems.com,+1-481-181-905,Phone Inquiry,Working
+LEAD000183,Linda,Wright,Ridgeline Manufacturing Group,,,,Converted
+LEAD000184,William,Scott,Cascade Production Works,william.scott@cascadeproductionworks.com,+1-483-183-915,Purchased List,Unqualified
+LEAD000185,Barbara,Torres,CoreTech Assembly Co.,,,,Nurturing
+LEAD000186,David,Nguyen,Highpoint Industrial Ltd,david.nguyen@highpointindustrialltd.com,+1-485-185-925,Other,New
+LEAD000187,Elizabeth,Hill,Streamline Parts & Components,,,,Working
+LEAD000188,Richard,Flores,Keystone Manufacturing Alliance,richard.flores@keystonemanufacturingalliance.com,+1-487-187-935,Phone Inquiry,Converted
+LEAD000189,Susan,Green,Pacific Fabrication Systems,,,,Unqualified
+LEAD000190,Joseph,Adams,Pinnacle Parts Group,joseph.adams@pinnaclepartsgroup.com,+1-489-189-945,Purchased List,Nurturing
+LEAD000191,Jessica,Nelson,Centennial Industrial Co.,,,,New
+LEAD000192,Thomas,Baker,Northgate Manufacturing Inc.,thomas.baker@northgatemanufacturinginc.com,+1-491-191-955,Other,Working
+LEAD000193,Sarah,Hall,Lakeside Engineering Works,,,,Converted
+LEAD000194,Charles,Rivera,Thornton Components Group,charles.rivera@thorntoncomponentsgroup.com,+1-493-193-965,Phone Inquiry,Unqualified
+LEAD000195,Karen,Campbell,Broadfield Production Inc.,,,,Nurturing
+LEAD000196,Christopher,Mitchell,Sterling Assembly Systems,christopher.mitchell@sterlingassemblysystems.com,+1-495-195-975,Purchased List,New
+LEAD000197,Lisa,Carter,Clearwater Industrial Corp.,,,,Working
+LEAD000198,Daniel,Roberts,Apex Industrial Systems,daniel.roberts@apexindustrialsystems.com,+1-497-197-985,Other,Converted
+LEAD000199,Nancy,Phillips,Precision Components Ltd,,,,Unqualified
+LEAD000200,Matthew,Evans,Granite Manufacturing Co.,matthew.evans@granitemanufacturingco.com,+1-499-199-995,Phone Inquiry,Nurturing
+LEAD000201,Betty,Turner,Ironclad Production Group,,,,New
+LEAD000202,Anthony,Torres,Velocity Parts & Assembly,anthony.torres@velocitypartsassembly.com,+1-501-201-005,Purchased List,Working
+LEAD000203,Margaret,Parker,Summit Engineering Works,,,,Converted
+LEAD000204,Mark,Collins,BlueForge Manufacturing,mark.collins@blueforgemanufacturing.com,+1-503-203-015,Other,Unqualified
+LEAD000205,Sandra,Edwards,Strata Industrial Solutions,,,,Nurturing
+LEAD000206,Donald,Stewart,Crestline Fabrication Inc.,donald.stewart@crestlinefabricationinc.com,+1-505-205-025,Phone Inquiry,New
+LEAD000207,Ashley,Flores,Meridian Parts Systems,,,,Working
+LEAD000208,Steven,Morris,Ridgeline Manufacturing Group,steven.morris@ridgelinemanufacturinggroup.com,+1-507-207-035,Purchased List,Converted
+LEAD000209,Dorothy,Nguyen,Cascade Production Works,,,,Unqualified
+LEAD000210,Paul,Murphy,CoreTech Assembly Co.,paul.murphy@coretechassemblyco.com,+1-509-209-045,Other,Nurturing
+LEAD000211,Kimberly,Rivera,Highpoint Industrial Ltd,,,,New
+LEAD000212,Andrew,Cook,Streamline Parts & Components,andrew.cook@streamlinepartscomponents.com,+1-511-211-055,Phone Inquiry,Working
+LEAD000213,Emily,Rogers,Keystone Manufacturing Alliance,,,,Converted
+LEAD000214,Kenneth,Morgan,Pacific Fabrication Systems,kenneth.morgan@pacificfabricationsystems.com,+1-513-213-065,Purchased List,Unqualified
+LEAD000215,Donna,Peterson,Pinnacle Parts Group,,,,Nurturing
+LEAD000216,Joshua,Cooper,Centennial Industrial Co.,joshua.cooper@centennialindustrialco.com,+1-515-215-075,Other,New
+LEAD000217,Michelle,Reed,Northgate Manufacturing Inc.,,,,Working
+LEAD000218,Kevin,Bailey,Lakeside Engineering Works,kevin.bailey@lakesideengineeringworks.com,+1-517-217-085,Phone Inquiry,Converted
+LEAD000219,Carol,Bell,Thornton Components Group,,,,Unqualified
+LEAD000220,Brian,Gomez,Broadfield Production Inc.,brian.gomez@broadfieldproductioninc.com,+1-519-219-095,Purchased List,Nurturing
+LEAD000221,Amanda,Kelly,Sterling Assembly Systems,,,,New
+LEAD000222,George,Howard,Clearwater Industrial Corp.,george.howard@clearwaterindustrialcorp.com,+1-521-221-105,Other,Working
+LEAD000223,Melissa,Ward,Apex Industrial Systems,,,,Converted
+LEAD000224,Edward,Cox,Precision Components Ltd,edward.cox@precisioncomponentsltd.com,+1-523-223-115,Phone Inquiry,Unqualified
+LEAD000225,Deborah,Diaz,Granite Manufacturing Co.,,,,Nurturing
+LEAD000226,Ronald,Richardson,Ironclad Production Group,ronald.richardson@ironcladproductiongroup.com,+1-525-225-125,Purchased List,New
+LEAD000227,Stephanie,Wood,Velocity Parts & Assembly,,,,Working
+LEAD000228,Timothy,Watson,Summit Engineering Works,timothy.watson@summitengineeringworks.com,+1-527-227-135,Other,Converted
+LEAD000229,Rebecca,Smith,BlueForge Manufacturing,,,,Unqualified
+LEAD000230,Jason,Johnson,Strata Industrial Solutions,jason.johnson@strataindustrialsolutions.com,+1-529-229-145,Phone Inquiry,Nurturing
+LEAD000231,Sharon,Williams,Crestline Fabrication Inc.,,,,New
+LEAD000232,Jeffrey,Brown,Meridian Parts Systems,jeffrey.brown@meridianpartssystems.com,+1-531-231-155,Purchased List,Working
+LEAD000233,Laura,Jones,Ridgeline Manufacturing Group,,,,Converted
+LEAD000234,Ryan,Garcia,Cascade Production Works,ryan.garcia@cascadeproductionworks.com,+1-533-233-165,Other,Unqualified
+LEAD000235,Cynthia,Miller,CoreTech Assembly Co.,,,,Nurturing
+LEAD000236,James,Davis,Highpoint Industrial Ltd,james.davis@highpointindustrialltd.com,+1-535-235-175,Phone Inquiry,New
+LEAD000237,Mary,Rodriguez,Streamline Parts & Components,,,,Working
+LEAD000238,John,Martinez,Keystone Manufacturing Alliance,john.martinez@keystonemanufacturingalliance.com,+1-537-237-185,Purchased List,Converted
+LEAD000239,Patricia,Hernandez,Pacific Fabrication Systems,,,,Unqualified
+LEAD000240,Robert,Lopez,Pinnacle Parts Group,robert.lopez@pinnaclepartsgroup.com,+1-539-239-195,Other,Nurturing
+LEAD000241,Jennifer,Gonzalez,Centennial Industrial Co.,,,,New
+LEAD000242,Michael,Wilson,Northgate Manufacturing Inc.,michael.wilson@northgatemanufacturinginc.com,+1-541-241-205,Phone Inquiry,Working
+LEAD000243,Linda,Anderson,Lakeside Engineering Works,,,,Converted
+LEAD000244,William,Thomas,Thornton Components Group,william.thomas@thorntoncomponentsgroup.com,+1-543-243-215,Purchased List,Unqualified
+LEAD000245,Barbara,Taylor,Broadfield Production Inc.,,,,Nurturing
+LEAD000246,David,Moore,Sterling Assembly Systems,david.moore@sterlingassemblysystems.com,+1-545-245-225,Other,New
+LEAD000247,Elizabeth,Jackson,Clearwater Industrial Corp.,,,,Working
+LEAD000248,Richard,Martin,Apex Industrial Systems,richard.martin@apexindustrialsystems.com,+1-547-247-235,Phone Inquiry,Converted
+LEAD000249,Susan,Lee,Precision Components Ltd,,,,Unqualified
+LEAD000250,Joseph,Perez,Granite Manufacturing Co.,joseph.perez@granitemanufacturingco.com,+1-549-249-245,Purchased List,Nurturing
+LEAD000251,Jessica,Thompson,Ironclad Production Group,,,,New
+LEAD000252,Thomas,White,Velocity Parts & Assembly,thomas.white@velocitypartsassembly.com,+1-551-251-255,Other,Working
+LEAD000253,Sarah,Harris,Summit Engineering Works,,,,Converted
+LEAD000254,Charles,Sanchez,BlueForge Manufacturing,charles.sanchez@blueforgemanufacturing.com,+1-553-253-265,Phone Inquiry,Unqualified
+LEAD000255,Karen,Clark,Strata Industrial Solutions,,,,Nurturing
+LEAD000256,Christopher,Ramirez,Crestline Fabrication Inc.,christopher.ramirez@crestlinefabricationinc.com,+1-555-255-275,Purchased List,New
+LEAD000257,Lisa,Lewis,Meridian Parts Systems,,,,Working
+LEAD000258,Daniel,Robinson,Ridgeline Manufacturing Group,daniel.robinson@ridgelinemanufacturinggroup.com,+1-557-257-285,Other,Converted
+LEAD000259,Nancy,Walker,Cascade Production Works,,,,Unqualified
+LEAD000260,Matthew,Young,CoreTech Assembly Co.,matthew.young@coretechassemblyco.com,+1-559-259-295,Phone Inquiry,Nurturing
+LEAD000261,Betty,Allen,Highpoint Industrial Ltd,,,,New
+LEAD000262,Anthony,King,Streamline Parts & Components,anthony.king@streamlinepartscomponents.com,+1-561-261-305,Purchased List,Working
+LEAD000263,Margaret,Wright,Keystone Manufacturing Alliance,,,,Converted
+LEAD000264,Mark,Scott,Pacific Fabrication Systems,mark.scott@pacificfabricationsystems.com,+1-563-263-315,Other,Unqualified
+LEAD000265,Sandra,Torres,Pinnacle Parts Group,,,,Nurturing
+LEAD000266,Donald,Nguyen,Centennial Industrial Co.,donald.nguyen@centennialindustrialco.com,+1-565-265-325,Phone Inquiry,New
+LEAD000267,Ashley,Hill,Northgate Manufacturing Inc.,,,,Working
+LEAD000268,Steven,Flores,Lakeside Engineering Works,steven.flores@lakesideengineeringworks.com,+1-567-267-335,Purchased List,Converted
+LEAD000269,Dorothy,Green,Thornton Components Group,,,,Unqualified
+LEAD000270,Paul,Adams,Broadfield Production Inc.,paul.adams@broadfieldproductioninc.com,+1-569-269-345,Other,Nurturing
+LEAD000271,Kimberly,Nelson,Sterling Assembly Systems,,,,New
+LEAD000272,Andrew,Baker,Clearwater Industrial Corp.,andrew.baker@clearwaterindustrialcorp.com,+1-571-271-355,Phone Inquiry,Working
+LEAD000273,Emily,Hall,Apex Industrial Systems,,,,Converted
+LEAD000274,Kenneth,Rivera,Precision Components Ltd,kenneth.rivera@precisioncomponentsltd.com,+1-573-273-365,Purchased List,Unqualified
+LEAD000275,Donna,Campbell,Granite Manufacturing Co.,,,,Nurturing
+LEAD000276,Joshua,Mitchell,Ironclad Production Group,joshua.mitchell@ironcladproductiongroup.com,+1-575-275-375,Other,New
+LEAD000277,Michelle,Carter,Velocity Parts & Assembly,,,,Working
+LEAD000278,Kevin,Roberts,Summit Engineering Works,kevin.roberts@summitengineeringworks.com,+1-577-277-385,Phone Inquiry,Converted
+LEAD000279,Carol,Phillips,BlueForge Manufacturing,,,,Unqualified
+LEAD000280,Brian,Evans,Strata Industrial Solutions,brian.evans@strataindustrialsolutions.com,+1-579-279-395,Purchased List,Nurturing
+LEAD000281,Amanda,Turner,Crestline Fabrication Inc.,,,,New
+LEAD000282,George,Torres,Meridian Parts Systems,george.torres@meridianpartssystems.com,+1-581-281-405,Other,Working
+LEAD000283,Melissa,Parker,Ridgeline Manufacturing Group,,,,Converted
+LEAD000284,Edward,Collins,Cascade Production Works,edward.collins@cascadeproductionworks.com,+1-583-283-415,Phone Inquiry,Unqualified
+LEAD000285,Deborah,Edwards,CoreTech Assembly Co.,,,,Nurturing
+LEAD000286,Ronald,Stewart,Highpoint Industrial Ltd,ronald.stewart@highpointindustrialltd.com,+1-585-285-425,Purchased List,New
+LEAD000287,Stephanie,Flores,Streamline Parts & Components,,,,Working
+LEAD000288,Timothy,Morris,Keystone Manufacturing Alliance,timothy.morris@keystonemanufacturingalliance.com,+1-587-287-435,Other,Converted
+LEAD000289,Rebecca,Nguyen,Pacific Fabrication Systems,,,,Unqualified
+LEAD000290,Jason,Murphy,Pinnacle Parts Group,jason.murphy@pinnaclepartsgroup.com,+1-589-289-445,Phone Inquiry,Nurturing
+LEAD000291,Sharon,Rivera,Centennial Industrial Co.,,,,New
+LEAD000292,Jeffrey,Cook,Northgate Manufacturing Inc.,jeffrey.cook@northgatemanufacturinginc.com,+1-591-291-455,Purchased List,Working
+LEAD000293,Laura,Rogers,Lakeside Engineering Works,,,,Converted
+LEAD000294,Ryan,Morgan,Thornton Components Group,ryan.morgan@thorntoncomponentsgroup.com,+1-593-293-465,Other,Unqualified
+LEAD000295,Cynthia,Peterson,Broadfield Production Inc.,,,,Nurturing
+LEAD000296,James,Cooper,Sterling Assembly Systems,james.cooper@sterlingassemblysystems.com,+1-595-295-475,Phone Inquiry,New
+LEAD000297,Mary,Reed,Clearwater Industrial Corp.,,,,Working
+LEAD000298,John,Bailey,Apex Industrial Systems,john.bailey@apexindustrialsystems.com,+1-597-297-485,Purchased List,Converted
+LEAD000299,Patricia,Bell,Precision Components Ltd,,,,Unqualified
+LEAD000300,Robert,Gomez,Granite Manufacturing Co.,robert.gomez@granitemanufacturingco.com,+1-599-299-495,Other,Nurturing
+LEAD000301,Jennifer,Kelly,Ironclad Production Group,,,,New
+LEAD000302,Michael,Howard,Velocity Parts & Assembly,michael.howard@velocitypartsassembly.com,+1-601-301-505,Phone Inquiry,Working
+LEAD000303,Linda,Ward,Summit Engineering Works,,,,Converted
+LEAD000304,William,Cox,BlueForge Manufacturing,william.cox@blueforgemanufacturing.com,+1-603-303-515,Purchased List,Unqualified
+LEAD000305,Barbara,Diaz,Strata Industrial Solutions,,,,Nurturing
+LEAD000306,David,Richardson,Crestline Fabrication Inc.,david.richardson@crestlinefabricationinc.com,+1-605-305-525,Other,New
+LEAD000307,Elizabeth,Wood,Meridian Parts Systems,,,,Working
+LEAD000308,Richard,Watson,Ridgeline Manufacturing Group,richard.watson@ridgelinemanufacturinggroup.com,+1-607-307-535,Phone Inquiry,Converted
+LEAD000309,Susan,Smith,Cascade Production Works,,,,Unqualified
+LEAD000310,Joseph,Johnson,CoreTech Assembly Co.,joseph.johnson@coretechassemblyco.com,+1-609-309-545,Purchased List,Nurturing
+LEAD000311,Jessica,Williams,Highpoint Industrial Ltd,,,,New
+LEAD000312,Thomas,Brown,Streamline Parts & Components,thomas.brown@streamlinepartscomponents.com,+1-611-311-555,Other,Working
+LEAD000313,Sarah,Jones,Keystone Manufacturing Alliance,,,,Converted
+LEAD000314,Charles,Garcia,Pacific Fabrication Systems,charles.garcia@pacificfabricationsystems.com,+1-613-313-565,Phone Inquiry,Unqualified
+LEAD000315,Karen,Miller,Pinnacle Parts Group,,,,Nurturing
+LEAD000316,Christopher,Davis,Centennial Industrial Co.,christopher.davis@centennialindustrialco.com,+1-615-315-575,Purchased List,New
+LEAD000317,Lisa,Rodriguez,Northgate Manufacturing Inc.,,,,Working
+LEAD000318,Daniel,Martinez,Lakeside Engineering Works,daniel.martinez@lakesideengineeringworks.com,+1-617-317-585,Other,Converted
+LEAD000319,Nancy,Hernandez,Thornton Components Group,,,,Unqualified
+LEAD000320,Matthew,Lopez,Broadfield Production Inc.,matthew.lopez@broadfieldproductioninc.com,+1-619-319-595,Phone Inquiry,Nurturing
+LEAD000321,Betty,Gonzalez,Sterling Assembly Systems,,,,New
+LEAD000322,Anthony,Wilson,Clearwater Industrial Corp.,anthony.wilson@clearwaterindustrialcorp.com,+1-621-321-605,Purchased List,Working
+LEAD000323,Margaret,Anderson,Apex Industrial Systems,,,,Converted
+LEAD000324,Mark,Thomas,Precision Components Ltd,mark.thomas@precisioncomponentsltd.com,+1-623-323-615,Other,Unqualified
+LEAD000325,Sandra,Taylor,Granite Manufacturing Co.,,,,Nurturing
+LEAD000326,Donald,Moore,Ironclad Production Group,donald.moore@ironcladproductiongroup.com,+1-625-325-625,Phone Inquiry,New
+LEAD000327,Ashley,Jackson,Velocity Parts & Assembly,,,,Working
+LEAD000328,Steven,Martin,Summit Engineering Works,steven.martin@summitengineeringworks.com,+1-627-327-635,Purchased List,Converted
+LEAD000329,Dorothy,Lee,BlueForge Manufacturing,,,,Unqualified
+LEAD000330,Paul,Perez,Strata Industrial Solutions,paul.perez@strataindustrialsolutions.com,+1-629-329-645,Other,Nurturing
+LEAD000331,Kimberly,Thompson,Crestline Fabrication Inc.,,,,New
+LEAD000332,Andrew,White,Meridian Parts Systems,andrew.white@meridianpartssystems.com,+1-631-331-655,Phone Inquiry,Working
+LEAD000333,Emily,Harris,Ridgeline Manufacturing Group,,,,Converted
+LEAD000334,Kenneth,Sanchez,Cascade Production Works,kenneth.sanchez@cascadeproductionworks.com,+1-633-333-665,Purchased List,Unqualified
+LEAD000335,Donna,Clark,CoreTech Assembly Co.,,,,Nurturing
+LEAD000336,Joshua,Ramirez,Highpoint Industrial Ltd,joshua.ramirez@highpointindustrialltd.com,+1-635-335-675,Other,New
+LEAD000337,Michelle,Lewis,Streamline Parts & Components,,,,Working
+LEAD000338,Kevin,Robinson,Keystone Manufacturing Alliance,kevin.robinson@keystonemanufacturingalliance.com,+1-637-337-685,Phone Inquiry,Converted
+LEAD000339,Carol,Walker,Pacific Fabrication Systems,,,,Unqualified
+LEAD000340,Brian,Young,Pinnacle Parts Group,brian.young@pinnaclepartsgroup.com,+1-639-339-695,Purchased List,Nurturing
+LEAD000341,Amanda,Allen,Centennial Industrial Co.,,,,New
+LEAD000342,George,King,Northgate Manufacturing Inc.,george.king@northgatemanufacturinginc.com,+1-641-341-705,Other,Working
+LEAD000343,Melissa,Wright,Lakeside Engineering Works,,,,Converted
+LEAD000344,Edward,Scott,Thornton Components Group,edward.scott@thorntoncomponentsgroup.com,+1-643-343-715,Phone Inquiry,Unqualified
+LEAD000345,Deborah,Torres,Broadfield Production Inc.,,,,Nurturing
+LEAD000346,Ronald,Nguyen,Sterling Assembly Systems,ronald.nguyen@sterlingassemblysystems.com,+1-645-345-725,Purchased List,New
+LEAD000347,Stephanie,Hill,Clearwater Industrial Corp.,,,,Working
+LEAD000348,Timothy,Flores,Apex Industrial Systems,timothy.flores@apexindustrialsystems.com,+1-647-347-735,Other,Converted
+LEAD000349,Rebecca,Green,Precision Components Ltd,,,,Unqualified
+LEAD000350,Jason,Adams,Granite Manufacturing Co.,jason.adams@granitemanufacturingco.com,+1-649-349-745,Phone Inquiry,Nurturing
+LEAD000351,Sharon,Nelson,Ironclad Production Group,,,,New
+LEAD000352,Jeffrey,Baker,Velocity Parts & Assembly,jeffrey.baker@velocitypartsassembly.com,+1-651-351-755,Purchased List,Working
+LEAD000353,Laura,Hall,Summit Engineering Works,,,,Converted
+LEAD000354,Ryan,Rivera,BlueForge Manufacturing,ryan.rivera@blueforgemanufacturing.com,+1-653-353-765,Other,Unqualified
+LEAD000355,Cynthia,Campbell,Strata Industrial Solutions,,,,Nurturing
+LEAD000356,James,Mitchell,Crestline Fabrication Inc.,james.mitchell@crestlinefabricationinc.com,+1-655-355-775,Phone Inquiry,New
+LEAD000357,Mary,Carter,Meridian Parts Systems,,,,Working
+LEAD000358,John,Roberts,Ridgeline Manufacturing Group,john.roberts@ridgelinemanufacturinggroup.com,+1-657-357-785,Purchased List,Converted
+LEAD000359,Patricia,Phillips,Cascade Production Works,,,,Unqualified
+LEAD000360,Robert,Evans,CoreTech Assembly Co.,robert.evans@coretechassemblyco.com,+1-659-359-795,Other,Nurturing
+LEAD000361,Jennifer,Turner,Highpoint Industrial Ltd,,,,New
+LEAD000362,Michael,Torres,Streamline Parts & Components,michael.torres@streamlinepartscomponents.com,+1-661-361-805,Phone Inquiry,Working
+LEAD000363,Linda,Parker,Keystone Manufacturing Alliance,,,,Converted
+LEAD000364,William,Collins,Pacific Fabrication Systems,william.collins@pacificfabricationsystems.com,+1-663-363-815,Purchased List,Unqualified
+LEAD000365,Barbara,Edwards,Pinnacle Parts Group,,,,Nurturing
+LEAD000366,David,Stewart,Centennial Industrial Co.,david.stewart@centennialindustrialco.com,+1-665-365-825,Other,New
+LEAD000367,Elizabeth,Flores,Northgate Manufacturing Inc.,,,,Working
+LEAD000368,Richard,Morris,Lakeside Engineering Works,richard.morris@lakesideengineeringworks.com,+1-667-367-835,Phone Inquiry,Converted
+LEAD000369,Susan,Nguyen,Thornton Components Group,,,,Unqualified
+LEAD000370,Joseph,Murphy,Broadfield Production Inc.,joseph.murphy@broadfieldproductioninc.com,+1-669-369-845,Purchased List,Nurturing
+LEAD000371,Jessica,Rivera,Sterling Assembly Systems,,,,New
+LEAD000372,Thomas,Cook,Clearwater Industrial Corp.,thomas.cook@clearwaterindustrialcorp.com,+1-671-371-855,Other,Working
+LEAD000373,Sarah,Rogers,Apex Industrial Systems,,,,Converted
+LEAD000374,Charles,Morgan,Precision Components Ltd,charles.morgan@precisioncomponentsltd.com,+1-673-373-865,Phone Inquiry,Unqualified
+LEAD000375,Karen,Peterson,Granite Manufacturing Co.,,,,Nurturing
+LEAD000376,Christopher,Cooper,Ironclad Production Group,christopher.cooper@ironcladproductiongroup.com,+1-675-375-875,Purchased List,New
+LEAD000377,Lisa,Reed,Velocity Parts & Assembly,,,,Working
+LEAD000378,Daniel,Bailey,Summit Engineering Works,daniel.bailey@summitengineeringworks.com,+1-677-377-885,Other,Converted
+LEAD000379,Nancy,Bell,BlueForge Manufacturing,,,,Unqualified
+LEAD000380,Matthew,Gomez,Strata Industrial Solutions,matthew.gomez@strataindustrialsolutions.com,+1-679-379-895,Phone Inquiry,Nurturing
+LEAD000381,Betty,Kelly,Crestline Fabrication Inc.,,,,New
+LEAD000382,Anthony,Howard,Meridian Parts Systems,anthony.howard@meridianpartssystems.com,+1-681-381-905,Purchased List,Working
+LEAD000383,Margaret,Ward,Ridgeline Manufacturing Group,,,,Converted
+LEAD000384,Mark,Cox,Cascade Production Works,mark.cox@cascadeproductionworks.com,+1-683-383-915,Other,Unqualified
+LEAD000385,Sandra,Diaz,CoreTech Assembly Co.,,,,Nurturing
+LEAD000386,Donald,Richardson,Highpoint Industrial Ltd,donald.richardson@highpointindustrialltd.com,+1-685-385-925,Phone Inquiry,New
+LEAD000387,Ashley,Wood,Streamline Parts & Components,,,,Working
+LEAD000388,Steven,Watson,Keystone Manufacturing Alliance,steven.watson@keystonemanufacturingalliance.com,+1-687-387-935,Purchased List,Converted
+LEAD000389,Dorothy,Smith,Pacific Fabrication Systems,,,,Unqualified
+LEAD000390,Paul,Johnson,Pinnacle Parts Group,paul.johnson@pinnaclepartsgroup.com,+1-689-389-945,Other,Nurturing
+LEAD000391,Kimberly,Williams,Centennial Industrial Co.,,,,New
+LEAD000392,Andrew,Brown,Northgate Manufacturing Inc.,andrew.brown@northgatemanufacturinginc.com,+1-691-391-955,Phone Inquiry,Working
+LEAD000393,Emily,Jones,Lakeside Engineering Works,,,,Converted
+LEAD000394,Kenneth,Garcia,Thornton Components Group,kenneth.garcia@thorntoncomponentsgroup.com,+1-693-393-965,Purchased List,Unqualified
+LEAD000395,Donna,Miller,Broadfield Production Inc.,,,,Nurturing
+LEAD000396,Joshua,Davis,Sterling Assembly Systems,joshua.davis@sterlingassemblysystems.com,+1-695-395-975,Other,New
+LEAD000397,Michelle,Rodriguez,Clearwater Industrial Corp.,,,,Working
+LEAD000398,Kevin,Martinez,Apex Industrial Systems,kevin.martinez@apexindustrialsystems.com,+1-697-397-985,Phone Inquiry,Converted
+LEAD000399,Carol,Hernandez,Precision Components Ltd,,,,Unqualified
+LEAD000400,Brian,Lopez,Granite Manufacturing Co.,brian.lopez@granitemanufacturingco.com,+1-699-399-995,Purchased List,Nurturing

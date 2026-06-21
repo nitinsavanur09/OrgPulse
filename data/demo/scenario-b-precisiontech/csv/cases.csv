@@ -1,0 +1,2001 @@
+ExternalId,Subject,Status,Priority,Reason,Account_ExternalId__c,Contact_ExternalId__c
+CASE000001,Order Delay — Case 1,New,,Order Delay,,
+CASE000002,Order Delay — Case 2,Working,Medium,Order Delay,ACC000002,CON000002
+CASE000003,Order Delay — Case 3,Escalated,,Order Delay,ACC000003,
+CASE000004,Order Delay — Case 4,Closed,High,Order Delay,,CON000004
+CASE000005,Order Delay — Case 5,New,,Order Delay,ACC000005,
+CASE000006,Order Delay — Case 6,Working,Low,Order Delay,ACC000006,CON000006
+CASE000007,Order Delay — Case 7,Escalated,,Order Delay,,
+CASE000008,Order Delay — Case 8,Closed,Medium,Order Delay,ACC000008,CON000008
+CASE000009,Order Delay — Case 9,New,,Order Delay,ACC000009,
+CASE000010,Order Delay — Case 10,Working,High,Order Delay,,CON000010
+CASE000011,Order Delay — Case 11,Escalated,,Order Delay,ACC000011,
+CASE000012,Order Delay — Case 12,Closed,Low,Order Delay,ACC000012,CON000012
+CASE000013,Order Delay — Case 13,New,,Order Delay,,
+CASE000014,Order Delay — Case 14,Working,Medium,Order Delay,ACC000014,CON000014
+CASE000015,Order Delay — Case 15,Escalated,,Order Delay,ACC000015,
+CASE000016,Order Delay — Case 16,Closed,High,Order Delay,,CON000016
+CASE000017,Order Delay — Case 17,New,,Order Delay,ACC000017,
+CASE000018,Order Delay — Case 18,Working,Low,Order Delay,ACC000018,CON000018
+CASE000019,Order Delay — Case 19,Escalated,,Order Delay,,
+CASE000020,Order Delay — Case 20,Closed,Medium,Order Delay,ACC000020,CON000020
+CASE000021,Order Delay — Case 21,New,,Order Delay,ACC000021,
+CASE000022,Order Delay — Case 22,Working,High,Order Delay,,CON000022
+CASE000023,Order Delay — Case 23,Escalated,,Order Delay,ACC000023,
+CASE000024,Order Delay — Case 24,Closed,Low,Order Delay,ACC000024,CON000024
+CASE000025,Order Delay — Case 25,New,,Order Delay,,
+CASE000026,Order Delay — Case 26,Working,Medium,Order Delay,ACC000026,CON000026
+CASE000027,Order Delay — Case 27,Escalated,,Order Delay,ACC000027,
+CASE000028,Order Delay — Case 28,Closed,High,Order Delay,,CON000028
+CASE000029,Order Delay — Case 29,New,,Order Delay,ACC000029,
+CASE000030,Order Delay — Case 30,Working,Low,Order Delay,ACC000030,CON000030
+CASE000031,Order Delay — Case 31,Escalated,,Order Delay,,
+CASE000032,Order Delay — Case 32,Closed,Medium,Order Delay,ACC000032,CON000032
+CASE000033,Order Delay — Case 33,New,,Order Delay,ACC000033,
+CASE000034,Order Delay — Case 34,Working,High,Order Delay,,CON000034
+CASE000035,Order Delay — Case 35,Escalated,,Order Delay,ACC000035,
+CASE000036,Order Delay — Case 36,Closed,Low,Order Delay,ACC000036,CON000036
+CASE000037,Order Delay — Case 37,New,,Order Delay,,
+CASE000038,Order Delay — Case 38,Working,Medium,Order Delay,ACC000038,CON000038
+CASE000039,Order Delay — Case 39,Escalated,,Order Delay,ACC000039,
+CASE000040,Order Delay — Case 40,Closed,High,Order Delay,,CON000040
+CASE000041,Order Delay — Case 41,New,,Order Delay,ACC000041,
+CASE000042,Order Delay — Case 42,Working,Low,Order Delay,ACC000042,CON000042
+CASE000043,Order Delay — Case 43,Escalated,,Order Delay,,
+CASE000044,Order Delay — Case 44,Closed,Medium,Order Delay,ACC000044,CON000044
+CASE000045,Order Delay — Case 45,New,,Order Delay,ACC000045,
+CASE000046,Order Delay — Case 46,Working,High,Order Delay,,CON000046
+CASE000047,Order Delay — Case 47,Escalated,,Order Delay,ACC000047,
+CASE000048,Order Delay — Case 48,Closed,Low,Order Delay,ACC000048,CON000048
+CASE000049,Order Delay — Case 49,New,,Order Delay,,
+CASE000050,Order Delay — Case 50,Working,Medium,Order Delay,ACC000050,CON000050
+CASE000051,Order Delay — Case 51,Escalated,,Order Delay,ACC000051,
+CASE000052,Order Delay — Case 52,Closed,High,Order Delay,,CON000052
+CASE000053,Order Delay — Case 53,New,,Order Delay,ACC000053,
+CASE000054,Order Delay — Case 54,Working,Low,Order Delay,ACC000054,CON000054
+CASE000055,Order Delay — Case 55,Escalated,,Order Delay,,
+CASE000056,Order Delay — Case 56,Closed,Medium,Order Delay,ACC000056,CON000056
+CASE000057,Order Delay — Case 57,New,,Order Delay,ACC000057,
+CASE000058,Order Delay — Case 58,Working,High,Order Delay,,CON000058
+CASE000059,Order Delay — Case 59,Escalated,,Order Delay,ACC000059,
+CASE000060,Order Delay — Case 60,Closed,Low,Order Delay,ACC000060,CON000060
+CASE000061,Order Delay — Case 61,New,,Order Delay,,
+CASE000062,Order Delay — Case 62,Working,Medium,Order Delay,ACC000062,CON000062
+CASE000063,Order Delay — Case 63,Escalated,,Order Delay,ACC000063,
+CASE000064,Order Delay — Case 64,Closed,High,Order Delay,,CON000064
+CASE000065,Order Delay — Case 65,New,,Order Delay,ACC000065,
+CASE000066,Order Delay — Case 66,Working,Low,Order Delay,ACC000066,CON000066
+CASE000067,Order Delay — Case 67,Escalated,,Order Delay,,
+CASE000068,Order Delay — Case 68,Closed,Medium,Order Delay,ACC000068,CON000068
+CASE000069,Order Delay — Case 69,New,,Order Delay,ACC000069,
+CASE000070,Order Delay — Case 70,Working,High,Order Delay,,CON000070
+CASE000071,Order Delay — Case 71,Escalated,,Order Delay,ACC000071,
+CASE000072,Order Delay — Case 72,Closed,Low,Order Delay,ACC000072,CON000072
+CASE000073,Order Delay — Case 73,New,,Order Delay,,
+CASE000074,Order Delay — Case 74,Working,Medium,Order Delay,ACC000074,CON000074
+CASE000075,Order Delay — Case 75,Escalated,,Order Delay,ACC000075,
+CASE000076,Order Delay — Case 76,Closed,High,Order Delay,,CON000076
+CASE000077,Order Delay — Case 77,New,,Order Delay,ACC000077,
+CASE000078,Order Delay — Case 78,Working,Low,Order Delay,ACC000078,CON000078
+CASE000079,Order Delay — Case 79,Escalated,,Order Delay,,
+CASE000080,Order Delay — Case 80,Closed,Medium,Order Delay,ACC000080,CON000080
+CASE000081,Order Delay — Case 81,New,,Order Delay,ACC000081,
+CASE000082,Order Delay — Case 82,Working,High,Order Delay,,CON000082
+CASE000083,Order Delay — Case 83,Escalated,,Order Delay,ACC000083,
+CASE000084,Order Delay — Case 84,Closed,Low,Order Delay,ACC000084,CON000084
+CASE000085,Order Delay — Case 85,New,,Order Delay,,
+CASE000086,Order Delay — Case 86,Working,Medium,Order Delay,ACC000086,CON000086
+CASE000087,Order Delay — Case 87,Escalated,,Order Delay,ACC000087,
+CASE000088,Order Delay — Case 88,Closed,High,Order Delay,,CON000088
+CASE000089,Order Delay — Case 89,New,,Order Delay,ACC000089,
+CASE000090,Order Delay — Case 90,Working,Low,Order Delay,ACC000090,CON000090
+CASE000091,Order Delay — Case 91,Escalated,,Order Delay,,
+CASE000092,Order Delay — Case 92,Closed,Medium,Order Delay,ACC000092,CON000092
+CASE000093,Order Delay — Case 93,New,,Order Delay,ACC000093,
+CASE000094,Order Delay — Case 94,Working,High,Order Delay,,CON000094
+CASE000095,Order Delay — Case 95,Escalated,,Order Delay,ACC000095,
+CASE000096,Order Delay — Case 96,Closed,Low,Order Delay,ACC000096,CON000096
+CASE000097,Order Delay — Case 97,New,,Order Delay,,
+CASE000098,Order Delay — Case 98,Working,Medium,Order Delay,ACC000098,CON000098
+CASE000099,Order Delay — Case 99,Escalated,,Order Delay,ACC000099,
+CASE000100,Order Delay — Case 100,Closed,High,Order Delay,,CON000100
+CASE000101,Order Delay — Case 101,New,,Order Delay,ACC000101,
+CASE000102,Order Delay — Case 102,Working,Low,Order Delay,ACC000102,CON000102
+CASE000103,Order Delay — Case 103,Escalated,,Order Delay,,
+CASE000104,Order Delay — Case 104,Closed,Medium,Order Delay,ACC000104,CON000104
+CASE000105,Order Delay — Case 105,New,,Order Delay,ACC000105,
+CASE000106,Order Delay — Case 106,Working,High,Order Delay,,CON000106
+CASE000107,Order Delay — Case 107,Escalated,,Order Delay,ACC000107,
+CASE000108,Order Delay — Case 108,Closed,Low,Order Delay,ACC000108,CON000108
+CASE000109,Order Delay — Case 109,New,,Order Delay,,
+CASE000110,Order Delay — Case 110,Working,Medium,Order Delay,ACC000110,CON000110
+CASE000111,Order Delay — Case 111,Escalated,,Order Delay,ACC000111,
+CASE000112,Order Delay — Case 112,Closed,High,Order Delay,,CON000112
+CASE000113,Order Delay — Case 113,New,,Order Delay,ACC000113,
+CASE000114,Order Delay — Case 114,Working,Low,Order Delay,ACC000114,CON000114
+CASE000115,Order Delay — Case 115,Escalated,,Order Delay,,
+CASE000116,Order Delay — Case 116,Closed,Medium,Order Delay,ACC000116,CON000116
+CASE000117,Order Delay — Case 117,New,,Order Delay,ACC000117,
+CASE000118,Order Delay — Case 118,Working,High,Order Delay,,CON000118
+CASE000119,Order Delay — Case 119,Escalated,,Order Delay,ACC000119,
+CASE000120,Order Delay — Case 120,Closed,Low,Order Delay,ACC000120,CON000120
+CASE000121,Order Delay — Case 121,New,,Order Delay,,
+CASE000122,Order Delay — Case 122,Working,Medium,Order Delay,ACC000122,CON000122
+CASE000123,Order Delay — Case 123,Escalated,,Order Delay,ACC000123,
+CASE000124,Order Delay — Case 124,Closed,High,Order Delay,,CON000124
+CASE000125,Order Delay — Case 125,New,,Order Delay,ACC000125,
+CASE000126,Order Delay — Case 126,Working,Low,Order Delay,ACC000126,CON000126
+CASE000127,Order Delay — Case 127,Escalated,,Order Delay,,
+CASE000128,Order Delay — Case 128,Closed,Medium,Order Delay,ACC000128,CON000128
+CASE000129,Order Delay — Case 129,New,,Order Delay,ACC000129,
+CASE000130,Order Delay — Case 130,Working,High,Order Delay,,CON000130
+CASE000131,Order Delay — Case 131,Escalated,,Order Delay,ACC000131,
+CASE000132,Order Delay — Case 132,Closed,Low,Order Delay,ACC000132,CON000132
+CASE000133,Order Delay — Case 133,New,,Order Delay,,
+CASE000134,Order Delay — Case 134,Working,Medium,Order Delay,ACC000134,CON000134
+CASE000135,Order Delay — Case 135,Escalated,,Order Delay,ACC000135,
+CASE000136,Order Delay — Case 136,Closed,High,Order Delay,,CON000136
+CASE000137,Order Delay — Case 137,New,,Order Delay,ACC000137,
+CASE000138,Order Delay — Case 138,Working,Low,Order Delay,ACC000138,CON000138
+CASE000139,Order Delay — Case 139,Escalated,,Order Delay,,
+CASE000140,Order Delay — Case 140,Closed,Medium,Order Delay,ACC000140,CON000140
+CASE000141,Order Delay — Case 141,New,,Order Delay,ACC000141,
+CASE000142,Order Delay — Case 142,Working,High,Order Delay,,CON000142
+CASE000143,Order Delay — Case 143,Escalated,,Order Delay,ACC000143,
+CASE000144,Order Delay — Case 144,Closed,Low,Order Delay,ACC000144,CON000144
+CASE000145,Order Delay — Case 145,New,,Order Delay,,
+CASE000146,Order Delay — Case 146,Working,Medium,Order Delay,ACC000146,CON000146
+CASE000147,Order Delay — Case 147,Escalated,,Order Delay,ACC000147,
+CASE000148,Order Delay — Case 148,Closed,High,Order Delay,,CON000148
+CASE000149,Order Delay — Case 149,New,,Order Delay,ACC000149,
+CASE000150,Order Delay — Case 150,Working,Low,Order Delay,ACC000150,CON000150
+CASE000151,Order Delay — Case 151,Escalated,,Order Delay,,
+CASE000152,Order Delay — Case 152,Closed,Medium,Order Delay,ACC000152,CON000152
+CASE000153,Order Delay — Case 153,New,,Order Delay,ACC000153,
+CASE000154,Order Delay — Case 154,Working,High,Order Delay,,CON000154
+CASE000155,Order Delay — Case 155,Escalated,,Order Delay,ACC000155,
+CASE000156,Order Delay — Case 156,Closed,Low,Order Delay,ACC000156,CON000156
+CASE000157,Order Delay — Case 157,New,,Order Delay,,
+CASE000158,Order Delay — Case 158,Working,Medium,Order Delay,ACC000158,CON000158
+CASE000159,Order Delay — Case 159,Escalated,,Order Delay,ACC000159,
+CASE000160,Order Delay — Case 160,Closed,High,Order Delay,,CON000160
+CASE000161,Order Delay — Case 161,New,,Order Delay,ACC000161,
+CASE000162,Order Delay — Case 162,Working,Low,Order Delay,ACC000162,CON000162
+CASE000163,Order Delay — Case 163,Escalated,,Order Delay,,
+CASE000164,Order Delay — Case 164,Closed,Medium,Order Delay,ACC000164,CON000164
+CASE000165,Order Delay — Case 165,New,,Order Delay,ACC000165,
+CASE000166,Order Delay — Case 166,Working,High,Order Delay,,CON000166
+CASE000167,Order Delay — Case 167,Escalated,,Order Delay,ACC000167,
+CASE000168,Order Delay — Case 168,Closed,Low,Order Delay,ACC000168,CON000168
+CASE000169,Order Delay — Case 169,New,,Order Delay,,
+CASE000170,Order Delay — Case 170,Working,Medium,Order Delay,ACC000170,CON000170
+CASE000171,Order Delay — Case 171,Escalated,,Order Delay,ACC000171,
+CASE000172,Order Delay — Case 172,Closed,High,Order Delay,,CON000172
+CASE000173,Order Delay — Case 173,New,,Order Delay,ACC000173,
+CASE000174,Order Delay — Case 174,Working,Low,Order Delay,ACC000174,CON000174
+CASE000175,Order Delay — Case 175,Escalated,,Order Delay,,
+CASE000176,Order Delay — Case 176,Closed,Medium,Order Delay,ACC000176,CON000176
+CASE000177,Order Delay — Case 177,New,,Order Delay,ACC000177,
+CASE000178,Order Delay — Case 178,Working,High,Order Delay,,CON000178
+CASE000179,Order Delay — Case 179,Escalated,,Order Delay,ACC000179,
+CASE000180,Order Delay — Case 180,Closed,Low,Order Delay,ACC000180,CON000180
+CASE000181,Order Delay — Case 181,New,,Order Delay,,
+CASE000182,Order Delay — Case 182,Working,Medium,Order Delay,ACC000182,CON000182
+CASE000183,Order Delay — Case 183,Escalated,,Order Delay,ACC000183,
+CASE000184,Order Delay — Case 184,Closed,High,Order Delay,,CON000184
+CASE000185,Order Delay — Case 185,New,,Order Delay,ACC000185,
+CASE000186,Order Delay — Case 186,Working,Low,Order Delay,ACC000186,CON000186
+CASE000187,Order Delay — Case 187,Escalated,,Order Delay,,
+CASE000188,Order Delay — Case 188,Closed,Medium,Order Delay,ACC000188,CON000188
+CASE000189,Order Delay — Case 189,New,,Order Delay,ACC000189,
+CASE000190,Order Delay — Case 190,Working,High,Order Delay,,CON000190
+CASE000191,Order Delay — Case 191,Escalated,,Order Delay,ACC000191,
+CASE000192,Order Delay — Case 192,Closed,Low,Order Delay,ACC000192,CON000192
+CASE000193,Order Delay — Case 193,New,,Order Delay,,
+CASE000194,Order Delay — Case 194,Working,Medium,Order Delay,ACC000194,CON000194
+CASE000195,Order Delay — Case 195,Escalated,,Order Delay,ACC000195,
+CASE000196,Order Delay — Case 196,Closed,High,Order Delay,,CON000196
+CASE000197,Order Delay — Case 197,New,,Order Delay,ACC000197,
+CASE000198,Order Delay — Case 198,Working,Low,Order Delay,ACC000198,CON000198
+CASE000199,Order Delay — Case 199,Escalated,,Order Delay,,
+CASE000200,Order Delay — Case 200,Closed,Medium,Order Delay,ACC000200,CON000200
+CASE000201,Order Delay — Case 201,New,,Order Delay,ACC000201,
+CASE000202,Order Delay — Case 202,Working,High,Order Delay,,CON000202
+CASE000203,Order Delay — Case 203,Escalated,,Order Delay,ACC000203,
+CASE000204,Order Delay — Case 204,Closed,Low,Order Delay,ACC000204,CON000204
+CASE000205,Order Delay — Case 205,New,,Order Delay,,
+CASE000206,Order Delay — Case 206,Working,Medium,Order Delay,ACC000206,CON000206
+CASE000207,Order Delay — Case 207,Escalated,,Order Delay,ACC000207,
+CASE000208,Order Delay — Case 208,Closed,High,Order Delay,,CON000208
+CASE000209,Order Delay — Case 209,New,,Order Delay,ACC000209,
+CASE000210,Order Delay — Case 210,Working,Low,Order Delay,ACC000210,CON000210
+CASE000211,Order Delay — Case 211,Escalated,,Order Delay,,
+CASE000212,Order Delay — Case 212,Closed,Medium,Order Delay,ACC000212,CON000212
+CASE000213,Order Delay — Case 213,New,,Order Delay,ACC000213,
+CASE000214,Order Delay — Case 214,Working,High,Order Delay,,CON000214
+CASE000215,Order Delay — Case 215,Escalated,,Order Delay,ACC000215,
+CASE000216,Order Delay — Case 216,Closed,Low,Order Delay,ACC000216,CON000216
+CASE000217,Order Delay — Case 217,New,,Order Delay,,
+CASE000218,Order Delay — Case 218,Working,Medium,Order Delay,ACC000218,CON000218
+CASE000219,Order Delay — Case 219,Escalated,,Order Delay,ACC000219,
+CASE000220,Order Delay — Case 220,Closed,High,Order Delay,,CON000220
+CASE000221,Order Delay — Case 221,New,,Order Delay,ACC000221,
+CASE000222,Order Delay — Case 222,Working,Low,Order Delay,ACC000222,CON000222
+CASE000223,Order Delay — Case 223,Escalated,,Order Delay,,
+CASE000224,Order Delay — Case 224,Closed,Medium,Order Delay,ACC000224,CON000224
+CASE000225,Order Delay — Case 225,New,,Order Delay,ACC000225,
+CASE000226,Order Delay — Case 226,Working,High,Order Delay,,CON000226
+CASE000227,Order Delay — Case 227,Escalated,,Order Delay,ACC000227,
+CASE000228,Order Delay — Case 228,Closed,Low,Order Delay,ACC000228,CON000228
+CASE000229,Order Delay — Case 229,New,,Order Delay,,
+CASE000230,Order Delay — Case 230,Working,Medium,Order Delay,ACC000230,CON000230
+CASE000231,Order Delay — Case 231,Escalated,,Order Delay,ACC000231,
+CASE000232,Order Delay — Case 232,Closed,High,Order Delay,,CON000232
+CASE000233,Order Delay — Case 233,New,,Order Delay,ACC000233,
+CASE000234,Order Delay — Case 234,Working,Low,Order Delay,ACC000234,CON000234
+CASE000235,Order Delay — Case 235,Escalated,,Order Delay,,
+CASE000236,Order Delay — Case 236,Closed,Medium,Order Delay,ACC000236,CON000236
+CASE000237,Order Delay — Case 237,New,,Order Delay,ACC000237,
+CASE000238,Order Delay — Case 238,Working,High,Order Delay,,CON000238
+CASE000239,Order Delay — Case 239,Escalated,,Order Delay,ACC000239,
+CASE000240,Order Delay — Case 240,Closed,Low,Order Delay,ACC000240,CON000240
+CASE000241,Order Delay — Case 241,New,,Order Delay,,
+CASE000242,Order Delay — Case 242,Working,Medium,Order Delay,ACC000242,CON000242
+CASE000243,Order Delay — Case 243,Escalated,,Order Delay,ACC000243,
+CASE000244,Order Delay — Case 244,Closed,High,Order Delay,,CON000244
+CASE000245,Order Delay — Case 245,New,,Order Delay,ACC000245,
+CASE000246,Order Delay — Case 246,Working,Low,Order Delay,ACC000246,CON000246
+CASE000247,Order Delay — Case 247,Escalated,,Order Delay,,
+CASE000248,Order Delay — Case 248,Closed,Medium,Order Delay,ACC000248,CON000248
+CASE000249,Order Delay — Case 249,New,,Order Delay,ACC000249,
+CASE000250,Order Delay — Case 250,Working,High,Order Delay,,CON000250
+CASE000251,Order Delay — Case 251,Escalated,,Order Delay,ACC000251,
+CASE000252,Order Delay — Case 252,Closed,Low,Order Delay,ACC000252,CON000252
+CASE000253,Order Delay — Case 253,New,,Order Delay,,
+CASE000254,Order Delay — Case 254,Working,Medium,Order Delay,ACC000254,CON000254
+CASE000255,Order Delay — Case 255,Escalated,,Order Delay,ACC000255,
+CASE000256,Order Delay — Case 256,Closed,High,Order Delay,,CON000256
+CASE000257,Order Delay — Case 257,New,,Order Delay,ACC000257,
+CASE000258,Order Delay — Case 258,Working,Low,Order Delay,ACC000258,CON000258
+CASE000259,Order Delay — Case 259,Escalated,,Order Delay,,
+CASE000260,Order Delay — Case 260,Closed,Medium,Order Delay,ACC000260,CON000260
+CASE000261,Order Delay — Case 261,New,,Order Delay,ACC000261,
+CASE000262,Order Delay — Case 262,Working,High,Order Delay,,CON000262
+CASE000263,Order Delay — Case 263,Escalated,,Order Delay,ACC000263,
+CASE000264,Order Delay — Case 264,Closed,Low,Order Delay,ACC000264,CON000264
+CASE000265,Order Delay — Case 265,New,,Order Delay,,
+CASE000266,Order Delay — Case 266,Working,Medium,Order Delay,ACC000266,CON000266
+CASE000267,Order Delay — Case 267,Escalated,,Order Delay,ACC000267,
+CASE000268,Order Delay — Case 268,Closed,High,Order Delay,,CON000268
+CASE000269,Order Delay — Case 269,New,,Order Delay,ACC000269,
+CASE000270,Order Delay — Case 270,Working,Low,Order Delay,ACC000270,CON000270
+CASE000271,Order Delay — Case 271,Escalated,,Order Delay,,
+CASE000272,Order Delay — Case 272,Closed,Medium,Order Delay,ACC000272,CON000272
+CASE000273,Order Delay — Case 273,New,,Order Delay,ACC000273,
+CASE000274,Order Delay — Case 274,Working,High,Order Delay,,CON000274
+CASE000275,Order Delay — Case 275,Escalated,,Order Delay,ACC000275,
+CASE000276,Order Delay — Case 276,Closed,Low,Order Delay,ACC000276,CON000276
+CASE000277,Order Delay — Case 277,New,,Order Delay,,
+CASE000278,Order Delay — Case 278,Working,Medium,Order Delay,ACC000278,CON000278
+CASE000279,Order Delay — Case 279,Escalated,,Order Delay,ACC000279,
+CASE000280,Order Delay — Case 280,Closed,High,Order Delay,,CON000280
+CASE000281,Order Delay — Case 281,New,,Order Delay,ACC000281,
+CASE000282,Order Delay — Case 282,Working,Low,Order Delay,ACC000282,CON000282
+CASE000283,Order Delay — Case 283,Escalated,,Order Delay,,
+CASE000284,Order Delay — Case 284,Closed,Medium,Order Delay,ACC000284,CON000284
+CASE000285,Order Delay — Case 285,New,,Order Delay,ACC000285,
+CASE000286,Order Delay — Case 286,Working,High,Order Delay,,CON000286
+CASE000287,Order Delay — Case 287,Escalated,,Order Delay,ACC000287,
+CASE000288,Order Delay — Case 288,Closed,Low,Order Delay,ACC000288,CON000288
+CASE000289,Order Delay — Case 289,New,,Order Delay,,
+CASE000290,Order Delay — Case 290,Working,Medium,Order Delay,ACC000290,CON000290
+CASE000291,Order Delay — Case 291,Escalated,,Order Delay,ACC000291,
+CASE000292,Order Delay — Case 292,Closed,High,Order Delay,,CON000292
+CASE000293,Order Delay — Case 293,New,,Order Delay,ACC000293,
+CASE000294,Order Delay — Case 294,Working,Low,Order Delay,ACC000294,CON000294
+CASE000295,Order Delay — Case 295,Escalated,,Order Delay,,
+CASE000296,Order Delay — Case 296,Closed,Medium,Order Delay,ACC000296,CON000296
+CASE000297,Order Delay — Case 297,New,,Order Delay,ACC000297,
+CASE000298,Order Delay — Case 298,Working,High,Order Delay,,CON000298
+CASE000299,Order Delay — Case 299,Escalated,,Order Delay,ACC000299,
+CASE000300,Order Delay — Case 300,Closed,Low,Order Delay,ACC000300,CON000300
+CASE000301,Order Delay — Case 301,New,,Order Delay,,
+CASE000302,Order Delay — Case 302,Working,Medium,Order Delay,ACC000302,CON000302
+CASE000303,Order Delay — Case 303,Escalated,,Order Delay,ACC000303,
+CASE000304,Order Delay — Case 304,Closed,High,Order Delay,,CON000304
+CASE000305,Wrong Item Shipped — Case 305,New,,Wrong Item Shipped,ACC000305,
+CASE000306,Wrong Item Shipped — Case 306,Working,Low,Wrong Item Shipped,ACC000306,CON000306
+CASE000307,Wrong Item Shipped — Case 307,Escalated,,Wrong Item Shipped,,
+CASE000308,Wrong Item Shipped — Case 308,Closed,Medium,Wrong Item Shipped,ACC000308,CON000308
+CASE000309,Wrong Item Shipped — Case 309,New,,Wrong Item Shipped,ACC000309,
+CASE000310,Wrong Item Shipped — Case 310,Working,High,Wrong Item Shipped,,CON000310
+CASE000311,Wrong Item Shipped — Case 311,Escalated,,Wrong Item Shipped,ACC000311,
+CASE000312,Wrong Item Shipped — Case 312,Closed,Low,Wrong Item Shipped,ACC000312,CON000312
+CASE000313,Wrong Item Shipped — Case 313,New,,Wrong Item Shipped,,
+CASE000314,Wrong Item Shipped — Case 314,Working,Medium,Wrong Item Shipped,ACC000314,CON000314
+CASE000315,Wrong Item Shipped — Case 315,Escalated,,Wrong Item Shipped,ACC000315,
+CASE000316,Wrong Item Shipped — Case 316,Closed,High,Wrong Item Shipped,,CON000316
+CASE000317,Wrong Item Shipped — Case 317,New,,Wrong Item Shipped,ACC000317,
+CASE000318,Wrong Item Shipped — Case 318,Working,Low,Wrong Item Shipped,ACC000318,CON000318
+CASE000319,Wrong Item Shipped — Case 319,Escalated,,Wrong Item Shipped,,
+CASE000320,Wrong Item Shipped — Case 320,Closed,Medium,Wrong Item Shipped,ACC000320,CON000320
+CASE000321,Wrong Item Shipped — Case 321,New,,Wrong Item Shipped,ACC000321,
+CASE000322,Wrong Item Shipped — Case 322,Working,High,Wrong Item Shipped,,CON000322
+CASE000323,Wrong Item Shipped — Case 323,Escalated,,Wrong Item Shipped,ACC000323,
+CASE000324,Wrong Item Shipped — Case 324,Closed,Low,Wrong Item Shipped,ACC000324,CON000324
+CASE000325,Wrong Item Shipped — Case 325,New,,Wrong Item Shipped,,
+CASE000326,Wrong Item Shipped — Case 326,Working,Medium,Wrong Item Shipped,ACC000326,CON000326
+CASE000327,Wrong Item Shipped — Case 327,Escalated,,Wrong Item Shipped,ACC000327,
+CASE000328,Wrong Item Shipped — Case 328,Closed,High,Wrong Item Shipped,,CON000328
+CASE000329,Wrong Item Shipped — Case 329,New,,Wrong Item Shipped,ACC000329,
+CASE000330,Wrong Item Shipped — Case 330,Working,Low,Wrong Item Shipped,ACC000330,CON000330
+CASE000331,Wrong Item Shipped — Case 331,Escalated,,Wrong Item Shipped,,
+CASE000332,Wrong Item Shipped — Case 332,Closed,Medium,Wrong Item Shipped,ACC000332,CON000332
+CASE000333,Wrong Item Shipped — Case 333,New,,Wrong Item Shipped,ACC000333,
+CASE000334,Wrong Item Shipped — Case 334,Working,High,Wrong Item Shipped,,CON000334
+CASE000335,Wrong Item Shipped — Case 335,Escalated,,Wrong Item Shipped,ACC000335,
+CASE000336,Wrong Item Shipped — Case 336,Closed,Low,Wrong Item Shipped,ACC000336,CON000336
+CASE000337,Wrong Item Shipped — Case 337,New,,Wrong Item Shipped,,
+CASE000338,Wrong Item Shipped — Case 338,Working,Medium,Wrong Item Shipped,ACC000338,CON000338
+CASE000339,Wrong Item Shipped — Case 339,Escalated,,Wrong Item Shipped,ACC000339,
+CASE000340,Wrong Item Shipped — Case 340,Closed,High,Wrong Item Shipped,,CON000340
+CASE000341,Wrong Item Shipped — Case 341,New,,Wrong Item Shipped,ACC000341,
+CASE000342,Wrong Item Shipped — Case 342,Working,Low,Wrong Item Shipped,ACC000342,CON000342
+CASE000343,Wrong Item Shipped — Case 343,Escalated,,Wrong Item Shipped,,
+CASE000344,Wrong Item Shipped — Case 344,Closed,Medium,Wrong Item Shipped,ACC000344,CON000344
+CASE000345,Wrong Item Shipped — Case 345,New,,Wrong Item Shipped,ACC000345,
+CASE000346,Wrong Item Shipped — Case 346,Working,High,Wrong Item Shipped,,CON000346
+CASE000347,Wrong Item Shipped — Case 347,Escalated,,Wrong Item Shipped,ACC000347,
+CASE000348,Wrong Item Shipped — Case 348,Closed,Low,Wrong Item Shipped,ACC000348,CON000348
+CASE000349,Wrong Item Shipped — Case 349,New,,Wrong Item Shipped,,
+CASE000350,Wrong Item Shipped — Case 350,Working,Medium,Wrong Item Shipped,ACC000350,CON000350
+CASE000351,Wrong Item Shipped — Case 351,Escalated,,Wrong Item Shipped,ACC000351,
+CASE000352,Wrong Item Shipped — Case 352,Closed,High,Wrong Item Shipped,,CON000352
+CASE000353,Wrong Item Shipped — Case 353,New,,Wrong Item Shipped,ACC000353,
+CASE000354,Wrong Item Shipped — Case 354,Working,Low,Wrong Item Shipped,ACC000354,CON000354
+CASE000355,Wrong Item Shipped — Case 355,Escalated,,Wrong Item Shipped,,
+CASE000356,Wrong Item Shipped — Case 356,Closed,Medium,Wrong Item Shipped,ACC000356,CON000356
+CASE000357,Wrong Item Shipped — Case 357,New,,Wrong Item Shipped,ACC000357,
+CASE000358,Wrong Item Shipped — Case 358,Working,High,Wrong Item Shipped,,CON000358
+CASE000359,Wrong Item Shipped — Case 359,Escalated,,Wrong Item Shipped,ACC000359,
+CASE000360,Wrong Item Shipped — Case 360,Closed,Low,Wrong Item Shipped,ACC000360,CON000360
+CASE000361,Wrong Item Shipped — Case 361,New,,Wrong Item Shipped,,
+CASE000362,Wrong Item Shipped — Case 362,Working,Medium,Wrong Item Shipped,ACC000362,CON000362
+CASE000363,Wrong Item Shipped — Case 363,Escalated,,Wrong Item Shipped,ACC000363,
+CASE000364,Wrong Item Shipped — Case 364,Closed,High,Wrong Item Shipped,,CON000364
+CASE000365,Wrong Item Shipped — Case 365,New,,Wrong Item Shipped,ACC000365,
+CASE000366,Wrong Item Shipped — Case 366,Working,Low,Wrong Item Shipped,ACC000366,CON000366
+CASE000367,Wrong Item Shipped — Case 367,Escalated,,Wrong Item Shipped,,
+CASE000368,Wrong Item Shipped — Case 368,Closed,Medium,Wrong Item Shipped,ACC000368,CON000368
+CASE000369,Wrong Item Shipped — Case 369,New,,Wrong Item Shipped,ACC000369,
+CASE000370,Wrong Item Shipped — Case 370,Working,High,Wrong Item Shipped,,CON000370
+CASE000371,Wrong Item Shipped — Case 371,Escalated,,Wrong Item Shipped,ACC000371,
+CASE000372,Wrong Item Shipped — Case 372,Closed,Low,Wrong Item Shipped,ACC000372,CON000372
+CASE000373,Wrong Item Shipped — Case 373,New,,Wrong Item Shipped,,
+CASE000374,Wrong Item Shipped — Case 374,Working,Medium,Wrong Item Shipped,ACC000374,CON000374
+CASE000375,Wrong Item Shipped — Case 375,Escalated,,Wrong Item Shipped,ACC000375,
+CASE000376,Wrong Item Shipped — Case 376,Closed,High,Wrong Item Shipped,,CON000376
+CASE000377,Wrong Item Shipped — Case 377,New,,Wrong Item Shipped,ACC000377,
+CASE000378,Wrong Item Shipped — Case 378,Working,Low,Wrong Item Shipped,ACC000378,CON000378
+CASE000379,Wrong Item Shipped — Case 379,Escalated,,Wrong Item Shipped,,
+CASE000380,Wrong Item Shipped — Case 380,Closed,Medium,Wrong Item Shipped,ACC000380,CON000380
+CASE000381,Wrong Item Shipped — Case 381,New,,Wrong Item Shipped,ACC000381,
+CASE000382,Wrong Item Shipped — Case 382,Working,High,Wrong Item Shipped,,CON000382
+CASE000383,Wrong Item Shipped — Case 383,Escalated,,Wrong Item Shipped,ACC000383,
+CASE000384,Wrong Item Shipped — Case 384,Closed,Low,Wrong Item Shipped,ACC000384,CON000384
+CASE000385,Wrong Item Shipped — Case 385,New,,Wrong Item Shipped,,
+CASE000386,Wrong Item Shipped — Case 386,Working,Medium,Wrong Item Shipped,ACC000386,CON000386
+CASE000387,Wrong Item Shipped — Case 387,Escalated,,Wrong Item Shipped,ACC000387,
+CASE000388,Wrong Item Shipped — Case 388,Closed,High,Wrong Item Shipped,,CON000388
+CASE000389,Wrong Item Shipped — Case 389,New,,Wrong Item Shipped,ACC000389,
+CASE000390,Wrong Item Shipped — Case 390,Working,Low,Wrong Item Shipped,ACC000390,CON000390
+CASE000391,Wrong Item Shipped — Case 391,Escalated,,Wrong Item Shipped,,
+CASE000392,Wrong Item Shipped — Case 392,Closed,Medium,Wrong Item Shipped,ACC000392,CON000392
+CASE000393,Wrong Item Shipped — Case 393,New,,Wrong Item Shipped,ACC000393,
+CASE000394,Wrong Item Shipped — Case 394,Working,High,Wrong Item Shipped,,CON000394
+CASE000395,Wrong Item Shipped — Case 395,Escalated,,Wrong Item Shipped,ACC000395,
+CASE000396,Wrong Item Shipped — Case 396,Closed,Low,Wrong Item Shipped,ACC000396,CON000396
+CASE000397,Wrong Item Shipped — Case 397,New,,Wrong Item Shipped,,
+CASE000398,Wrong Item Shipped — Case 398,Working,Medium,Wrong Item Shipped,ACC000398,CON000398
+CASE000399,Wrong Item Shipped — Case 399,Escalated,,Wrong Item Shipped,ACC000399,
+CASE000400,Wrong Item Shipped — Case 400,Closed,High,Wrong Item Shipped,,CON000400
+CASE000401,Wrong Item Shipped — Case 401,New,,Wrong Item Shipped,ACC000401,
+CASE000402,Wrong Item Shipped — Case 402,Working,Low,Wrong Item Shipped,ACC000402,CON000402
+CASE000403,Wrong Item Shipped — Case 403,Escalated,,Wrong Item Shipped,,
+CASE000404,Wrong Item Shipped — Case 404,Closed,Medium,Wrong Item Shipped,ACC000404,CON000404
+CASE000405,Wrong Item Shipped — Case 405,New,,Wrong Item Shipped,ACC000405,
+CASE000406,Wrong Item Shipped — Case 406,Working,High,Wrong Item Shipped,,CON000406
+CASE000407,Wrong Item Shipped — Case 407,Escalated,,Wrong Item Shipped,ACC000407,
+CASE000408,Wrong Item Shipped — Case 408,Closed,Low,Wrong Item Shipped,ACC000408,CON000408
+CASE000409,Wrong Item Shipped — Case 409,New,,Wrong Item Shipped,,
+CASE000410,Wrong Item Shipped — Case 410,Working,Medium,Wrong Item Shipped,ACC000410,CON000410
+CASE000411,Wrong Item Shipped — Case 411,Escalated,,Wrong Item Shipped,ACC000411,
+CASE000412,Wrong Item Shipped — Case 412,Closed,High,Wrong Item Shipped,,CON000412
+CASE000413,Wrong Item Shipped — Case 413,New,,Wrong Item Shipped,ACC000413,
+CASE000414,Wrong Item Shipped — Case 414,Working,Low,Wrong Item Shipped,ACC000414,CON000414
+CASE000415,Wrong Item Shipped — Case 415,Escalated,,Wrong Item Shipped,,
+CASE000416,Wrong Item Shipped — Case 416,Closed,Medium,Wrong Item Shipped,ACC000416,CON000416
+CASE000417,Wrong Item Shipped — Case 417,New,,Wrong Item Shipped,ACC000417,
+CASE000418,Wrong Item Shipped — Case 418,Working,High,Wrong Item Shipped,,CON000418
+CASE000419,Wrong Item Shipped — Case 419,Escalated,,Wrong Item Shipped,ACC000419,
+CASE000420,Wrong Item Shipped — Case 420,Closed,Low,Wrong Item Shipped,ACC000420,CON000420
+CASE000421,Wrong Item Shipped — Case 421,New,,Wrong Item Shipped,,
+CASE000422,Wrong Item Shipped — Case 422,Working,Medium,Wrong Item Shipped,ACC000422,CON000422
+CASE000423,Wrong Item Shipped — Case 423,Escalated,,Wrong Item Shipped,ACC000423,
+CASE000424,Wrong Item Shipped — Case 424,Closed,High,Wrong Item Shipped,,CON000424
+CASE000425,Wrong Item Shipped — Case 425,New,,Wrong Item Shipped,ACC000425,
+CASE000426,Wrong Item Shipped — Case 426,Working,Low,Wrong Item Shipped,ACC000426,CON000426
+CASE000427,Wrong Item Shipped — Case 427,Escalated,,Wrong Item Shipped,,
+CASE000428,Wrong Item Shipped — Case 428,Closed,Medium,Wrong Item Shipped,ACC000428,CON000428
+CASE000429,Wrong Item Shipped — Case 429,New,,Wrong Item Shipped,ACC000429,
+CASE000430,Wrong Item Shipped — Case 430,Working,High,Wrong Item Shipped,,CON000430
+CASE000431,Wrong Item Shipped — Case 431,Escalated,,Wrong Item Shipped,ACC000431,
+CASE000432,Wrong Item Shipped — Case 432,Closed,Low,Wrong Item Shipped,ACC000432,CON000432
+CASE000433,Wrong Item Shipped — Case 433,New,,Wrong Item Shipped,,
+CASE000434,Wrong Item Shipped — Case 434,Working,Medium,Wrong Item Shipped,ACC000434,CON000434
+CASE000435,Wrong Item Shipped — Case 435,Escalated,,Wrong Item Shipped,ACC000435,
+CASE000436,Wrong Item Shipped — Case 436,Closed,High,Wrong Item Shipped,,CON000436
+CASE000437,Wrong Item Shipped — Case 437,New,,Wrong Item Shipped,ACC000437,
+CASE000438,Wrong Item Shipped — Case 438,Working,Low,Wrong Item Shipped,ACC000438,CON000438
+CASE000439,Wrong Item Shipped — Case 439,Escalated,,Wrong Item Shipped,,
+CASE000440,Wrong Item Shipped — Case 440,Closed,Medium,Wrong Item Shipped,ACC000440,CON000440
+CASE000441,Wrong Item Shipped — Case 441,New,,Wrong Item Shipped,ACC000441,
+CASE000442,Wrong Item Shipped — Case 442,Working,High,Wrong Item Shipped,,CON000442
+CASE000443,Wrong Item Shipped — Case 443,Escalated,,Wrong Item Shipped,ACC000443,
+CASE000444,Wrong Item Shipped — Case 444,Closed,Low,Wrong Item Shipped,ACC000444,CON000444
+CASE000445,Wrong Item Shipped — Case 445,New,,Wrong Item Shipped,,
+CASE000446,Wrong Item Shipped — Case 446,Working,Medium,Wrong Item Shipped,ACC000446,CON000446
+CASE000447,Wrong Item Shipped — Case 447,Escalated,,Wrong Item Shipped,ACC000447,
+CASE000448,Wrong Item Shipped — Case 448,Closed,High,Wrong Item Shipped,,CON000448
+CASE000449,Wrong Item Shipped — Case 449,New,,Wrong Item Shipped,ACC000449,
+CASE000450,Wrong Item Shipped — Case 450,Working,Low,Wrong Item Shipped,ACC000450,CON000450
+CASE000451,Wrong Item Shipped — Case 451,Escalated,,Wrong Item Shipped,,
+CASE000452,Wrong Item Shipped — Case 452,Closed,Medium,Wrong Item Shipped,ACC000452,CON000452
+CASE000453,Wrong Item Shipped — Case 453,New,,Wrong Item Shipped,ACC000453,
+CASE000454,Wrong Item Shipped — Case 454,Working,High,Wrong Item Shipped,,CON000454
+CASE000455,Wrong Item Shipped — Case 455,Escalated,,Wrong Item Shipped,ACC000455,
+CASE000456,Wrong Item Shipped — Case 456,Closed,Low,Wrong Item Shipped,ACC000456,CON000456
+CASE000457,Wrong Item Shipped — Case 457,New,,Wrong Item Shipped,,
+CASE000458,Wrong Item Shipped — Case 458,Working,Medium,Wrong Item Shipped,ACC000458,CON000458
+CASE000459,Wrong Item Shipped — Case 459,Escalated,,Wrong Item Shipped,ACC000459,
+CASE000460,Wrong Item Shipped — Case 460,Closed,High,Wrong Item Shipped,,CON000460
+CASE000461,Wrong Item Shipped — Case 461,New,,Wrong Item Shipped,ACC000461,
+CASE000462,Wrong Item Shipped — Case 462,Working,Low,Wrong Item Shipped,ACC000462,CON000462
+CASE000463,Wrong Item Shipped — Case 463,Escalated,,Wrong Item Shipped,,
+CASE000464,Wrong Item Shipped — Case 464,Closed,Medium,Wrong Item Shipped,ACC000464,CON000464
+CASE000465,Wrong Item Shipped — Case 465,New,,Wrong Item Shipped,ACC000465,
+CASE000466,Wrong Item Shipped — Case 466,Working,High,Wrong Item Shipped,,CON000466
+CASE000467,Wrong Item Shipped — Case 467,Escalated,,Wrong Item Shipped,ACC000467,
+CASE000468,Wrong Item Shipped — Case 468,Closed,Low,Wrong Item Shipped,ACC000468,CON000468
+CASE000469,Wrong Item Shipped — Case 469,New,,Wrong Item Shipped,,
+CASE000470,Wrong Item Shipped — Case 470,Working,Medium,Wrong Item Shipped,ACC000470,CON000470
+CASE000471,Wrong Item Shipped — Case 471,Escalated,,Wrong Item Shipped,ACC000471,
+CASE000472,Wrong Item Shipped — Case 472,Closed,High,Wrong Item Shipped,,CON000472
+CASE000473,Wrong Item Shipped — Case 473,New,,Wrong Item Shipped,ACC000473,
+CASE000474,Wrong Item Shipped — Case 474,Working,Low,Wrong Item Shipped,ACC000474,CON000474
+CASE000475,Wrong Item Shipped — Case 475,Escalated,,Wrong Item Shipped,,
+CASE000476,Wrong Item Shipped — Case 476,Closed,Medium,Wrong Item Shipped,ACC000476,CON000476
+CASE000477,Wrong Item Shipped — Case 477,New,,Wrong Item Shipped,ACC000477,
+CASE000478,Wrong Item Shipped — Case 478,Working,High,Wrong Item Shipped,,CON000478
+CASE000479,Wrong Item Shipped — Case 479,Escalated,,Wrong Item Shipped,ACC000479,
+CASE000480,Wrong Item Shipped — Case 480,Closed,Low,Wrong Item Shipped,ACC000480,CON000480
+CASE000481,Wrong Item Shipped — Case 481,New,,Wrong Item Shipped,,
+CASE000482,Wrong Item Shipped — Case 482,Working,Medium,Wrong Item Shipped,ACC000482,CON000482
+CASE000483,Wrong Item Shipped — Case 483,Escalated,,Wrong Item Shipped,ACC000483,
+CASE000484,Wrong Item Shipped — Case 484,Closed,High,Wrong Item Shipped,,CON000484
+CASE000485,Wrong Item Shipped — Case 485,New,,Wrong Item Shipped,ACC000485,
+CASE000486,Wrong Item Shipped — Case 486,Working,Low,Wrong Item Shipped,ACC000486,CON000486
+CASE000487,Wrong Item Shipped — Case 487,Escalated,,Wrong Item Shipped,,
+CASE000488,Wrong Item Shipped — Case 488,Closed,Medium,Wrong Item Shipped,ACC000488,CON000488
+CASE000489,Wrong Item Shipped — Case 489,New,,Wrong Item Shipped,ACC000489,
+CASE000490,Wrong Item Shipped — Case 490,Working,High,Wrong Item Shipped,,CON000490
+CASE000491,Wrong Item Shipped — Case 491,Escalated,,Wrong Item Shipped,ACC000491,
+CASE000492,Wrong Item Shipped — Case 492,Closed,Low,Wrong Item Shipped,ACC000492,CON000492
+CASE000493,Wrong Item Shipped — Case 493,New,,Wrong Item Shipped,,
+CASE000494,Wrong Item Shipped — Case 494,Working,Medium,Wrong Item Shipped,ACC000494,CON000494
+CASE000495,Wrong Item Shipped — Case 495,Escalated,,Wrong Item Shipped,ACC000495,
+CASE000496,Wrong Item Shipped — Case 496,Closed,High,Wrong Item Shipped,,CON000496
+CASE000497,Wrong Item Shipped — Case 497,New,,Wrong Item Shipped,ACC000497,
+CASE000498,Wrong Item Shipped — Case 498,Working,Low,Wrong Item Shipped,ACC000498,CON000498
+CASE000499,Wrong Item Shipped — Case 499,Escalated,,Wrong Item Shipped,,
+CASE000500,Wrong Item Shipped — Case 500,Closed,Medium,Wrong Item Shipped,ACC000500,CON000500
+CASE000501,Wrong Item Shipped — Case 501,New,,Wrong Item Shipped,ACC000001,
+CASE000502,Wrong Item Shipped — Case 502,Working,High,Wrong Item Shipped,,CON000502
+CASE000503,Wrong Item Shipped — Case 503,Escalated,,Wrong Item Shipped,ACC000003,
+CASE000504,Wrong Item Shipped — Case 504,Closed,Low,Wrong Item Shipped,ACC000004,CON000504
+CASE000505,Wrong Item Shipped — Case 505,New,,Wrong Item Shipped,,
+CASE000506,Wrong Item Shipped — Case 506,Working,Medium,Wrong Item Shipped,ACC000006,CON000506
+CASE000507,Wrong Item Shipped — Case 507,Escalated,,Wrong Item Shipped,ACC000007,
+CASE000508,Wrong Item Shipped — Case 508,Closed,High,Wrong Item Shipped,,CON000508
+CASE000509,Wrong Item Shipped — Case 509,New,,Wrong Item Shipped,ACC000009,
+CASE000510,Wrong Item Shipped — Case 510,Working,Low,Wrong Item Shipped,ACC000010,CON000510
+CASE000511,Wrong Item Shipped — Case 511,Escalated,,Wrong Item Shipped,,
+CASE000512,Wrong Item Shipped — Case 512,Closed,Medium,Wrong Item Shipped,ACC000012,CON000512
+CASE000513,Wrong Item Shipped — Case 513,New,,Wrong Item Shipped,ACC000013,
+CASE000514,Wrong Item Shipped — Case 514,Working,High,Wrong Item Shipped,,CON000514
+CASE000515,Wrong Item Shipped — Case 515,Escalated,,Wrong Item Shipped,ACC000015,
+CASE000516,Wrong Item Shipped — Case 516,Closed,Low,Wrong Item Shipped,ACC000016,CON000516
+CASE000517,Wrong Item Shipped — Case 517,New,,Wrong Item Shipped,,
+CASE000518,Wrong Item Shipped — Case 518,Working,Medium,Wrong Item Shipped,ACC000018,CON000518
+CASE000519,Wrong Item Shipped — Case 519,Escalated,,Wrong Item Shipped,ACC000019,
+CASE000520,Wrong Item Shipped — Case 520,Closed,High,Wrong Item Shipped,,CON000520
+CASE000521,Wrong Item Shipped — Case 521,New,,Wrong Item Shipped,ACC000021,
+CASE000522,Wrong Item Shipped — Case 522,Working,Low,Wrong Item Shipped,ACC000022,CON000522
+CASE000523,Wrong Item Shipped — Case 523,Escalated,,Wrong Item Shipped,,
+CASE000524,Wrong Item Shipped — Case 524,Closed,Medium,Wrong Item Shipped,ACC000024,CON000524
+CASE000525,Wrong Item Shipped — Case 525,New,,Wrong Item Shipped,ACC000025,
+CASE000526,Wrong Item Shipped — Case 526,Working,High,Wrong Item Shipped,,CON000526
+CASE000527,Wrong Item Shipped — Case 527,Escalated,,Wrong Item Shipped,ACC000027,
+CASE000528,Wrong Item Shipped — Case 528,Closed,Low,Wrong Item Shipped,ACC000028,CON000528
+CASE000529,Wrong Item Shipped — Case 529,New,,Wrong Item Shipped,,
+CASE000530,Wrong Item Shipped — Case 530,Working,Medium,Wrong Item Shipped,ACC000030,CON000530
+CASE000531,Wrong Item Shipped — Case 531,Escalated,,Wrong Item Shipped,ACC000031,
+CASE000532,Wrong Item Shipped — Case 532,Closed,High,Wrong Item Shipped,,CON000532
+CASE000533,Wrong Item Shipped — Case 533,New,,Wrong Item Shipped,ACC000033,
+CASE000534,Wrong Item Shipped — Case 534,Working,Low,Wrong Item Shipped,ACC000034,CON000534
+CASE000535,Wrong Item Shipped — Case 535,Escalated,,Wrong Item Shipped,,
+CASE000536,Wrong Item Shipped — Case 536,Closed,Medium,Wrong Item Shipped,ACC000036,CON000536
+CASE000537,Wrong Item Shipped — Case 537,New,,Wrong Item Shipped,ACC000037,
+CASE000538,Wrong Item Shipped — Case 538,Working,High,Wrong Item Shipped,,CON000538
+CASE000539,Wrong Item Shipped — Case 539,Escalated,,Wrong Item Shipped,ACC000039,
+CASE000540,Wrong Item Shipped — Case 540,Closed,Low,Wrong Item Shipped,ACC000040,CON000540
+CASE000541,Defective Product — Case 541,New,,Defective Product,,
+CASE000542,Defective Product — Case 542,Working,Medium,Defective Product,ACC000042,CON000542
+CASE000543,Defective Product — Case 543,Escalated,,Defective Product,ACC000043,
+CASE000544,Defective Product — Case 544,Closed,High,Defective Product,,CON000544
+CASE000545,Defective Product — Case 545,New,,Defective Product,ACC000045,
+CASE000546,Defective Product — Case 546,Working,Low,Defective Product,ACC000046,CON000546
+CASE000547,Defective Product — Case 547,Escalated,,Defective Product,,
+CASE000548,Defective Product — Case 548,Closed,Medium,Defective Product,ACC000048,CON000548
+CASE000549,Defective Product — Case 549,New,,Defective Product,ACC000049,
+CASE000550,Defective Product — Case 550,Working,High,Defective Product,,CON000550
+CASE000551,Defective Product — Case 551,Escalated,,Defective Product,ACC000051,
+CASE000552,Defective Product — Case 552,Closed,Low,Defective Product,ACC000052,CON000552
+CASE000553,Defective Product — Case 553,New,,Defective Product,,
+CASE000554,Defective Product — Case 554,Working,Medium,Defective Product,ACC000054,CON000554
+CASE000555,Defective Product — Case 555,Escalated,,Defective Product,ACC000055,
+CASE000556,Defective Product — Case 556,Closed,High,Defective Product,,CON000556
+CASE000557,Defective Product — Case 557,New,,Defective Product,ACC000057,
+CASE000558,Defective Product — Case 558,Working,Low,Defective Product,ACC000058,CON000558
+CASE000559,Defective Product — Case 559,Escalated,,Defective Product,,
+CASE000560,Defective Product — Case 560,Closed,Medium,Defective Product,ACC000060,CON000560
+CASE000561,Defective Product — Case 561,New,,Defective Product,ACC000061,
+CASE000562,Defective Product — Case 562,Working,High,Defective Product,,CON000562
+CASE000563,Defective Product — Case 563,Escalated,,Defective Product,ACC000063,
+CASE000564,Defective Product — Case 564,Closed,Low,Defective Product,ACC000064,CON000564
+CASE000565,Defective Product — Case 565,New,,Defective Product,,
+CASE000566,Defective Product — Case 566,Working,Medium,Defective Product,ACC000066,CON000566
+CASE000567,Defective Product — Case 567,Escalated,,Defective Product,ACC000067,
+CASE000568,Defective Product — Case 568,Closed,High,Defective Product,,CON000568
+CASE000569,Defective Product — Case 569,New,,Defective Product,ACC000069,
+CASE000570,Defective Product — Case 570,Working,Low,Defective Product,ACC000070,CON000570
+CASE000571,Defective Product — Case 571,Escalated,,Defective Product,,
+CASE000572,Defective Product — Case 572,Closed,Medium,Defective Product,ACC000072,CON000572
+CASE000573,Defective Product — Case 573,New,,Defective Product,ACC000073,
+CASE000574,Defective Product — Case 574,Working,High,Defective Product,,CON000574
+CASE000575,Defective Product — Case 575,Escalated,,Defective Product,ACC000075,
+CASE000576,Defective Product — Case 576,Closed,Low,Defective Product,ACC000076,CON000576
+CASE000577,Defective Product — Case 577,New,,Defective Product,,
+CASE000578,Defective Product — Case 578,Working,Medium,Defective Product,ACC000078,CON000578
+CASE000579,Defective Product — Case 579,Escalated,,Defective Product,ACC000079,
+CASE000580,Defective Product — Case 580,Closed,High,Defective Product,,CON000580
+CASE000581,Defective Product — Case 581,New,,Defective Product,ACC000081,
+CASE000582,Defective Product — Case 582,Working,Low,Defective Product,ACC000082,CON000582
+CASE000583,Defective Product — Case 583,Escalated,,Defective Product,,
+CASE000584,Defective Product — Case 584,Closed,Medium,Defective Product,ACC000084,CON000584
+CASE000585,Defective Product — Case 585,New,,Defective Product,ACC000085,
+CASE000586,Defective Product — Case 586,Working,High,Defective Product,,CON000586
+CASE000587,Defective Product — Case 587,Escalated,,Defective Product,ACC000087,
+CASE000588,Defective Product — Case 588,Closed,Low,Defective Product,ACC000088,CON000588
+CASE000589,Defective Product — Case 589,New,,Defective Product,,
+CASE000590,Defective Product — Case 590,Working,Medium,Defective Product,ACC000090,CON000590
+CASE000591,Defective Product — Case 591,Escalated,,Defective Product,ACC000091,
+CASE000592,Defective Product — Case 592,Closed,High,Defective Product,,CON000592
+CASE000593,Defective Product — Case 593,New,,Defective Product,ACC000093,
+CASE000594,Defective Product — Case 594,Working,Low,Defective Product,ACC000094,CON000594
+CASE000595,Defective Product — Case 595,Escalated,,Defective Product,,
+CASE000596,Defective Product — Case 596,Closed,Medium,Defective Product,ACC000096,CON000596
+CASE000597,Defective Product — Case 597,New,,Defective Product,ACC000097,
+CASE000598,Defective Product — Case 598,Working,High,Defective Product,,CON000598
+CASE000599,Defective Product — Case 599,Escalated,,Defective Product,ACC000099,
+CASE000600,Defective Product — Case 600,Closed,Low,Defective Product,ACC000100,CON000600
+CASE000601,Defective Product — Case 601,New,,Defective Product,,
+CASE000602,Defective Product — Case 602,Working,Medium,Defective Product,ACC000102,CON000602
+CASE000603,Defective Product — Case 603,Escalated,,Defective Product,ACC000103,
+CASE000604,Defective Product — Case 604,Closed,High,Defective Product,,CON000604
+CASE000605,Defective Product — Case 605,New,,Defective Product,ACC000105,
+CASE000606,Defective Product — Case 606,Working,Low,Defective Product,ACC000106,CON000606
+CASE000607,Defective Product — Case 607,Escalated,,Defective Product,,
+CASE000608,Defective Product — Case 608,Closed,Medium,Defective Product,ACC000108,CON000608
+CASE000609,Defective Product — Case 609,New,,Defective Product,ACC000109,
+CASE000610,Defective Product — Case 610,Working,High,Defective Product,,CON000610
+CASE000611,Defective Product — Case 611,Escalated,,Defective Product,ACC000111,
+CASE000612,Defective Product — Case 612,Closed,Low,Defective Product,ACC000112,CON000612
+CASE000613,Defective Product — Case 613,New,,Defective Product,,
+CASE000614,Defective Product — Case 614,Working,Medium,Defective Product,ACC000114,CON000614
+CASE000615,Defective Product — Case 615,Escalated,,Defective Product,ACC000115,
+CASE000616,Defective Product — Case 616,Closed,High,Defective Product,,CON000616
+CASE000617,Defective Product — Case 617,New,,Defective Product,ACC000117,
+CASE000618,Defective Product — Case 618,Working,Low,Defective Product,ACC000118,CON000618
+CASE000619,Defective Product — Case 619,Escalated,,Defective Product,,
+CASE000620,Defective Product — Case 620,Closed,Medium,Defective Product,ACC000120,CON000620
+CASE000621,Defective Product — Case 621,New,,Defective Product,ACC000121,
+CASE000622,Defective Product — Case 622,Working,High,Defective Product,,CON000622
+CASE000623,Defective Product — Case 623,Escalated,,Defective Product,ACC000123,
+CASE000624,Defective Product — Case 624,Closed,Low,Defective Product,ACC000124,CON000624
+CASE000625,Defective Product — Case 625,New,,Defective Product,,
+CASE000626,Defective Product — Case 626,Working,Medium,Defective Product,ACC000126,CON000626
+CASE000627,Defective Product — Case 627,Escalated,,Defective Product,ACC000127,
+CASE000628,Defective Product — Case 628,Closed,High,Defective Product,,CON000628
+CASE000629,Defective Product — Case 629,New,,Defective Product,ACC000129,
+CASE000630,Defective Product — Case 630,Working,Low,Defective Product,ACC000130,CON000630
+CASE000631,Defective Product — Case 631,Escalated,,Defective Product,,
+CASE000632,Defective Product — Case 632,Closed,Medium,Defective Product,ACC000132,CON000632
+CASE000633,Defective Product — Case 633,New,,Defective Product,ACC000133,
+CASE000634,Defective Product — Case 634,Working,High,Defective Product,,CON000634
+CASE000635,Defective Product — Case 635,Escalated,,Defective Product,ACC000135,
+CASE000636,Defective Product — Case 636,Closed,Low,Defective Product,ACC000136,CON000636
+CASE000637,Defective Product — Case 637,New,,Defective Product,,
+CASE000638,Defective Product — Case 638,Working,Medium,Defective Product,ACC000138,CON000638
+CASE000639,Defective Product — Case 639,Escalated,,Defective Product,ACC000139,
+CASE000640,Defective Product — Case 640,Closed,High,Defective Product,,CON000640
+CASE000641,Defective Product — Case 641,New,,Defective Product,ACC000141,
+CASE000642,Defective Product — Case 642,Working,Low,Defective Product,ACC000142,CON000642
+CASE000643,Defective Product — Case 643,Escalated,,Defective Product,,
+CASE000644,Defective Product — Case 644,Closed,Medium,Defective Product,ACC000144,CON000644
+CASE000645,Defective Product — Case 645,New,,Defective Product,ACC000145,
+CASE000646,Defective Product — Case 646,Working,High,Defective Product,,CON000646
+CASE000647,Defective Product — Case 647,Escalated,,Defective Product,ACC000147,
+CASE000648,Defective Product — Case 648,Closed,Low,Defective Product,ACC000148,CON000648
+CASE000649,Defective Product — Case 649,New,,Defective Product,,
+CASE000650,Defective Product — Case 650,Working,Medium,Defective Product,ACC000150,CON000650
+CASE000651,Defective Product — Case 651,Escalated,,Defective Product,ACC000151,
+CASE000652,Defective Product — Case 652,Closed,High,Defective Product,,CON000652
+CASE000653,Defective Product — Case 653,New,,Defective Product,ACC000153,
+CASE000654,Defective Product — Case 654,Working,Low,Defective Product,ACC000154,CON000654
+CASE000655,Defective Product — Case 655,Escalated,,Defective Product,,
+CASE000656,Defective Product — Case 656,Closed,Medium,Defective Product,ACC000156,CON000656
+CASE000657,Defective Product — Case 657,New,,Defective Product,ACC000157,
+CASE000658,Defective Product — Case 658,Working,High,Defective Product,,CON000658
+CASE000659,Defective Product — Case 659,Escalated,,Defective Product,ACC000159,
+CASE000660,Defective Product — Case 660,Closed,Low,Defective Product,ACC000160,CON000660
+CASE000661,Defective Product — Case 661,New,,Defective Product,,
+CASE000662,Defective Product — Case 662,Working,Medium,Defective Product,ACC000162,CON000662
+CASE000663,Defective Product — Case 663,Escalated,,Defective Product,ACC000163,
+CASE000664,Defective Product — Case 664,Closed,High,Defective Product,,CON000664
+CASE000665,Defective Product — Case 665,New,,Defective Product,ACC000165,
+CASE000666,Defective Product — Case 666,Working,Low,Defective Product,ACC000166,CON000666
+CASE000667,Defective Product — Case 667,Escalated,,Defective Product,,
+CASE000668,Defective Product — Case 668,Closed,Medium,Defective Product,ACC000168,CON000668
+CASE000669,Defective Product — Case 669,New,,Defective Product,ACC000169,
+CASE000670,Defective Product — Case 670,Working,High,Defective Product,,CON000670
+CASE000671,Defective Product — Case 671,Escalated,,Defective Product,ACC000171,
+CASE000672,Defective Product — Case 672,Closed,Low,Defective Product,ACC000172,CON000672
+CASE000673,Defective Product — Case 673,New,,Defective Product,,
+CASE000674,Defective Product — Case 674,Working,Medium,Defective Product,ACC000174,CON000674
+CASE000675,Defective Product — Case 675,Escalated,,Defective Product,ACC000175,
+CASE000676,Defective Product — Case 676,Closed,High,Defective Product,,CON000676
+CASE000677,Defective Product — Case 677,New,,Defective Product,ACC000177,
+CASE000678,Defective Product — Case 678,Working,Low,Defective Product,ACC000178,CON000678
+CASE000679,Defective Product — Case 679,Escalated,,Defective Product,,
+CASE000680,Defective Product — Case 680,Closed,Medium,Defective Product,ACC000180,CON000680
+CASE000681,Defective Product — Case 681,New,,Defective Product,ACC000181,
+CASE000682,Defective Product — Case 682,Working,High,Defective Product,,CON000682
+CASE000683,Defective Product — Case 683,Escalated,,Defective Product,ACC000183,
+CASE000684,Defective Product — Case 684,Closed,Low,Defective Product,ACC000184,CON000684
+CASE000685,Defective Product — Case 685,New,,Defective Product,,
+CASE000686,Defective Product — Case 686,Working,Medium,Defective Product,ACC000186,CON000686
+CASE000687,Defective Product — Case 687,Escalated,,Defective Product,ACC000187,
+CASE000688,Defective Product — Case 688,Closed,High,Defective Product,,CON000688
+CASE000689,Defective Product — Case 689,New,,Defective Product,ACC000189,
+CASE000690,Defective Product — Case 690,Working,Low,Defective Product,ACC000190,CON000690
+CASE000691,Defective Product — Case 691,Escalated,,Defective Product,,
+CASE000692,Defective Product — Case 692,Closed,Medium,Defective Product,ACC000192,CON000692
+CASE000693,Defective Product — Case 693,New,,Defective Product,ACC000193,
+CASE000694,Defective Product — Case 694,Working,High,Defective Product,,CON000694
+CASE000695,Defective Product — Case 695,Escalated,,Defective Product,ACC000195,
+CASE000696,Defective Product — Case 696,Closed,Low,Defective Product,ACC000196,CON000696
+CASE000697,Defective Product — Case 697,New,,Defective Product,,
+CASE000698,Defective Product — Case 698,Working,Medium,Defective Product,ACC000198,CON000698
+CASE000699,Defective Product — Case 699,Escalated,,Defective Product,ACC000199,
+CASE000700,Defective Product — Case 700,Closed,High,Defective Product,,CON000700
+CASE000701,Defective Product — Case 701,New,,Defective Product,ACC000201,
+CASE000702,Defective Product — Case 702,Working,Low,Defective Product,ACC000202,CON000702
+CASE000703,Defective Product — Case 703,Escalated,,Defective Product,,
+CASE000704,Defective Product — Case 704,Closed,Medium,Defective Product,ACC000204,CON000704
+CASE000705,Defective Product — Case 705,New,,Defective Product,ACC000205,
+CASE000706,Defective Product — Case 706,Working,High,Defective Product,,CON000706
+CASE000707,Defective Product — Case 707,Escalated,,Defective Product,ACC000207,
+CASE000708,Defective Product — Case 708,Closed,Low,Defective Product,ACC000208,CON000708
+CASE000709,Defective Product — Case 709,New,,Defective Product,,
+CASE000710,Defective Product — Case 710,Working,Medium,Defective Product,ACC000210,CON000710
+CASE000711,Defective Product — Case 711,Escalated,,Defective Product,ACC000211,
+CASE000712,Defective Product — Case 712,Closed,High,Defective Product,,CON000712
+CASE000713,Defective Product — Case 713,New,,Defective Product,ACC000213,
+CASE000714,Defective Product — Case 714,Working,Low,Defective Product,ACC000214,CON000714
+CASE000715,Defective Product — Case 715,Escalated,,Defective Product,,
+CASE000716,Defective Product — Case 716,Closed,Medium,Defective Product,ACC000216,CON000716
+CASE000717,Defective Product — Case 717,New,,Defective Product,ACC000217,
+CASE000718,Defective Product — Case 718,Working,High,Defective Product,,CON000718
+CASE000719,Defective Product — Case 719,Escalated,,Defective Product,ACC000219,
+CASE000720,Defective Product — Case 720,Closed,Low,Defective Product,ACC000220,CON000720
+CASE000721,Defective Product — Case 721,New,,Defective Product,,
+CASE000722,Defective Product — Case 722,Working,Medium,Defective Product,ACC000222,CON000722
+CASE000723,Defective Product — Case 723,Escalated,,Defective Product,ACC000223,
+CASE000724,Defective Product — Case 724,Closed,High,Defective Product,,CON000724
+CASE000725,Defective Product — Case 725,New,,Defective Product,ACC000225,
+CASE000726,Defective Product — Case 726,Working,Low,Defective Product,ACC000226,CON000726
+CASE000727,Defective Product — Case 727,Escalated,,Defective Product,,
+CASE000728,Defective Product — Case 728,Closed,Medium,Defective Product,ACC000228,CON000728
+CASE000729,Defective Product — Case 729,New,,Defective Product,ACC000229,
+CASE000730,Defective Product — Case 730,Working,High,Defective Product,,CON000730
+CASE000731,Defective Product — Case 731,Escalated,,Defective Product,ACC000231,
+CASE000732,Defective Product — Case 732,Closed,Low,Defective Product,ACC000232,CON000732
+CASE000733,Defective Product — Case 733,New,,Defective Product,,
+CASE000734,Defective Product — Case 734,Working,Medium,Defective Product,ACC000234,CON000734
+CASE000735,Defective Product — Case 735,Escalated,,Defective Product,ACC000235,
+CASE000736,Defective Product — Case 736,Closed,High,Defective Product,,CON000736
+CASE000737,Defective Product — Case 737,New,,Defective Product,ACC000237,
+CASE000738,Defective Product — Case 738,Working,Low,Defective Product,ACC000238,CON000738
+CASE000739,Defective Product — Case 739,Escalated,,Defective Product,,
+CASE000740,Defective Product — Case 740,Closed,Medium,Defective Product,ACC000240,CON000740
+CASE000741,Defective Product — Case 741,New,,Defective Product,ACC000241,
+CASE000742,Defective Product — Case 742,Working,High,Defective Product,,CON000742
+CASE000743,Invoice Dispute — Case 743,Escalated,,Invoice Dispute,ACC000243,
+CASE000744,Invoice Dispute — Case 744,Closed,Low,Invoice Dispute,ACC000244,CON000744
+CASE000745,Invoice Dispute — Case 745,New,,Invoice Dispute,,
+CASE000746,Invoice Dispute — Case 746,Working,Medium,Invoice Dispute,ACC000246,CON000746
+CASE000747,Invoice Dispute — Case 747,Escalated,,Invoice Dispute,ACC000247,
+CASE000748,Invoice Dispute — Case 748,Closed,High,Invoice Dispute,,CON000748
+CASE000749,Invoice Dispute — Case 749,New,,Invoice Dispute,ACC000249,
+CASE000750,Invoice Dispute — Case 750,Working,Low,Invoice Dispute,ACC000250,CON000750
+CASE000751,Invoice Dispute — Case 751,Escalated,,Invoice Dispute,,
+CASE000752,Invoice Dispute — Case 752,Closed,Medium,Invoice Dispute,ACC000252,CON000752
+CASE000753,Invoice Dispute — Case 753,New,,Invoice Dispute,ACC000253,
+CASE000754,Invoice Dispute — Case 754,Working,High,Invoice Dispute,,CON000754
+CASE000755,Invoice Dispute — Case 755,Escalated,,Invoice Dispute,ACC000255,
+CASE000756,Invoice Dispute — Case 756,Closed,Low,Invoice Dispute,ACC000256,CON000756
+CASE000757,Invoice Dispute — Case 757,New,,Invoice Dispute,,
+CASE000758,Invoice Dispute — Case 758,Working,Medium,Invoice Dispute,ACC000258,CON000758
+CASE000759,Invoice Dispute — Case 759,Escalated,,Invoice Dispute,ACC000259,
+CASE000760,Invoice Dispute — Case 760,Closed,High,Invoice Dispute,,CON000760
+CASE000761,General enquiry — Case 761,New,,,ACC000261,
+CASE000762,General enquiry — Case 762,Working,Low,,ACC000262,CON000762
+CASE000763,General enquiry — Case 763,Escalated,,,,
+CASE000764,General enquiry — Case 764,Closed,Medium,,ACC000264,CON000764
+CASE000765,General enquiry — Case 765,New,,,ACC000265,
+CASE000766,General enquiry — Case 766,Working,High,,,CON000766
+CASE000767,General enquiry — Case 767,Escalated,,,ACC000267,
+CASE000768,General enquiry — Case 768,Closed,Low,,ACC000268,CON000768
+CASE000769,General enquiry — Case 769,New,,,,
+CASE000770,General enquiry — Case 770,Working,Medium,,ACC000270,CON000770
+CASE000771,General enquiry — Case 771,Escalated,,,ACC000271,
+CASE000772,General enquiry — Case 772,Closed,High,,,CON000772
+CASE000773,General enquiry — Case 773,New,,,ACC000273,
+CASE000774,General enquiry — Case 774,Working,Low,,ACC000274,CON000774
+CASE000775,General enquiry — Case 775,Escalated,,,,
+CASE000776,General enquiry — Case 776,Closed,Medium,,ACC000276,CON000776
+CASE000777,General enquiry — Case 777,New,,,ACC000277,
+CASE000778,General enquiry — Case 778,Working,High,,,CON000778
+CASE000779,General enquiry — Case 779,Escalated,,,ACC000279,
+CASE000780,General enquiry — Case 780,Closed,Low,,ACC000280,CON000780
+CASE000781,General enquiry — Case 781,New,,,,
+CASE000782,General enquiry — Case 782,Working,Medium,,ACC000282,CON000782
+CASE000783,General enquiry — Case 783,Escalated,,,ACC000283,
+CASE000784,General enquiry — Case 784,Closed,High,,,CON000784
+CASE000785,General enquiry — Case 785,New,,,ACC000285,
+CASE000786,General enquiry — Case 786,Working,Low,,ACC000286,CON000786
+CASE000787,General enquiry — Case 787,Escalated,,,,
+CASE000788,General enquiry — Case 788,Closed,Medium,,ACC000288,CON000788
+CASE000789,General enquiry — Case 789,New,,,ACC000289,
+CASE000790,General enquiry — Case 790,Working,High,,,CON000790
+CASE000791,General enquiry — Case 791,Escalated,,,ACC000291,
+CASE000792,General enquiry — Case 792,Closed,Low,,ACC000292,CON000792
+CASE000793,General enquiry — Case 793,New,,,,
+CASE000794,General enquiry — Case 794,Working,Medium,,ACC000294,CON000794
+CASE000795,General enquiry — Case 795,Escalated,,,ACC000295,
+CASE000796,General enquiry — Case 796,Closed,High,,,CON000796
+CASE000797,General enquiry — Case 797,New,,,ACC000297,
+CASE000798,General enquiry — Case 798,Working,Low,,ACC000298,CON000798
+CASE000799,General enquiry — Case 799,Escalated,,,,
+CASE000800,General enquiry — Case 800,Closed,Medium,,ACC000300,CON000800
+CASE000801,General enquiry — Case 801,New,,,ACC000301,
+CASE000802,General enquiry — Case 802,Working,High,,,CON000802
+CASE000803,General enquiry — Case 803,Escalated,,,ACC000303,
+CASE000804,General enquiry — Case 804,Closed,Low,,ACC000304,CON000804
+CASE000805,General enquiry — Case 805,New,,,,
+CASE000806,General enquiry — Case 806,Working,Medium,,ACC000306,CON000806
+CASE000807,General enquiry — Case 807,Escalated,,,ACC000307,
+CASE000808,General enquiry — Case 808,Closed,High,,,CON000808
+CASE000809,General enquiry — Case 809,New,,,ACC000309,
+CASE000810,General enquiry — Case 810,Working,Low,,ACC000310,CON000810
+CASE000811,General enquiry — Case 811,Escalated,,,,
+CASE000812,General enquiry — Case 812,Closed,Medium,,ACC000312,CON000812
+CASE000813,General enquiry — Case 813,New,,,ACC000313,
+CASE000814,General enquiry — Case 814,Working,High,,,CON000814
+CASE000815,General enquiry — Case 815,Escalated,,,ACC000315,
+CASE000816,General enquiry — Case 816,Closed,Low,,ACC000316,CON000816
+CASE000817,General enquiry — Case 817,New,,,,
+CASE000818,General enquiry — Case 818,Working,Medium,,ACC000318,CON000818
+CASE000819,General enquiry — Case 819,Escalated,,,ACC000319,
+CASE000820,General enquiry — Case 820,Closed,High,,,CON000820
+CASE000821,General enquiry — Case 821,New,,,ACC000321,
+CASE000822,General enquiry — Case 822,Working,Low,,ACC000322,CON000822
+CASE000823,General enquiry — Case 823,Escalated,,,,
+CASE000824,General enquiry — Case 824,Closed,Medium,,ACC000324,CON000824
+CASE000825,General enquiry — Case 825,New,,,ACC000325,
+CASE000826,General enquiry — Case 826,Working,High,,,CON000826
+CASE000827,General enquiry — Case 827,Escalated,,,ACC000327,
+CASE000828,General enquiry — Case 828,Closed,Low,,ACC000328,CON000828
+CASE000829,General enquiry — Case 829,New,,,,
+CASE000830,General enquiry — Case 830,Working,Medium,,ACC000330,CON000830
+CASE000831,General enquiry — Case 831,Escalated,,,ACC000331,
+CASE000832,General enquiry — Case 832,Closed,High,,,CON000832
+CASE000833,General enquiry — Case 833,New,,,ACC000333,
+CASE000834,General enquiry — Case 834,Working,Low,,ACC000334,CON000834
+CASE000835,General enquiry — Case 835,Escalated,,,,
+CASE000836,General enquiry — Case 836,Closed,Medium,,ACC000336,CON000836
+CASE000837,General enquiry — Case 837,New,,,ACC000337,
+CASE000838,General enquiry — Case 838,Working,High,,,CON000838
+CASE000839,General enquiry — Case 839,Escalated,,,ACC000339,
+CASE000840,General enquiry — Case 840,Closed,Low,,ACC000340,CON000840
+CASE000841,General enquiry — Case 841,New,,,,
+CASE000842,General enquiry — Case 842,Working,Medium,,ACC000342,CON000842
+CASE000843,General enquiry — Case 843,Escalated,,,ACC000343,
+CASE000844,General enquiry — Case 844,Closed,High,,,CON000844
+CASE000845,General enquiry — Case 845,New,,,ACC000345,
+CASE000846,General enquiry — Case 846,Working,Low,,ACC000346,CON000846
+CASE000847,General enquiry — Case 847,Escalated,,,,
+CASE000848,General enquiry — Case 848,Closed,Medium,,ACC000348,CON000848
+CASE000849,General enquiry — Case 849,New,,,ACC000349,
+CASE000850,General enquiry — Case 850,Working,High,,,CON000850
+CASE000851,General enquiry — Case 851,Escalated,,,ACC000351,
+CASE000852,General enquiry — Case 852,Closed,Low,,ACC000352,CON000852
+CASE000853,General enquiry — Case 853,New,,,,
+CASE000854,General enquiry — Case 854,Working,Medium,,ACC000354,CON000854
+CASE000855,General enquiry — Case 855,Escalated,,,ACC000355,
+CASE000856,General enquiry — Case 856,Closed,High,,,CON000856
+CASE000857,General enquiry — Case 857,New,,,ACC000357,
+CASE000858,General enquiry — Case 858,Working,Low,,ACC000358,CON000858
+CASE000859,General enquiry — Case 859,Escalated,,,,
+CASE000860,General enquiry — Case 860,Closed,Medium,,ACC000360,CON000860
+CASE000861,General enquiry — Case 861,New,,,ACC000361,
+CASE000862,General enquiry — Case 862,Working,High,,,CON000862
+CASE000863,General enquiry — Case 863,Escalated,,,ACC000363,
+CASE000864,General enquiry — Case 864,Closed,Low,,ACC000364,CON000864
+CASE000865,General enquiry — Case 865,New,,,,
+CASE000866,General enquiry — Case 866,Working,Medium,,ACC000366,CON000866
+CASE000867,General enquiry — Case 867,Escalated,,,ACC000367,
+CASE000868,General enquiry — Case 868,Closed,High,,,CON000868
+CASE000869,General enquiry — Case 869,New,,,ACC000369,
+CASE000870,General enquiry — Case 870,Working,Low,,ACC000370,CON000870
+CASE000871,General enquiry — Case 871,Escalated,,,,
+CASE000872,General enquiry — Case 872,Closed,Medium,,ACC000372,CON000872
+CASE000873,General enquiry — Case 873,New,,,ACC000373,
+CASE000874,General enquiry — Case 874,Working,High,,,CON000874
+CASE000875,General enquiry — Case 875,Escalated,,,ACC000375,
+CASE000876,General enquiry — Case 876,Closed,Low,,ACC000376,CON000876
+CASE000877,General enquiry — Case 877,New,,,,
+CASE000878,General enquiry — Case 878,Working,Medium,,ACC000378,CON000878
+CASE000879,General enquiry — Case 879,Escalated,,,ACC000379,
+CASE000880,General enquiry — Case 880,Closed,High,,,CON000880
+CASE000881,General enquiry — Case 881,New,,,ACC000381,
+CASE000882,General enquiry — Case 882,Working,Low,,ACC000382,CON000882
+CASE000883,General enquiry — Case 883,Escalated,,,,
+CASE000884,General enquiry — Case 884,Closed,Medium,,ACC000384,CON000884
+CASE000885,General enquiry — Case 885,New,,,ACC000385,
+CASE000886,General enquiry — Case 886,Working,High,,,CON000886
+CASE000887,General enquiry — Case 887,Escalated,,,ACC000387,
+CASE000888,General enquiry — Case 888,Closed,Low,,ACC000388,CON000888
+CASE000889,General enquiry — Case 889,New,,,,
+CASE000890,General enquiry — Case 890,Working,Medium,,ACC000390,CON000890
+CASE000891,General enquiry — Case 891,Escalated,,,ACC000391,
+CASE000892,General enquiry — Case 892,Closed,High,,,CON000892
+CASE000893,General enquiry — Case 893,New,,,ACC000393,
+CASE000894,General enquiry — Case 894,Working,Low,,ACC000394,CON000894
+CASE000895,General enquiry — Case 895,Escalated,,,,
+CASE000896,General enquiry — Case 896,Closed,Medium,,ACC000396,CON000896
+CASE000897,General enquiry — Case 897,New,,,ACC000397,
+CASE000898,General enquiry — Case 898,Working,High,,,CON000898
+CASE000899,General enquiry — Case 899,Escalated,,,ACC000399,
+CASE000900,General enquiry — Case 900,Closed,Low,,ACC000400,CON000900
+CASE000901,General enquiry — Case 901,New,,,,
+CASE000902,General enquiry — Case 902,Working,Medium,,ACC000402,CON000902
+CASE000903,General enquiry — Case 903,Escalated,,,ACC000403,
+CASE000904,General enquiry — Case 904,Closed,High,,,CON000904
+CASE000905,General enquiry — Case 905,New,,,ACC000405,
+CASE000906,General enquiry — Case 906,Working,Low,,ACC000406,CON000906
+CASE000907,General enquiry — Case 907,Escalated,,,,
+CASE000908,General enquiry — Case 908,Closed,Medium,,ACC000408,CON000908
+CASE000909,General enquiry — Case 909,New,,,ACC000409,
+CASE000910,General enquiry — Case 910,Working,High,,,CON000910
+CASE000911,General enquiry — Case 911,Escalated,,,ACC000411,
+CASE000912,General enquiry — Case 912,Closed,Low,,ACC000412,CON000912
+CASE000913,General enquiry — Case 913,New,,,,
+CASE000914,General enquiry — Case 914,Working,Medium,,ACC000414,CON000914
+CASE000915,General enquiry — Case 915,Escalated,,,ACC000415,
+CASE000916,General enquiry — Case 916,Closed,High,,,CON000916
+CASE000917,General enquiry — Case 917,New,,,ACC000417,
+CASE000918,General enquiry — Case 918,Working,Low,,ACC000418,CON000918
+CASE000919,General enquiry — Case 919,Escalated,,,,
+CASE000920,General enquiry — Case 920,Closed,Medium,,ACC000420,CON000920
+CASE000921,General enquiry — Case 921,New,,,ACC000421,
+CASE000922,General enquiry — Case 922,Working,High,,,CON000922
+CASE000923,General enquiry — Case 923,Escalated,,,ACC000423,
+CASE000924,General enquiry — Case 924,Closed,Low,,ACC000424,CON000924
+CASE000925,General enquiry — Case 925,New,,,,
+CASE000926,General enquiry — Case 926,Working,Medium,,ACC000426,CON000926
+CASE000927,General enquiry — Case 927,Escalated,,,ACC000427,
+CASE000928,General enquiry — Case 928,Closed,High,,,CON000928
+CASE000929,General enquiry — Case 929,New,,,ACC000429,
+CASE000930,General enquiry — Case 930,Working,Low,,ACC000430,CON000930
+CASE000931,General enquiry — Case 931,Escalated,,,,
+CASE000932,General enquiry — Case 932,Closed,Medium,,ACC000432,CON000932
+CASE000933,General enquiry — Case 933,New,,,ACC000433,
+CASE000934,General enquiry — Case 934,Working,High,,,CON000934
+CASE000935,General enquiry — Case 935,Escalated,,,ACC000435,
+CASE000936,General enquiry — Case 936,Closed,Low,,ACC000436,CON000936
+CASE000937,General enquiry — Case 937,New,,,,
+CASE000938,General enquiry — Case 938,Working,Medium,,ACC000438,CON000938
+CASE000939,General enquiry — Case 939,Escalated,,,ACC000439,
+CASE000940,General enquiry — Case 940,Closed,High,,,CON000940
+CASE000941,General enquiry — Case 941,New,,,ACC000441,
+CASE000942,General enquiry — Case 942,Working,Low,,ACC000442,CON000942
+CASE000943,General enquiry — Case 943,Escalated,,,,
+CASE000944,General enquiry — Case 944,Closed,Medium,,ACC000444,CON000944
+CASE000945,General enquiry — Case 945,New,,,ACC000445,
+CASE000946,General enquiry — Case 946,Working,High,,,CON000946
+CASE000947,General enquiry — Case 947,Escalated,,,ACC000447,
+CASE000948,General enquiry — Case 948,Closed,Low,,ACC000448,CON000948
+CASE000949,General enquiry — Case 949,New,,,,
+CASE000950,General enquiry — Case 950,Working,Medium,,ACC000450,CON000950
+CASE000951,General enquiry — Case 951,Escalated,,,ACC000451,
+CASE000952,General enquiry — Case 952,Closed,High,,,CON000952
+CASE000953,General enquiry — Case 953,New,,,ACC000453,
+CASE000954,General enquiry — Case 954,Working,Low,,ACC000454,CON000954
+CASE000955,General enquiry — Case 955,Escalated,,,,
+CASE000956,General enquiry — Case 956,Closed,Medium,,ACC000456,CON000956
+CASE000957,General enquiry — Case 957,New,,,ACC000457,
+CASE000958,General enquiry — Case 958,Working,High,,,CON000958
+CASE000959,General enquiry — Case 959,Escalated,,,ACC000459,
+CASE000960,General enquiry — Case 960,Closed,Low,,ACC000460,CON000960
+CASE000961,General enquiry — Case 961,New,,,,
+CASE000962,General enquiry — Case 962,Working,Medium,,ACC000462,CON000962
+CASE000963,General enquiry — Case 963,Escalated,,,ACC000463,
+CASE000964,General enquiry — Case 964,Closed,High,,,CON000964
+CASE000965,General enquiry — Case 965,New,,,ACC000465,
+CASE000966,General enquiry — Case 966,Working,Low,,ACC000466,CON000966
+CASE000967,General enquiry — Case 967,Escalated,,,,
+CASE000968,General enquiry — Case 968,Closed,Medium,,ACC000468,CON000968
+CASE000969,General enquiry — Case 969,New,,,ACC000469,
+CASE000970,General enquiry — Case 970,Working,High,,,CON000970
+CASE000971,General enquiry — Case 971,Escalated,,,ACC000471,
+CASE000972,General enquiry — Case 972,Closed,Low,,ACC000472,CON000972
+CASE000973,General enquiry — Case 973,New,,,,
+CASE000974,General enquiry — Case 974,Working,Medium,,ACC000474,CON000974
+CASE000975,General enquiry — Case 975,Escalated,,,ACC000475,
+CASE000976,General enquiry — Case 976,Closed,High,,,CON000976
+CASE000977,General enquiry — Case 977,New,,,ACC000477,
+CASE000978,General enquiry — Case 978,Working,Low,,ACC000478,CON000978
+CASE000979,General enquiry — Case 979,Escalated,,,,
+CASE000980,General enquiry — Case 980,Closed,Medium,,ACC000480,CON000980
+CASE000981,General enquiry — Case 981,New,,,ACC000481,
+CASE000982,General enquiry — Case 982,Working,High,,,CON000982
+CASE000983,General enquiry — Case 983,Escalated,,,ACC000483,
+CASE000984,General enquiry — Case 984,Closed,Low,,ACC000484,CON000984
+CASE000985,General enquiry — Case 985,New,,,,
+CASE000986,General enquiry — Case 986,Working,Medium,,ACC000486,CON000986
+CASE000987,General enquiry — Case 987,Escalated,,,ACC000487,
+CASE000988,General enquiry — Case 988,Closed,High,,,CON000988
+CASE000989,General enquiry — Case 989,New,,,ACC000489,
+CASE000990,General enquiry — Case 990,Working,Low,,ACC000490,CON000990
+CASE000991,General enquiry — Case 991,Escalated,,,,
+CASE000992,General enquiry — Case 992,Closed,Medium,,ACC000492,CON000992
+CASE000993,General enquiry — Case 993,New,,,ACC000493,
+CASE000994,General enquiry — Case 994,Working,High,,,CON000994
+CASE000995,General enquiry — Case 995,Escalated,,,ACC000495,
+CASE000996,General enquiry — Case 996,Closed,Low,,ACC000496,CON000996
+CASE000997,General enquiry — Case 997,New,,,,
+CASE000998,General enquiry — Case 998,Working,Medium,,ACC000498,CON000998
+CASE000999,General enquiry — Case 999,Escalated,,,ACC000499,
+CASE001000,General enquiry — Case 1000,Closed,High,,,CON001000
+CASE001001,General enquiry — Case 1001,New,,,ACC000001,
+CASE001002,General enquiry — Case 1002,Working,Low,,ACC000002,CON001002
+CASE001003,General enquiry — Case 1003,Escalated,,,,
+CASE001004,General enquiry — Case 1004,Closed,Medium,,ACC000004,CON001004
+CASE001005,General enquiry — Case 1005,New,,,ACC000005,
+CASE001006,General enquiry — Case 1006,Working,High,,,CON001006
+CASE001007,General enquiry — Case 1007,Escalated,,,ACC000007,
+CASE001008,General enquiry — Case 1008,Closed,Low,,ACC000008,CON001008
+CASE001009,General enquiry — Case 1009,New,,,,
+CASE001010,General enquiry — Case 1010,Working,Medium,,ACC000010,CON001010
+CASE001011,General enquiry — Case 1011,Escalated,,,ACC000011,
+CASE001012,General enquiry — Case 1012,Closed,High,,,CON001012
+CASE001013,General enquiry — Case 1013,New,,,ACC000013,
+CASE001014,General enquiry — Case 1014,Working,Low,,ACC000014,CON001014
+CASE001015,General enquiry — Case 1015,Escalated,,,,
+CASE001016,General enquiry — Case 1016,Closed,Medium,,ACC000016,CON001016
+CASE001017,General enquiry — Case 1017,New,,,ACC000017,
+CASE001018,General enquiry — Case 1018,Working,High,,,CON001018
+CASE001019,General enquiry — Case 1019,Escalated,,,ACC000019,
+CASE001020,General enquiry — Case 1020,Closed,Low,,ACC000020,CON001020
+CASE001021,General enquiry — Case 1021,New,,,,
+CASE001022,General enquiry — Case 1022,Working,Medium,,ACC000022,CON001022
+CASE001023,General enquiry — Case 1023,Escalated,,,ACC000023,
+CASE001024,General enquiry — Case 1024,Closed,High,,,CON001024
+CASE001025,General enquiry — Case 1025,New,,,ACC000025,
+CASE001026,General enquiry — Case 1026,Working,Low,,ACC000026,CON001026
+CASE001027,General enquiry — Case 1027,Escalated,,,,
+CASE001028,General enquiry — Case 1028,Closed,Medium,,ACC000028,CON001028
+CASE001029,General enquiry — Case 1029,New,,,ACC000029,
+CASE001030,General enquiry — Case 1030,Working,High,,,CON001030
+CASE001031,General enquiry — Case 1031,Escalated,,,ACC000031,
+CASE001032,General enquiry — Case 1032,Closed,Low,,ACC000032,CON001032
+CASE001033,General enquiry — Case 1033,New,,,,
+CASE001034,General enquiry — Case 1034,Working,Medium,,ACC000034,CON001034
+CASE001035,General enquiry — Case 1035,Escalated,,,ACC000035,
+CASE001036,General enquiry — Case 1036,Closed,High,,,CON001036
+CASE001037,General enquiry — Case 1037,New,,,ACC000037,
+CASE001038,General enquiry — Case 1038,Working,Low,,ACC000038,CON001038
+CASE001039,General enquiry — Case 1039,Escalated,,,,
+CASE001040,General enquiry — Case 1040,Closed,Medium,,ACC000040,CON001040
+CASE001041,General enquiry — Case 1041,New,,,ACC000041,
+CASE001042,General enquiry — Case 1042,Working,High,,,CON001042
+CASE001043,General enquiry — Case 1043,Escalated,,,ACC000043,
+CASE001044,General enquiry — Case 1044,Closed,Low,,ACC000044,CON001044
+CASE001045,General enquiry — Case 1045,New,,,,
+CASE001046,General enquiry — Case 1046,Working,Medium,,ACC000046,CON001046
+CASE001047,General enquiry — Case 1047,Escalated,,,ACC000047,
+CASE001048,General enquiry — Case 1048,Closed,High,,,CON001048
+CASE001049,General enquiry — Case 1049,New,,,ACC000049,
+CASE001050,General enquiry — Case 1050,Working,Low,,ACC000050,CON001050
+CASE001051,General enquiry — Case 1051,Escalated,,,,
+CASE001052,General enquiry — Case 1052,Closed,Medium,,ACC000052,CON001052
+CASE001053,General enquiry — Case 1053,New,,,ACC000053,
+CASE001054,General enquiry — Case 1054,Working,High,,,CON001054
+CASE001055,General enquiry — Case 1055,Escalated,,,ACC000055,
+CASE001056,General enquiry — Case 1056,Closed,Low,,ACC000056,CON001056
+CASE001057,General enquiry — Case 1057,New,,,,
+CASE001058,General enquiry — Case 1058,Working,Medium,,ACC000058,CON001058
+CASE001059,General enquiry — Case 1059,Escalated,,,ACC000059,
+CASE001060,General enquiry — Case 1060,Closed,High,,,CON001060
+CASE001061,General enquiry — Case 1061,New,,,ACC000061,
+CASE001062,General enquiry — Case 1062,Working,Low,,ACC000062,CON001062
+CASE001063,General enquiry — Case 1063,Escalated,,,,
+CASE001064,General enquiry — Case 1064,Closed,Medium,,ACC000064,CON001064
+CASE001065,General enquiry — Case 1065,New,,,ACC000065,
+CASE001066,General enquiry — Case 1066,Working,High,,,CON001066
+CASE001067,General enquiry — Case 1067,Escalated,,,ACC000067,
+CASE001068,General enquiry — Case 1068,Closed,Low,,ACC000068,CON001068
+CASE001069,General enquiry — Case 1069,New,,,,
+CASE001070,General enquiry — Case 1070,Working,Medium,,ACC000070,CON001070
+CASE001071,General enquiry — Case 1071,Escalated,,,ACC000071,
+CASE001072,General enquiry — Case 1072,Closed,High,,,CON001072
+CASE001073,General enquiry — Case 1073,New,,,ACC000073,
+CASE001074,General enquiry — Case 1074,Working,Low,,ACC000074,CON001074
+CASE001075,General enquiry — Case 1075,Escalated,,,,
+CASE001076,General enquiry — Case 1076,Closed,Medium,,ACC000076,CON001076
+CASE001077,General enquiry — Case 1077,New,,,ACC000077,
+CASE001078,General enquiry — Case 1078,Working,High,,,CON001078
+CASE001079,General enquiry — Case 1079,Escalated,,,ACC000079,
+CASE001080,General enquiry — Case 1080,Closed,Low,,ACC000080,CON001080
+CASE001081,General enquiry — Case 1081,New,,,,
+CASE001082,General enquiry — Case 1082,Working,Medium,,ACC000082,CON001082
+CASE001083,General enquiry — Case 1083,Escalated,,,ACC000083,
+CASE001084,General enquiry — Case 1084,Closed,High,,,CON001084
+CASE001085,General enquiry — Case 1085,New,,,ACC000085,
+CASE001086,General enquiry — Case 1086,Working,Low,,ACC000086,CON001086
+CASE001087,General enquiry — Case 1087,Escalated,,,,
+CASE001088,General enquiry — Case 1088,Closed,Medium,,ACC000088,CON001088
+CASE001089,General enquiry — Case 1089,New,,,ACC000089,
+CASE001090,General enquiry — Case 1090,Working,High,,,CON001090
+CASE001091,General enquiry — Case 1091,Escalated,,,ACC000091,
+CASE001092,General enquiry — Case 1092,Closed,Low,,ACC000092,CON001092
+CASE001093,General enquiry — Case 1093,New,,,,
+CASE001094,General enquiry — Case 1094,Working,Medium,,ACC000094,CON001094
+CASE001095,General enquiry — Case 1095,Escalated,,,ACC000095,
+CASE001096,General enquiry — Case 1096,Closed,High,,,CON001096
+CASE001097,General enquiry — Case 1097,New,,,ACC000097,
+CASE001098,General enquiry — Case 1098,Working,Low,,ACC000098,CON001098
+CASE001099,General enquiry — Case 1099,Escalated,,,,
+CASE001100,General enquiry — Case 1100,Closed,Medium,,ACC000100,CON001100
+CASE001101,General enquiry — Case 1101,New,,,ACC000101,
+CASE001102,General enquiry — Case 1102,Working,High,,,CON001102
+CASE001103,General enquiry — Case 1103,Escalated,,,ACC000103,
+CASE001104,General enquiry — Case 1104,Closed,Low,,ACC000104,CON001104
+CASE001105,General enquiry — Case 1105,New,,,,
+CASE001106,General enquiry — Case 1106,Working,Medium,,ACC000106,CON001106
+CASE001107,General enquiry — Case 1107,Escalated,,,ACC000107,
+CASE001108,General enquiry — Case 1108,Closed,High,,,CON001108
+CASE001109,General enquiry — Case 1109,New,,,ACC000109,
+CASE001110,General enquiry — Case 1110,Working,Low,,ACC000110,CON001110
+CASE001111,General enquiry — Case 1111,Escalated,,,,
+CASE001112,General enquiry — Case 1112,Closed,Medium,,ACC000112,CON001112
+CASE001113,General enquiry — Case 1113,New,,,ACC000113,
+CASE001114,General enquiry — Case 1114,Working,High,,,CON001114
+CASE001115,General enquiry — Case 1115,Escalated,,,ACC000115,
+CASE001116,General enquiry — Case 1116,Closed,Low,,ACC000116,CON001116
+CASE001117,General enquiry — Case 1117,New,,,,
+CASE001118,General enquiry — Case 1118,Working,Medium,,ACC000118,CON001118
+CASE001119,General enquiry — Case 1119,Escalated,,,ACC000119,
+CASE001120,General enquiry — Case 1120,Closed,High,,,CON001120
+CASE001121,General enquiry — Case 1121,New,,,ACC000121,
+CASE001122,General enquiry — Case 1122,Working,Low,,ACC000122,CON001122
+CASE001123,General enquiry — Case 1123,Escalated,,,,
+CASE001124,General enquiry — Case 1124,Closed,Medium,,ACC000124,CON001124
+CASE001125,General enquiry — Case 1125,New,,,ACC000125,
+CASE001126,General enquiry — Case 1126,Working,High,,,CON001126
+CASE001127,General enquiry — Case 1127,Escalated,,,ACC000127,
+CASE001128,General enquiry — Case 1128,Closed,Low,,ACC000128,CON001128
+CASE001129,General enquiry — Case 1129,New,,,,
+CASE001130,General enquiry — Case 1130,Working,Medium,,ACC000130,CON001130
+CASE001131,General enquiry — Case 1131,Escalated,,,ACC000131,
+CASE001132,General enquiry — Case 1132,Closed,High,,,CON001132
+CASE001133,General enquiry — Case 1133,New,,,ACC000133,
+CASE001134,General enquiry — Case 1134,Working,Low,,ACC000134,CON001134
+CASE001135,General enquiry — Case 1135,Escalated,,,,
+CASE001136,General enquiry — Case 1136,Closed,Medium,,ACC000136,CON001136
+CASE001137,General enquiry — Case 1137,New,,,ACC000137,
+CASE001138,General enquiry — Case 1138,Working,High,,,CON001138
+CASE001139,General enquiry — Case 1139,Escalated,,,ACC000139,
+CASE001140,General enquiry — Case 1140,Closed,Low,,ACC000140,CON001140
+CASE001141,General enquiry — Case 1141,New,,,,
+CASE001142,General enquiry — Case 1142,Working,Medium,,ACC000142,CON001142
+CASE001143,General enquiry — Case 1143,Escalated,,,ACC000143,
+CASE001144,General enquiry — Case 1144,Closed,High,,,CON001144
+CASE001145,General enquiry — Case 1145,New,,,ACC000145,
+CASE001146,General enquiry — Case 1146,Working,Low,,ACC000146,CON001146
+CASE001147,General enquiry — Case 1147,Escalated,,,,
+CASE001148,General enquiry — Case 1148,Closed,Medium,,ACC000148,CON001148
+CASE001149,General enquiry — Case 1149,New,,,ACC000149,
+CASE001150,General enquiry — Case 1150,Working,High,,,CON001150
+CASE001151,General enquiry — Case 1151,Escalated,,,ACC000151,
+CASE001152,General enquiry — Case 1152,Closed,Low,,ACC000152,CON001152
+CASE001153,General enquiry — Case 1153,New,,,,
+CASE001154,General enquiry — Case 1154,Working,Medium,,ACC000154,CON001154
+CASE001155,General enquiry — Case 1155,Escalated,,,ACC000155,
+CASE001156,General enquiry — Case 1156,Closed,High,,,CON001156
+CASE001157,General enquiry — Case 1157,New,,,ACC000157,
+CASE001158,General enquiry — Case 1158,Working,Low,,ACC000158,CON001158
+CASE001159,General enquiry — Case 1159,Escalated,,,,
+CASE001160,General enquiry — Case 1160,Closed,Medium,,ACC000160,CON001160
+CASE001161,General enquiry — Case 1161,New,,,ACC000161,
+CASE001162,General enquiry — Case 1162,Working,High,,,CON001162
+CASE001163,General enquiry — Case 1163,Escalated,,,ACC000163,
+CASE001164,General enquiry — Case 1164,Closed,Low,,ACC000164,CON001164
+CASE001165,General enquiry — Case 1165,New,,,,
+CASE001166,General enquiry — Case 1166,Working,Medium,,ACC000166,CON001166
+CASE001167,General enquiry — Case 1167,Escalated,,,ACC000167,
+CASE001168,General enquiry — Case 1168,Closed,High,,,CON001168
+CASE001169,General enquiry — Case 1169,New,,,ACC000169,
+CASE001170,General enquiry — Case 1170,Working,Low,,ACC000170,CON001170
+CASE001171,General enquiry — Case 1171,Escalated,,,,
+CASE001172,General enquiry — Case 1172,Closed,Medium,,ACC000172,CON001172
+CASE001173,General enquiry — Case 1173,New,,,ACC000173,
+CASE001174,General enquiry — Case 1174,Working,High,,,CON001174
+CASE001175,General enquiry — Case 1175,Escalated,,,ACC000175,
+CASE001176,General enquiry — Case 1176,Closed,Low,,ACC000176,CON001176
+CASE001177,General enquiry — Case 1177,New,,,,
+CASE001178,General enquiry — Case 1178,Working,Medium,,ACC000178,CON001178
+CASE001179,General enquiry — Case 1179,Escalated,,,ACC000179,
+CASE001180,General enquiry — Case 1180,Closed,High,,,CON001180
+CASE001181,General enquiry — Case 1181,New,,,ACC000181,
+CASE001182,General enquiry — Case 1182,Working,Low,,ACC000182,CON001182
+CASE001183,General enquiry — Case 1183,Escalated,,,,
+CASE001184,General enquiry — Case 1184,Closed,Medium,,ACC000184,CON001184
+CASE001185,General enquiry — Case 1185,New,,,ACC000185,
+CASE001186,General enquiry — Case 1186,Working,High,,,CON001186
+CASE001187,General enquiry — Case 1187,Escalated,,,ACC000187,
+CASE001188,General enquiry — Case 1188,Closed,Low,,ACC000188,CON001188
+CASE001189,General enquiry — Case 1189,New,,,,
+CASE001190,General enquiry — Case 1190,Working,Medium,,ACC000190,CON001190
+CASE001191,General enquiry — Case 1191,Escalated,,,ACC000191,
+CASE001192,General enquiry — Case 1192,Closed,High,,,CON001192
+CASE001193,General enquiry — Case 1193,New,,,ACC000193,
+CASE001194,General enquiry — Case 1194,Working,Low,,ACC000194,CON001194
+CASE001195,General enquiry — Case 1195,Escalated,,,,
+CASE001196,General enquiry — Case 1196,Closed,Medium,,ACC000196,CON001196
+CASE001197,General enquiry — Case 1197,New,,,ACC000197,
+CASE001198,General enquiry — Case 1198,Working,High,,,CON001198
+CASE001199,General enquiry — Case 1199,Escalated,,,ACC000199,
+CASE001200,General enquiry — Case 1200,Closed,Low,,ACC000200,CON001200
+CASE001201,General enquiry — Case 1201,New,,,,
+CASE001202,General enquiry — Case 1202,Working,Medium,,ACC000202,CON001202
+CASE001203,General enquiry — Case 1203,Escalated,,,ACC000203,
+CASE001204,General enquiry — Case 1204,Closed,High,,,CON001204
+CASE001205,General enquiry — Case 1205,New,,,ACC000205,
+CASE001206,General enquiry — Case 1206,Working,Low,,ACC000206,CON001206
+CASE001207,General enquiry — Case 1207,Escalated,,,,
+CASE001208,General enquiry — Case 1208,Closed,Medium,,ACC000208,CON001208
+CASE001209,General enquiry — Case 1209,New,,,ACC000209,
+CASE001210,General enquiry — Case 1210,Working,High,,,CON001210
+CASE001211,General enquiry — Case 1211,Escalated,,,ACC000211,
+CASE001212,General enquiry — Case 1212,Closed,Low,,ACC000212,CON001212
+CASE001213,General enquiry — Case 1213,New,,,,
+CASE001214,General enquiry — Case 1214,Working,Medium,,ACC000214,CON001214
+CASE001215,General enquiry — Case 1215,Escalated,,,ACC000215,
+CASE001216,General enquiry — Case 1216,Closed,High,,,CON001216
+CASE001217,General enquiry — Case 1217,New,,,ACC000217,
+CASE001218,General enquiry — Case 1218,Working,Low,,ACC000218,CON001218
+CASE001219,General enquiry — Case 1219,Escalated,,,,
+CASE001220,General enquiry — Case 1220,Closed,Medium,,ACC000220,CON001220
+CASE001221,General enquiry — Case 1221,New,,,ACC000221,
+CASE001222,General enquiry — Case 1222,Working,High,,,CON001222
+CASE001223,General enquiry — Case 1223,Escalated,,,ACC000223,
+CASE001224,General enquiry — Case 1224,Closed,Low,,ACC000224,CON001224
+CASE001225,General enquiry — Case 1225,New,,,,
+CASE001226,General enquiry — Case 1226,Working,Medium,,ACC000226,CON001226
+CASE001227,General enquiry — Case 1227,Escalated,,,ACC000227,
+CASE001228,General enquiry — Case 1228,Closed,High,,,CON001228
+CASE001229,General enquiry — Case 1229,New,,,ACC000229,
+CASE001230,General enquiry — Case 1230,Working,Low,,ACC000230,CON001230
+CASE001231,General enquiry — Case 1231,Escalated,,,,
+CASE001232,General enquiry — Case 1232,Closed,Medium,,ACC000232,CON001232
+CASE001233,General enquiry — Case 1233,New,,,ACC000233,
+CASE001234,General enquiry — Case 1234,Working,High,,,CON001234
+CASE001235,General enquiry — Case 1235,Escalated,,,ACC000235,
+CASE001236,General enquiry — Case 1236,Closed,Low,,ACC000236,CON001236
+CASE001237,General enquiry — Case 1237,New,,,,
+CASE001238,General enquiry — Case 1238,Working,Medium,,ACC000238,CON001238
+CASE001239,General enquiry — Case 1239,Escalated,,,ACC000239,
+CASE001240,General enquiry — Case 1240,Closed,High,,,CON001240
+CASE001241,General enquiry — Case 1241,New,,,ACC000241,
+CASE001242,General enquiry — Case 1242,Working,Low,,ACC000242,CON001242
+CASE001243,General enquiry — Case 1243,Escalated,,,,
+CASE001244,General enquiry — Case 1244,Closed,Medium,,ACC000244,CON001244
+CASE001245,General enquiry — Case 1245,New,,,ACC000245,
+CASE001246,General enquiry — Case 1246,Working,High,,,CON001246
+CASE001247,General enquiry — Case 1247,Escalated,,,ACC000247,
+CASE001248,General enquiry — Case 1248,Closed,Low,,ACC000248,CON001248
+CASE001249,General enquiry — Case 1249,New,,,,
+CASE001250,General enquiry — Case 1250,Working,Medium,,ACC000250,CON001250
+CASE001251,General enquiry — Case 1251,Escalated,,,ACC000251,
+CASE001252,General enquiry — Case 1252,Closed,High,,,CON001252
+CASE001253,General enquiry — Case 1253,New,,,ACC000253,
+CASE001254,General enquiry — Case 1254,Working,Low,,ACC000254,CON001254
+CASE001255,General enquiry — Case 1255,Escalated,,,,
+CASE001256,General enquiry — Case 1256,Closed,Medium,,ACC000256,CON001256
+CASE001257,General enquiry — Case 1257,New,,,ACC000257,
+CASE001258,General enquiry — Case 1258,Working,High,,,CON001258
+CASE001259,General enquiry — Case 1259,Escalated,,,ACC000259,
+CASE001260,General enquiry — Case 1260,Closed,Low,,ACC000260,CON001260
+CASE001261,General enquiry — Case 1261,New,,,,
+CASE001262,General enquiry — Case 1262,Working,Medium,,ACC000262,CON001262
+CASE001263,General enquiry — Case 1263,Escalated,,,ACC000263,
+CASE001264,General enquiry — Case 1264,Closed,High,,,CON001264
+CASE001265,General enquiry — Case 1265,New,,,ACC000265,
+CASE001266,General enquiry — Case 1266,Working,Low,,ACC000266,CON001266
+CASE001267,General enquiry — Case 1267,Escalated,,,,
+CASE001268,General enquiry — Case 1268,Closed,Medium,,ACC000268,CON001268
+CASE001269,General enquiry — Case 1269,New,,,ACC000269,
+CASE001270,General enquiry — Case 1270,Working,High,,,CON001270
+CASE001271,General enquiry — Case 1271,Escalated,,,ACC000271,
+CASE001272,General enquiry — Case 1272,Closed,Low,,ACC000272,CON001272
+CASE001273,General enquiry — Case 1273,New,,,,
+CASE001274,General enquiry — Case 1274,Working,Medium,,ACC000274,CON001274
+CASE001275,General enquiry — Case 1275,Escalated,,,ACC000275,
+CASE001276,General enquiry — Case 1276,Closed,High,,,CON001276
+CASE001277,General enquiry — Case 1277,New,,,ACC000277,
+CASE001278,General enquiry — Case 1278,Working,Low,,ACC000278,CON001278
+CASE001279,General enquiry — Case 1279,Escalated,,,,
+CASE001280,General enquiry — Case 1280,Closed,Medium,,ACC000280,CON001280
+CASE001281,General enquiry — Case 1281,New,,,ACC000281,
+CASE001282,General enquiry — Case 1282,Working,High,,,CON001282
+CASE001283,General enquiry — Case 1283,Escalated,,,ACC000283,
+CASE001284,General enquiry — Case 1284,Closed,Low,,ACC000284,CON001284
+CASE001285,General enquiry — Case 1285,New,,,,
+CASE001286,General enquiry — Case 1286,Working,Medium,,ACC000286,CON001286
+CASE001287,General enquiry — Case 1287,Escalated,,,ACC000287,
+CASE001288,General enquiry — Case 1288,Closed,High,,,CON001288
+CASE001289,General enquiry — Case 1289,New,,,ACC000289,
+CASE001290,General enquiry — Case 1290,Working,Low,,ACC000290,CON001290
+CASE001291,General enquiry — Case 1291,Escalated,,,,
+CASE001292,General enquiry — Case 1292,Closed,Medium,,ACC000292,CON001292
+CASE001293,General enquiry — Case 1293,New,,,ACC000293,
+CASE001294,General enquiry — Case 1294,Working,High,,,CON001294
+CASE001295,General enquiry — Case 1295,Escalated,,,ACC000295,
+CASE001296,General enquiry — Case 1296,Closed,Low,,ACC000296,CON001296
+CASE001297,General enquiry — Case 1297,New,,,,
+CASE001298,General enquiry — Case 1298,Working,Medium,,ACC000298,CON001298
+CASE001299,General enquiry — Case 1299,Escalated,,,ACC000299,
+CASE001300,General enquiry — Case 1300,Closed,High,,,CON001300
+CASE001301,General enquiry — Case 1301,New,,,ACC000301,
+CASE001302,General enquiry — Case 1302,Working,Low,,ACC000302,CON001302
+CASE001303,General enquiry — Case 1303,Escalated,,,,
+CASE001304,General enquiry — Case 1304,Closed,Medium,,ACC000304,CON001304
+CASE001305,General enquiry — Case 1305,New,,,ACC000305,
+CASE001306,General enquiry — Case 1306,Working,High,,,CON001306
+CASE001307,General enquiry — Case 1307,Escalated,,,ACC000307,
+CASE001308,General enquiry — Case 1308,Closed,Low,,ACC000308,CON001308
+CASE001309,General enquiry — Case 1309,New,,,,
+CASE001310,General enquiry — Case 1310,Working,Medium,,ACC000310,CON001310
+CASE001311,General enquiry — Case 1311,Escalated,,,ACC000311,
+CASE001312,General enquiry — Case 1312,Closed,High,,,CON001312
+CASE001313,General enquiry — Case 1313,New,,,ACC000313,
+CASE001314,General enquiry — Case 1314,Working,Low,,ACC000314,CON001314
+CASE001315,General enquiry — Case 1315,Escalated,,,,
+CASE001316,General enquiry — Case 1316,Closed,Medium,,ACC000316,CON001316
+CASE001317,General enquiry — Case 1317,New,,,ACC000317,
+CASE001318,General enquiry — Case 1318,Working,High,,,CON001318
+CASE001319,General enquiry — Case 1319,Escalated,,,ACC000319,
+CASE001320,General enquiry — Case 1320,Closed,Low,,ACC000320,CON001320
+CASE001321,General enquiry — Case 1321,New,,,,
+CASE001322,General enquiry — Case 1322,Working,Medium,,ACC000322,CON001322
+CASE001323,General enquiry — Case 1323,Escalated,,,ACC000323,
+CASE001324,General enquiry — Case 1324,Closed,High,,,CON001324
+CASE001325,General enquiry — Case 1325,New,,,ACC000325,
+CASE001326,General enquiry — Case 1326,Working,Low,,ACC000326,CON001326
+CASE001327,General enquiry — Case 1327,Escalated,,,,
+CASE001328,General enquiry — Case 1328,Closed,Medium,,ACC000328,CON001328
+CASE001329,General enquiry — Case 1329,New,,,ACC000329,
+CASE001330,General enquiry — Case 1330,Working,High,,,CON001330
+CASE001331,General enquiry — Case 1331,Escalated,,,ACC000331,
+CASE001332,General enquiry — Case 1332,Closed,Low,,ACC000332,CON001332
+CASE001333,General enquiry — Case 1333,New,,,,
+CASE001334,General enquiry — Case 1334,Working,Medium,,ACC000334,CON001334
+CASE001335,General enquiry — Case 1335,Escalated,,,ACC000335,
+CASE001336,General enquiry — Case 1336,Closed,High,,,CON001336
+CASE001337,General enquiry — Case 1337,New,,,ACC000337,
+CASE001338,General enquiry — Case 1338,Working,Low,,ACC000338,CON001338
+CASE001339,General enquiry — Case 1339,Escalated,,,,
+CASE001340,General enquiry — Case 1340,Closed,Medium,,ACC000340,CON001340
+CASE001341,General enquiry — Case 1341,New,,,ACC000341,
+CASE001342,General enquiry — Case 1342,Working,High,,,CON001342
+CASE001343,General enquiry — Case 1343,Escalated,,,ACC000343,
+CASE001344,General enquiry — Case 1344,Closed,Low,,ACC000344,CON001344
+CASE001345,General enquiry — Case 1345,New,,,,
+CASE001346,General enquiry — Case 1346,Working,Medium,,ACC000346,CON001346
+CASE001347,General enquiry — Case 1347,Escalated,,,ACC000347,
+CASE001348,General enquiry — Case 1348,Closed,High,,,CON001348
+CASE001349,General enquiry — Case 1349,New,,,ACC000349,
+CASE001350,General enquiry — Case 1350,Working,Low,,ACC000350,CON001350
+CASE001351,General enquiry — Case 1351,Escalated,,,,
+CASE001352,General enquiry — Case 1352,Closed,Medium,,ACC000352,CON001352
+CASE001353,General enquiry — Case 1353,New,,,ACC000353,
+CASE001354,General enquiry — Case 1354,Working,High,,,CON001354
+CASE001355,General enquiry — Case 1355,Escalated,,,ACC000355,
+CASE001356,General enquiry — Case 1356,Closed,Low,,ACC000356,CON001356
+CASE001357,General enquiry — Case 1357,New,,,,
+CASE001358,General enquiry — Case 1358,Working,Medium,,ACC000358,CON001358
+CASE001359,General enquiry — Case 1359,Escalated,,,ACC000359,
+CASE001360,General enquiry — Case 1360,Closed,High,,,CON001360
+CASE001361,General enquiry — Case 1361,New,,,ACC000361,
+CASE001362,General enquiry — Case 1362,Working,Low,,ACC000362,CON001362
+CASE001363,General enquiry — Case 1363,Escalated,,,,
+CASE001364,General enquiry — Case 1364,Closed,Medium,,ACC000364,CON001364
+CASE001365,General enquiry — Case 1365,New,,,ACC000365,
+CASE001366,General enquiry — Case 1366,Working,High,,,CON001366
+CASE001367,General enquiry — Case 1367,Escalated,,,ACC000367,
+CASE001368,General enquiry — Case 1368,Closed,Low,,ACC000368,CON001368
+CASE001369,General enquiry — Case 1369,New,,,,
+CASE001370,General enquiry — Case 1370,Working,Medium,,ACC000370,CON001370
+CASE001371,General enquiry — Case 1371,Escalated,,,ACC000371,
+CASE001372,General enquiry — Case 1372,Closed,High,,,CON001372
+CASE001373,General enquiry — Case 1373,New,,,ACC000373,
+CASE001374,General enquiry — Case 1374,Working,Low,,ACC000374,CON001374
+CASE001375,General enquiry — Case 1375,Escalated,,,,
+CASE001376,General enquiry — Case 1376,Closed,Medium,,ACC000376,CON001376
+CASE001377,General enquiry — Case 1377,New,,,ACC000377,
+CASE001378,General enquiry — Case 1378,Working,High,,,CON001378
+CASE001379,General enquiry — Case 1379,Escalated,,,ACC000379,
+CASE001380,General enquiry — Case 1380,Closed,Low,,ACC000380,CON001380
+CASE001381,General enquiry — Case 1381,New,,,,
+CASE001382,General enquiry — Case 1382,Working,Medium,,ACC000382,CON001382
+CASE001383,General enquiry — Case 1383,Escalated,,,ACC000383,
+CASE001384,General enquiry — Case 1384,Closed,High,,,CON001384
+CASE001385,General enquiry — Case 1385,New,,,ACC000385,
+CASE001386,General enquiry — Case 1386,Working,Low,,ACC000386,CON001386
+CASE001387,General enquiry — Case 1387,Escalated,,,,
+CASE001388,General enquiry — Case 1388,Closed,Medium,,ACC000388,CON001388
+CASE001389,General enquiry — Case 1389,New,,,ACC000389,
+CASE001390,General enquiry — Case 1390,Working,High,,,CON001390
+CASE001391,General enquiry — Case 1391,Escalated,,,ACC000391,
+CASE001392,General enquiry — Case 1392,Closed,Low,,ACC000392,CON001392
+CASE001393,General enquiry — Case 1393,New,,,,
+CASE001394,General enquiry — Case 1394,Working,Medium,,ACC000394,CON001394
+CASE001395,General enquiry — Case 1395,Escalated,,,ACC000395,
+CASE001396,General enquiry — Case 1396,Closed,High,,,CON001396
+CASE001397,General enquiry — Case 1397,New,,,ACC000397,
+CASE001398,General enquiry — Case 1398,Working,Low,,ACC000398,CON001398
+CASE001399,General enquiry — Case 1399,Escalated,,,,
+CASE001400,General enquiry — Case 1400,Closed,Medium,,ACC000400,CON001400
+CASE001401,General enquiry — Case 1401,New,,,ACC000401,
+CASE001402,General enquiry — Case 1402,Working,High,,,CON001402
+CASE001403,General enquiry — Case 1403,Escalated,,,ACC000403,
+CASE001404,General enquiry — Case 1404,Closed,Low,,ACC000404,CON001404
+CASE001405,General enquiry — Case 1405,New,,,,
+CASE001406,General enquiry — Case 1406,Working,Medium,,ACC000406,CON001406
+CASE001407,General enquiry — Case 1407,Escalated,,,ACC000407,
+CASE001408,General enquiry — Case 1408,Closed,High,,,CON001408
+CASE001409,General enquiry — Case 1409,New,,,ACC000409,
+CASE001410,General enquiry — Case 1410,Working,Low,,ACC000410,CON001410
+CASE001411,General enquiry — Case 1411,Escalated,,,,
+CASE001412,General enquiry — Case 1412,Closed,Medium,,ACC000412,CON001412
+CASE001413,General enquiry — Case 1413,New,,,ACC000413,
+CASE001414,General enquiry — Case 1414,Working,High,,,CON001414
+CASE001415,General enquiry — Case 1415,Escalated,,,ACC000415,
+CASE001416,General enquiry — Case 1416,Closed,Low,,ACC000416,CON001416
+CASE001417,General enquiry — Case 1417,New,,,,
+CASE001418,General enquiry — Case 1418,Working,Medium,,ACC000418,CON001418
+CASE001419,General enquiry — Case 1419,Escalated,,,ACC000419,
+CASE001420,General enquiry — Case 1420,Closed,High,,,CON001420
+CASE001421,General enquiry — Case 1421,New,,,ACC000421,
+CASE001422,General enquiry — Case 1422,Working,Low,,ACC000422,CON001422
+CASE001423,General enquiry — Case 1423,Escalated,,,,
+CASE001424,General enquiry — Case 1424,Closed,Medium,,ACC000424,CON001424
+CASE001425,General enquiry — Case 1425,New,,,ACC000425,
+CASE001426,General enquiry — Case 1426,Working,High,,,CON001426
+CASE001427,General enquiry — Case 1427,Escalated,,,ACC000427,
+CASE001428,General enquiry — Case 1428,Closed,Low,,ACC000428,CON001428
+CASE001429,General enquiry — Case 1429,New,,,,
+CASE001430,General enquiry — Case 1430,Working,Medium,,ACC000430,CON001430
+CASE001431,General enquiry — Case 1431,Escalated,,,ACC000431,
+CASE001432,General enquiry — Case 1432,Closed,High,,,CON001432
+CASE001433,General enquiry — Case 1433,New,,,ACC000433,
+CASE001434,General enquiry — Case 1434,Working,Low,,ACC000434,CON001434
+CASE001435,General enquiry — Case 1435,Escalated,,,,
+CASE001436,General enquiry — Case 1436,Closed,Medium,,ACC000436,CON001436
+CASE001437,General enquiry — Case 1437,New,,,ACC000437,
+CASE001438,General enquiry — Case 1438,Working,High,,,CON001438
+CASE001439,General enquiry — Case 1439,Escalated,,,ACC000439,
+CASE001440,General enquiry — Case 1440,Closed,Low,,ACC000440,CON001440
+CASE001441,General enquiry — Case 1441,New,,,,
+CASE001442,General enquiry — Case 1442,Working,Medium,,ACC000442,CON001442
+CASE001443,General enquiry — Case 1443,Escalated,,,ACC000443,
+CASE001444,General enquiry — Case 1444,Closed,High,,,CON001444
+CASE001445,General enquiry — Case 1445,New,,,ACC000445,
+CASE001446,General enquiry — Case 1446,Working,Low,,ACC000446,CON001446
+CASE001447,General enquiry — Case 1447,Escalated,,,,
+CASE001448,General enquiry — Case 1448,Closed,Medium,,ACC000448,CON001448
+CASE001449,General enquiry — Case 1449,New,,,ACC000449,
+CASE001450,General enquiry — Case 1450,Working,High,,,CON001450
+CASE001451,General enquiry — Case 1451,Escalated,,,ACC000451,
+CASE001452,General enquiry — Case 1452,Closed,Low,,ACC000452,CON001452
+CASE001453,General enquiry — Case 1453,New,,,,
+CASE001454,General enquiry — Case 1454,Working,Medium,,ACC000454,CON001454
+CASE001455,General enquiry — Case 1455,Escalated,,,ACC000455,
+CASE001456,General enquiry — Case 1456,Closed,High,,,CON001456
+CASE001457,General enquiry — Case 1457,New,,,ACC000457,
+CASE001458,General enquiry — Case 1458,Working,Low,,ACC000458,CON001458
+CASE001459,General enquiry — Case 1459,Escalated,,,,
+CASE001460,General enquiry — Case 1460,Closed,Medium,,ACC000460,CON001460
+CASE001461,General enquiry — Case 1461,New,,,ACC000461,
+CASE001462,General enquiry — Case 1462,Working,High,,,CON001462
+CASE001463,General enquiry — Case 1463,Escalated,,,ACC000463,
+CASE001464,General enquiry — Case 1464,Closed,Low,,ACC000464,CON001464
+CASE001465,General enquiry — Case 1465,New,,,,
+CASE001466,General enquiry — Case 1466,Working,Medium,,ACC000466,CON001466
+CASE001467,General enquiry — Case 1467,Escalated,,,ACC000467,
+CASE001468,General enquiry — Case 1468,Closed,High,,,CON001468
+CASE001469,General enquiry — Case 1469,New,,,ACC000469,
+CASE001470,General enquiry — Case 1470,Working,Low,,ACC000470,CON001470
+CASE001471,General enquiry — Case 1471,Escalated,,,,
+CASE001472,General enquiry — Case 1472,Closed,Medium,,ACC000472,CON001472
+CASE001473,General enquiry — Case 1473,New,,,ACC000473,
+CASE001474,General enquiry — Case 1474,Working,High,,,CON001474
+CASE001475,General enquiry — Case 1475,Escalated,,,ACC000475,
+CASE001476,General enquiry — Case 1476,Closed,Low,,ACC000476,CON001476
+CASE001477,General enquiry — Case 1477,New,,,,
+CASE001478,General enquiry — Case 1478,Working,Medium,,ACC000478,CON001478
+CASE001479,General enquiry — Case 1479,Escalated,,,ACC000479,
+CASE001480,General enquiry — Case 1480,Closed,High,,,CON001480
+CASE001481,General enquiry — Case 1481,New,,,ACC000481,
+CASE001482,General enquiry — Case 1482,Working,Low,,ACC000482,CON001482
+CASE001483,General enquiry — Case 1483,Escalated,,,,
+CASE001484,General enquiry — Case 1484,Closed,Medium,,ACC000484,CON001484
+CASE001485,General enquiry — Case 1485,New,,,ACC000485,
+CASE001486,General enquiry — Case 1486,Working,High,,,CON001486
+CASE001487,General enquiry — Case 1487,Escalated,,,ACC000487,
+CASE001488,General enquiry — Case 1488,Closed,Low,,ACC000488,CON001488
+CASE001489,General enquiry — Case 1489,New,,,,
+CASE001490,General enquiry — Case 1490,Working,Medium,,ACC000490,CON001490
+CASE001491,General enquiry — Case 1491,Escalated,,,ACC000491,
+CASE001492,General enquiry — Case 1492,Closed,High,,,CON001492
+CASE001493,General enquiry — Case 1493,New,,,ACC000493,
+CASE001494,General enquiry — Case 1494,Working,Low,,ACC000494,CON001494
+CASE001495,General enquiry — Case 1495,Escalated,,,,
+CASE001496,General enquiry — Case 1496,Closed,Medium,,ACC000496,CON001496
+CASE001497,General enquiry — Case 1497,New,,,ACC000497,
+CASE001498,General enquiry — Case 1498,Working,High,,,CON001498
+CASE001499,General enquiry — Case 1499,Escalated,,,ACC000499,
+CASE001500,General enquiry — Case 1500,Closed,Low,,ACC000500,CON001500
+CASE001501,General enquiry — Case 1501,New,,,,
+CASE001502,General enquiry — Case 1502,Working,Medium,,ACC000002,CON001502
+CASE001503,General enquiry — Case 1503,Escalated,,,ACC000003,
+CASE001504,General enquiry — Case 1504,Closed,High,,,CON001504
+CASE001505,General enquiry — Case 1505,New,,,ACC000005,
+CASE001506,General enquiry — Case 1506,Working,Low,,ACC000006,CON001506
+CASE001507,General enquiry — Case 1507,Escalated,,,,
+CASE001508,General enquiry — Case 1508,Closed,Medium,,ACC000008,CON001508
+CASE001509,General enquiry — Case 1509,New,,,ACC000009,
+CASE001510,General enquiry — Case 1510,Working,High,,,CON001510
+CASE001511,General enquiry — Case 1511,Escalated,,,ACC000011,
+CASE001512,General enquiry — Case 1512,Closed,Low,,ACC000012,CON001512
+CASE001513,General enquiry — Case 1513,New,,,,
+CASE001514,General enquiry — Case 1514,Working,Medium,,ACC000014,CON001514
+CASE001515,General enquiry — Case 1515,Escalated,,,ACC000015,
+CASE001516,General enquiry — Case 1516,Closed,High,,,CON001516
+CASE001517,General enquiry — Case 1517,New,,,ACC000017,
+CASE001518,General enquiry — Case 1518,Working,Low,,ACC000018,CON001518
+CASE001519,General enquiry — Case 1519,Escalated,,,,
+CASE001520,General enquiry — Case 1520,Closed,Medium,,ACC000020,CON001520
+CASE001521,General enquiry — Case 1521,New,,,ACC000021,
+CASE001522,General enquiry — Case 1522,Working,High,,,CON001522
+CASE001523,General enquiry — Case 1523,Escalated,,,ACC000023,
+CASE001524,General enquiry — Case 1524,Closed,Low,,ACC000024,CON001524
+CASE001525,General enquiry — Case 1525,New,,,,
+CASE001526,General enquiry — Case 1526,Working,Medium,,ACC000026,CON001526
+CASE001527,General enquiry — Case 1527,Escalated,,,ACC000027,
+CASE001528,General enquiry — Case 1528,Closed,High,,,CON001528
+CASE001529,General enquiry — Case 1529,New,,,ACC000029,
+CASE001530,General enquiry — Case 1530,Working,Low,,ACC000030,CON001530
+CASE001531,General enquiry — Case 1531,Escalated,,,,
+CASE001532,General enquiry — Case 1532,Closed,Medium,,ACC000032,CON001532
+CASE001533,General enquiry — Case 1533,New,,,ACC000033,
+CASE001534,General enquiry — Case 1534,Working,High,,,CON001534
+CASE001535,General enquiry — Case 1535,Escalated,,,ACC000035,
+CASE001536,General enquiry — Case 1536,Closed,Low,,ACC000036,CON001536
+CASE001537,General enquiry — Case 1537,New,,,,
+CASE001538,General enquiry — Case 1538,Working,Medium,,ACC000038,CON001538
+CASE001539,General enquiry — Case 1539,Escalated,,,ACC000039,
+CASE001540,General enquiry — Case 1540,Closed,High,,,CON001540
+CASE001541,General enquiry — Case 1541,New,,,ACC000041,
+CASE001542,General enquiry — Case 1542,Working,Low,,ACC000042,CON001542
+CASE001543,General enquiry — Case 1543,Escalated,,,,
+CASE001544,General enquiry — Case 1544,Closed,Medium,,ACC000044,CON001544
+CASE001545,General enquiry — Case 1545,New,,,ACC000045,
+CASE001546,General enquiry — Case 1546,Working,High,,,CON001546
+CASE001547,General enquiry — Case 1547,Escalated,,,ACC000047,
+CASE001548,General enquiry — Case 1548,Closed,Low,,ACC000048,CON001548
+CASE001549,General enquiry — Case 1549,New,,,,
+CASE001550,General enquiry — Case 1550,Working,Medium,,ACC000050,CON001550
+CASE001551,General enquiry — Case 1551,Escalated,,,ACC000051,
+CASE001552,General enquiry — Case 1552,Closed,High,,,CON001552
+CASE001553,General enquiry — Case 1553,New,,,ACC000053,
+CASE001554,General enquiry — Case 1554,Working,Low,,ACC000054,CON001554
+CASE001555,General enquiry — Case 1555,Escalated,,,,
+CASE001556,General enquiry — Case 1556,Closed,Medium,,ACC000056,CON001556
+CASE001557,General enquiry — Case 1557,New,,,ACC000057,
+CASE001558,General enquiry — Case 1558,Working,High,,,CON001558
+CASE001559,General enquiry — Case 1559,Escalated,,,ACC000059,
+CASE001560,General enquiry — Case 1560,Closed,Low,,ACC000060,CON001560
+CASE001561,General enquiry — Case 1561,New,,,,
+CASE001562,General enquiry — Case 1562,Working,Medium,,ACC000062,CON001562
+CASE001563,General enquiry — Case 1563,Escalated,,,ACC000063,
+CASE001564,General enquiry — Case 1564,Closed,High,,,CON001564
+CASE001565,General enquiry — Case 1565,New,,,ACC000065,
+CASE001566,General enquiry — Case 1566,Working,Low,,ACC000066,CON001566
+CASE001567,General enquiry — Case 1567,Escalated,,,,
+CASE001568,General enquiry — Case 1568,Closed,Medium,,ACC000068,CON001568
+CASE001569,General enquiry — Case 1569,New,,,ACC000069,
+CASE001570,General enquiry — Case 1570,Working,High,,,CON001570
+CASE001571,General enquiry — Case 1571,Escalated,,,ACC000071,
+CASE001572,General enquiry — Case 1572,Closed,Low,,ACC000072,CON001572
+CASE001573,General enquiry — Case 1573,New,,,,
+CASE001574,General enquiry — Case 1574,Working,Medium,,ACC000074,CON001574
+CASE001575,General enquiry — Case 1575,Escalated,,,ACC000075,
+CASE001576,General enquiry — Case 1576,Closed,High,,,CON001576
+CASE001577,General enquiry — Case 1577,New,,,ACC000077,
+CASE001578,General enquiry — Case 1578,Working,Low,,ACC000078,CON001578
+CASE001579,General enquiry — Case 1579,Escalated,,,,
+CASE001580,General enquiry — Case 1580,Closed,Medium,,ACC000080,CON001580
+CASE001581,General enquiry — Case 1581,New,,,ACC000081,
+CASE001582,General enquiry — Case 1582,Working,High,,,CON001582
+CASE001583,General enquiry — Case 1583,Escalated,,,ACC000083,
+CASE001584,General enquiry — Case 1584,Closed,Low,,ACC000084,CON001584
+CASE001585,General enquiry — Case 1585,New,,,,
+CASE001586,General enquiry — Case 1586,Working,Medium,,ACC000086,CON001586
+CASE001587,General enquiry — Case 1587,Escalated,,,ACC000087,
+CASE001588,General enquiry — Case 1588,Closed,High,,,CON001588
+CASE001589,General enquiry — Case 1589,New,,,ACC000089,
+CASE001590,General enquiry — Case 1590,Working,Low,,ACC000090,CON001590
+CASE001591,General enquiry — Case 1591,Escalated,,,,
+CASE001592,General enquiry — Case 1592,Closed,Medium,,ACC000092,CON001592
+CASE001593,General enquiry — Case 1593,New,,,ACC000093,
+CASE001594,General enquiry — Case 1594,Working,High,,,CON001594
+CASE001595,General enquiry — Case 1595,Escalated,,,ACC000095,
+CASE001596,General enquiry — Case 1596,Closed,Low,,ACC000096,CON001596
+CASE001597,General enquiry — Case 1597,New,,,,
+CASE001598,General enquiry — Case 1598,Working,Medium,,ACC000098,CON001598
+CASE001599,General enquiry — Case 1599,Escalated,,,ACC000099,
+CASE001600,General enquiry — Case 1600,Closed,High,,,CON001600
+CASE001601,General enquiry — Case 1601,New,,,ACC000101,
+CASE001602,General enquiry — Case 1602,Working,Low,,ACC000102,CON001602
+CASE001603,General enquiry — Case 1603,Escalated,,,,
+CASE001604,General enquiry — Case 1604,Closed,Medium,,ACC000104,CON001604
+CASE001605,General enquiry — Case 1605,New,,,ACC000105,
+CASE001606,General enquiry — Case 1606,Working,High,,,CON001606
+CASE001607,General enquiry — Case 1607,Escalated,,,ACC000107,
+CASE001608,General enquiry — Case 1608,Closed,Low,,ACC000108,CON001608
+CASE001609,General enquiry — Case 1609,New,,,,
+CASE001610,General enquiry — Case 1610,Working,Medium,,ACC000110,CON001610
+CASE001611,General enquiry — Case 1611,Escalated,,,ACC000111,
+CASE001612,General enquiry — Case 1612,Closed,High,,,CON001612
+CASE001613,General enquiry — Case 1613,New,,,ACC000113,
+CASE001614,General enquiry — Case 1614,Working,Low,,ACC000114,CON001614
+CASE001615,General enquiry — Case 1615,Escalated,,,,
+CASE001616,General enquiry — Case 1616,Closed,Medium,,ACC000116,CON001616
+CASE001617,General enquiry — Case 1617,New,,,ACC000117,
+CASE001618,General enquiry — Case 1618,Working,High,,,CON001618
+CASE001619,General enquiry — Case 1619,Escalated,,,ACC000119,
+CASE001620,General enquiry — Case 1620,Closed,Low,,ACC000120,CON001620
+CASE001621,General enquiry — Case 1621,New,,,,
+CASE001622,General enquiry — Case 1622,Working,Medium,,ACC000122,CON001622
+CASE001623,General enquiry — Case 1623,Escalated,,,ACC000123,
+CASE001624,General enquiry — Case 1624,Closed,High,,,CON001624
+CASE001625,General enquiry — Case 1625,New,,,ACC000125,
+CASE001626,General enquiry — Case 1626,Working,Low,,ACC000126,CON001626
+CASE001627,General enquiry — Case 1627,Escalated,,,,
+CASE001628,General enquiry — Case 1628,Closed,Medium,,ACC000128,CON001628
+CASE001629,General enquiry — Case 1629,New,,,ACC000129,
+CASE001630,General enquiry — Case 1630,Working,High,,,CON001630
+CASE001631,General enquiry — Case 1631,Escalated,,,ACC000131,
+CASE001632,General enquiry — Case 1632,Closed,Low,,ACC000132,CON001632
+CASE001633,General enquiry — Case 1633,New,,,,
+CASE001634,General enquiry — Case 1634,Working,Medium,,ACC000134,CON001634
+CASE001635,General enquiry — Case 1635,Escalated,,,ACC000135,
+CASE001636,General enquiry — Case 1636,Closed,High,,,CON001636
+CASE001637,General enquiry — Case 1637,New,,,ACC000137,
+CASE001638,General enquiry — Case 1638,Working,Low,,ACC000138,CON001638
+CASE001639,General enquiry — Case 1639,Escalated,,,,
+CASE001640,General enquiry — Case 1640,Closed,Medium,,ACC000140,CON001640
+CASE001641,General enquiry — Case 1641,New,,,ACC000141,
+CASE001642,General enquiry — Case 1642,Working,High,,,CON001642
+CASE001643,General enquiry — Case 1643,Escalated,,,ACC000143,
+CASE001644,General enquiry — Case 1644,Closed,Low,,ACC000144,CON001644
+CASE001645,General enquiry — Case 1645,New,,,,
+CASE001646,General enquiry — Case 1646,Working,Medium,,ACC000146,CON001646
+CASE001647,General enquiry — Case 1647,Escalated,,,ACC000147,
+CASE001648,General enquiry — Case 1648,Closed,High,,,CON001648
+CASE001649,General enquiry — Case 1649,New,,,ACC000149,
+CASE001650,General enquiry — Case 1650,Working,Low,,ACC000150,CON001650
+CASE001651,General enquiry — Case 1651,Escalated,,,,
+CASE001652,General enquiry — Case 1652,Closed,Medium,,ACC000152,CON001652
+CASE001653,General enquiry — Case 1653,New,,,ACC000153,
+CASE001654,General enquiry — Case 1654,Working,High,,,CON001654
+CASE001655,General enquiry — Case 1655,Escalated,,,ACC000155,
+CASE001656,General enquiry — Case 1656,Closed,Low,,ACC000156,CON001656
+CASE001657,General enquiry — Case 1657,New,,,,
+CASE001658,General enquiry — Case 1658,Working,Medium,,ACC000158,CON001658
+CASE001659,General enquiry — Case 1659,Escalated,,,ACC000159,
+CASE001660,General enquiry — Case 1660,Closed,High,,,CON001660
+CASE001661,General enquiry — Case 1661,New,,,ACC000161,
+CASE001662,General enquiry — Case 1662,Working,Low,,ACC000162,CON001662
+CASE001663,General enquiry — Case 1663,Escalated,,,,
+CASE001664,General enquiry — Case 1664,Closed,Medium,,ACC000164,CON001664
+CASE001665,General enquiry — Case 1665,New,,,ACC000165,
+CASE001666,General enquiry — Case 1666,Working,High,,,CON001666
+CASE001667,General enquiry — Case 1667,Escalated,,,ACC000167,
+CASE001668,General enquiry — Case 1668,Closed,Low,,ACC000168,CON001668
+CASE001669,General enquiry — Case 1669,New,,,,
+CASE001670,General enquiry — Case 1670,Working,Medium,,ACC000170,CON001670
+CASE001671,General enquiry — Case 1671,Escalated,,,ACC000171,
+CASE001672,General enquiry — Case 1672,Closed,High,,,CON001672
+CASE001673,General enquiry — Case 1673,New,,,ACC000173,
+CASE001674,General enquiry — Case 1674,Working,Low,,ACC000174,CON001674
+CASE001675,General enquiry — Case 1675,Escalated,,,,
+CASE001676,General enquiry — Case 1676,Closed,Medium,,ACC000176,CON001676
+CASE001677,General enquiry — Case 1677,New,,,ACC000177,
+CASE001678,General enquiry — Case 1678,Working,High,,,CON001678
+CASE001679,General enquiry — Case 1679,Escalated,,,ACC000179,
+CASE001680,General enquiry — Case 1680,Closed,Low,,ACC000180,CON001680
+CASE001681,General enquiry — Case 1681,New,,,,
+CASE001682,General enquiry — Case 1682,Working,Medium,,ACC000182,CON001682
+CASE001683,General enquiry — Case 1683,Escalated,,,ACC000183,
+CASE001684,General enquiry — Case 1684,Closed,High,,,CON001684
+CASE001685,General enquiry — Case 1685,New,,,ACC000185,
+CASE001686,General enquiry — Case 1686,Working,Low,,ACC000186,CON001686
+CASE001687,General enquiry — Case 1687,Escalated,,,,
+CASE001688,General enquiry — Case 1688,Closed,Medium,,ACC000188,CON001688
+CASE001689,General enquiry — Case 1689,New,,,ACC000189,
+CASE001690,General enquiry — Case 1690,Working,High,,,CON001690
+CASE001691,General enquiry — Case 1691,Escalated,,,ACC000191,
+CASE001692,General enquiry — Case 1692,Closed,Low,,ACC000192,CON001692
+CASE001693,General enquiry — Case 1693,New,,,,
+CASE001694,General enquiry — Case 1694,Working,Medium,,ACC000194,CON001694
+CASE001695,General enquiry — Case 1695,Escalated,,,ACC000195,
+CASE001696,General enquiry — Case 1696,Closed,High,,,CON001696
+CASE001697,General enquiry — Case 1697,New,,,ACC000197,
+CASE001698,General enquiry — Case 1698,Working,Low,,ACC000198,CON001698
+CASE001699,General enquiry — Case 1699,Escalated,,,,
+CASE001700,General enquiry — Case 1700,Closed,Medium,,ACC000200,CON001700
+CASE001701,General enquiry — Case 1701,New,,,ACC000201,
+CASE001702,General enquiry — Case 1702,Working,High,,,CON001702
+CASE001703,General enquiry — Case 1703,Escalated,,,ACC000203,
+CASE001704,General enquiry — Case 1704,Closed,Low,,ACC000204,CON001704
+CASE001705,General enquiry — Case 1705,New,,,,
+CASE001706,General enquiry — Case 1706,Working,Medium,,ACC000206,CON001706
+CASE001707,General enquiry — Case 1707,Escalated,,,ACC000207,
+CASE001708,General enquiry — Case 1708,Closed,High,,,CON001708
+CASE001709,General enquiry — Case 1709,New,,,ACC000209,
+CASE001710,General enquiry — Case 1710,Working,Low,,ACC000210,CON001710
+CASE001711,General enquiry — Case 1711,Escalated,,,,
+CASE001712,General enquiry — Case 1712,Closed,Medium,,ACC000212,CON001712
+CASE001713,General enquiry — Case 1713,New,,,ACC000213,
+CASE001714,General enquiry — Case 1714,Working,High,,,CON001714
+CASE001715,General enquiry — Case 1715,Escalated,,,ACC000215,
+CASE001716,General enquiry — Case 1716,Closed,Low,,ACC000216,CON001716
+CASE001717,General enquiry — Case 1717,New,,,,
+CASE001718,General enquiry — Case 1718,Working,Medium,,ACC000218,CON001718
+CASE001719,General enquiry — Case 1719,Escalated,,,ACC000219,
+CASE001720,General enquiry — Case 1720,Closed,High,,,CON001720
+CASE001721,General enquiry — Case 1721,New,,,ACC000221,
+CASE001722,General enquiry — Case 1722,Working,Low,,ACC000222,CON001722
+CASE001723,General enquiry — Case 1723,Escalated,,,,
+CASE001724,General enquiry — Case 1724,Closed,Medium,,ACC000224,CON001724
+CASE001725,General enquiry — Case 1725,New,,,ACC000225,
+CASE001726,General enquiry — Case 1726,Working,High,,,CON001726
+CASE001727,General enquiry — Case 1727,Escalated,,,ACC000227,
+CASE001728,General enquiry — Case 1728,Closed,Low,,ACC000228,CON001728
+CASE001729,General enquiry — Case 1729,New,,,,
+CASE001730,General enquiry — Case 1730,Working,Medium,,ACC000230,CON001730
+CASE001731,General enquiry — Case 1731,Escalated,,,ACC000231,
+CASE001732,General enquiry — Case 1732,Closed,High,,,CON001732
+CASE001733,General enquiry — Case 1733,New,,,ACC000233,
+CASE001734,General enquiry — Case 1734,Working,Low,,ACC000234,CON001734
+CASE001735,General enquiry — Case 1735,Escalated,,,,
+CASE001736,General enquiry — Case 1736,Closed,Medium,,ACC000236,CON001736
+CASE001737,General enquiry — Case 1737,New,,,ACC000237,
+CASE001738,General enquiry — Case 1738,Working,High,,,CON001738
+CASE001739,General enquiry — Case 1739,Escalated,,,ACC000239,
+CASE001740,General enquiry — Case 1740,Closed,Low,,ACC000240,CON001740
+CASE001741,General enquiry — Case 1741,New,,,,
+CASE001742,General enquiry — Case 1742,Working,Medium,,ACC000242,CON001742
+CASE001743,General enquiry — Case 1743,Escalated,,,ACC000243,
+CASE001744,General enquiry — Case 1744,Closed,High,,,CON001744
+CASE001745,General enquiry — Case 1745,New,,,ACC000245,
+CASE001746,General enquiry — Case 1746,Working,Low,,ACC000246,CON001746
+CASE001747,General enquiry — Case 1747,Escalated,,,,
+CASE001748,General enquiry — Case 1748,Closed,Medium,,ACC000248,CON001748
+CASE001749,General enquiry — Case 1749,New,,,ACC000249,
+CASE001750,General enquiry — Case 1750,Working,High,,,CON001750
+CASE001751,General enquiry — Case 1751,Escalated,,,ACC000251,
+CASE001752,General enquiry — Case 1752,Closed,Low,,ACC000252,CON001752
+CASE001753,General enquiry — Case 1753,New,,,,
+CASE001754,General enquiry — Case 1754,Working,Medium,,ACC000254,CON001754
+CASE001755,General enquiry — Case 1755,Escalated,,,ACC000255,
+CASE001756,General enquiry — Case 1756,Closed,High,,,CON001756
+CASE001757,General enquiry — Case 1757,New,,,ACC000257,
+CASE001758,General enquiry — Case 1758,Working,Low,,ACC000258,CON001758
+CASE001759,General enquiry — Case 1759,Escalated,,,,
+CASE001760,General enquiry — Case 1760,Closed,Medium,,ACC000260,CON001760
+CASE001761,General enquiry — Case 1761,New,,,ACC000261,
+CASE001762,General enquiry — Case 1762,Working,High,,,CON001762
+CASE001763,General enquiry — Case 1763,Escalated,,,ACC000263,
+CASE001764,General enquiry — Case 1764,Closed,Low,,ACC000264,CON001764
+CASE001765,General enquiry — Case 1765,New,,,,
+CASE001766,General enquiry — Case 1766,Working,Medium,,ACC000266,CON001766
+CASE001767,General enquiry — Case 1767,Escalated,,,ACC000267,
+CASE001768,General enquiry — Case 1768,Closed,High,,,CON001768
+CASE001769,General enquiry — Case 1769,New,,,ACC000269,
+CASE001770,General enquiry — Case 1770,Working,Low,,ACC000270,CON001770
+CASE001771,General enquiry — Case 1771,Escalated,,,,
+CASE001772,General enquiry — Case 1772,Closed,Medium,,ACC000272,CON001772
+CASE001773,General enquiry — Case 1773,New,,,ACC000273,
+CASE001774,General enquiry — Case 1774,Working,High,,,CON001774
+CASE001775,General enquiry — Case 1775,Escalated,,,ACC000275,
+CASE001776,General enquiry — Case 1776,Closed,Low,,ACC000276,CON001776
+CASE001777,General enquiry — Case 1777,New,,,,
+CASE001778,General enquiry — Case 1778,Working,Medium,,ACC000278,CON001778
+CASE001779,General enquiry — Case 1779,Escalated,,,ACC000279,
+CASE001780,General enquiry — Case 1780,Closed,High,,,CON001780
+CASE001781,General enquiry — Case 1781,New,,,ACC000281,
+CASE001782,General enquiry — Case 1782,Working,Low,,ACC000282,CON001782
+CASE001783,General enquiry — Case 1783,Escalated,,,,
+CASE001784,General enquiry — Case 1784,Closed,Medium,,ACC000284,CON001784
+CASE001785,General enquiry — Case 1785,New,,,ACC000285,
+CASE001786,General enquiry — Case 1786,Working,High,,,CON001786
+CASE001787,General enquiry — Case 1787,Escalated,,,ACC000287,
+CASE001788,General enquiry — Case 1788,Closed,Low,,ACC000288,CON001788
+CASE001789,General enquiry — Case 1789,New,,,,
+CASE001790,General enquiry — Case 1790,Working,Medium,,ACC000290,CON001790
+CASE001791,General enquiry — Case 1791,Escalated,,,ACC000291,
+CASE001792,General enquiry — Case 1792,Closed,High,,,CON001792
+CASE001793,General enquiry — Case 1793,New,,,ACC000293,
+CASE001794,General enquiry — Case 1794,Working,Low,,ACC000294,CON001794
+CASE001795,General enquiry — Case 1795,Escalated,,,,
+CASE001796,General enquiry — Case 1796,Closed,Medium,,ACC000296,CON001796
+CASE001797,General enquiry — Case 1797,New,,,ACC000297,
+CASE001798,General enquiry — Case 1798,Working,High,,,CON001798
+CASE001799,General enquiry — Case 1799,Escalated,,,ACC000299,
+CASE001800,General enquiry — Case 1800,Closed,Low,,ACC000300,CON001800
+CASE001801,General enquiry — Case 1801,New,,,,
+CASE001802,General enquiry — Case 1802,Working,Medium,,ACC000302,CON001802
+CASE001803,General enquiry — Case 1803,Escalated,,,ACC000303,
+CASE001804,General enquiry — Case 1804,Closed,High,,,CON001804
+CASE001805,General enquiry — Case 1805,New,,,ACC000305,
+CASE001806,General enquiry — Case 1806,Working,Low,,ACC000306,CON001806
+CASE001807,General enquiry — Case 1807,Escalated,,,,
+CASE001808,General enquiry — Case 1808,Closed,Medium,,ACC000308,CON001808
+CASE001809,General enquiry — Case 1809,New,,,ACC000309,
+CASE001810,General enquiry — Case 1810,Working,High,,,CON001810
+CASE001811,General enquiry — Case 1811,Escalated,,,ACC000311,
+CASE001812,General enquiry — Case 1812,Closed,Low,,ACC000312,CON001812
+CASE001813,General enquiry — Case 1813,New,,,,
+CASE001814,General enquiry — Case 1814,Working,Medium,,ACC000314,CON001814
+CASE001815,General enquiry — Case 1815,Escalated,,,ACC000315,
+CASE001816,General enquiry — Case 1816,Closed,High,,,CON001816
+CASE001817,General enquiry — Case 1817,New,,,ACC000317,
+CASE001818,General enquiry — Case 1818,Working,Low,,ACC000318,CON001818
+CASE001819,General enquiry — Case 1819,Escalated,,,,
+CASE001820,General enquiry — Case 1820,Closed,Medium,,ACC000320,CON001820
+CASE001821,General enquiry — Case 1821,New,,,ACC000321,
+CASE001822,General enquiry — Case 1822,Working,High,,,CON001822
+CASE001823,General enquiry — Case 1823,Escalated,,,ACC000323,
+CASE001824,General enquiry — Case 1824,Closed,Low,,ACC000324,CON001824
+CASE001825,General enquiry — Case 1825,New,,,,
+CASE001826,General enquiry — Case 1826,Working,Medium,,ACC000326,CON001826
+CASE001827,General enquiry — Case 1827,Escalated,,,ACC000327,
+CASE001828,General enquiry — Case 1828,Closed,High,,,CON001828
+CASE001829,General enquiry — Case 1829,New,,,ACC000329,
+CASE001830,General enquiry — Case 1830,Working,Low,,ACC000330,CON001830
+CASE001831,General enquiry — Case 1831,Escalated,,,,
+CASE001832,General enquiry — Case 1832,Closed,Medium,,ACC000332,CON001832
+CASE001833,General enquiry — Case 1833,New,,,ACC000333,
+CASE001834,General enquiry — Case 1834,Working,High,,,CON001834
+CASE001835,General enquiry — Case 1835,Escalated,,,ACC000335,
+CASE001836,General enquiry — Case 1836,Closed,Low,,ACC000336,CON001836
+CASE001837,General enquiry — Case 1837,New,,,,
+CASE001838,General enquiry — Case 1838,Working,Medium,,ACC000338,CON001838
+CASE001839,General enquiry — Case 1839,Escalated,,,ACC000339,
+CASE001840,General enquiry — Case 1840,Closed,High,,,CON001840
+CASE001841,General enquiry — Case 1841,New,,,ACC000341,
+CASE001842,General enquiry — Case 1842,Working,Low,,ACC000342,CON001842
+CASE001843,General enquiry — Case 1843,Escalated,,,,
+CASE001844,General enquiry — Case 1844,Closed,Medium,,ACC000344,CON001844
+CASE001845,General enquiry — Case 1845,New,,,ACC000345,
+CASE001846,General enquiry — Case 1846,Working,High,,,CON001846
+CASE001847,General enquiry — Case 1847,Escalated,,,ACC000347,
+CASE001848,General enquiry — Case 1848,Closed,Low,,ACC000348,CON001848
+CASE001849,General enquiry — Case 1849,New,,,,
+CASE001850,General enquiry — Case 1850,Working,Medium,,ACC000350,CON001850
+CASE001851,General enquiry — Case 1851,Escalated,,,ACC000351,
+CASE001852,General enquiry — Case 1852,Closed,High,,,CON001852
+CASE001853,General enquiry — Case 1853,New,,,ACC000353,
+CASE001854,General enquiry — Case 1854,Working,Low,,ACC000354,CON001854
+CASE001855,General enquiry — Case 1855,Escalated,,,,
+CASE001856,General enquiry — Case 1856,Closed,Medium,,ACC000356,CON001856
+CASE001857,General enquiry — Case 1857,New,,,ACC000357,
+CASE001858,General enquiry — Case 1858,Working,High,,,CON001858
+CASE001859,General enquiry — Case 1859,Escalated,,,ACC000359,
+CASE001860,General enquiry — Case 1860,Closed,Low,,ACC000360,CON001860
+CASE001861,General enquiry — Case 1861,New,,,,
+CASE001862,General enquiry — Case 1862,Working,Medium,,ACC000362,CON001862
+CASE001863,General enquiry — Case 1863,Escalated,,,ACC000363,
+CASE001864,General enquiry — Case 1864,Closed,High,,,CON001864
+CASE001865,General enquiry — Case 1865,New,,,ACC000365,
+CASE001866,General enquiry — Case 1866,Working,Low,,ACC000366,CON001866
+CASE001867,General enquiry — Case 1867,Escalated,,,,
+CASE001868,General enquiry — Case 1868,Closed,Medium,,ACC000368,CON001868
+CASE001869,General enquiry — Case 1869,New,,,ACC000369,
+CASE001870,General enquiry — Case 1870,Working,High,,,CON001870
+CASE001871,General enquiry — Case 1871,Escalated,,,ACC000371,
+CASE001872,General enquiry — Case 1872,Closed,Low,,ACC000372,CON001872
+CASE001873,General enquiry — Case 1873,New,,,,
+CASE001874,General enquiry — Case 1874,Working,Medium,,ACC000374,CON001874
+CASE001875,General enquiry — Case 1875,Escalated,,,ACC000375,
+CASE001876,General enquiry — Case 1876,Closed,High,,,CON001876
+CASE001877,General enquiry — Case 1877,New,,,ACC000377,
+CASE001878,General enquiry — Case 1878,Working,Low,,ACC000378,CON001878
+CASE001879,General enquiry — Case 1879,Escalated,,,,
+CASE001880,General enquiry — Case 1880,Closed,Medium,,ACC000380,CON001880
+CASE001881,General enquiry — Case 1881,New,,,ACC000381,
+CASE001882,General enquiry — Case 1882,Working,High,,,CON001882
+CASE001883,General enquiry — Case 1883,Escalated,,,ACC000383,
+CASE001884,General enquiry — Case 1884,Closed,Low,,ACC000384,CON001884
+CASE001885,General enquiry — Case 1885,New,,,,
+CASE001886,General enquiry — Case 1886,Working,Medium,,ACC000386,CON001886
+CASE001887,General enquiry — Case 1887,Escalated,,,ACC000387,
+CASE001888,General enquiry — Case 1888,Closed,High,,,CON001888
+CASE001889,General enquiry — Case 1889,New,,,ACC000389,
+CASE001890,General enquiry — Case 1890,Working,Low,,ACC000390,CON001890
+CASE001891,General enquiry — Case 1891,Escalated,,,,
+CASE001892,General enquiry — Case 1892,Closed,Medium,,ACC000392,CON001892
+CASE001893,General enquiry — Case 1893,New,,,ACC000393,
+CASE001894,General enquiry — Case 1894,Working,High,,,CON001894
+CASE001895,General enquiry — Case 1895,Escalated,,,ACC000395,
+CASE001896,General enquiry — Case 1896,Closed,Low,,ACC000396,CON001896
+CASE001897,General enquiry — Case 1897,New,,,,
+CASE001898,General enquiry — Case 1898,Working,Medium,,ACC000398,CON001898
+CASE001899,General enquiry — Case 1899,Escalated,,,ACC000399,
+CASE001900,General enquiry — Case 1900,Closed,High,,,CON001900
+CASE001901,General enquiry — Case 1901,New,,,ACC000401,
+CASE001902,General enquiry — Case 1902,Working,Low,,ACC000402,CON001902
+CASE001903,General enquiry — Case 1903,Escalated,,,,
+CASE001904,General enquiry — Case 1904,Closed,Medium,,ACC000404,CON001904
+CASE001905,General enquiry — Case 1905,New,,,ACC000405,
+CASE001906,General enquiry — Case 1906,Working,High,,,CON001906
+CASE001907,General enquiry — Case 1907,Escalated,,,ACC000407,
+CASE001908,General enquiry — Case 1908,Closed,Low,,ACC000408,CON001908
+CASE001909,General enquiry — Case 1909,New,,,,
+CASE001910,General enquiry — Case 1910,Working,Medium,,ACC000410,CON001910
+CASE001911,General enquiry — Case 1911,Escalated,,,ACC000411,
+CASE001912,General enquiry — Case 1912,Closed,High,,,CON001912
+CASE001913,General enquiry — Case 1913,New,,,ACC000413,
+CASE001914,General enquiry — Case 1914,Working,Low,,ACC000414,CON001914
+CASE001915,General enquiry — Case 1915,Escalated,,,,
+CASE001916,General enquiry — Case 1916,Closed,Medium,,ACC000416,CON001916
+CASE001917,General enquiry — Case 1917,New,,,ACC000417,
+CASE001918,General enquiry — Case 1918,Working,High,,,CON001918
+CASE001919,General enquiry — Case 1919,Escalated,,,ACC000419,
+CASE001920,General enquiry — Case 1920,Closed,Low,,ACC000420,CON001920
+CASE001921,General enquiry — Case 1921,New,,,,
+CASE001922,General enquiry — Case 1922,Working,Medium,,ACC000422,CON001922
+CASE001923,General enquiry — Case 1923,Escalated,,,ACC000423,
+CASE001924,General enquiry — Case 1924,Closed,High,,,CON001924
+CASE001925,General enquiry — Case 1925,New,,,ACC000425,
+CASE001926,General enquiry — Case 1926,Working,Low,,ACC000426,CON001926
+CASE001927,General enquiry — Case 1927,Escalated,,,,
+CASE001928,General enquiry — Case 1928,Closed,Medium,,ACC000428,CON001928
+CASE001929,General enquiry — Case 1929,New,,,ACC000429,
+CASE001930,General enquiry — Case 1930,Working,High,,,CON001930
+CASE001931,General enquiry — Case 1931,Escalated,,,ACC000431,
+CASE001932,General enquiry — Case 1932,Closed,Low,,ACC000432,CON001932
+CASE001933,General enquiry — Case 1933,New,,,,
+CASE001934,General enquiry — Case 1934,Working,Medium,,ACC000434,CON001934
+CASE001935,General enquiry — Case 1935,Escalated,,,ACC000435,
+CASE001936,General enquiry — Case 1936,Closed,High,,,CON001936
+CASE001937,General enquiry — Case 1937,New,,,ACC000437,
+CASE001938,General enquiry — Case 1938,Working,Low,,ACC000438,CON001938
+CASE001939,General enquiry — Case 1939,Escalated,,,,
+CASE001940,General enquiry — Case 1940,Closed,Medium,,ACC000440,CON001940
+CASE001941,General enquiry — Case 1941,New,,,ACC000441,
+CASE001942,General enquiry — Case 1942,Working,High,,,CON001942
+CASE001943,General enquiry — Case 1943,Escalated,,,ACC000443,
+CASE001944,General enquiry — Case 1944,Closed,Low,,ACC000444,CON001944
+CASE001945,General enquiry — Case 1945,New,,,,
+CASE001946,General enquiry — Case 1946,Working,Medium,,ACC000446,CON001946
+CASE001947,General enquiry — Case 1947,Escalated,,,ACC000447,
+CASE001948,General enquiry — Case 1948,Closed,High,,,CON001948
+CASE001949,General enquiry — Case 1949,New,,,ACC000449,
+CASE001950,General enquiry — Case 1950,Working,Low,,ACC000450,CON001950
+CASE001951,General enquiry — Case 1951,Escalated,,,,
+CASE001952,General enquiry — Case 1952,Closed,Medium,,ACC000452,CON001952
+CASE001953,General enquiry — Case 1953,New,,,ACC000453,
+CASE001954,General enquiry — Case 1954,Working,High,,,CON001954
+CASE001955,General enquiry — Case 1955,Escalated,,,ACC000455,
+CASE001956,General enquiry — Case 1956,Closed,Low,,ACC000456,CON001956
+CASE001957,General enquiry — Case 1957,New,,,,
+CASE001958,General enquiry — Case 1958,Working,Medium,,ACC000458,CON001958
+CASE001959,General enquiry — Case 1959,Escalated,,,ACC000459,
+CASE001960,General enquiry — Case 1960,Closed,High,,,CON001960
+CASE001961,General enquiry — Case 1961,New,,,ACC000461,
+CASE001962,General enquiry — Case 1962,Working,Low,,ACC000462,CON001962
+CASE001963,General enquiry — Case 1963,Escalated,,,,
+CASE001964,General enquiry — Case 1964,Closed,Medium,,ACC000464,CON001964
+CASE001965,General enquiry — Case 1965,New,,,ACC000465,
+CASE001966,General enquiry — Case 1966,Working,High,,,CON001966
+CASE001967,General enquiry — Case 1967,Escalated,,,ACC000467,
+CASE001968,General enquiry — Case 1968,Closed,Low,,ACC000468,CON001968
+CASE001969,General enquiry — Case 1969,New,,,,
+CASE001970,General enquiry — Case 1970,Working,Medium,,ACC000470,CON001970
+CASE001971,General enquiry — Case 1971,Escalated,,,ACC000471,
+CASE001972,General enquiry — Case 1972,Closed,High,,,CON001972
+CASE001973,General enquiry — Case 1973,New,,,ACC000473,
+CASE001974,General enquiry — Case 1974,Working,Low,,ACC000474,CON001974
+CASE001975,General enquiry — Case 1975,Escalated,,,,
+CASE001976,General enquiry — Case 1976,Closed,Medium,,ACC000476,CON001976
+CASE001977,General enquiry — Case 1977,New,,,ACC000477,
+CASE001978,General enquiry — Case 1978,Working,High,,,CON001978
+CASE001979,General enquiry — Case 1979,Escalated,,,ACC000479,
+CASE001980,General enquiry — Case 1980,Closed,Low,,ACC000480,CON001980
+CASE001981,General enquiry — Case 1981,New,,,,
+CASE001982,General enquiry — Case 1982,Working,Medium,,ACC000482,CON001982
+CASE001983,General enquiry — Case 1983,Escalated,,,ACC000483,
+CASE001984,General enquiry — Case 1984,Closed,High,,,CON001984
+CASE001985,General enquiry — Case 1985,New,,,ACC000485,
+CASE001986,General enquiry — Case 1986,Working,Low,,ACC000486,CON001986
+CASE001987,General enquiry — Case 1987,Escalated,,,,
+CASE001988,General enquiry — Case 1988,Closed,Medium,,ACC000488,CON001988
+CASE001989,General enquiry — Case 1989,New,,,ACC000489,
+CASE001990,General enquiry — Case 1990,Working,High,,,CON001990
+CASE001991,General enquiry — Case 1991,Escalated,,,ACC000491,
+CASE001992,General enquiry — Case 1992,Closed,Low,,ACC000492,CON001992
+CASE001993,General enquiry — Case 1993,New,,,,
+CASE001994,General enquiry — Case 1994,Working,Medium,,ACC000494,CON001994
+CASE001995,General enquiry — Case 1995,Escalated,,,ACC000495,
+CASE001996,General enquiry — Case 1996,Closed,High,,,CON001996
+CASE001997,General enquiry — Case 1997,New,,,ACC000497,
+CASE001998,General enquiry — Case 1998,Working,Low,,ACC000498,CON001998
+CASE001999,General enquiry — Case 1999,Escalated,,,,
+CASE002000,General enquiry — Case 2000,Closed,Medium,,ACC000500,CON002000

@@ -1,0 +1,1201 @@
+ExternalId,Name,Account_ExternalId__c,StageName,CloseDate,Amount
+OPP000001,Sunrise Financial Group — Renewal 2026,,Prospecting,2026-07-21,
+OPP000002,Meridian Life Partners — Expansion 2026,ACC000002,Qualification,2026-07-22,5137
+OPP000003,Pacific Coast Assurance — New Business 2026,ACC000003,Needs Analysis,2026-07-23,5274
+OPP000004,BlueSky Protection Services — Upgrade 2026,ACC000004,Value Proposition,2026-07-24,5411
+OPP000005,Cornerstone Risk Management — Upsell 2026,ACC000005,Id. Decision Makers,2026-07-25,5548
+OPP000006,Evergreen Coverage Co. — Renewal 2026,ACC000006,Perception Analysis,2026-07-26,5685
+OPP000007,Pinnacle Insurance Brokers — Expansion 2026,ACC000007,Proposal/Price Quote,2026-07-27,
+OPP000008,Heritage Mutual Group — New Business 2026,ACC000008,Negotiation/Review,2026-07-28,5959
+OPP000009,Coastal Risk Advisors — Upgrade 2026,ACC000009,Closed Won,2026-07-29,6096
+OPP000010,Summit Protection Alliance — Upsell 2026,ACC000010,Closed Lost,2026-07-30,6233
+OPP000011,Lighthouse Insurance Services — Renewal 2026,ACC000011,Prospecting,2026-07-31,6370
+OPP000012,Cascade Financial Security — Expansion 2026,ACC000012,Qualification,2026-08-01,6507
+OPP000013,Premier Risk Solutions — New Business 2026,ACC000013,Needs Analysis,2026-08-02,
+OPP000014,Horizon Assurance Group — Upgrade 2026,,Value Proposition,2026-08-03,6781
+OPP000015,Keystone Benefits Co. — Upsell 2026,ACC000015,Id. Decision Makers,2026-08-04,6918
+OPP000016,Streamline Coverage Partners — Renewal 2026,ACC000016,Perception Analysis,2026-08-05,7055
+OPP000017,Apex Insurance Holdings — Expansion 2026,ACC000017,Proposal/Price Quote,2026-08-06,7192
+OPP000018,Valley Risk Management — New Business 2026,ACC000018,Negotiation/Review,2026-08-07,7329
+OPP000019,Crestview Financial Services — Upgrade 2026,ACC000019,Closed Won,2026-08-08,
+OPP000020,Lakeside Protection Group — Upsell 2026,ACC000020,Closed Lost,2026-08-09,7603
+OPP000021,Sterling Risk Partners — Renewal 2026,ACC000021,Prospecting,2026-08-10,7740
+OPP000022,Westpoint Insurance Alliance — Expansion 2026,ACC000022,Qualification,2026-08-11,7877
+OPP000023,Clearwater Benefits Group — New Business 2026,ACC000023,Needs Analysis,2026-08-12,8014
+OPP000024,Redwood Assurance Co. — Upgrade 2026,ACC000024,Value Proposition,2026-08-13,8151
+OPP000025,Oakridge Financial Partners — Upsell 2026,ACC000025,Id. Decision Makers,2026-08-14,
+OPP000026,Sunrise Financial Group — Renewal 2026,ACC000026,Perception Analysis,2026-08-15,8425
+OPP000027,Meridian Life Partners — Expansion 2026,,Proposal/Price Quote,2026-08-16,8562
+OPP000028,Pacific Coast Assurance — New Business 2026,ACC000028,Negotiation/Review,2026-08-17,8699
+OPP000029,BlueSky Protection Services — Upgrade 2026,ACC000029,Closed Won,2026-08-18,8836
+OPP000030,Cornerstone Risk Management — Upsell 2026,ACC000030,Closed Lost,2026-08-19,8973
+OPP000031,Evergreen Coverage Co. — Renewal 2026,ACC000031,Prospecting,2026-08-20,
+OPP000032,Pinnacle Insurance Brokers — Expansion 2026,ACC000032,Qualification,2026-08-21,9247
+OPP000033,Heritage Mutual Group — New Business 2026,ACC000033,Needs Analysis,2026-08-22,9384
+OPP000034,Coastal Risk Advisors — Upgrade 2026,ACC000034,Value Proposition,2026-08-23,9521
+OPP000035,Summit Protection Alliance — Upsell 2026,ACC000035,Id. Decision Makers,2026-08-24,9658
+OPP000036,Lighthouse Insurance Services — Renewal 2026,ACC000036,Perception Analysis,2026-08-25,9795
+OPP000037,Cascade Financial Security — Expansion 2026,ACC000037,Proposal/Price Quote,2026-08-26,
+OPP000038,Premier Risk Solutions — New Business 2026,ACC000038,Negotiation/Review,2026-08-27,10069
+OPP000039,Horizon Assurance Group — Upgrade 2026,ACC000039,Closed Won,2026-08-28,10206
+OPP000040,Keystone Benefits Co. — Upsell 2026,,Closed Lost,2026-08-29,10343
+OPP000041,Streamline Coverage Partners — Renewal 2026,ACC000041,Prospecting,2026-08-30,10480
+OPP000042,Apex Insurance Holdings — Expansion 2026,ACC000042,Qualification,2026-08-31,10617
+OPP000043,Valley Risk Management — New Business 2026,ACC000043,Needs Analysis,2026-09-01,
+OPP000044,Crestview Financial Services — Upgrade 2026,ACC000044,Value Proposition,2026-09-02,10891
+OPP000045,Lakeside Protection Group — Upsell 2026,ACC000045,Id. Decision Makers,2026-09-03,11028
+OPP000046,Sterling Risk Partners — Renewal 2026,ACC000046,Perception Analysis,2026-09-04,11165
+OPP000047,Westpoint Insurance Alliance — Expansion 2026,ACC000047,Proposal/Price Quote,2026-09-05,11302
+OPP000048,Clearwater Benefits Group — New Business 2026,ACC000048,Negotiation/Review,2026-09-06,11439
+OPP000049,Redwood Assurance Co. — Upgrade 2026,ACC000049,Closed Won,2026-09-07,
+OPP000050,Oakridge Financial Partners — Upsell 2026,ACC000050,Closed Lost,2026-09-08,11713
+OPP000051,Sunrise Financial Group — Renewal 2026,ACC000051,Prospecting,2026-09-09,11850
+OPP000052,Meridian Life Partners — Expansion 2026,ACC000052,Qualification,2026-09-10,11987
+OPP000053,Pacific Coast Assurance — New Business 2026,,Needs Analysis,2026-09-11,12124
+OPP000054,BlueSky Protection Services — Upgrade 2026,ACC000054,Value Proposition,2026-09-12,12261
+OPP000055,Cornerstone Risk Management — Upsell 2026,ACC000055,Id. Decision Makers,2026-09-13,
+OPP000056,Evergreen Coverage Co. — Renewal 2026,ACC000056,Perception Analysis,2026-09-14,12535
+OPP000057,Pinnacle Insurance Brokers — Expansion 2026,ACC000057,Proposal/Price Quote,2026-09-15,12672
+OPP000058,Heritage Mutual Group — New Business 2026,ACC000058,Negotiation/Review,2026-09-16,12809
+OPP000059,Coastal Risk Advisors — Upgrade 2026,ACC000059,Closed Won,2026-09-17,12946
+OPP000060,Summit Protection Alliance — Upsell 2026,ACC000060,Closed Lost,2026-09-18,13083
+OPP000061,Lighthouse Insurance Services — Renewal 2026,ACC000061,Prospecting,2026-09-19,
+OPP000062,Cascade Financial Security — Expansion 2026,ACC000062,Qualification,2026-09-20,13357
+OPP000063,Premier Risk Solutions — New Business 2026,ACC000063,Needs Analysis,2026-09-21,13494
+OPP000064,Horizon Assurance Group — Upgrade 2026,ACC000064,Value Proposition,2026-09-22,13631
+OPP000065,Keystone Benefits Co. — Upsell 2026,ACC000065,Id. Decision Makers,2026-09-23,13768
+OPP000066,Streamline Coverage Partners — Renewal 2026,,Perception Analysis,2026-09-24,13905
+OPP000067,Apex Insurance Holdings — Expansion 2026,ACC000067,Proposal/Price Quote,2026-09-25,
+OPP000068,Valley Risk Management — New Business 2026,ACC000068,Negotiation/Review,2026-09-26,14179
+OPP000069,Crestview Financial Services — Upgrade 2026,ACC000069,Closed Won,2026-09-27,14316
+OPP000070,Lakeside Protection Group — Upsell 2026,ACC000070,Closed Lost,2026-09-28,14453
+OPP000071,Sterling Risk Partners — Renewal 2026,ACC000071,Prospecting,2026-09-29,14590
+OPP000072,Westpoint Insurance Alliance — Expansion 2026,ACC000072,Qualification,2026-09-30,14727
+OPP000073,Clearwater Benefits Group — New Business 2026,ACC000073,Needs Analysis,2026-10-01,
+OPP000074,Redwood Assurance Co. — Upgrade 2026,ACC000074,Value Proposition,2026-10-02,15001
+OPP000075,Oakridge Financial Partners — Upsell 2026,ACC000075,Id. Decision Makers,2026-10-03,15138
+OPP000076,Sunrise Financial Group — Renewal 2026,ACC000076,Perception Analysis,2026-10-04,15275
+OPP000077,Meridian Life Partners — Expansion 2026,ACC000077,Proposal/Price Quote,2026-10-05,15412
+OPP000078,Pacific Coast Assurance — New Business 2026,ACC000078,Negotiation/Review,2026-10-06,15549
+OPP000079,BlueSky Protection Services — Upgrade 2026,,Closed Won,2026-10-07,
+OPP000080,Cornerstone Risk Management — Upsell 2026,ACC000080,Closed Lost,2026-10-08,15823
+OPP000081,Evergreen Coverage Co. — Renewal 2026,ACC000081,Prospecting,2026-10-09,15960
+OPP000082,Pinnacle Insurance Brokers — Expansion 2026,ACC000082,Qualification,2026-10-10,16097
+OPP000083,Heritage Mutual Group — New Business 2026,ACC000083,Needs Analysis,2026-10-11,16234
+OPP000084,Coastal Risk Advisors — Upgrade 2026,ACC000084,Value Proposition,2026-10-12,16371
+OPP000085,Summit Protection Alliance — Upsell 2026,ACC000085,Id. Decision Makers,2026-10-13,
+OPP000086,Lighthouse Insurance Services — Renewal 2026,ACC000086,Perception Analysis,2026-10-14,16645
+OPP000087,Cascade Financial Security — Expansion 2026,ACC000087,Proposal/Price Quote,2026-10-15,16782
+OPP000088,Premier Risk Solutions — New Business 2026,ACC000088,Negotiation/Review,2026-10-16,16919
+OPP000089,Horizon Assurance Group — Upgrade 2026,ACC000089,Closed Won,2026-10-17,17056
+OPP000090,Keystone Benefits Co. — Upsell 2026,ACC000090,Closed Lost,2026-10-18,17193
+OPP000091,Streamline Coverage Partners — Renewal 2026,ACC000091,Prospecting,2026-10-19,
+OPP000092,Apex Insurance Holdings — Expansion 2026,,Qualification,2026-10-20,17467
+OPP000093,Valley Risk Management — New Business 2026,ACC000093,Needs Analysis,2026-10-21,17604
+OPP000094,Crestview Financial Services — Upgrade 2026,ACC000094,Value Proposition,2026-10-22,17741
+OPP000095,Lakeside Protection Group — Upsell 2026,ACC000095,Id. Decision Makers,2026-10-23,17878
+OPP000096,Sterling Risk Partners — Renewal 2026,ACC000096,Perception Analysis,2026-10-24,18015
+OPP000097,Westpoint Insurance Alliance — Expansion 2026,ACC000097,Proposal/Price Quote,2026-10-25,
+OPP000098,Clearwater Benefits Group — New Business 2026,ACC000098,Negotiation/Review,2026-10-26,18289
+OPP000099,Redwood Assurance Co. — Upgrade 2026,ACC000099,Closed Won,2026-10-27,18426
+OPP000100,Oakridge Financial Partners — Upsell 2026,ACC000100,Closed Lost,2026-10-28,18563
+OPP000101,Sunrise Financial Group — Renewal 2026,ACC000101,Prospecting,2026-10-29,18700
+OPP000102,Meridian Life Partners — Expansion 2026,ACC000102,Qualification,2026-10-30,18837
+OPP000103,Pacific Coast Assurance — New Business 2026,ACC000103,Needs Analysis,2026-10-31,
+OPP000104,BlueSky Protection Services — Upgrade 2026,ACC000104,Value Proposition,2026-11-01,19111
+OPP000105,Cornerstone Risk Management — Upsell 2026,,Id. Decision Makers,2026-11-02,19248
+OPP000106,Evergreen Coverage Co. — Renewal 2026,ACC000106,Perception Analysis,2026-11-03,19385
+OPP000107,Pinnacle Insurance Brokers — Expansion 2026,ACC000107,Proposal/Price Quote,2026-11-04,19522
+OPP000108,Heritage Mutual Group — New Business 2026,ACC000108,Negotiation/Review,2026-11-05,19659
+OPP000109,Coastal Risk Advisors — Upgrade 2026,ACC000109,Closed Won,2026-11-06,
+OPP000110,Summit Protection Alliance — Upsell 2026,ACC000110,Closed Lost,2026-11-07,19933
+OPP000111,Lighthouse Insurance Services — Renewal 2026,ACC000111,Prospecting,2026-11-08,20070
+OPP000112,Cascade Financial Security — Expansion 2026,ACC000112,Qualification,2026-11-09,20207
+OPP000113,Premier Risk Solutions — New Business 2026,ACC000113,Needs Analysis,2026-11-10,20344
+OPP000114,Horizon Assurance Group — Upgrade 2026,ACC000114,Value Proposition,2026-11-11,20481
+OPP000115,Keystone Benefits Co. — Upsell 2026,ACC000115,Id. Decision Makers,2026-11-12,
+OPP000116,Streamline Coverage Partners — Renewal 2026,ACC000116,Perception Analysis,2026-11-13,20755
+OPP000117,Apex Insurance Holdings — Expansion 2026,ACC000117,Proposal/Price Quote,2026-11-14,20892
+OPP000118,Valley Risk Management — New Business 2026,,Negotiation/Review,2026-11-15,21029
+OPP000119,Crestview Financial Services — Upgrade 2026,ACC000119,Closed Won,2026-11-16,21166
+OPP000120,Lakeside Protection Group — Upsell 2026,ACC000120,Closed Lost,2026-11-17,21303
+OPP000121,Sterling Risk Partners — Renewal 2026,ACC000121,Prospecting,2026-11-18,
+OPP000122,Westpoint Insurance Alliance — Expansion 2026,ACC000122,Qualification,2026-11-19,21577
+OPP000123,Clearwater Benefits Group — New Business 2026,ACC000123,Needs Analysis,2026-11-20,21714
+OPP000124,Redwood Assurance Co. — Upgrade 2026,ACC000124,Value Proposition,2026-11-21,21851
+OPP000125,Oakridge Financial Partners — Upsell 2026,ACC000125,Id. Decision Makers,2026-11-22,21988
+OPP000126,Sunrise Financial Group — Renewal 2026,ACC000126,Perception Analysis,2026-11-23,22125
+OPP000127,Meridian Life Partners — Expansion 2026,ACC000127,Proposal/Price Quote,2026-11-24,
+OPP000128,Pacific Coast Assurance — New Business 2026,ACC000128,Negotiation/Review,2026-11-25,22399
+OPP000129,BlueSky Protection Services — Upgrade 2026,ACC000129,Closed Won,2026-11-26,22536
+OPP000130,Cornerstone Risk Management — Upsell 2026,ACC000130,Closed Lost,2026-11-27,22673
+OPP000131,Evergreen Coverage Co. — Renewal 2026,,Prospecting,2026-11-28,22810
+OPP000132,Pinnacle Insurance Brokers — Expansion 2026,ACC000132,Qualification,2026-11-29,22947
+OPP000133,Heritage Mutual Group — New Business 2026,ACC000133,Needs Analysis,2026-11-30,
+OPP000134,Coastal Risk Advisors — Upgrade 2026,ACC000134,Value Proposition,2026-12-01,23221
+OPP000135,Summit Protection Alliance — Upsell 2026,ACC000135,Id. Decision Makers,2026-12-02,23358
+OPP000136,Lighthouse Insurance Services — Renewal 2026,ACC000136,Perception Analysis,2026-12-03,23495
+OPP000137,Cascade Financial Security — Expansion 2026,ACC000137,Proposal/Price Quote,2026-12-04,23632
+OPP000138,Premier Risk Solutions — New Business 2026,ACC000138,Negotiation/Review,2026-12-05,23769
+OPP000139,Horizon Assurance Group — Upgrade 2026,ACC000139,Closed Won,2026-12-06,
+OPP000140,Keystone Benefits Co. — Upsell 2026,ACC000140,Closed Lost,2026-12-07,24043
+OPP000141,Streamline Coverage Partners — Renewal 2026,ACC000141,Prospecting,2026-12-08,24180
+OPP000142,Apex Insurance Holdings — Expansion 2026,ACC000142,Qualification,2026-12-09,24317
+OPP000143,Valley Risk Management — New Business 2026,ACC000143,Needs Analysis,2026-12-10,24454
+OPP000144,Crestview Financial Services — Upgrade 2026,,Value Proposition,2026-12-11,24591
+OPP000145,Lakeside Protection Group — Upsell 2026,ACC000145,Id. Decision Makers,2026-12-12,
+OPP000146,Sterling Risk Partners — Renewal 2026,ACC000146,Perception Analysis,2026-12-13,24865
+OPP000147,Westpoint Insurance Alliance — Expansion 2026,ACC000147,Proposal/Price Quote,2026-12-14,25002
+OPP000148,Clearwater Benefits Group — New Business 2026,ACC000148,Negotiation/Review,2026-12-15,25139
+OPP000149,Redwood Assurance Co. — Upgrade 2026,ACC000149,Closed Won,2026-12-16,25276
+OPP000150,Oakridge Financial Partners — Upsell 2026,ACC000150,Closed Lost,2026-12-17,25413
+OPP000151,Sunrise Financial Group — Renewal 2026,ACC000151,Prospecting,2026-12-18,
+OPP000152,Meridian Life Partners — Expansion 2026,ACC000152,Qualification,2026-12-19,25687
+OPP000153,Pacific Coast Assurance — New Business 2026,ACC000153,Needs Analysis,2026-12-20,25824
+OPP000154,BlueSky Protection Services — Upgrade 2026,ACC000154,Value Proposition,2026-12-21,25961
+OPP000155,Cornerstone Risk Management — Upsell 2026,ACC000155,Id. Decision Makers,2026-12-22,26098
+OPP000156,Evergreen Coverage Co. — Renewal 2026,ACC000156,Perception Analysis,2026-12-23,26235
+OPP000157,Pinnacle Insurance Brokers — Expansion 2026,,Proposal/Price Quote,2026-12-24,
+OPP000158,Heritage Mutual Group — New Business 2026,ACC000158,Negotiation/Review,2026-12-25,26509
+OPP000159,Coastal Risk Advisors — Upgrade 2026,ACC000159,Closed Won,2026-12-26,26646
+OPP000160,Summit Protection Alliance — Upsell 2026,ACC000160,Closed Lost,2026-12-27,26783
+OPP000161,Lighthouse Insurance Services — Renewal 2026,ACC000161,Prospecting,2026-12-28,26920
+OPP000162,Cascade Financial Security — Expansion 2026,ACC000162,Qualification,2026-12-29,27057
+OPP000163,Premier Risk Solutions — New Business 2026,ACC000163,Needs Analysis,2026-12-30,
+OPP000164,Horizon Assurance Group — Upgrade 2026,ACC000164,Value Proposition,2026-12-31,27331
+OPP000165,Keystone Benefits Co. — Upsell 2026,ACC000165,Id. Decision Makers,2027-01-01,27468
+OPP000166,Streamline Coverage Partners — Renewal 2026,ACC000166,Perception Analysis,2027-01-02,27605
+OPP000167,Apex Insurance Holdings — Expansion 2026,ACC000167,Proposal/Price Quote,2027-01-03,27742
+OPP000168,Valley Risk Management — New Business 2026,ACC000168,Negotiation/Review,2027-01-04,27879
+OPP000169,Crestview Financial Services — Upgrade 2026,ACC000169,Closed Won,2027-01-05,
+OPP000170,Lakeside Protection Group — Upsell 2026,,Closed Lost,2027-01-06,28153
+OPP000171,Sterling Risk Partners — Renewal 2026,ACC000171,Prospecting,2027-01-07,28290
+OPP000172,Westpoint Insurance Alliance — Expansion 2026,ACC000172,Qualification,2027-01-08,28427
+OPP000173,Clearwater Benefits Group — New Business 2026,ACC000173,Needs Analysis,2027-01-09,28564
+OPP000174,Redwood Assurance Co. — Upgrade 2026,ACC000174,Value Proposition,2027-01-10,28701
+OPP000175,Oakridge Financial Partners — Upsell 2026,ACC000175,Id. Decision Makers,2027-01-11,
+OPP000176,Sunrise Financial Group — Renewal 2026,ACC000176,Perception Analysis,2027-01-12,28975
+OPP000177,Meridian Life Partners — Expansion 2026,ACC000177,Proposal/Price Quote,2027-01-13,29112
+OPP000178,Pacific Coast Assurance — New Business 2026,ACC000178,Negotiation/Review,2027-01-14,29249
+OPP000179,BlueSky Protection Services — Upgrade 2026,ACC000179,Closed Won,2027-01-15,29386
+OPP000180,Cornerstone Risk Management — Upsell 2026,ACC000180,Closed Lost,2027-01-16,29523
+OPP000181,Evergreen Coverage Co. — Renewal 2026,ACC000181,Prospecting,2027-01-17,
+OPP000182,Pinnacle Insurance Brokers — Expansion 2026,ACC000182,Qualification,2027-01-18,29797
+OPP000183,Heritage Mutual Group — New Business 2026,,Needs Analysis,2027-01-19,29934
+OPP000184,Coastal Risk Advisors — Upgrade 2026,ACC000184,Value Proposition,2027-01-20,30071
+OPP000185,Summit Protection Alliance — Upsell 2026,ACC000185,Id. Decision Makers,2027-01-21,30208
+OPP000186,Lighthouse Insurance Services — Renewal 2026,ACC000186,Perception Analysis,2027-01-22,30345
+OPP000187,Cascade Financial Security — Expansion 2026,ACC000187,Proposal/Price Quote,2027-01-23,
+OPP000188,Premier Risk Solutions — New Business 2026,ACC000188,Negotiation/Review,2027-01-24,30619
+OPP000189,Horizon Assurance Group — Upgrade 2026,ACC000189,Closed Won,2027-01-25,30756
+OPP000190,Keystone Benefits Co. — Upsell 2026,ACC000190,Closed Lost,2027-01-26,30893
+OPP000191,Streamline Coverage Partners — Renewal 2026,ACC000191,Prospecting,2027-01-27,31030
+OPP000192,Apex Insurance Holdings — Expansion 2026,ACC000192,Qualification,2027-01-28,31167
+OPP000193,Valley Risk Management — New Business 2026,ACC000193,Needs Analysis,2027-01-29,
+OPP000194,Crestview Financial Services — Upgrade 2026,ACC000194,Value Proposition,2027-01-30,31441
+OPP000195,Lakeside Protection Group — Upsell 2026,ACC000195,Id. Decision Makers,2027-01-31,31578
+OPP000196,Sterling Risk Partners — Renewal 2026,,Perception Analysis,2027-02-01,31715
+OPP000197,Westpoint Insurance Alliance — Expansion 2026,ACC000197,Proposal/Price Quote,2027-02-02,31852
+OPP000198,Clearwater Benefits Group — New Business 2026,ACC000198,Negotiation/Review,2027-02-03,31989
+OPP000199,Redwood Assurance Co. — Upgrade 2026,ACC000199,Closed Won,2027-02-04,
+OPP000200,Oakridge Financial Partners — Upsell 2026,ACC000200,Closed Lost,2027-02-05,32263
+OPP000201,Sunrise Financial Group — Renewal 2026,ACC000201,Prospecting,2027-02-06,32400
+OPP000202,Meridian Life Partners — Expansion 2026,ACC000202,Qualification,2027-02-07,32537
+OPP000203,Pacific Coast Assurance — New Business 2026,ACC000203,Needs Analysis,2027-02-08,32674
+OPP000204,BlueSky Protection Services — Upgrade 2026,ACC000204,Value Proposition,2027-02-09,32811
+OPP000205,Cornerstone Risk Management — Upsell 2026,ACC000205,Id. Decision Makers,2027-02-10,
+OPP000206,Evergreen Coverage Co. — Renewal 2026,ACC000206,Perception Analysis,2027-02-11,33085
+OPP000207,Pinnacle Insurance Brokers — Expansion 2026,ACC000207,Proposal/Price Quote,2027-02-12,33222
+OPP000208,Heritage Mutual Group — New Business 2026,ACC000208,Negotiation/Review,2027-02-13,33359
+OPP000209,Coastal Risk Advisors — Upgrade 2026,,Closed Won,2027-02-14,33496
+OPP000210,Summit Protection Alliance — Upsell 2026,ACC000210,Closed Lost,2027-02-15,33633
+OPP000211,Lighthouse Insurance Services — Renewal 2026,ACC000211,Prospecting,2027-02-16,
+OPP000212,Cascade Financial Security — Expansion 2026,ACC000212,Qualification,2027-02-17,33907
+OPP000213,Premier Risk Solutions — New Business 2026,ACC000213,Needs Analysis,2027-02-18,34044
+OPP000214,Horizon Assurance Group — Upgrade 2026,ACC000214,Value Proposition,2027-02-19,34181
+OPP000215,Keystone Benefits Co. — Upsell 2026,ACC000215,Id. Decision Makers,2027-02-20,34318
+OPP000216,Streamline Coverage Partners — Renewal 2026,ACC000216,Perception Analysis,2027-02-21,34455
+OPP000217,Apex Insurance Holdings — Expansion 2026,ACC000217,Proposal/Price Quote,2027-02-22,
+OPP000218,Valley Risk Management — New Business 2026,ACC000218,Negotiation/Review,2027-02-23,34729
+OPP000219,Crestview Financial Services — Upgrade 2026,ACC000219,Closed Won,2027-02-24,34866
+OPP000220,Lakeside Protection Group — Upsell 2026,ACC000220,Closed Lost,2027-02-25,35003
+OPP000221,Sterling Risk Partners — Renewal 2026,ACC000221,Prospecting,2027-02-26,35140
+OPP000222,Westpoint Insurance Alliance — Expansion 2026,,Qualification,2027-02-27,35277
+OPP000223,Clearwater Benefits Group — New Business 2026,ACC000223,Needs Analysis,2027-02-28,
+OPP000224,Redwood Assurance Co. — Upgrade 2026,ACC000224,Value Proposition,2027-03-01,35551
+OPP000225,Oakridge Financial Partners — Upsell 2026,ACC000225,Id. Decision Makers,2027-03-02,35688
+OPP000226,Sunrise Financial Group — Renewal 2026,ACC000226,Perception Analysis,2027-03-03,35825
+OPP000227,Meridian Life Partners — Expansion 2026,ACC000227,Proposal/Price Quote,2027-03-04,35962
+OPP000228,Pacific Coast Assurance — New Business 2026,ACC000228,Negotiation/Review,2027-03-05,36099
+OPP000229,BlueSky Protection Services — Upgrade 2026,ACC000229,Closed Won,2027-03-06,
+OPP000230,Cornerstone Risk Management — Upsell 2026,ACC000230,Closed Lost,2027-03-07,36373
+OPP000231,Evergreen Coverage Co. — Renewal 2026,ACC000231,Prospecting,2027-03-08,36510
+OPP000232,Pinnacle Insurance Brokers — Expansion 2026,ACC000232,Qualification,2027-03-09,36647
+OPP000233,Heritage Mutual Group — New Business 2026,ACC000233,Needs Analysis,2027-03-10,36784
+OPP000234,Coastal Risk Advisors — Upgrade 2026,ACC000234,Value Proposition,2027-03-11,36921
+OPP000235,Summit Protection Alliance — Upsell 2026,,Id. Decision Makers,2027-03-12,
+OPP000236,Lighthouse Insurance Services — Renewal 2026,ACC000236,Perception Analysis,2027-03-13,37195
+OPP000237,Cascade Financial Security — Expansion 2026,ACC000237,Proposal/Price Quote,2027-03-14,37332
+OPP000238,Premier Risk Solutions — New Business 2026,ACC000238,Negotiation/Review,2027-03-15,37469
+OPP000239,Horizon Assurance Group — Upgrade 2026,ACC000239,Closed Won,2027-03-16,37606
+OPP000240,Keystone Benefits Co. — Upsell 2026,ACC000240,Closed Lost,2027-03-17,37743
+OPP000241,Streamline Coverage Partners — Renewal 2026,ACC000241,Prospecting,2027-03-18,
+OPP000242,Apex Insurance Holdings — Expansion 2026,ACC000242,Qualification,2027-03-19,38017
+OPP000243,Valley Risk Management — New Business 2026,ACC000243,Needs Analysis,2027-03-20,38154
+OPP000244,Crestview Financial Services — Upgrade 2026,ACC000244,Value Proposition,2027-03-21,38291
+OPP000245,Lakeside Protection Group — Upsell 2026,ACC000245,Id. Decision Makers,2027-03-22,38428
+OPP000246,Sterling Risk Partners — Renewal 2026,ACC000246,Perception Analysis,2027-03-23,38565
+OPP000247,Westpoint Insurance Alliance — Expansion 2026,ACC000247,Proposal/Price Quote,2027-03-24,
+OPP000248,Clearwater Benefits Group — New Business 2026,,Negotiation/Review,2027-03-25,38839
+OPP000249,Redwood Assurance Co. — Upgrade 2026,ACC000249,Closed Won,2027-03-26,38976
+OPP000250,Oakridge Financial Partners — Upsell 2026,ACC000250,Closed Lost,2027-03-27,39113
+OPP000251,Sunrise Financial Group — Renewal 2026,ACC000251,Prospecting,2027-03-28,39250
+OPP000252,Meridian Life Partners — Expansion 2026,ACC000252,Qualification,2027-03-29,39387
+OPP000253,Pacific Coast Assurance — New Business 2026,ACC000253,Needs Analysis,2027-03-30,
+OPP000254,BlueSky Protection Services — Upgrade 2026,ACC000254,Value Proposition,2027-03-31,39661
+OPP000255,Cornerstone Risk Management — Upsell 2026,ACC000255,Id. Decision Makers,2027-04-01,39798
+OPP000256,Evergreen Coverage Co. — Renewal 2026,ACC000256,Perception Analysis,2027-04-02,39935
+OPP000257,Pinnacle Insurance Brokers — Expansion 2026,ACC000257,Proposal/Price Quote,2027-04-03,40072
+OPP000258,Heritage Mutual Group — New Business 2026,ACC000258,Negotiation/Review,2027-04-04,40209
+OPP000259,Coastal Risk Advisors — Upgrade 2026,ACC000259,Closed Won,2027-04-05,
+OPP000260,Summit Protection Alliance — Upsell 2026,ACC000260,Closed Lost,2027-04-06,40483
+OPP000261,Lighthouse Insurance Services — Renewal 2026,,Prospecting,2027-04-07,40620
+OPP000262,Cascade Financial Security — Expansion 2026,ACC000262,Qualification,2027-04-08,40757
+OPP000263,Premier Risk Solutions — New Business 2026,ACC000263,Needs Analysis,2027-04-09,40894
+OPP000264,Horizon Assurance Group — Upgrade 2026,ACC000264,Value Proposition,2027-04-10,41031
+OPP000265,Keystone Benefits Co. — Upsell 2026,ACC000265,Id. Decision Makers,2027-04-11,
+OPP000266,Streamline Coverage Partners — Renewal 2026,ACC000266,Perception Analysis,2027-04-12,41305
+OPP000267,Apex Insurance Holdings — Expansion 2026,ACC000267,Proposal/Price Quote,2027-04-13,41442
+OPP000268,Valley Risk Management — New Business 2026,ACC000268,Negotiation/Review,2027-04-14,41579
+OPP000269,Crestview Financial Services — Upgrade 2026,ACC000269,Closed Won,2027-04-15,41716
+OPP000270,Lakeside Protection Group — Upsell 2026,ACC000270,Closed Lost,2027-04-16,41853
+OPP000271,Sterling Risk Partners — Renewal 2026,ACC000271,Prospecting,2027-04-17,
+OPP000272,Westpoint Insurance Alliance — Expansion 2026,ACC000272,Qualification,2027-04-18,42127
+OPP000273,Clearwater Benefits Group — New Business 2026,ACC000273,Needs Analysis,2027-04-19,42264
+OPP000274,Redwood Assurance Co. — Upgrade 2026,,Value Proposition,2027-04-20,42401
+OPP000275,Oakridge Financial Partners — Upsell 2026,ACC000275,Id. Decision Makers,2027-04-21,42538
+OPP000276,Sunrise Financial Group — Renewal 2026,ACC000276,Perception Analysis,2027-04-22,42675
+OPP000277,Meridian Life Partners — Expansion 2026,ACC000277,Proposal/Price Quote,2027-04-23,
+OPP000278,Pacific Coast Assurance — New Business 2026,ACC000278,Negotiation/Review,2027-04-24,42949
+OPP000279,BlueSky Protection Services — Upgrade 2026,ACC000279,Closed Won,2027-04-25,43086
+OPP000280,Cornerstone Risk Management — Upsell 2026,ACC000280,Closed Lost,2027-04-26,43223
+OPP000281,Evergreen Coverage Co. — Renewal 2026,ACC000281,Prospecting,2027-04-27,43360
+OPP000282,Pinnacle Insurance Brokers — Expansion 2026,ACC000282,Qualification,2027-04-28,43497
+OPP000283,Heritage Mutual Group — New Business 2026,ACC000283,Needs Analysis,2027-04-29,
+OPP000284,Coastal Risk Advisors — Upgrade 2026,ACC000284,Value Proposition,2027-04-30,43771
+OPP000285,Summit Protection Alliance — Upsell 2026,ACC000285,Id. Decision Makers,2027-05-01,43908
+OPP000286,Lighthouse Insurance Services — Renewal 2026,ACC000286,Perception Analysis,2027-05-02,44045
+OPP000287,Cascade Financial Security — Expansion 2026,,Proposal/Price Quote,2027-05-03,44182
+OPP000288,Premier Risk Solutions — New Business 2026,ACC000288,Negotiation/Review,2027-05-04,44319
+OPP000289,Horizon Assurance Group — Upgrade 2026,ACC000289,Closed Won,2027-05-05,
+OPP000290,Keystone Benefits Co. — Upsell 2026,ACC000290,Closed Lost,2027-05-06,44593
+OPP000291,Streamline Coverage Partners — Renewal 2026,ACC000291,Prospecting,2027-05-07,44730
+OPP000292,Apex Insurance Holdings — Expansion 2026,ACC000292,Qualification,2027-05-08,44867
+OPP000293,Valley Risk Management — New Business 2026,ACC000293,Needs Analysis,2027-05-09,45004
+OPP000294,Crestview Financial Services — Upgrade 2026,ACC000294,Value Proposition,2027-05-10,45141
+OPP000295,Lakeside Protection Group — Upsell 2026,ACC000295,Id. Decision Makers,2027-05-11,
+OPP000296,Sterling Risk Partners — Renewal 2026,ACC000296,Perception Analysis,2027-05-12,45415
+OPP000297,Westpoint Insurance Alliance — Expansion 2026,ACC000297,Proposal/Price Quote,2027-05-13,45552
+OPP000298,Clearwater Benefits Group — New Business 2026,ACC000298,Negotiation/Review,2027-05-14,45689
+OPP000299,Redwood Assurance Co. — Upgrade 2026,ACC000299,Closed Won,2027-05-15,45826
+OPP000300,Oakridge Financial Partners — Upsell 2026,,Closed Lost,2027-05-16,45963
+OPP000301,Sunrise Financial Group — Renewal 2026,ACC000301,Prospecting,2027-05-17,
+OPP000302,Meridian Life Partners — Expansion 2026,ACC000302,Qualification,2027-05-18,46237
+OPP000303,Pacific Coast Assurance — New Business 2026,ACC000303,Needs Analysis,2027-05-19,46374
+OPP000304,BlueSky Protection Services — Upgrade 2026,ACC000304,Value Proposition,2027-05-20,46511
+OPP000305,Cornerstone Risk Management — Upsell 2026,ACC000305,Id. Decision Makers,2027-05-21,46648
+OPP000306,Evergreen Coverage Co. — Renewal 2026,ACC000306,Perception Analysis,2027-05-22,46785
+OPP000307,Pinnacle Insurance Brokers — Expansion 2026,ACC000307,Proposal/Price Quote,2027-05-23,
+OPP000308,Heritage Mutual Group — New Business 2026,ACC000308,Negotiation/Review,2027-05-24,47059
+OPP000309,Coastal Risk Advisors — Upgrade 2026,ACC000309,Closed Won,2027-05-25,47196
+OPP000310,Summit Protection Alliance — Upsell 2026,ACC000310,Closed Lost,2027-05-26,47333
+OPP000311,Lighthouse Insurance Services — Renewal 2026,ACC000311,Prospecting,2027-05-27,47470
+OPP000312,Cascade Financial Security — Expansion 2026,ACC000312,Qualification,2027-05-28,47607
+OPP000313,Premier Risk Solutions — New Business 2026,,Needs Analysis,2027-05-29,
+OPP000314,Horizon Assurance Group — Upgrade 2026,ACC000314,Value Proposition,2027-05-30,47881
+OPP000315,Keystone Benefits Co. — Upsell 2026,ACC000315,Id. Decision Makers,2027-05-31,48018
+OPP000316,Streamline Coverage Partners — Renewal 2026,ACC000316,Perception Analysis,2027-06-01,48155
+OPP000317,Apex Insurance Holdings — Expansion 2026,ACC000317,Proposal/Price Quote,2027-06-02,48292
+OPP000318,Valley Risk Management — New Business 2026,ACC000318,Negotiation/Review,2027-06-03,48429
+OPP000319,Crestview Financial Services — Upgrade 2026,ACC000319,Closed Won,2027-06-04,
+OPP000320,Lakeside Protection Group — Upsell 2026,ACC000320,Closed Lost,2027-06-05,48703
+OPP000321,Sterling Risk Partners — Renewal 2026,ACC000321,Prospecting,2027-06-06,48840
+OPP000322,Westpoint Insurance Alliance — Expansion 2026,ACC000322,Qualification,2027-06-07,48977
+OPP000323,Clearwater Benefits Group — New Business 2026,ACC000323,Needs Analysis,2027-06-08,49114
+OPP000324,Redwood Assurance Co. — Upgrade 2026,ACC000324,Value Proposition,2027-06-09,49251
+OPP000325,Oakridge Financial Partners — Upsell 2026,ACC000325,Id. Decision Makers,2027-06-10,
+OPP000326,Sunrise Financial Group — Renewal 2026,,Perception Analysis,2027-06-11,49525
+OPP000327,Meridian Life Partners — Expansion 2026,ACC000327,Proposal/Price Quote,2027-06-12,49662
+OPP000328,Pacific Coast Assurance — New Business 2026,ACC000328,Negotiation/Review,2027-06-13,49799
+OPP000329,BlueSky Protection Services — Upgrade 2026,ACC000329,Closed Won,2027-06-14,49936
+OPP000330,Cornerstone Risk Management — Upsell 2026,ACC000330,Closed Lost,2027-06-15,50073
+OPP000331,Evergreen Coverage Co. — Renewal 2026,ACC000331,Prospecting,2027-06-16,
+OPP000332,Pinnacle Insurance Brokers — Expansion 2026,ACC000332,Qualification,2027-06-17,50347
+OPP000333,Heritage Mutual Group — New Business 2026,ACC000333,Needs Analysis,2027-06-18,50484
+OPP000334,Coastal Risk Advisors — Upgrade 2026,ACC000334,Value Proposition,2027-06-19,50621
+OPP000335,Summit Protection Alliance — Upsell 2026,ACC000335,Id. Decision Makers,2027-06-20,50758
+OPP000336,Lighthouse Insurance Services — Renewal 2026,ACC000336,Perception Analysis,2027-06-21,50895
+OPP000337,Cascade Financial Security — Expansion 2026,ACC000337,Proposal/Price Quote,2027-06-22,
+OPP000338,Premier Risk Solutions — New Business 2026,ACC000338,Negotiation/Review,2027-06-23,51169
+OPP000339,Horizon Assurance Group — Upgrade 2026,,Closed Won,2027-06-24,51306
+OPP000340,Keystone Benefits Co. — Upsell 2026,ACC000340,Closed Lost,2027-06-25,51443
+OPP000341,Streamline Coverage Partners — Renewal 2026,ACC000341,Prospecting,2027-06-26,51580
+OPP000342,Apex Insurance Holdings — Expansion 2026,ACC000342,Qualification,2027-06-27,51717
+OPP000343,Valley Risk Management — New Business 2026,ACC000343,Needs Analysis,2027-06-28,
+OPP000344,Crestview Financial Services — Upgrade 2026,ACC000344,Value Proposition,2027-06-29,51991
+OPP000345,Lakeside Protection Group — Upsell 2026,ACC000345,Id. Decision Makers,2027-06-30,52128
+OPP000346,Sterling Risk Partners — Renewal 2026,ACC000346,Perception Analysis,2027-07-01,52265
+OPP000347,Westpoint Insurance Alliance — Expansion 2026,ACC000347,Proposal/Price Quote,2027-07-02,52402
+OPP000348,Clearwater Benefits Group — New Business 2026,ACC000348,Negotiation/Review,2027-07-03,52539
+OPP000349,Redwood Assurance Co. — Upgrade 2026,ACC000349,Closed Won,2027-07-04,
+OPP000350,Oakridge Financial Partners — Upsell 2026,ACC000350,Closed Lost,2027-07-05,52813
+OPP000351,Sunrise Financial Group — Renewal 2026,ACC000351,Prospecting,2027-07-06,52950
+OPP000352,Meridian Life Partners — Expansion 2026,,Qualification,2027-07-07,53087
+OPP000353,Pacific Coast Assurance — New Business 2026,ACC000353,Needs Analysis,2027-07-08,53224
+OPP000354,BlueSky Protection Services — Upgrade 2026,ACC000354,Value Proposition,2027-07-09,53361
+OPP000355,Cornerstone Risk Management — Upsell 2026,ACC000355,Id. Decision Makers,2027-07-10,
+OPP000356,Evergreen Coverage Co. — Renewal 2026,ACC000356,Perception Analysis,2027-07-11,53635
+OPP000357,Pinnacle Insurance Brokers — Expansion 2026,ACC000357,Proposal/Price Quote,2027-07-12,53772
+OPP000358,Heritage Mutual Group — New Business 2026,ACC000358,Negotiation/Review,2027-07-13,53909
+OPP000359,Coastal Risk Advisors — Upgrade 2026,ACC000359,Closed Won,2027-07-14,54046
+OPP000360,Summit Protection Alliance — Upsell 2026,ACC000360,Closed Lost,2027-07-15,54183
+OPP000361,Lighthouse Insurance Services — Renewal 2026,ACC000361,Prospecting,2027-07-16,
+OPP000362,Cascade Financial Security — Expansion 2026,ACC000362,Qualification,2027-07-17,54457
+OPP000363,Premier Risk Solutions — New Business 2026,ACC000363,Needs Analysis,2027-07-18,54594
+OPP000364,Horizon Assurance Group — Upgrade 2026,ACC000364,Value Proposition,2027-07-19,54731
+OPP000365,Keystone Benefits Co. — Upsell 2026,,Id. Decision Makers,2027-07-20,54868
+OPP000366,Streamline Coverage Partners — Renewal 2026,ACC000366,Perception Analysis,2027-07-21,55005
+OPP000367,Apex Insurance Holdings — Expansion 2026,ACC000367,Proposal/Price Quote,2027-07-22,
+OPP000368,Valley Risk Management — New Business 2026,ACC000368,Negotiation/Review,2027-07-23,55279
+OPP000369,Crestview Financial Services — Upgrade 2026,ACC000369,Closed Won,2027-07-24,55416
+OPP000370,Lakeside Protection Group — Upsell 2026,ACC000370,Closed Lost,2027-07-25,55553
+OPP000371,Sterling Risk Partners — Renewal 2026,ACC000371,Prospecting,2027-07-26,55690
+OPP000372,Westpoint Insurance Alliance — Expansion 2026,ACC000372,Qualification,2027-07-27,55827
+OPP000373,Clearwater Benefits Group — New Business 2026,ACC000373,Needs Analysis,2027-07-28,
+OPP000374,Redwood Assurance Co. — Upgrade 2026,ACC000374,Value Proposition,2027-07-29,56101
+OPP000375,Oakridge Financial Partners — Upsell 2026,ACC000375,Id. Decision Makers,2027-07-30,56238
+OPP000376,Sunrise Financial Group — Renewal 2026,ACC000376,Perception Analysis,2027-07-31,56375
+OPP000377,Meridian Life Partners — Expansion 2026,ACC000377,Proposal/Price Quote,2027-08-01,56512
+OPP000378,Pacific Coast Assurance — New Business 2026,,Negotiation/Review,2027-08-02,56649
+OPP000379,BlueSky Protection Services — Upgrade 2026,ACC000379,Closed Won,2027-08-03,
+OPP000380,Cornerstone Risk Management — Upsell 2026,ACC000380,Closed Lost,2027-08-04,56923
+OPP000381,Evergreen Coverage Co. — Renewal 2026,ACC000381,Prospecting,2027-08-05,57060
+OPP000382,Pinnacle Insurance Brokers — Expansion 2026,ACC000382,Qualification,2027-08-06,57197
+OPP000383,Heritage Mutual Group — New Business 2026,ACC000383,Needs Analysis,2027-08-07,57334
+OPP000384,Coastal Risk Advisors — Upgrade 2026,ACC000384,Value Proposition,2027-08-08,57471
+OPP000385,Summit Protection Alliance — Upsell 2026,ACC000385,Id. Decision Makers,2027-08-09,
+OPP000386,Lighthouse Insurance Services — Renewal 2026,ACC000386,Perception Analysis,2027-08-10,57745
+OPP000387,Cascade Financial Security — Expansion 2026,ACC000387,Proposal/Price Quote,2027-08-11,57882
+OPP000388,Premier Risk Solutions — New Business 2026,ACC000388,Negotiation/Review,2027-08-12,58019
+OPP000389,Horizon Assurance Group — Upgrade 2026,ACC000389,Closed Won,2027-08-13,58156
+OPP000390,Keystone Benefits Co. — Upsell 2026,ACC000390,Closed Lost,2027-08-14,58293
+OPP000391,Streamline Coverage Partners — Renewal 2026,,Prospecting,2027-08-15,
+OPP000392,Apex Insurance Holdings — Expansion 2026,ACC000392,Qualification,2027-08-16,58567
+OPP000393,Valley Risk Management — New Business 2026,ACC000393,Needs Analysis,2027-08-17,58704
+OPP000394,Crestview Financial Services — Upgrade 2026,ACC000394,Value Proposition,2027-08-18,58841
+OPP000395,Lakeside Protection Group — Upsell 2026,ACC000395,Id. Decision Makers,2027-08-19,58978
+OPP000396,Sterling Risk Partners — Renewal 2026,ACC000396,Perception Analysis,2027-08-20,59115
+OPP000397,Westpoint Insurance Alliance — Expansion 2026,ACC000397,Proposal/Price Quote,2027-08-21,
+OPP000398,Clearwater Benefits Group — New Business 2026,ACC000398,Negotiation/Review,2027-08-22,59389
+OPP000399,Redwood Assurance Co. — Upgrade 2026,ACC000399,Closed Won,2027-08-23,59526
+OPP000400,Oakridge Financial Partners — Upsell 2026,ACC000400,Closed Lost,2027-08-24,59663
+OPP000401,Sunrise Financial Group — Renewal 2026,ACC000401,Prospecting,2027-08-25,59800
+OPP000402,Meridian Life Partners — Expansion 2026,ACC000402,Qualification,2027-08-26,59937
+OPP000403,Pacific Coast Assurance — New Business 2026,ACC000403,Needs Analysis,2027-08-27,
+OPP000404,BlueSky Protection Services — Upgrade 2026,,Value Proposition,2027-08-28,60211
+OPP000405,Cornerstone Risk Management — Upsell 2026,ACC000405,Id. Decision Makers,2027-08-29,60348
+OPP000406,Evergreen Coverage Co. — Renewal 2026,ACC000406,Perception Analysis,2027-08-30,60485
+OPP000407,Pinnacle Insurance Brokers — Expansion 2026,ACC000407,Proposal/Price Quote,2027-08-31,60622
+OPP000408,Heritage Mutual Group — New Business 2026,ACC000408,Negotiation/Review,2027-09-01,60759
+OPP000409,Coastal Risk Advisors — Upgrade 2026,ACC000409,Closed Won,2027-09-02,
+OPP000410,Summit Protection Alliance — Upsell 2026,ACC000410,Closed Lost,2027-09-03,61033
+OPP000411,Lighthouse Insurance Services — Renewal 2026,ACC000411,Prospecting,2027-09-04,61170
+OPP000412,Cascade Financial Security — Expansion 2026,ACC000412,Qualification,2027-09-05,61307
+OPP000413,Premier Risk Solutions — New Business 2026,ACC000413,Needs Analysis,2027-09-06,61444
+OPP000414,Horizon Assurance Group — Upgrade 2026,ACC000414,Value Proposition,2027-09-07,61581
+OPP000415,Keystone Benefits Co. — Upsell 2026,ACC000415,Id. Decision Makers,2027-09-08,
+OPP000416,Streamline Coverage Partners — Renewal 2026,ACC000416,Perception Analysis,2027-09-09,61855
+OPP000417,Apex Insurance Holdings — Expansion 2026,,Proposal/Price Quote,2027-09-10,61992
+OPP000418,Valley Risk Management — New Business 2026,ACC000418,Negotiation/Review,2027-09-11,62129
+OPP000419,Crestview Financial Services — Upgrade 2026,ACC000419,Closed Won,2027-09-12,62266
+OPP000420,Lakeside Protection Group — Upsell 2026,ACC000420,Closed Lost,2027-09-13,62403
+OPP000421,Sterling Risk Partners — Renewal 2026,ACC000421,Prospecting,2027-09-14,
+OPP000422,Westpoint Insurance Alliance — Expansion 2026,ACC000422,Qualification,2027-09-15,62677
+OPP000423,Clearwater Benefits Group — New Business 2026,ACC000423,Needs Analysis,2027-09-16,62814
+OPP000424,Redwood Assurance Co. — Upgrade 2026,ACC000424,Value Proposition,2027-09-17,62951
+OPP000425,Oakridge Financial Partners — Upsell 2026,ACC000425,Id. Decision Makers,2027-09-18,63088
+OPP000426,Sunrise Financial Group — Renewal 2026,ACC000426,Perception Analysis,2027-09-19,63225
+OPP000427,Meridian Life Partners — Expansion 2026,ACC000427,Proposal/Price Quote,2027-09-20,
+OPP000428,Pacific Coast Assurance — New Business 2026,ACC000428,Negotiation/Review,2027-09-21,63499
+OPP000429,BlueSky Protection Services — Upgrade 2026,ACC000429,Closed Won,2027-09-22,63636
+OPP000430,Cornerstone Risk Management — Upsell 2026,,Closed Lost,2027-09-23,63773
+OPP000431,Evergreen Coverage Co. — Renewal 2026,ACC000431,Prospecting,2027-09-24,63910
+OPP000432,Pinnacle Insurance Brokers — Expansion 2026,ACC000432,Qualification,2027-09-25,64047
+OPP000433,Heritage Mutual Group — New Business 2026,ACC000433,Needs Analysis,2027-09-26,
+OPP000434,Coastal Risk Advisors — Upgrade 2026,ACC000434,Value Proposition,2027-09-27,64321
+OPP000435,Summit Protection Alliance — Upsell 2026,ACC000435,Id. Decision Makers,2027-09-28,64458
+OPP000436,Lighthouse Insurance Services — Renewal 2026,ACC000436,Perception Analysis,2027-09-29,64595
+OPP000437,Cascade Financial Security — Expansion 2026,ACC000437,Proposal/Price Quote,2027-09-30,64732
+OPP000438,Premier Risk Solutions — New Business 2026,ACC000438,Negotiation/Review,2027-10-01,64869
+OPP000439,Horizon Assurance Group — Upgrade 2026,ACC000439,Closed Won,2027-10-02,
+OPP000440,Keystone Benefits Co. — Upsell 2026,ACC000440,Closed Lost,2027-10-03,65143
+OPP000441,Streamline Coverage Partners — Renewal 2026,ACC000441,Prospecting,2027-10-04,65280
+OPP000442,Apex Insurance Holdings — Expansion 2026,ACC000442,Qualification,2027-10-05,65417
+OPP000443,Valley Risk Management — New Business 2026,,Needs Analysis,2027-10-06,65554
+OPP000444,Crestview Financial Services — Upgrade 2026,ACC000444,Value Proposition,2027-10-07,65691
+OPP000445,Lakeside Protection Group — Upsell 2026,ACC000445,Id. Decision Makers,2027-10-08,
+OPP000446,Sterling Risk Partners — Renewal 2026,ACC000446,Perception Analysis,2027-10-09,65965
+OPP000447,Westpoint Insurance Alliance — Expansion 2026,ACC000447,Proposal/Price Quote,2027-10-10,66102
+OPP000448,Clearwater Benefits Group — New Business 2026,ACC000448,Negotiation/Review,2027-10-11,66239
+OPP000449,Redwood Assurance Co. — Upgrade 2026,ACC000449,Closed Won,2027-10-12,66376
+OPP000450,Oakridge Financial Partners — Upsell 2026,ACC000450,Closed Lost,2027-10-13,66513
+OPP000451,Sunrise Financial Group — Renewal 2026,ACC000451,Prospecting,2027-10-14,
+OPP000452,Meridian Life Partners — Expansion 2026,ACC000452,Qualification,2027-10-15,66787
+OPP000453,Pacific Coast Assurance — New Business 2026,ACC000453,Needs Analysis,2027-10-16,66924
+OPP000454,BlueSky Protection Services — Upgrade 2026,ACC000454,Value Proposition,2027-10-17,67061
+OPP000455,Cornerstone Risk Management — Upsell 2026,ACC000455,Id. Decision Makers,2027-10-18,67198
+OPP000456,Evergreen Coverage Co. — Renewal 2026,,Perception Analysis,2027-10-19,67335
+OPP000457,Pinnacle Insurance Brokers — Expansion 2026,ACC000457,Proposal/Price Quote,2027-10-20,
+OPP000458,Heritage Mutual Group — New Business 2026,ACC000458,Negotiation/Review,2027-10-21,67609
+OPP000459,Coastal Risk Advisors — Upgrade 2026,ACC000459,Closed Won,2027-10-22,67746
+OPP000460,Summit Protection Alliance — Upsell 2026,ACC000460,Closed Lost,2027-10-23,67883
+OPP000461,Lighthouse Insurance Services — Renewal 2026,ACC000461,Prospecting,2027-10-24,68020
+OPP000462,Cascade Financial Security — Expansion 2026,ACC000462,Qualification,2027-10-25,68157
+OPP000463,Premier Risk Solutions — New Business 2026,ACC000463,Needs Analysis,2027-10-26,
+OPP000464,Horizon Assurance Group — Upgrade 2026,ACC000464,Value Proposition,2027-10-27,68431
+OPP000465,Keystone Benefits Co. — Upsell 2026,ACC000465,Id. Decision Makers,2027-10-28,68568
+OPP000466,Streamline Coverage Partners — Renewal 2026,ACC000466,Perception Analysis,2027-10-29,68705
+OPP000467,Apex Insurance Holdings — Expansion 2026,ACC000467,Proposal/Price Quote,2027-10-30,68842
+OPP000468,Valley Risk Management — New Business 2026,ACC000468,Negotiation/Review,2027-10-31,68979
+OPP000469,Crestview Financial Services — Upgrade 2026,,Closed Won,2027-11-01,
+OPP000470,Lakeside Protection Group — Upsell 2026,ACC000470,Closed Lost,2027-11-02,69253
+OPP000471,Sterling Risk Partners — Renewal 2026,ACC000471,Prospecting,2027-11-03,69390
+OPP000472,Westpoint Insurance Alliance — Expansion 2026,ACC000472,Qualification,2027-11-04,69527
+OPP000473,Clearwater Benefits Group — New Business 2026,ACC000473,Needs Analysis,2027-11-05,69664
+OPP000474,Redwood Assurance Co. — Upgrade 2026,ACC000474,Value Proposition,2027-11-06,69801
+OPP000475,Oakridge Financial Partners — Upsell 2026,ACC000475,Id. Decision Makers,2027-11-07,
+OPP000476,Sunrise Financial Group — Renewal 2026,ACC000476,Perception Analysis,2027-11-08,70075
+OPP000477,Meridian Life Partners — Expansion 2026,ACC000477,Proposal/Price Quote,2027-11-09,70212
+OPP000478,Pacific Coast Assurance — New Business 2026,ACC000478,Negotiation/Review,2027-11-10,70349
+OPP000479,BlueSky Protection Services — Upgrade 2026,ACC000479,Closed Won,2027-11-11,70486
+OPP000480,Cornerstone Risk Management — Upsell 2026,ACC000480,Closed Lost,2027-11-12,70623
+OPP000481,Evergreen Coverage Co. — Renewal 2026,ACC000481,Prospecting,2027-11-13,
+OPP000482,Pinnacle Insurance Brokers — Expansion 2026,,Qualification,2027-11-14,70897
+OPP000483,Heritage Mutual Group — New Business 2026,ACC000483,Needs Analysis,2027-11-15,71034
+OPP000484,Coastal Risk Advisors — Upgrade 2026,ACC000484,Value Proposition,2027-11-16,71171
+OPP000485,Summit Protection Alliance — Upsell 2026,ACC000485,Id. Decision Makers,2027-11-17,71308
+OPP000486,Lighthouse Insurance Services — Renewal 2026,ACC000486,Perception Analysis,2027-11-18,71445
+OPP000487,Cascade Financial Security — Expansion 2026,ACC000487,Proposal/Price Quote,2027-11-19,
+OPP000488,Premier Risk Solutions — New Business 2026,ACC000488,Negotiation/Review,2027-11-20,71719
+OPP000489,Horizon Assurance Group — Upgrade 2026,ACC000489,Closed Won,2027-11-21,71856
+OPP000490,Keystone Benefits Co. — Upsell 2026,ACC000490,Closed Lost,2027-11-22,71993
+OPP000491,Streamline Coverage Partners — Renewal 2026,ACC000491,Prospecting,2027-11-23,72130
+OPP000492,Apex Insurance Holdings — Expansion 2026,ACC000492,Qualification,2027-11-24,72267
+OPP000493,Valley Risk Management — New Business 2026,ACC000493,Needs Analysis,2027-11-25,
+OPP000494,Crestview Financial Services — Upgrade 2026,ACC000494,Value Proposition,2027-11-26,72541
+OPP000495,Lakeside Protection Group — Upsell 2026,,Id. Decision Makers,2027-11-27,72678
+OPP000496,Sterling Risk Partners — Renewal 2026,ACC000496,Perception Analysis,2027-11-28,72815
+OPP000497,Westpoint Insurance Alliance — Expansion 2026,ACC000497,Proposal/Price Quote,2027-11-29,72952
+OPP000498,Clearwater Benefits Group — New Business 2026,ACC000498,Negotiation/Review,2027-11-30,73089
+OPP000499,Redwood Assurance Co. — Upgrade 2026,ACC000499,Closed Won,2027-12-01,
+OPP000500,Oakridge Financial Partners — Upsell 2026,ACC000500,Closed Lost,2027-12-02,73363
+OPP000501,Sunrise Financial Group — Renewal 2026,ACC000001,Prospecting,2027-12-03,73500
+OPP000502,Meridian Life Partners — Expansion 2026,ACC000002,Qualification,2027-12-04,73637
+OPP000503,Pacific Coast Assurance — New Business 2026,ACC000003,Needs Analysis,2027-12-05,73774
+OPP000504,BlueSky Protection Services — Upgrade 2026,ACC000004,Value Proposition,2027-12-06,73911
+OPP000505,Cornerstone Risk Management — Upsell 2026,ACC000005,Id. Decision Makers,2027-12-07,
+OPP000506,Evergreen Coverage Co. — Renewal 2026,ACC000006,Perception Analysis,2027-12-08,74185
+OPP000507,Pinnacle Insurance Brokers — Expansion 2026,ACC000007,Proposal/Price Quote,2027-12-09,74322
+OPP000508,Heritage Mutual Group — New Business 2026,,Negotiation/Review,2027-12-10,74459
+OPP000509,Coastal Risk Advisors — Upgrade 2026,ACC000009,Closed Won,2027-12-11,74596
+OPP000510,Summit Protection Alliance — Upsell 2026,ACC000010,Closed Lost,2027-12-12,74733
+OPP000511,Lighthouse Insurance Services — Renewal 2026,ACC000011,Prospecting,2027-12-13,
+OPP000512,Cascade Financial Security — Expansion 2026,ACC000012,Qualification,2027-12-14,75007
+OPP000513,Premier Risk Solutions — New Business 2026,ACC000013,Needs Analysis,2027-12-15,75144
+OPP000514,Horizon Assurance Group — Upgrade 2026,ACC000014,Value Proposition,2027-12-16,75281
+OPP000515,Keystone Benefits Co. — Upsell 2026,ACC000015,Id. Decision Makers,2027-12-17,75418
+OPP000516,Streamline Coverage Partners — Renewal 2026,ACC000016,Perception Analysis,2027-12-18,75555
+OPP000517,Apex Insurance Holdings — Expansion 2026,ACC000017,Proposal/Price Quote,2027-12-19,
+OPP000518,Valley Risk Management — New Business 2026,ACC000018,Negotiation/Review,2027-12-20,75829
+OPP000519,Crestview Financial Services — Upgrade 2026,ACC000019,Closed Won,2027-12-21,75966
+OPP000520,Lakeside Protection Group — Upsell 2026,ACC000020,Closed Lost,2027-12-22,76103
+OPP000521,Sterling Risk Partners — Renewal 2026,,Prospecting,2027-12-23,76240
+OPP000522,Westpoint Insurance Alliance — Expansion 2026,ACC000022,Qualification,2027-12-24,76377
+OPP000523,Clearwater Benefits Group — New Business 2026,ACC000023,Needs Analysis,2027-12-25,
+OPP000524,Redwood Assurance Co. — Upgrade 2026,ACC000024,Value Proposition,2027-12-26,76651
+OPP000525,Oakridge Financial Partners — Upsell 2026,ACC000025,Id. Decision Makers,2027-12-27,76788
+OPP000526,Sunrise Financial Group — Renewal 2026,ACC000026,Perception Analysis,2027-12-28,76925
+OPP000527,Meridian Life Partners — Expansion 2026,ACC000027,Proposal/Price Quote,2027-12-29,77062
+OPP000528,Pacific Coast Assurance — New Business 2026,ACC000028,Negotiation/Review,2027-12-30,77199
+OPP000529,BlueSky Protection Services — Upgrade 2026,ACC000029,Closed Won,2027-12-31,
+OPP000530,Cornerstone Risk Management — Upsell 2026,ACC000030,Closed Lost,2028-01-01,77473
+OPP000531,Evergreen Coverage Co. — Renewal 2026,ACC000031,Prospecting,2028-01-02,77610
+OPP000532,Pinnacle Insurance Brokers — Expansion 2026,ACC000032,Qualification,2028-01-03,77747
+OPP000533,Heritage Mutual Group — New Business 2026,ACC000033,Needs Analysis,2028-01-04,77884
+OPP000534,Coastal Risk Advisors — Upgrade 2026,,Value Proposition,2028-01-05,78021
+OPP000535,Summit Protection Alliance — Upsell 2026,ACC000035,Id. Decision Makers,2028-01-06,
+OPP000536,Lighthouse Insurance Services — Renewal 2026,ACC000036,Perception Analysis,2028-01-07,78295
+OPP000537,Cascade Financial Security — Expansion 2026,ACC000037,Proposal/Price Quote,2028-01-08,78432
+OPP000538,Premier Risk Solutions — New Business 2026,ACC000038,Negotiation/Review,2028-01-09,78569
+OPP000539,Horizon Assurance Group — Upgrade 2026,ACC000039,Closed Won,2028-01-10,78706
+OPP000540,Keystone Benefits Co. — Upsell 2026,ACC000040,Closed Lost,2028-01-11,78843
+OPP000541,Streamline Coverage Partners — Renewal 2026,ACC000041,Prospecting,2026-07-21,
+OPP000542,Apex Insurance Holdings — Expansion 2026,ACC000042,Qualification,2026-07-22,79117
+OPP000543,Valley Risk Management — New Business 2026,ACC000043,Needs Analysis,2026-07-23,79254
+OPP000544,Crestview Financial Services — Upgrade 2026,ACC000044,Value Proposition,2026-07-24,79391
+OPP000545,Lakeside Protection Group — Upsell 2026,ACC000045,Id. Decision Makers,2026-07-25,79528
+OPP000546,Sterling Risk Partners — Renewal 2026,ACC000046,Perception Analysis,2026-07-26,79665
+OPP000547,Westpoint Insurance Alliance — Expansion 2026,,Proposal/Price Quote,2026-07-27,
+OPP000548,Clearwater Benefits Group — New Business 2026,ACC000048,Negotiation/Review,2026-07-28,79939
+OPP000549,Redwood Assurance Co. — Upgrade 2026,ACC000049,Closed Won,2026-07-29,80076
+OPP000550,Oakridge Financial Partners — Upsell 2026,ACC000050,Closed Lost,2026-07-30,80213
+OPP000551,Sunrise Financial Group — Renewal 2026,ACC000051,Prospecting,2026-07-31,80350
+OPP000552,Meridian Life Partners — Expansion 2026,ACC000052,Qualification,2026-08-01,80487
+OPP000553,Pacific Coast Assurance — New Business 2026,ACC000053,Needs Analysis,2026-08-02,
+OPP000554,BlueSky Protection Services — Upgrade 2026,ACC000054,Value Proposition,2026-08-03,80761
+OPP000555,Cornerstone Risk Management — Upsell 2026,ACC000055,Id. Decision Makers,2026-08-04,80898
+OPP000556,Evergreen Coverage Co. — Renewal 2026,ACC000056,Perception Analysis,2026-08-05,81035
+OPP000557,Pinnacle Insurance Brokers — Expansion 2026,ACC000057,Proposal/Price Quote,2026-08-06,81172
+OPP000558,Heritage Mutual Group — New Business 2026,ACC000058,Negotiation/Review,2026-08-07,81309
+OPP000559,Coastal Risk Advisors — Upgrade 2026,ACC000059,Closed Won,2026-08-08,
+OPP000560,Summit Protection Alliance — Upsell 2026,,Closed Lost,2026-08-09,81583
+OPP000561,Lighthouse Insurance Services — Renewal 2026,ACC000061,Prospecting,2026-08-10,81720
+OPP000562,Cascade Financial Security — Expansion 2026,ACC000062,Qualification,2026-08-11,81857
+OPP000563,Premier Risk Solutions — New Business 2026,ACC000063,Needs Analysis,2026-08-12,81994
+OPP000564,Horizon Assurance Group — Upgrade 2026,ACC000064,Value Proposition,2026-08-13,82131
+OPP000565,Keystone Benefits Co. — Upsell 2026,ACC000065,Id. Decision Makers,2026-08-14,
+OPP000566,Streamline Coverage Partners — Renewal 2026,ACC000066,Perception Analysis,2026-08-15,82405
+OPP000567,Apex Insurance Holdings — Expansion 2026,ACC000067,Proposal/Price Quote,2026-08-16,82542
+OPP000568,Valley Risk Management — New Business 2026,ACC000068,Negotiation/Review,2026-08-17,82679
+OPP000569,Crestview Financial Services — Upgrade 2026,ACC000069,Closed Won,2026-08-18,82816
+OPP000570,Lakeside Protection Group — Upsell 2026,ACC000070,Closed Lost,2026-08-19,82953
+OPP000571,Sterling Risk Partners — Renewal 2026,ACC000071,Prospecting,2026-08-20,
+OPP000572,Westpoint Insurance Alliance — Expansion 2026,ACC000072,Qualification,2026-08-21,83227
+OPP000573,Clearwater Benefits Group — New Business 2026,,Needs Analysis,2026-08-22,83364
+OPP000574,Redwood Assurance Co. — Upgrade 2026,ACC000074,Value Proposition,2026-08-23,83501
+OPP000575,Oakridge Financial Partners — Upsell 2026,ACC000075,Id. Decision Makers,2026-08-24,83638
+OPP000576,Sunrise Financial Group — Renewal 2026,ACC000076,Perception Analysis,2026-08-25,83775
+OPP000577,Meridian Life Partners — Expansion 2026,ACC000077,Proposal/Price Quote,2026-08-26,
+OPP000578,Pacific Coast Assurance — New Business 2026,ACC000078,Negotiation/Review,2026-08-27,84049
+OPP000579,BlueSky Protection Services — Upgrade 2026,ACC000079,Closed Won,2026-08-28,84186
+OPP000580,Cornerstone Risk Management — Upsell 2026,ACC000080,Closed Lost,2026-08-29,84323
+OPP000581,Evergreen Coverage Co. — Renewal 2026,ACC000081,Prospecting,2026-08-30,84460
+OPP000582,Pinnacle Insurance Brokers — Expansion 2026,ACC000082,Qualification,2026-08-31,84597
+OPP000583,Heritage Mutual Group — New Business 2026,ACC000083,Needs Analysis,2026-09-01,
+OPP000584,Coastal Risk Advisors — Upgrade 2026,ACC000084,Value Proposition,2026-09-02,84871
+OPP000585,Summit Protection Alliance — Upsell 2026,ACC000085,Id. Decision Makers,2026-09-03,85008
+OPP000586,Lighthouse Insurance Services — Renewal 2026,,Perception Analysis,2026-09-04,85145
+OPP000587,Cascade Financial Security — Expansion 2026,ACC000087,Proposal/Price Quote,2026-09-05,85282
+OPP000588,Premier Risk Solutions — New Business 2026,ACC000088,Negotiation/Review,2026-09-06,85419
+OPP000589,Horizon Assurance Group — Upgrade 2026,ACC000089,Closed Won,2026-09-07,
+OPP000590,Keystone Benefits Co. — Upsell 2026,ACC000090,Closed Lost,2026-09-08,85693
+OPP000591,Streamline Coverage Partners — Renewal 2026,ACC000091,Prospecting,2026-09-09,85830
+OPP000592,Apex Insurance Holdings — Expansion 2026,ACC000092,Qualification,2026-09-10,85967
+OPP000593,Valley Risk Management — New Business 2026,ACC000093,Needs Analysis,2026-09-11,86104
+OPP000594,Crestview Financial Services — Upgrade 2026,ACC000094,Value Proposition,2026-09-12,86241
+OPP000595,Lakeside Protection Group — Upsell 2026,ACC000095,Id. Decision Makers,2026-09-13,
+OPP000596,Sterling Risk Partners — Renewal 2026,ACC000096,Perception Analysis,2026-09-14,86515
+OPP000597,Westpoint Insurance Alliance — Expansion 2026,ACC000097,Proposal/Price Quote,2026-09-15,86652
+OPP000598,Clearwater Benefits Group — New Business 2026,ACC000098,Negotiation/Review,2026-09-16,86789
+OPP000599,Redwood Assurance Co. — Upgrade 2026,,Closed Won,2026-09-17,86926
+OPP000600,Oakridge Financial Partners — Upsell 2026,ACC000100,Closed Lost,2026-09-18,87063
+OPP000601,Sunrise Financial Group — Renewal 2026,ACC000101,Prospecting,2026-09-19,
+OPP000602,Meridian Life Partners — Expansion 2026,ACC000102,Qualification,2026-09-20,87337
+OPP000603,Pacific Coast Assurance — New Business 2026,ACC000103,Needs Analysis,2026-09-21,87474
+OPP000604,BlueSky Protection Services — Upgrade 2026,ACC000104,Value Proposition,2026-09-22,87611
+OPP000605,Cornerstone Risk Management — Upsell 2026,ACC000105,Id. Decision Makers,2026-09-23,87748
+OPP000606,Evergreen Coverage Co. — Renewal 2026,ACC000106,Perception Analysis,2026-09-24,87885
+OPP000607,Pinnacle Insurance Brokers — Expansion 2026,ACC000107,Proposal/Price Quote,2026-09-25,
+OPP000608,Heritage Mutual Group — New Business 2026,ACC000108,Negotiation/Review,2026-09-26,88159
+OPP000609,Coastal Risk Advisors — Upgrade 2026,ACC000109,Closed Won,2026-09-27,88296
+OPP000610,Summit Protection Alliance — Upsell 2026,ACC000110,Closed Lost,2026-09-28,88433
+OPP000611,Lighthouse Insurance Services — Renewal 2026,ACC000111,Prospecting,2026-09-29,88570
+OPP000612,Cascade Financial Security — Expansion 2026,,Qualification,2026-09-30,88707
+OPP000613,Premier Risk Solutions — New Business 2026,ACC000113,Needs Analysis,2026-10-01,
+OPP000614,Horizon Assurance Group — Upgrade 2026,ACC000114,Value Proposition,2026-10-02,88981
+OPP000615,Keystone Benefits Co. — Upsell 2026,ACC000115,Id. Decision Makers,2026-10-03,89118
+OPP000616,Streamline Coverage Partners — Renewal 2026,ACC000116,Perception Analysis,2026-10-04,89255
+OPP000617,Apex Insurance Holdings — Expansion 2026,ACC000117,Proposal/Price Quote,2026-10-05,89392
+OPP000618,Valley Risk Management — New Business 2026,ACC000118,Negotiation/Review,2026-10-06,89529
+OPP000619,Crestview Financial Services — Upgrade 2026,ACC000119,Closed Won,2026-10-07,
+OPP000620,Lakeside Protection Group — Upsell 2026,ACC000120,Closed Lost,2026-10-08,89803
+OPP000621,Sterling Risk Partners — Renewal 2026,ACC000121,Prospecting,2026-10-09,89940
+OPP000622,Westpoint Insurance Alliance — Expansion 2026,ACC000122,Qualification,2026-10-10,90077
+OPP000623,Clearwater Benefits Group — New Business 2026,ACC000123,Needs Analysis,2026-10-11,90214
+OPP000624,Redwood Assurance Co. — Upgrade 2026,ACC000124,Value Proposition,2026-10-12,90351
+OPP000625,Oakridge Financial Partners — Upsell 2026,,Id. Decision Makers,2026-10-13,
+OPP000626,Sunrise Financial Group — Renewal 2026,ACC000126,Perception Analysis,2026-10-14,90625
+OPP000627,Meridian Life Partners — Expansion 2026,ACC000127,Proposal/Price Quote,2026-10-15,90762
+OPP000628,Pacific Coast Assurance — New Business 2026,ACC000128,Negotiation/Review,2026-10-16,90899
+OPP000629,BlueSky Protection Services — Upgrade 2026,ACC000129,Closed Won,2026-10-17,91036
+OPP000630,Cornerstone Risk Management — Upsell 2026,ACC000130,Closed Lost,2026-10-18,91173
+OPP000631,Evergreen Coverage Co. — Renewal 2026,ACC000131,Prospecting,2026-10-19,
+OPP000632,Pinnacle Insurance Brokers — Expansion 2026,ACC000132,Qualification,2026-10-20,91447
+OPP000633,Heritage Mutual Group — New Business 2026,ACC000133,Needs Analysis,2026-10-21,91584
+OPP000634,Coastal Risk Advisors — Upgrade 2026,ACC000134,Value Proposition,2026-10-22,91721
+OPP000635,Summit Protection Alliance — Upsell 2026,ACC000135,Id. Decision Makers,2026-10-23,91858
+OPP000636,Lighthouse Insurance Services — Renewal 2026,ACC000136,Perception Analysis,2026-10-24,91995
+OPP000637,Cascade Financial Security — Expansion 2026,ACC000137,Proposal/Price Quote,2026-10-25,
+OPP000638,Premier Risk Solutions — New Business 2026,,Negotiation/Review,2026-10-26,92269
+OPP000639,Horizon Assurance Group — Upgrade 2026,ACC000139,Closed Won,2026-10-27,92406
+OPP000640,Keystone Benefits Co. — Upsell 2026,ACC000140,Closed Lost,2026-10-28,92543
+OPP000641,Streamline Coverage Partners — Renewal 2026,ACC000141,Prospecting,2026-10-29,92680
+OPP000642,Apex Insurance Holdings — Expansion 2026,ACC000142,Qualification,2026-10-30,92817
+OPP000643,Valley Risk Management — New Business 2026,ACC000143,Needs Analysis,2026-10-31,
+OPP000644,Crestview Financial Services — Upgrade 2026,ACC000144,Value Proposition,2026-11-01,93091
+OPP000645,Lakeside Protection Group — Upsell 2026,ACC000145,Id. Decision Makers,2026-11-02,93228
+OPP000646,Sterling Risk Partners — Renewal 2026,ACC000146,Perception Analysis,2026-11-03,93365
+OPP000647,Westpoint Insurance Alliance — Expansion 2026,ACC000147,Proposal/Price Quote,2026-11-04,93502
+OPP000648,Clearwater Benefits Group — New Business 2026,ACC000148,Negotiation/Review,2026-11-05,93639
+OPP000649,Redwood Assurance Co. — Upgrade 2026,ACC000149,Closed Won,2026-11-06,
+OPP000650,Oakridge Financial Partners — Upsell 2026,ACC000150,Closed Lost,2026-11-07,93913
+OPP000651,Sunrise Financial Group — Renewal 2026,,Prospecting,2026-11-08,94050
+OPP000652,Meridian Life Partners — Expansion 2026,ACC000152,Qualification,2026-11-09,94187
+OPP000653,Pacific Coast Assurance — New Business 2026,ACC000153,Needs Analysis,2026-11-10,94324
+OPP000654,BlueSky Protection Services — Upgrade 2026,ACC000154,Value Proposition,2026-11-11,94461
+OPP000655,Cornerstone Risk Management — Upsell 2026,ACC000155,Id. Decision Makers,2026-11-12,
+OPP000656,Evergreen Coverage Co. — Renewal 2026,ACC000156,Perception Analysis,2026-11-13,94735
+OPP000657,Pinnacle Insurance Brokers — Expansion 2026,ACC000157,Proposal/Price Quote,2026-11-14,94872
+OPP000658,Heritage Mutual Group — New Business 2026,ACC000158,Negotiation/Review,2026-11-15,95009
+OPP000659,Coastal Risk Advisors — Upgrade 2026,ACC000159,Closed Won,2026-11-16,95146
+OPP000660,Summit Protection Alliance — Upsell 2026,ACC000160,Closed Lost,2026-11-17,95283
+OPP000661,Lighthouse Insurance Services — Renewal 2026,ACC000161,Prospecting,2026-11-18,
+OPP000662,Cascade Financial Security — Expansion 2026,ACC000162,Qualification,2026-11-19,95557
+OPP000663,Premier Risk Solutions — New Business 2026,ACC000163,Needs Analysis,2026-11-20,95694
+OPP000664,Horizon Assurance Group — Upgrade 2026,,Value Proposition,2026-11-21,95831
+OPP000665,Keystone Benefits Co. — Upsell 2026,ACC000165,Id. Decision Makers,2026-11-22,95968
+OPP000666,Streamline Coverage Partners — Renewal 2026,ACC000166,Perception Analysis,2026-11-23,96105
+OPP000667,Apex Insurance Holdings — Expansion 2026,ACC000167,Proposal/Price Quote,2026-11-24,
+OPP000668,Valley Risk Management — New Business 2026,ACC000168,Negotiation/Review,2026-11-25,96379
+OPP000669,Crestview Financial Services — Upgrade 2026,ACC000169,Closed Won,2026-11-26,96516
+OPP000670,Lakeside Protection Group — Upsell 2026,ACC000170,Closed Lost,2026-11-27,96653
+OPP000671,Sterling Risk Partners — Renewal 2026,ACC000171,Prospecting,2026-11-28,96790
+OPP000672,Westpoint Insurance Alliance — Expansion 2026,ACC000172,Qualification,2026-11-29,96927
+OPP000673,Clearwater Benefits Group — New Business 2026,ACC000173,Needs Analysis,2026-11-30,
+OPP000674,Redwood Assurance Co. — Upgrade 2026,ACC000174,Value Proposition,2026-12-01,97201
+OPP000675,Oakridge Financial Partners — Upsell 2026,ACC000175,Id. Decision Makers,2026-12-02,97338
+OPP000676,Sunrise Financial Group — Renewal 2026,ACC000176,Perception Analysis,2026-12-03,97475
+OPP000677,Meridian Life Partners — Expansion 2026,,Proposal/Price Quote,2026-12-04,97612
+OPP000678,Pacific Coast Assurance — New Business 2026,ACC000178,Negotiation/Review,2026-12-05,97749
+OPP000679,BlueSky Protection Services — Upgrade 2026,ACC000179,Closed Won,2026-12-06,
+OPP000680,Cornerstone Risk Management — Upsell 2026,ACC000180,Closed Lost,2026-12-07,98023
+OPP000681,Evergreen Coverage Co. — Renewal 2026,ACC000181,Prospecting,2026-12-08,98160
+OPP000682,Pinnacle Insurance Brokers — Expansion 2026,ACC000182,Qualification,2026-12-09,98297
+OPP000683,Heritage Mutual Group — New Business 2026,ACC000183,Needs Analysis,2026-12-10,98434
+OPP000684,Coastal Risk Advisors — Upgrade 2026,ACC000184,Value Proposition,2026-12-11,98571
+OPP000685,Summit Protection Alliance — Upsell 2026,ACC000185,Id. Decision Makers,2026-12-12,
+OPP000686,Lighthouse Insurance Services — Renewal 2026,ACC000186,Perception Analysis,2026-12-13,98845
+OPP000687,Cascade Financial Security — Expansion 2026,ACC000187,Proposal/Price Quote,2026-12-14,98982
+OPP000688,Premier Risk Solutions — New Business 2026,ACC000188,Negotiation/Review,2026-12-15,99119
+OPP000689,Horizon Assurance Group — Upgrade 2026,ACC000189,Closed Won,2026-12-16,99256
+OPP000690,Keystone Benefits Co. — Upsell 2026,,Closed Lost,2026-12-17,99393
+OPP000691,Streamline Coverage Partners — Renewal 2026,ACC000191,Prospecting,2026-12-18,
+OPP000692,Apex Insurance Holdings — Expansion 2026,ACC000192,Qualification,2026-12-19,99667
+OPP000693,Valley Risk Management — New Business 2026,ACC000193,Needs Analysis,2026-12-20,99804
+OPP000694,Crestview Financial Services — Upgrade 2026,ACC000194,Value Proposition,2026-12-21,99941
+OPP000695,Lakeside Protection Group — Upsell 2026,ACC000195,Id. Decision Makers,2026-12-22,100078
+OPP000696,Sterling Risk Partners — Renewal 2026,ACC000196,Perception Analysis,2026-12-23,100215
+OPP000697,Westpoint Insurance Alliance — Expansion 2026,ACC000197,Proposal/Price Quote,2026-12-24,
+OPP000698,Clearwater Benefits Group — New Business 2026,ACC000198,Negotiation/Review,2026-12-25,100489
+OPP000699,Redwood Assurance Co. — Upgrade 2026,ACC000199,Closed Won,2026-12-26,100626
+OPP000700,Oakridge Financial Partners — Upsell 2026,ACC000200,Closed Lost,2026-12-27,100763
+OPP000701,Sunrise Financial Group — Renewal 2026,ACC000201,Prospecting,2026-12-28,100900
+OPP000702,Meridian Life Partners — Expansion 2026,ACC000202,Qualification,2026-12-29,101037
+OPP000703,Pacific Coast Assurance — New Business 2026,,Needs Analysis,2026-12-30,
+OPP000704,BlueSky Protection Services — Upgrade 2026,ACC000204,Value Proposition,2026-12-31,101311
+OPP000705,Cornerstone Risk Management — Upsell 2026,ACC000205,Id. Decision Makers,2027-01-01,101448
+OPP000706,Evergreen Coverage Co. — Renewal 2026,ACC000206,Perception Analysis,2027-01-02,101585
+OPP000707,Pinnacle Insurance Brokers — Expansion 2026,ACC000207,Proposal/Price Quote,2027-01-03,101722
+OPP000708,Heritage Mutual Group — New Business 2026,ACC000208,Negotiation/Review,2027-01-04,101859
+OPP000709,Coastal Risk Advisors — Upgrade 2026,ACC000209,Closed Won,2027-01-05,
+OPP000710,Summit Protection Alliance — Upsell 2026,ACC000210,Closed Lost,2027-01-06,102133
+OPP000711,Lighthouse Insurance Services — Renewal 2026,ACC000211,Prospecting,2027-01-07,102270
+OPP000712,Cascade Financial Security — Expansion 2026,ACC000212,Qualification,2027-01-08,102407
+OPP000713,Premier Risk Solutions — New Business 2026,ACC000213,Needs Analysis,2027-01-09,102544
+OPP000714,Horizon Assurance Group — Upgrade 2026,ACC000214,Value Proposition,2027-01-10,102681
+OPP000715,Keystone Benefits Co. — Upsell 2026,ACC000215,Id. Decision Makers,2027-01-11,
+OPP000716,Streamline Coverage Partners — Renewal 2026,,Perception Analysis,2027-01-12,102955
+OPP000717,Apex Insurance Holdings — Expansion 2026,ACC000217,Proposal/Price Quote,2027-01-13,103092
+OPP000718,Valley Risk Management — New Business 2026,ACC000218,Negotiation/Review,2027-01-14,103229
+OPP000719,Crestview Financial Services — Upgrade 2026,ACC000219,Closed Won,2027-01-15,103366
+OPP000720,Lakeside Protection Group — Upsell 2026,ACC000220,Closed Lost,2027-01-16,103503
+OPP000721,Sterling Risk Partners — Renewal 2026,ACC000221,Prospecting,2027-01-17,
+OPP000722,Westpoint Insurance Alliance — Expansion 2026,ACC000222,Qualification,2027-01-18,103777
+OPP000723,Clearwater Benefits Group — New Business 2026,ACC000223,Needs Analysis,2027-01-19,103914
+OPP000724,Redwood Assurance Co. — Upgrade 2026,ACC000224,Value Proposition,2027-01-20,104051
+OPP000725,Oakridge Financial Partners — Upsell 2026,ACC000225,Id. Decision Makers,2027-01-21,104188
+OPP000726,Sunrise Financial Group — Renewal 2026,ACC000226,Perception Analysis,2027-01-22,104325
+OPP000727,Meridian Life Partners — Expansion 2026,ACC000227,Proposal/Price Quote,2027-01-23,
+OPP000728,Pacific Coast Assurance — New Business 2026,ACC000228,Negotiation/Review,2027-01-24,104599
+OPP000729,BlueSky Protection Services — Upgrade 2026,,Closed Won,2027-01-25,104736
+OPP000730,Cornerstone Risk Management — Upsell 2026,ACC000230,Closed Lost,2027-01-26,104873
+OPP000731,Evergreen Coverage Co. — Renewal 2026,ACC000231,Prospecting,2027-01-27,105010
+OPP000732,Pinnacle Insurance Brokers — Expansion 2026,ACC000232,Qualification,2027-01-28,105147
+OPP000733,Heritage Mutual Group — New Business 2026,ACC000233,Needs Analysis,2027-01-29,
+OPP000734,Coastal Risk Advisors — Upgrade 2026,ACC000234,Value Proposition,2027-01-30,105421
+OPP000735,Summit Protection Alliance — Upsell 2026,ACC000235,Id. Decision Makers,2027-01-31,105558
+OPP000736,Lighthouse Insurance Services — Renewal 2026,ACC000236,Perception Analysis,2027-02-01,105695
+OPP000737,Cascade Financial Security — Expansion 2026,ACC000237,Proposal/Price Quote,2027-02-02,105832
+OPP000738,Premier Risk Solutions — New Business 2026,ACC000238,Negotiation/Review,2027-02-03,105969
+OPP000739,Horizon Assurance Group — Upgrade 2026,ACC000239,Closed Won,2027-02-04,
+OPP000740,Keystone Benefits Co. — Upsell 2026,ACC000240,Closed Lost,2027-02-05,106243
+OPP000741,Streamline Coverage Partners — Renewal 2026,ACC000241,Prospecting,2027-02-06,106380
+OPP000742,Apex Insurance Holdings — Expansion 2026,,Qualification,2027-02-07,106517
+OPP000743,Valley Risk Management — New Business 2026,ACC000243,Needs Analysis,2027-02-08,106654
+OPP000744,Crestview Financial Services — Upgrade 2026,ACC000244,Value Proposition,2027-02-09,106791
+OPP000745,Lakeside Protection Group — Upsell 2026,ACC000245,Id. Decision Makers,2027-02-10,
+OPP000746,Sterling Risk Partners — Renewal 2026,ACC000246,Perception Analysis,2027-02-11,107065
+OPP000747,Westpoint Insurance Alliance — Expansion 2026,ACC000247,Proposal/Price Quote,2027-02-12,107202
+OPP000748,Clearwater Benefits Group — New Business 2026,ACC000248,Negotiation/Review,2027-02-13,107339
+OPP000749,Redwood Assurance Co. — Upgrade 2026,ACC000249,Closed Won,2027-02-14,107476
+OPP000750,Oakridge Financial Partners — Upsell 2026,ACC000250,Closed Lost,2027-02-15,107613
+OPP000751,Sunrise Financial Group — Renewal 2026,ACC000251,Prospecting,2027-02-16,
+OPP000752,Meridian Life Partners — Expansion 2026,ACC000252,Qualification,2027-02-17,107887
+OPP000753,Pacific Coast Assurance — New Business 2026,ACC000253,Needs Analysis,2027-02-18,108024
+OPP000754,BlueSky Protection Services — Upgrade 2026,ACC000254,Value Proposition,2027-02-19,108161
+OPP000755,Cornerstone Risk Management — Upsell 2026,,Id. Decision Makers,2027-02-20,108298
+OPP000756,Evergreen Coverage Co. — Renewal 2026,ACC000256,Perception Analysis,2027-02-21,108435
+OPP000757,Pinnacle Insurance Brokers — Expansion 2026,ACC000257,Proposal/Price Quote,2027-02-22,
+OPP000758,Heritage Mutual Group — New Business 2026,ACC000258,Negotiation/Review,2027-02-23,108709
+OPP000759,Coastal Risk Advisors — Upgrade 2026,ACC000259,Closed Won,2027-02-24,108846
+OPP000760,Summit Protection Alliance — Upsell 2026,ACC000260,Closed Lost,2027-02-25,108983
+OPP000761,Lighthouse Insurance Services — Renewal 2026,ACC000261,Prospecting,2027-02-26,109120
+OPP000762,Cascade Financial Security — Expansion 2026,ACC000262,Qualification,2027-02-27,109257
+OPP000763,Premier Risk Solutions — New Business 2026,ACC000263,Needs Analysis,2027-02-28,
+OPP000764,Horizon Assurance Group — Upgrade 2026,ACC000264,Value Proposition,2027-03-01,109531
+OPP000765,Keystone Benefits Co. — Upsell 2026,ACC000265,Id. Decision Makers,2027-03-02,109668
+OPP000766,Streamline Coverage Partners — Renewal 2026,ACC000266,Perception Analysis,2027-03-03,109805
+OPP000767,Apex Insurance Holdings — Expansion 2026,ACC000267,Proposal/Price Quote,2027-03-04,109942
+OPP000768,Valley Risk Management — New Business 2026,,Negotiation/Review,2027-03-05,110079
+OPP000769,Crestview Financial Services — Upgrade 2026,ACC000269,Closed Won,2027-03-06,
+OPP000770,Lakeside Protection Group — Upsell 2026,ACC000270,Closed Lost,2027-03-07,110353
+OPP000771,Sterling Risk Partners — Renewal 2026,ACC000271,Prospecting,2027-03-08,110490
+OPP000772,Westpoint Insurance Alliance — Expansion 2026,ACC000272,Qualification,2027-03-09,110627
+OPP000773,Clearwater Benefits Group — New Business 2026,ACC000273,Needs Analysis,2027-03-10,110764
+OPP000774,Redwood Assurance Co. — Upgrade 2026,ACC000274,Value Proposition,2027-03-11,110901
+OPP000775,Oakridge Financial Partners — Upsell 2026,ACC000275,Id. Decision Makers,2027-03-12,
+OPP000776,Sunrise Financial Group — Renewal 2026,ACC000276,Perception Analysis,2027-03-13,111175
+OPP000777,Meridian Life Partners — Expansion 2026,ACC000277,Proposal/Price Quote,2027-03-14,111312
+OPP000778,Pacific Coast Assurance — New Business 2026,ACC000278,Negotiation/Review,2027-03-15,111449
+OPP000779,BlueSky Protection Services — Upgrade 2026,ACC000279,Closed Won,2027-03-16,111586
+OPP000780,Cornerstone Risk Management — Upsell 2026,ACC000280,Closed Lost,2027-03-17,111723
+OPP000781,Evergreen Coverage Co. — Renewal 2026,,Prospecting,2027-03-18,
+OPP000782,Pinnacle Insurance Brokers — Expansion 2026,ACC000282,Qualification,2027-03-19,111997
+OPP000783,Heritage Mutual Group — New Business 2026,ACC000283,Needs Analysis,2027-03-20,112134
+OPP000784,Coastal Risk Advisors — Upgrade 2026,ACC000284,Value Proposition,2027-03-21,112271
+OPP000785,Summit Protection Alliance — Upsell 2026,ACC000285,Id. Decision Makers,2027-03-22,112408
+OPP000786,Lighthouse Insurance Services — Renewal 2026,ACC000286,Perception Analysis,2027-03-23,112545
+OPP000787,Cascade Financial Security — Expansion 2026,ACC000287,Proposal/Price Quote,2027-03-24,
+OPP000788,Premier Risk Solutions — New Business 2026,ACC000288,Negotiation/Review,2027-03-25,112819
+OPP000789,Horizon Assurance Group — Upgrade 2026,ACC000289,Closed Won,2027-03-26,112956
+OPP000790,Keystone Benefits Co. — Upsell 2026,ACC000290,Closed Lost,2027-03-27,113093
+OPP000791,Streamline Coverage Partners — Renewal 2026,ACC000291,Prospecting,2027-03-28,113230
+OPP000792,Apex Insurance Holdings — Expansion 2026,ACC000292,Qualification,2027-03-29,113367
+OPP000793,Valley Risk Management — New Business 2026,ACC000293,Needs Analysis,2027-03-30,
+OPP000794,Crestview Financial Services — Upgrade 2026,,Value Proposition,2027-03-31,113641
+OPP000795,Lakeside Protection Group — Upsell 2026,ACC000295,Id. Decision Makers,2027-04-01,113778
+OPP000796,Sterling Risk Partners — Renewal 2026,ACC000296,Perception Analysis,2027-04-02,113915
+OPP000797,Westpoint Insurance Alliance — Expansion 2026,ACC000297,Proposal/Price Quote,2027-04-03,114052
+OPP000798,Clearwater Benefits Group — New Business 2026,ACC000298,Negotiation/Review,2027-04-04,114189
+OPP000799,Redwood Assurance Co. — Upgrade 2026,ACC000299,Closed Won,2027-04-05,
+OPP000800,Oakridge Financial Partners — Upsell 2026,ACC000300,Closed Lost,2027-04-06,114463
+OPP000801,Sunrise Financial Group — Renewal 2026,ACC000301,Prospecting,2027-04-07,114600
+OPP000802,Meridian Life Partners — Expansion 2026,ACC000302,Qualification,2027-04-08,114737
+OPP000803,Pacific Coast Assurance — New Business 2026,ACC000303,Needs Analysis,2027-04-09,114874
+OPP000804,BlueSky Protection Services — Upgrade 2026,ACC000304,Value Proposition,2027-04-10,115011
+OPP000805,Cornerstone Risk Management — Upsell 2026,ACC000305,Id. Decision Makers,2027-04-11,
+OPP000806,Evergreen Coverage Co. — Renewal 2026,ACC000306,Perception Analysis,2027-04-12,115285
+OPP000807,Pinnacle Insurance Brokers — Expansion 2026,,Proposal/Price Quote,2027-04-13,115422
+OPP000808,Heritage Mutual Group — New Business 2026,ACC000308,Negotiation/Review,2027-04-14,115559
+OPP000809,Coastal Risk Advisors — Upgrade 2026,ACC000309,Closed Won,2027-04-15,115696
+OPP000810,Summit Protection Alliance — Upsell 2026,ACC000310,Closed Lost,2027-04-16,115833
+OPP000811,Lighthouse Insurance Services — Renewal 2026,ACC000311,Prospecting,2027-04-17,
+OPP000812,Cascade Financial Security — Expansion 2026,ACC000312,Qualification,2027-04-18,116107
+OPP000813,Premier Risk Solutions — New Business 2026,ACC000313,Needs Analysis,2027-04-19,116244
+OPP000814,Horizon Assurance Group — Upgrade 2026,ACC000314,Value Proposition,2027-04-20,116381
+OPP000815,Keystone Benefits Co. — Upsell 2026,ACC000315,Id. Decision Makers,2027-04-21,116518
+OPP000816,Streamline Coverage Partners — Renewal 2026,ACC000316,Perception Analysis,2027-04-22,116655
+OPP000817,Apex Insurance Holdings — Expansion 2026,ACC000317,Proposal/Price Quote,2027-04-23,
+OPP000818,Valley Risk Management — New Business 2026,ACC000318,Negotiation/Review,2027-04-24,116929
+OPP000819,Crestview Financial Services — Upgrade 2026,ACC000319,Closed Won,2027-04-25,117066
+OPP000820,Lakeside Protection Group — Upsell 2026,,Closed Lost,2027-04-26,117203
+OPP000821,Sterling Risk Partners — Renewal 2026,ACC000321,Prospecting,2027-04-27,117340
+OPP000822,Westpoint Insurance Alliance — Expansion 2026,ACC000322,Qualification,2027-04-28,117477
+OPP000823,Clearwater Benefits Group — New Business 2026,ACC000323,Needs Analysis,2027-04-29,
+OPP000824,Redwood Assurance Co. — Upgrade 2026,ACC000324,Value Proposition,2027-04-30,117751
+OPP000825,Oakridge Financial Partners — Upsell 2026,ACC000325,Id. Decision Makers,2027-05-01,117888
+OPP000826,Sunrise Financial Group — Renewal 2026,ACC000326,Perception Analysis,2027-05-02,118025
+OPP000827,Meridian Life Partners — Expansion 2026,ACC000327,Proposal/Price Quote,2027-05-03,118162
+OPP000828,Pacific Coast Assurance — New Business 2026,ACC000328,Negotiation/Review,2027-05-04,118299
+OPP000829,BlueSky Protection Services — Upgrade 2026,ACC000329,Closed Won,2027-05-05,
+OPP000830,Cornerstone Risk Management — Upsell 2026,ACC000330,Closed Lost,2027-05-06,118573
+OPP000831,Evergreen Coverage Co. — Renewal 2026,ACC000331,Prospecting,2027-05-07,118710
+OPP000832,Pinnacle Insurance Brokers — Expansion 2026,ACC000332,Qualification,2027-05-08,118847
+OPP000833,Heritage Mutual Group — New Business 2026,,Needs Analysis,2027-05-09,118984
+OPP000834,Coastal Risk Advisors — Upgrade 2026,ACC000334,Value Proposition,2027-05-10,119121
+OPP000835,Summit Protection Alliance — Upsell 2026,ACC000335,Id. Decision Makers,2027-05-11,
+OPP000836,Lighthouse Insurance Services — Renewal 2026,ACC000336,Perception Analysis,2027-05-12,119395
+OPP000837,Cascade Financial Security — Expansion 2026,ACC000337,Proposal/Price Quote,2027-05-13,119532
+OPP000838,Premier Risk Solutions — New Business 2026,ACC000338,Negotiation/Review,2027-05-14,119669
+OPP000839,Horizon Assurance Group — Upgrade 2026,ACC000339,Closed Won,2027-05-15,119806
+OPP000840,Keystone Benefits Co. — Upsell 2026,ACC000340,Closed Lost,2027-05-16,119943
+OPP000841,Streamline Coverage Partners — Renewal 2026,ACC000341,Prospecting,2027-05-17,
+OPP000842,Apex Insurance Holdings — Expansion 2026,ACC000342,Qualification,2027-05-18,120217
+OPP000843,Valley Risk Management — New Business 2026,ACC000343,Needs Analysis,2027-05-19,120354
+OPP000844,Crestview Financial Services — Upgrade 2026,ACC000344,Value Proposition,2027-05-20,120491
+OPP000845,Lakeside Protection Group — Upsell 2026,ACC000345,Id. Decision Makers,2027-05-21,120628
+OPP000846,Sterling Risk Partners — Renewal 2026,,Perception Analysis,2027-05-22,120765
+OPP000847,Westpoint Insurance Alliance — Expansion 2026,ACC000347,Proposal/Price Quote,2027-05-23,
+OPP000848,Clearwater Benefits Group — New Business 2026,ACC000348,Negotiation/Review,2027-05-24,121039
+OPP000849,Redwood Assurance Co. — Upgrade 2026,ACC000349,Closed Won,2027-05-25,121176
+OPP000850,Oakridge Financial Partners — Upsell 2026,ACC000350,Closed Lost,2027-05-26,121313
+OPP000851,Sunrise Financial Group — Renewal 2026,ACC000351,Prospecting,2027-05-27,121450
+OPP000852,Meridian Life Partners — Expansion 2026,ACC000352,Qualification,2027-05-28,121587
+OPP000853,Pacific Coast Assurance — New Business 2026,ACC000353,Needs Analysis,2027-05-29,
+OPP000854,BlueSky Protection Services — Upgrade 2026,ACC000354,Value Proposition,2027-05-30,121861
+OPP000855,Cornerstone Risk Management — Upsell 2026,ACC000355,Id. Decision Makers,2027-05-31,121998
+OPP000856,Evergreen Coverage Co. — Renewal 2026,ACC000356,Perception Analysis,2027-06-01,122135
+OPP000857,Pinnacle Insurance Brokers — Expansion 2026,ACC000357,Proposal/Price Quote,2027-06-02,122272
+OPP000858,Heritage Mutual Group — New Business 2026,ACC000358,Negotiation/Review,2027-06-03,122409
+OPP000859,Coastal Risk Advisors — Upgrade 2026,,Closed Won,2027-06-04,
+OPP000860,Summit Protection Alliance — Upsell 2026,ACC000360,Closed Lost,2027-06-05,122683
+OPP000861,Lighthouse Insurance Services — Renewal 2026,ACC000361,Prospecting,2027-06-06,122820
+OPP000862,Cascade Financial Security — Expansion 2026,ACC000362,Qualification,2027-06-07,122957
+OPP000863,Premier Risk Solutions — New Business 2026,ACC000363,Needs Analysis,2027-06-08,123094
+OPP000864,Horizon Assurance Group — Upgrade 2026,ACC000364,Value Proposition,2027-06-09,123231
+OPP000865,Keystone Benefits Co. — Upsell 2026,ACC000365,Id. Decision Makers,2027-06-10,
+OPP000866,Streamline Coverage Partners — Renewal 2026,ACC000366,Perception Analysis,2027-06-11,123505
+OPP000867,Apex Insurance Holdings — Expansion 2026,ACC000367,Proposal/Price Quote,2027-06-12,123642
+OPP000868,Valley Risk Management — New Business 2026,ACC000368,Negotiation/Review,2027-06-13,123779
+OPP000869,Crestview Financial Services — Upgrade 2026,ACC000369,Closed Won,2027-06-14,123916
+OPP000870,Lakeside Protection Group — Upsell 2026,ACC000370,Closed Lost,2027-06-15,124053
+OPP000871,Sterling Risk Partners — Renewal 2026,ACC000371,Prospecting,2027-06-16,
+OPP000872,Westpoint Insurance Alliance — Expansion 2026,,Qualification,2027-06-17,124327
+OPP000873,Clearwater Benefits Group — New Business 2026,ACC000373,Needs Analysis,2027-06-18,124464
+OPP000874,Redwood Assurance Co. — Upgrade 2026,ACC000374,Value Proposition,2027-06-19,124601
+OPP000875,Oakridge Financial Partners — Upsell 2026,ACC000375,Id. Decision Makers,2027-06-20,124738
+OPP000876,Sunrise Financial Group — Renewal 2026,ACC000376,Perception Analysis,2027-06-21,124875
+OPP000877,Meridian Life Partners — Expansion 2026,ACC000377,Proposal/Price Quote,2027-06-22,
+OPP000878,Pacific Coast Assurance — New Business 2026,ACC000378,Negotiation/Review,2027-06-23,125149
+OPP000879,BlueSky Protection Services — Upgrade 2026,ACC000379,Closed Won,2027-06-24,125286
+OPP000880,Cornerstone Risk Management — Upsell 2026,ACC000380,Closed Lost,2027-06-25,125423
+OPP000881,Evergreen Coverage Co. — Renewal 2026,ACC000381,Prospecting,2027-06-26,125560
+OPP000882,Pinnacle Insurance Brokers — Expansion 2026,ACC000382,Qualification,2027-06-27,125697
+OPP000883,Heritage Mutual Group — New Business 2026,ACC000383,Needs Analysis,2027-06-28,
+OPP000884,Coastal Risk Advisors — Upgrade 2026,ACC000384,Value Proposition,2027-06-29,125971
+OPP000885,Summit Protection Alliance — Upsell 2026,,Id. Decision Makers,2027-06-30,126108
+OPP000886,Lighthouse Insurance Services — Renewal 2026,ACC000386,Perception Analysis,2027-07-01,126245
+OPP000887,Cascade Financial Security — Expansion 2026,ACC000387,Proposal/Price Quote,2027-07-02,126382
+OPP000888,Premier Risk Solutions — New Business 2026,ACC000388,Negotiation/Review,2027-07-03,126519
+OPP000889,Horizon Assurance Group — Upgrade 2026,ACC000389,Closed Won,2027-07-04,
+OPP000890,Keystone Benefits Co. — Upsell 2026,ACC000390,Closed Lost,2027-07-05,126793
+OPP000891,Streamline Coverage Partners — Renewal 2026,ACC000391,Prospecting,2027-07-06,126930
+OPP000892,Apex Insurance Holdings — Expansion 2026,ACC000392,Qualification,2027-07-07,127067
+OPP000893,Valley Risk Management — New Business 2026,ACC000393,Needs Analysis,2027-07-08,127204
+OPP000894,Crestview Financial Services — Upgrade 2026,ACC000394,Value Proposition,2027-07-09,127341
+OPP000895,Lakeside Protection Group — Upsell 2026,ACC000395,Id. Decision Makers,2027-07-10,
+OPP000896,Sterling Risk Partners — Renewal 2026,ACC000396,Perception Analysis,2027-07-11,127615
+OPP000897,Westpoint Insurance Alliance — Expansion 2026,ACC000397,Proposal/Price Quote,2027-07-12,127752
+OPP000898,Clearwater Benefits Group — New Business 2026,,Negotiation/Review,2027-07-13,127889
+OPP000899,Redwood Assurance Co. — Upgrade 2026,ACC000399,Closed Won,2027-07-14,128026
+OPP000900,Oakridge Financial Partners — Upsell 2026,ACC000400,Closed Lost,2027-07-15,128163
+OPP000901,Sunrise Financial Group — Renewal 2026,ACC000401,Prospecting,2027-07-16,
+OPP000902,Meridian Life Partners — Expansion 2026,ACC000402,Qualification,2027-07-17,128437
+OPP000903,Pacific Coast Assurance — New Business 2026,ACC000403,Needs Analysis,2027-07-18,128574
+OPP000904,BlueSky Protection Services — Upgrade 2026,ACC000404,Value Proposition,2027-07-19,128711
+OPP000905,Cornerstone Risk Management — Upsell 2026,ACC000405,Id. Decision Makers,2027-07-20,128848
+OPP000906,Evergreen Coverage Co. — Renewal 2026,ACC000406,Perception Analysis,2027-07-21,128985
+OPP000907,Pinnacle Insurance Brokers — Expansion 2026,ACC000407,Proposal/Price Quote,2027-07-22,
+OPP000908,Heritage Mutual Group — New Business 2026,ACC000408,Negotiation/Review,2027-07-23,129259
+OPP000909,Coastal Risk Advisors — Upgrade 2026,ACC000409,Closed Won,2027-07-24,129396
+OPP000910,Summit Protection Alliance — Upsell 2026,ACC000410,Closed Lost,2027-07-25,129533
+OPP000911,Lighthouse Insurance Services — Renewal 2026,,Prospecting,2027-07-26,129670
+OPP000912,Cascade Financial Security — Expansion 2026,ACC000412,Qualification,2027-07-27,129807
+OPP000913,Premier Risk Solutions — New Business 2026,ACC000413,Needs Analysis,2027-07-28,
+OPP000914,Horizon Assurance Group — Upgrade 2026,ACC000414,Value Proposition,2027-07-29,130081
+OPP000915,Keystone Benefits Co. — Upsell 2026,ACC000415,Id. Decision Makers,2027-07-30,130218
+OPP000916,Streamline Coverage Partners — Renewal 2026,ACC000416,Perception Analysis,2027-07-31,130355
+OPP000917,Apex Insurance Holdings — Expansion 2026,ACC000417,Proposal/Price Quote,2027-08-01,130492
+OPP000918,Valley Risk Management — New Business 2026,ACC000418,Negotiation/Review,2027-08-02,130629
+OPP000919,Crestview Financial Services — Upgrade 2026,ACC000419,Closed Won,2027-08-03,
+OPP000920,Lakeside Protection Group — Upsell 2026,ACC000420,Closed Lost,2027-08-04,130903
+OPP000921,Sterling Risk Partners — Renewal 2026,ACC000421,Prospecting,2027-08-05,131040
+OPP000922,Westpoint Insurance Alliance — Expansion 2026,ACC000422,Qualification,2027-08-06,131177
+OPP000923,Clearwater Benefits Group — New Business 2026,ACC000423,Needs Analysis,2027-08-07,131314
+OPP000924,Redwood Assurance Co. — Upgrade 2026,,Value Proposition,2027-08-08,131451
+OPP000925,Oakridge Financial Partners — Upsell 2026,ACC000425,Id. Decision Makers,2027-08-09,
+OPP000926,Sunrise Financial Group — Renewal 2026,ACC000426,Perception Analysis,2027-08-10,131725
+OPP000927,Meridian Life Partners — Expansion 2026,ACC000427,Proposal/Price Quote,2027-08-11,131862
+OPP000928,Pacific Coast Assurance — New Business 2026,ACC000428,Negotiation/Review,2027-08-12,131999
+OPP000929,BlueSky Protection Services — Upgrade 2026,ACC000429,Closed Won,2027-08-13,132136
+OPP000930,Cornerstone Risk Management — Upsell 2026,ACC000430,Closed Lost,2027-08-14,132273
+OPP000931,Evergreen Coverage Co. — Renewal 2026,ACC000431,Prospecting,2027-08-15,
+OPP000932,Pinnacle Insurance Brokers — Expansion 2026,ACC000432,Qualification,2027-08-16,132547
+OPP000933,Heritage Mutual Group — New Business 2026,ACC000433,Needs Analysis,2027-08-17,132684
+OPP000934,Coastal Risk Advisors — Upgrade 2026,ACC000434,Value Proposition,2027-08-18,132821
+OPP000935,Summit Protection Alliance — Upsell 2026,ACC000435,Id. Decision Makers,2027-08-19,132958
+OPP000936,Lighthouse Insurance Services — Renewal 2026,ACC000436,Perception Analysis,2027-08-20,133095
+OPP000937,Cascade Financial Security — Expansion 2026,,Proposal/Price Quote,2027-08-21,
+OPP000938,Premier Risk Solutions — New Business 2026,ACC000438,Negotiation/Review,2027-08-22,133369
+OPP000939,Horizon Assurance Group — Upgrade 2026,ACC000439,Closed Won,2027-08-23,133506
+OPP000940,Keystone Benefits Co. — Upsell 2026,ACC000440,Closed Lost,2027-08-24,133643
+OPP000941,Streamline Coverage Partners — Renewal 2026,ACC000441,Prospecting,2027-08-25,133780
+OPP000942,Apex Insurance Holdings — Expansion 2026,ACC000442,Qualification,2027-08-26,133917
+OPP000943,Valley Risk Management — New Business 2026,ACC000443,Needs Analysis,2027-08-27,
+OPP000944,Crestview Financial Services — Upgrade 2026,ACC000444,Value Proposition,2027-08-28,134191
+OPP000945,Lakeside Protection Group — Upsell 2026,ACC000445,Id. Decision Makers,2027-08-29,134328
+OPP000946,Sterling Risk Partners — Renewal 2026,ACC000446,Perception Analysis,2027-08-30,134465
+OPP000947,Westpoint Insurance Alliance — Expansion 2026,ACC000447,Proposal/Price Quote,2027-08-31,134602
+OPP000948,Clearwater Benefits Group — New Business 2026,ACC000448,Negotiation/Review,2027-09-01,134739
+OPP000949,Redwood Assurance Co. — Upgrade 2026,ACC000449,Closed Won,2027-09-02,
+OPP000950,Oakridge Financial Partners — Upsell 2026,,Closed Lost,2027-09-03,135013
+OPP000951,Sunrise Financial Group — Renewal 2026,ACC000451,Prospecting,2027-09-04,135150
+OPP000952,Meridian Life Partners — Expansion 2026,ACC000452,Qualification,2027-09-05,135287
+OPP000953,Pacific Coast Assurance — New Business 2026,ACC000453,Needs Analysis,2027-09-06,135424
+OPP000954,BlueSky Protection Services — Upgrade 2026,ACC000454,Value Proposition,2027-09-07,135561
+OPP000955,Cornerstone Risk Management — Upsell 2026,ACC000455,Id. Decision Makers,2027-09-08,
+OPP000956,Evergreen Coverage Co. — Renewal 2026,ACC000456,Perception Analysis,2027-09-09,135835
+OPP000957,Pinnacle Insurance Brokers — Expansion 2026,ACC000457,Proposal/Price Quote,2027-09-10,135972
+OPP000958,Heritage Mutual Group — New Business 2026,ACC000458,Negotiation/Review,2027-09-11,136109
+OPP000959,Coastal Risk Advisors — Upgrade 2026,ACC000459,Closed Won,2027-09-12,136246
+OPP000960,Summit Protection Alliance — Upsell 2026,ACC000460,Closed Lost,2027-09-13,136383
+OPP000961,Lighthouse Insurance Services — Renewal 2026,ACC000461,Prospecting,2027-09-14,
+OPP000962,Cascade Financial Security — Expansion 2026,ACC000462,Qualification,2027-09-15,136657
+OPP000963,Premier Risk Solutions — New Business 2026,,Needs Analysis,2027-09-16,136794
+OPP000964,Horizon Assurance Group — Upgrade 2026,ACC000464,Value Proposition,2027-09-17,136931
+OPP000965,Keystone Benefits Co. — Upsell 2026,ACC000465,Id. Decision Makers,2027-09-18,137068
+OPP000966,Streamline Coverage Partners — Renewal 2026,ACC000466,Perception Analysis,2027-09-19,137205
+OPP000967,Apex Insurance Holdings — Expansion 2026,ACC000467,Proposal/Price Quote,2027-09-20,
+OPP000968,Valley Risk Management — New Business 2026,ACC000468,Negotiation/Review,2027-09-21,137479
+OPP000969,Crestview Financial Services — Upgrade 2026,ACC000469,Closed Won,2027-09-22,137616
+OPP000970,Lakeside Protection Group — Upsell 2026,ACC000470,Closed Lost,2027-09-23,137753
+OPP000971,Sterling Risk Partners — Renewal 2026,ACC000471,Prospecting,2027-09-24,137890
+OPP000972,Westpoint Insurance Alliance — Expansion 2026,ACC000472,Qualification,2027-09-25,138027
+OPP000973,Clearwater Benefits Group — New Business 2026,ACC000473,Needs Analysis,2027-09-26,
+OPP000974,Redwood Assurance Co. — Upgrade 2026,ACC000474,Value Proposition,2027-09-27,138301
+OPP000975,Oakridge Financial Partners — Upsell 2026,ACC000475,Id. Decision Makers,2027-09-28,138438
+OPP000976,Sunrise Financial Group — Renewal 2026,,Perception Analysis,2027-09-29,138575
+OPP000977,Meridian Life Partners — Expansion 2026,ACC000477,Proposal/Price Quote,2027-09-30,138712
+OPP000978,Pacific Coast Assurance — New Business 2026,ACC000478,Negotiation/Review,2027-10-01,138849
+OPP000979,BlueSky Protection Services — Upgrade 2026,ACC000479,Closed Won,2027-10-02,
+OPP000980,Cornerstone Risk Management — Upsell 2026,ACC000480,Closed Lost,2027-10-03,139123
+OPP000981,Evergreen Coverage Co. — Renewal 2026,ACC000481,Prospecting,2027-10-04,139260
+OPP000982,Pinnacle Insurance Brokers — Expansion 2026,ACC000482,Qualification,2027-10-05,139397
+OPP000983,Heritage Mutual Group — New Business 2026,ACC000483,Needs Analysis,2027-10-06,139534
+OPP000984,Coastal Risk Advisors — Upgrade 2026,ACC000484,Value Proposition,2027-10-07,139671
+OPP000985,Summit Protection Alliance — Upsell 2026,ACC000485,Id. Decision Makers,2027-10-08,
+OPP000986,Lighthouse Insurance Services — Renewal 2026,ACC000486,Perception Analysis,2027-10-09,139945
+OPP000987,Cascade Financial Security — Expansion 2026,ACC000487,Proposal/Price Quote,2027-10-10,140082
+OPP000988,Premier Risk Solutions — New Business 2026,ACC000488,Negotiation/Review,2027-10-11,140219
+OPP000989,Horizon Assurance Group — Upgrade 2026,,Closed Won,2027-10-12,140356
+OPP000990,Keystone Benefits Co. — Upsell 2026,ACC000490,Closed Lost,2027-10-13,140493
+OPP000991,Streamline Coverage Partners — Renewal 2026,ACC000491,Prospecting,2027-10-14,
+OPP000992,Apex Insurance Holdings — Expansion 2026,ACC000492,Qualification,2027-10-15,140767
+OPP000993,Valley Risk Management — New Business 2026,ACC000493,Needs Analysis,2027-10-16,140904
+OPP000994,Crestview Financial Services — Upgrade 2026,ACC000494,Value Proposition,2027-10-17,141041
+OPP000995,Lakeside Protection Group — Upsell 2026,ACC000495,Id. Decision Makers,2027-10-18,141178
+OPP000996,Sterling Risk Partners — Renewal 2026,ACC000496,Perception Analysis,2027-10-19,141315
+OPP000997,Westpoint Insurance Alliance — Expansion 2026,ACC000497,Proposal/Price Quote,2027-10-20,
+OPP000998,Clearwater Benefits Group — New Business 2026,ACC000498,Negotiation/Review,2027-10-21,141589
+OPP000999,Redwood Assurance Co. — Upgrade 2026,ACC000499,Closed Won,2027-10-22,141726
+OPP001000,Oakridge Financial Partners — Upsell 2026,ACC000500,Closed Lost,2027-10-23,141863
+OPP001001,Sunrise Financial Group — Renewal 2026,ACC000001,Prospecting,2027-10-24,142000
+OPP001002,Meridian Life Partners — Expansion 2026,,Qualification,2027-10-25,142137
+OPP001003,Pacific Coast Assurance — New Business 2026,ACC000003,Needs Analysis,2027-10-26,
+OPP001004,BlueSky Protection Services — Upgrade 2026,ACC000004,Value Proposition,2027-10-27,142411
+OPP001005,Cornerstone Risk Management — Upsell 2026,ACC000005,Id. Decision Makers,2027-10-28,142548
+OPP001006,Evergreen Coverage Co. — Renewal 2026,ACC000006,Perception Analysis,2027-10-29,142685
+OPP001007,Pinnacle Insurance Brokers — Expansion 2026,ACC000007,Proposal/Price Quote,2027-10-30,142822
+OPP001008,Heritage Mutual Group — New Business 2026,ACC000008,Negotiation/Review,2027-10-31,142959
+OPP001009,Coastal Risk Advisors — Upgrade 2026,ACC000009,Closed Won,2027-11-01,
+OPP001010,Summit Protection Alliance — Upsell 2026,ACC000010,Closed Lost,2027-11-02,143233
+OPP001011,Lighthouse Insurance Services — Renewal 2026,ACC000011,Prospecting,2027-11-03,143370
+OPP001012,Cascade Financial Security — Expansion 2026,ACC000012,Qualification,2027-11-04,143507
+OPP001013,Premier Risk Solutions — New Business 2026,ACC000013,Needs Analysis,2027-11-05,143644
+OPP001014,Horizon Assurance Group — Upgrade 2026,ACC000014,Value Proposition,2027-11-06,143781
+OPP001015,Keystone Benefits Co. — Upsell 2026,,Id. Decision Makers,2027-11-07,
+OPP001016,Streamline Coverage Partners — Renewal 2026,ACC000016,Perception Analysis,2027-11-08,144055
+OPP001017,Apex Insurance Holdings — Expansion 2026,ACC000017,Proposal/Price Quote,2027-11-09,144192
+OPP001018,Valley Risk Management — New Business 2026,ACC000018,Negotiation/Review,2027-11-10,144329
+OPP001019,Crestview Financial Services — Upgrade 2026,ACC000019,Closed Won,2027-11-11,144466
+OPP001020,Lakeside Protection Group — Upsell 2026,ACC000020,Closed Lost,2027-11-12,144603
+OPP001021,Sterling Risk Partners — Renewal 2026,ACC000021,Prospecting,2027-11-13,
+OPP001022,Westpoint Insurance Alliance — Expansion 2026,ACC000022,Qualification,2027-11-14,144877
+OPP001023,Clearwater Benefits Group — New Business 2026,ACC000023,Needs Analysis,2027-11-15,145014
+OPP001024,Redwood Assurance Co. — Upgrade 2026,ACC000024,Value Proposition,2027-11-16,145151
+OPP001025,Oakridge Financial Partners — Upsell 2026,ACC000025,Id. Decision Makers,2027-11-17,145288
+OPP001026,Sunrise Financial Group — Renewal 2026,ACC000026,Perception Analysis,2027-11-18,145425
+OPP001027,Meridian Life Partners — Expansion 2026,ACC000027,Proposal/Price Quote,2027-11-19,
+OPP001028,Pacific Coast Assurance — New Business 2026,,Negotiation/Review,2027-11-20,145699
+OPP001029,BlueSky Protection Services — Upgrade 2026,ACC000029,Closed Won,2027-11-21,145836
+OPP001030,Cornerstone Risk Management — Upsell 2026,ACC000030,Closed Lost,2027-11-22,145973
+OPP001031,Evergreen Coverage Co. — Renewal 2026,ACC000031,Prospecting,2027-11-23,146110
+OPP001032,Pinnacle Insurance Brokers — Expansion 2026,ACC000032,Qualification,2027-11-24,146247
+OPP001033,Heritage Mutual Group — New Business 2026,ACC000033,Needs Analysis,2027-11-25,
+OPP001034,Coastal Risk Advisors — Upgrade 2026,ACC000034,Value Proposition,2027-11-26,146521
+OPP001035,Summit Protection Alliance — Upsell 2026,ACC000035,Id. Decision Makers,2027-11-27,146658
+OPP001036,Lighthouse Insurance Services — Renewal 2026,ACC000036,Perception Analysis,2027-11-28,146795
+OPP001037,Cascade Financial Security — Expansion 2026,ACC000037,Proposal/Price Quote,2027-11-29,146932
+OPP001038,Premier Risk Solutions — New Business 2026,ACC000038,Negotiation/Review,2027-11-30,147069
+OPP001039,Horizon Assurance Group — Upgrade 2026,ACC000039,Closed Won,2027-12-01,
+OPP001040,Keystone Benefits Co. — Upsell 2026,ACC000040,Closed Lost,2027-12-02,147343
+OPP001041,Streamline Coverage Partners — Renewal 2026,,Prospecting,2027-12-03,147480
+OPP001042,Apex Insurance Holdings — Expansion 2026,ACC000042,Qualification,2027-12-04,147617
+OPP001043,Valley Risk Management — New Business 2026,ACC000043,Needs Analysis,2027-12-05,147754
+OPP001044,Crestview Financial Services — Upgrade 2026,ACC000044,Value Proposition,2027-12-06,147891
+OPP001045,Lakeside Protection Group — Upsell 2026,ACC000045,Id. Decision Makers,2027-12-07,
+OPP001046,Sterling Risk Partners — Renewal 2026,ACC000046,Perception Analysis,2027-12-08,148165
+OPP001047,Westpoint Insurance Alliance — Expansion 2026,ACC000047,Proposal/Price Quote,2027-12-09,148302
+OPP001048,Clearwater Benefits Group — New Business 2026,ACC000048,Negotiation/Review,2027-12-10,148439
+OPP001049,Redwood Assurance Co. — Upgrade 2026,ACC000049,Closed Won,2027-12-11,148576
+OPP001050,Oakridge Financial Partners — Upsell 2026,ACC000050,Closed Lost,2027-12-12,148713
+OPP001051,Sunrise Financial Group — Renewal 2026,ACC000051,Prospecting,2027-12-13,
+OPP001052,Meridian Life Partners — Expansion 2026,ACC000052,Qualification,2027-12-14,148987
+OPP001053,Pacific Coast Assurance — New Business 2026,ACC000053,Needs Analysis,2027-12-15,149124
+OPP001054,BlueSky Protection Services — Upgrade 2026,,Value Proposition,2027-12-16,149261
+OPP001055,Cornerstone Risk Management — Upsell 2026,ACC000055,Id. Decision Makers,2027-12-17,149398
+OPP001056,Evergreen Coverage Co. — Renewal 2026,ACC000056,Perception Analysis,2027-12-18,149535
+OPP001057,Pinnacle Insurance Brokers — Expansion 2026,ACC000057,Proposal/Price Quote,2027-12-19,
+OPP001058,Heritage Mutual Group — New Business 2026,ACC000058,Negotiation/Review,2027-12-20,149809
+OPP001059,Coastal Risk Advisors — Upgrade 2026,ACC000059,Closed Won,2027-12-21,149946
+OPP001060,Summit Protection Alliance — Upsell 2026,ACC000060,Closed Lost,2027-12-22,150083
+OPP001061,Lighthouse Insurance Services — Renewal 2026,ACC000061,Prospecting,2027-12-23,150220
+OPP001062,Cascade Financial Security — Expansion 2026,ACC000062,Qualification,2027-12-24,150357
+OPP001063,Premier Risk Solutions — New Business 2026,ACC000063,Needs Analysis,2027-12-25,
+OPP001064,Horizon Assurance Group — Upgrade 2026,ACC000064,Value Proposition,2027-12-26,150631
+OPP001065,Keystone Benefits Co. — Upsell 2026,ACC000065,Id. Decision Makers,2027-12-27,150768
+OPP001066,Streamline Coverage Partners — Renewal 2026,ACC000066,Perception Analysis,2027-12-28,150905
+OPP001067,Apex Insurance Holdings — Expansion 2026,,Proposal/Price Quote,2027-12-29,151042
+OPP001068,Valley Risk Management — New Business 2026,ACC000068,Negotiation/Review,2027-12-30,151179
+OPP001069,Crestview Financial Services — Upgrade 2026,ACC000069,Closed Won,2027-12-31,
+OPP001070,Lakeside Protection Group — Upsell 2026,ACC000070,Closed Lost,2028-01-01,151453
+OPP001071,Sterling Risk Partners — Renewal 2026,ACC000071,Prospecting,2028-01-02,151590
+OPP001072,Westpoint Insurance Alliance — Expansion 2026,ACC000072,Qualification,2028-01-03,151727
+OPP001073,Clearwater Benefits Group — New Business 2026,ACC000073,Needs Analysis,2028-01-04,151864
+OPP001074,Redwood Assurance Co. — Upgrade 2026,ACC000074,Value Proposition,2028-01-05,152001
+OPP001075,Oakridge Financial Partners — Upsell 2026,ACC000075,Id. Decision Makers,2028-01-06,
+OPP001076,Sunrise Financial Group — Renewal 2026,ACC000076,Perception Analysis,2028-01-07,152275
+OPP001077,Meridian Life Partners — Expansion 2026,ACC000077,Proposal/Price Quote,2028-01-08,152412
+OPP001078,Pacific Coast Assurance — New Business 2026,ACC000078,Negotiation/Review,2028-01-09,152549
+OPP001079,BlueSky Protection Services — Upgrade 2026,ACC000079,Closed Won,2028-01-10,152686
+OPP001080,Cornerstone Risk Management — Upsell 2026,,Closed Lost,2028-01-11,152823
+OPP001081,Evergreen Coverage Co. — Renewal 2026,ACC000081,Prospecting,2026-07-21,
+OPP001082,Pinnacle Insurance Brokers — Expansion 2026,ACC000082,Qualification,2026-07-22,153097
+OPP001083,Heritage Mutual Group — New Business 2026,ACC000083,Needs Analysis,2026-07-23,153234
+OPP001084,Coastal Risk Advisors — Upgrade 2026,ACC000084,Value Proposition,2026-07-24,153371
+OPP001085,Summit Protection Alliance — Upsell 2026,ACC000085,Id. Decision Makers,2026-07-25,153508
+OPP001086,Lighthouse Insurance Services — Renewal 2026,ACC000086,Perception Analysis,2026-07-26,153645
+OPP001087,Cascade Financial Security — Expansion 2026,ACC000087,Proposal/Price Quote,2026-07-27,
+OPP001088,Premier Risk Solutions — New Business 2026,ACC000088,Negotiation/Review,2026-07-28,153919
+OPP001089,Horizon Assurance Group — Upgrade 2026,ACC000089,Closed Won,2026-07-29,154056
+OPP001090,Keystone Benefits Co. — Upsell 2026,ACC000090,Closed Lost,2026-07-30,154193
+OPP001091,Streamline Coverage Partners — Renewal 2026,ACC000091,Prospecting,2026-07-31,154330
+OPP001092,Apex Insurance Holdings — Expansion 2026,ACC000092,Qualification,2026-08-01,154467
+OPP001093,Valley Risk Management — New Business 2026,,Needs Analysis,2026-08-02,
+OPP001094,Crestview Financial Services — Upgrade 2026,ACC000094,Value Proposition,2026-08-03,154741
+OPP001095,Lakeside Protection Group — Upsell 2026,ACC000095,Id. Decision Makers,2026-08-04,154878
+OPP001096,Sterling Risk Partners — Renewal 2026,ACC000096,Perception Analysis,2026-08-05,155015
+OPP001097,Westpoint Insurance Alliance — Expansion 2026,ACC000097,Proposal/Price Quote,2026-08-06,155152
+OPP001098,Clearwater Benefits Group — New Business 2026,ACC000098,Negotiation/Review,2026-08-07,155289
+OPP001099,Redwood Assurance Co. — Upgrade 2026,ACC000099,Closed Won,2026-08-08,
+OPP001100,Oakridge Financial Partners — Upsell 2026,ACC000100,Closed Lost,2026-08-09,155563
+OPP001101,Sunrise Financial Group — Renewal 2026,ACC000101,Prospecting,2026-08-10,155700
+OPP001102,Meridian Life Partners — Expansion 2026,ACC000102,Qualification,2026-08-11,155837
+OPP001103,Pacific Coast Assurance — New Business 2026,ACC000103,Needs Analysis,2026-08-12,155974
+OPP001104,BlueSky Protection Services — Upgrade 2026,ACC000104,Value Proposition,2026-08-13,156111
+OPP001105,Cornerstone Risk Management — Upsell 2026,ACC000105,Id. Decision Makers,2026-08-14,
+OPP001106,Evergreen Coverage Co. — Renewal 2026,,Perception Analysis,2026-08-15,156385
+OPP001107,Pinnacle Insurance Brokers — Expansion 2026,ACC000107,Proposal/Price Quote,2026-08-16,156522
+OPP001108,Heritage Mutual Group — New Business 2026,ACC000108,Negotiation/Review,2026-08-17,156659
+OPP001109,Coastal Risk Advisors — Upgrade 2026,ACC000109,Closed Won,2026-08-18,156796
+OPP001110,Summit Protection Alliance — Upsell 2026,ACC000110,Closed Lost,2026-08-19,156933
+OPP001111,Lighthouse Insurance Services — Renewal 2026,ACC000111,Prospecting,2026-08-20,
+OPP001112,Cascade Financial Security — Expansion 2026,ACC000112,Qualification,2026-08-21,157207
+OPP001113,Premier Risk Solutions — New Business 2026,ACC000113,Needs Analysis,2026-08-22,157344
+OPP001114,Horizon Assurance Group — Upgrade 2026,ACC000114,Value Proposition,2026-08-23,157481
+OPP001115,Keystone Benefits Co. — Upsell 2026,ACC000115,Id. Decision Makers,2026-08-24,157618
+OPP001116,Streamline Coverage Partners — Renewal 2026,ACC000116,Perception Analysis,2026-08-25,157755
+OPP001117,Apex Insurance Holdings — Expansion 2026,ACC000117,Proposal/Price Quote,2026-08-26,
+OPP001118,Valley Risk Management — New Business 2026,ACC000118,Negotiation/Review,2026-08-27,158029
+OPP001119,Crestview Financial Services — Upgrade 2026,,Closed Won,2026-08-28,158166
+OPP001120,Lakeside Protection Group — Upsell 2026,ACC000120,Closed Lost,2026-08-29,158303
+OPP001121,Sterling Risk Partners — Renewal 2026,ACC000121,Prospecting,2026-08-30,158440
+OPP001122,Westpoint Insurance Alliance — Expansion 2026,ACC000122,Qualification,2026-08-31,158577
+OPP001123,Clearwater Benefits Group — New Business 2026,ACC000123,Needs Analysis,2026-09-01,
+OPP001124,Redwood Assurance Co. — Upgrade 2026,ACC000124,Value Proposition,2026-09-02,158851
+OPP001125,Oakridge Financial Partners — Upsell 2026,ACC000125,Id. Decision Makers,2026-09-03,158988
+OPP001126,Sunrise Financial Group — Renewal 2026,ACC000126,Perception Analysis,2026-09-04,159125
+OPP001127,Meridian Life Partners — Expansion 2026,ACC000127,Proposal/Price Quote,2026-09-05,159262
+OPP001128,Pacific Coast Assurance — New Business 2026,ACC000128,Negotiation/Review,2026-09-06,159399
+OPP001129,BlueSky Protection Services — Upgrade 2026,ACC000129,Closed Won,2026-09-07,
+OPP001130,Cornerstone Risk Management — Upsell 2026,ACC000130,Closed Lost,2026-09-08,159673
+OPP001131,Evergreen Coverage Co. — Renewal 2026,ACC000131,Prospecting,2026-09-09,159810
+OPP001132,Pinnacle Insurance Brokers — Expansion 2026,,Qualification,2026-09-10,159947
+OPP001133,Heritage Mutual Group — New Business 2026,ACC000133,Needs Analysis,2026-09-11,160084
+OPP001134,Coastal Risk Advisors — Upgrade 2026,ACC000134,Value Proposition,2026-09-12,160221
+OPP001135,Summit Protection Alliance — Upsell 2026,ACC000135,Id. Decision Makers,2026-09-13,
+OPP001136,Lighthouse Insurance Services — Renewal 2026,ACC000136,Perception Analysis,2026-09-14,160495
+OPP001137,Cascade Financial Security — Expansion 2026,ACC000137,Proposal/Price Quote,2026-09-15,160632
+OPP001138,Premier Risk Solutions — New Business 2026,ACC000138,Negotiation/Review,2026-09-16,160769
+OPP001139,Horizon Assurance Group — Upgrade 2026,ACC000139,Closed Won,2026-09-17,160906
+OPP001140,Keystone Benefits Co. — Upsell 2026,ACC000140,Closed Lost,2026-09-18,161043
+OPP001141,Streamline Coverage Partners — Renewal 2026,ACC000141,Prospecting,2026-09-19,
+OPP001142,Apex Insurance Holdings — Expansion 2026,ACC000142,Qualification,2026-09-20,161317
+OPP001143,Valley Risk Management — New Business 2026,ACC000143,Needs Analysis,2026-09-21,161454
+OPP001144,Crestview Financial Services — Upgrade 2026,ACC000144,Value Proposition,2026-09-22,161591
+OPP001145,Lakeside Protection Group — Upsell 2026,,Id. Decision Makers,2026-09-23,161728
+OPP001146,Sterling Risk Partners — Renewal 2026,ACC000146,Perception Analysis,2026-09-24,161865
+OPP001147,Westpoint Insurance Alliance — Expansion 2026,ACC000147,Proposal/Price Quote,2026-09-25,
+OPP001148,Clearwater Benefits Group — New Business 2026,ACC000148,Negotiation/Review,2026-09-26,162139
+OPP001149,Redwood Assurance Co. — Upgrade 2026,ACC000149,Closed Won,2026-09-27,162276
+OPP001150,Oakridge Financial Partners — Upsell 2026,ACC000150,Closed Lost,2026-09-28,162413
+OPP001151,Sunrise Financial Group — Renewal 2026,ACC000151,Prospecting,2026-09-29,162550
+OPP001152,Meridian Life Partners — Expansion 2026,ACC000152,Qualification,2026-09-30,162687
+OPP001153,Pacific Coast Assurance — New Business 2026,ACC000153,Needs Analysis,2026-10-01,
+OPP001154,BlueSky Protection Services — Upgrade 2026,ACC000154,Value Proposition,2026-10-02,162961
+OPP001155,Cornerstone Risk Management — Upsell 2026,ACC000155,Id. Decision Makers,2026-10-03,163098
+OPP001156,Evergreen Coverage Co. — Renewal 2026,ACC000156,Perception Analysis,2026-10-04,163235
+OPP001157,Pinnacle Insurance Brokers — Expansion 2026,ACC000157,Proposal/Price Quote,2026-10-05,163372
+OPP001158,Heritage Mutual Group — New Business 2026,,Negotiation/Review,2026-10-06,163509
+OPP001159,Coastal Risk Advisors — Upgrade 2026,ACC000159,Closed Won,2026-10-07,
+OPP001160,Summit Protection Alliance — Upsell 2026,ACC000160,Closed Lost,2026-10-08,163783
+OPP001161,Lighthouse Insurance Services — Renewal 2026,ACC000161,Prospecting,2026-10-09,163920
+OPP001162,Cascade Financial Security — Expansion 2026,ACC000162,Qualification,2026-10-10,164057
+OPP001163,Premier Risk Solutions — New Business 2026,ACC000163,Needs Analysis,2026-10-11,164194
+OPP001164,Horizon Assurance Group — Upgrade 2026,ACC000164,Value Proposition,2026-10-12,164331
+OPP001165,Keystone Benefits Co. — Upsell 2026,ACC000165,Id. Decision Makers,2026-10-13,
+OPP001166,Streamline Coverage Partners — Renewal 2026,ACC000166,Perception Analysis,2026-10-14,164605
+OPP001167,Apex Insurance Holdings — Expansion 2026,ACC000167,Proposal/Price Quote,2026-10-15,164742
+OPP001168,Valley Risk Management — New Business 2026,ACC000168,Negotiation/Review,2026-10-16,164879
+OPP001169,Crestview Financial Services — Upgrade 2026,ACC000169,Closed Won,2026-10-17,165016
+OPP001170,Lakeside Protection Group — Upsell 2026,ACC000170,Closed Lost,2026-10-18,165153
+OPP001171,Sterling Risk Partners — Renewal 2026,,Prospecting,2026-10-19,
+OPP001172,Westpoint Insurance Alliance — Expansion 2026,ACC000172,Qualification,2026-10-20,165427
+OPP001173,Clearwater Benefits Group — New Business 2026,ACC000173,Needs Analysis,2026-10-21,165564
+OPP001174,Redwood Assurance Co. — Upgrade 2026,ACC000174,Value Proposition,2026-10-22,165701
+OPP001175,Oakridge Financial Partners — Upsell 2026,ACC000175,Id. Decision Makers,2026-10-23,165838
+OPP001176,Sunrise Financial Group — Renewal 2026,ACC000176,Perception Analysis,2026-10-24,165975
+OPP001177,Meridian Life Partners — Expansion 2026,ACC000177,Proposal/Price Quote,2026-10-25,
+OPP001178,Pacific Coast Assurance — New Business 2026,ACC000178,Negotiation/Review,2026-10-26,166249
+OPP001179,BlueSky Protection Services — Upgrade 2026,ACC000179,Closed Won,2026-10-27,166386
+OPP001180,Cornerstone Risk Management — Upsell 2026,ACC000180,Closed Lost,2026-10-28,166523
+OPP001181,Evergreen Coverage Co. — Renewal 2026,ACC000181,Prospecting,2026-10-29,166660
+OPP001182,Pinnacle Insurance Brokers — Expansion 2026,ACC000182,Qualification,2026-10-30,166797
+OPP001183,Heritage Mutual Group — New Business 2026,ACC000183,Needs Analysis,2026-10-31,
+OPP001184,Coastal Risk Advisors — Upgrade 2026,,Value Proposition,2026-11-01,167071
+OPP001185,Summit Protection Alliance — Upsell 2026,ACC000185,Id. Decision Makers,2026-11-02,167208
+OPP001186,Lighthouse Insurance Services — Renewal 2026,ACC000186,Perception Analysis,2026-11-03,167345
+OPP001187,Cascade Financial Security — Expansion 2026,ACC000187,Proposal/Price Quote,2026-11-04,167482
+OPP001188,Premier Risk Solutions — New Business 2026,ACC000188,Negotiation/Review,2026-11-05,167619
+OPP001189,Horizon Assurance Group — Upgrade 2026,ACC000189,Closed Won,2026-11-06,
+OPP001190,Keystone Benefits Co. — Upsell 2026,ACC000190,Closed Lost,2026-11-07,167893
+OPP001191,Streamline Coverage Partners — Renewal 2026,ACC000191,Prospecting,2026-11-08,168030
+OPP001192,Apex Insurance Holdings — Expansion 2026,ACC000192,Qualification,2026-11-09,168167
+OPP001193,Valley Risk Management — New Business 2026,ACC000193,Needs Analysis,2026-11-10,168304
+OPP001194,Crestview Financial Services — Upgrade 2026,ACC000194,Value Proposition,2026-11-11,168441
+OPP001195,Lakeside Protection Group — Upsell 2026,ACC000195,Id. Decision Makers,2026-11-12,
+OPP001196,Sterling Risk Partners — Renewal 2026,ACC000196,Perception Analysis,2026-11-13,168715
+OPP001197,Westpoint Insurance Alliance — Expansion 2026,,Proposal/Price Quote,2026-11-14,168852
+OPP001198,Clearwater Benefits Group — New Business 2026,ACC000198,Negotiation/Review,2026-11-15,168989
+OPP001199,Redwood Assurance Co. — Upgrade 2026,ACC000199,Closed Won,2026-11-16,169126
+OPP001200,Oakridge Financial Partners — Upsell 2026,ACC000200,Closed Lost,2026-11-17,169263

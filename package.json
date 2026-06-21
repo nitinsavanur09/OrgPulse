@@ -11,7 +11,8 @@
     "test-conn":   "tsx scripts/test-connection.ts",
     "test-report":    "tsx scripts/test-report.ts",
     "rebuild-report": "tsx scripts/rebuild-report.ts",
-    "lint":           "tsc --noEmit"
+    "lint":           "tsc --noEmit",
+    "generate-demo":  "tsx scripts/generate-demo-csv.ts"
   },
   "dependencies": {
     "jsforce":               "^3.0.0",

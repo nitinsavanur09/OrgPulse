@@ -4,3 +4,4 @@ dist/
 .tokens.json
 reports/
 *.js.map
+/client-intake.json

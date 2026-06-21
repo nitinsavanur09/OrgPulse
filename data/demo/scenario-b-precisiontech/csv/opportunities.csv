@@ -1,0 +1,801 @@
+ExternalId,Name,Account_ExternalId__c,StageName,CloseDate,Amount
+OPP000001,Apex Industrial Systems — Renewal 2026,,Prospecting,2026-07-21,
+OPP000002,Precision Components Ltd — Expansion 2026,ACC000002,Qualification,2026-07-22,5137
+OPP000003,Granite Manufacturing Co. — New Business 2026,ACC000003,Needs Analysis,2026-07-23,
+OPP000004,Ironclad Production Group — Upgrade 2026,,Value Proposition,2026-07-24,5411
+OPP000005,Velocity Parts & Assembly — Upsell 2026,ACC000005,Id. Decision Makers,2026-07-25,
+OPP000006,Summit Engineering Works — Renewal 2026,ACC000006,Perception Analysis,2026-07-26,5685
+OPP000007,BlueForge Manufacturing — Expansion 2026,,Proposal/Price Quote,2026-07-27,
+OPP000008,Strata Industrial Solutions — New Business 2026,ACC000008,Negotiation/Review,2026-07-28,5959
+OPP000009,Crestline Fabrication Inc. — Upgrade 2026,ACC000009,Closed Won,2026-07-29,
+OPP000010,Meridian Parts Systems — Upsell 2026,,Closed Lost,2026-07-30,6233
+OPP000011,Ridgeline Manufacturing Group — Renewal 2026,ACC000011,Prospecting,2026-07-31,
+OPP000012,Cascade Production Works — Expansion 2026,ACC000012,Qualification,2026-08-01,6507
+OPP000013,CoreTech Assembly Co. — New Business 2026,,Needs Analysis,2026-08-02,
+OPP000014,Highpoint Industrial Ltd — Upgrade 2026,ACC000014,Value Proposition,2026-08-03,6781
+OPP000015,Streamline Parts & Components — Upsell 2026,ACC000015,Id. Decision Makers,2026-08-04,
+OPP000016,Keystone Manufacturing Alliance — Renewal 2026,,Perception Analysis,2026-08-05,7055
+OPP000017,Pacific Fabrication Systems — Expansion 2026,ACC000017,Proposal/Price Quote,2026-08-06,
+OPP000018,Pinnacle Parts Group — New Business 2026,ACC000018,Negotiation/Review,2026-08-07,7329
+OPP000019,Centennial Industrial Co. — Upgrade 2026,,Closed Won,2026-08-08,
+OPP000020,Northgate Manufacturing Inc. — Upsell 2026,ACC000020,Closed Lost,2026-08-09,7603
+OPP000021,Lakeside Engineering Works — Renewal 2026,ACC000021,Prospecting,2026-08-10,
+OPP000022,Thornton Components Group — Expansion 2026,,Qualification,2026-08-11,7877
+OPP000023,Broadfield Production Inc. — New Business 2026,ACC000023,Needs Analysis,2026-08-12,
+OPP000024,Sterling Assembly Systems — Upgrade 2026,ACC000024,Value Proposition,2026-08-13,8151
+OPP000025,Clearwater Industrial Corp. — Upsell 2026,,Id. Decision Makers,2026-08-14,
+OPP000026,Apex Industrial Systems — Renewal 2026,ACC000026,Perception Analysis,2026-08-15,8425
+OPP000027,Precision Components Ltd — Expansion 2026,ACC000027,Proposal/Price Quote,2026-08-16,
+OPP000028,Granite Manufacturing Co. — New Business 2026,,Negotiation/Review,2026-08-17,8699
+OPP000029,Ironclad Production Group — Upgrade 2026,ACC000029,Closed Won,2026-08-18,
+OPP000030,Velocity Parts & Assembly — Upsell 2026,ACC000030,Closed Lost,2026-08-19,8973
+OPP000031,Summit Engineering Works — Renewal 2026,,Prospecting,2026-08-20,
+OPP000032,BlueForge Manufacturing — Expansion 2026,ACC000032,Qualification,2026-08-21,9247
+OPP000033,Strata Industrial Solutions — New Business 2026,ACC000033,Needs Analysis,2026-08-22,
+OPP000034,Crestline Fabrication Inc. — Upgrade 2026,,Value Proposition,2026-08-23,9521
+OPP000035,Meridian Parts Systems — Upsell 2026,ACC000035,Id. Decision Makers,2026-08-24,
+OPP000036,Ridgeline Manufacturing Group — Renewal 2026,ACC000036,Perception Analysis,2026-08-25,9795
+OPP000037,Cascade Production Works — Expansion 2026,,Proposal/Price Quote,2026-08-26,
+OPP000038,CoreTech Assembly Co. — New Business 2026,ACC000038,Negotiation/Review,2026-08-27,10069
+OPP000039,Highpoint Industrial Ltd — Upgrade 2026,ACC000039,Closed Won,2026-08-28,
+OPP000040,Streamline Parts & Components — Upsell 2026,,Closed Lost,2026-08-29,10343
+OPP000041,Keystone Manufacturing Alliance — Renewal 2026,ACC000041,Prospecting,2026-08-30,
+OPP000042,Pacific Fabrication Systems — Expansion 2026,ACC000042,Qualification,2026-08-31,10617
+OPP000043,Pinnacle Parts Group — New Business 2026,,Needs Analysis,2026-09-01,
+OPP000044,Centennial Industrial Co. — Upgrade 2026,ACC000044,Value Proposition,2026-09-02,10891
+OPP000045,Northgate Manufacturing Inc. — Upsell 2026,ACC000045,Id. Decision Makers,2026-09-03,
+OPP000046,Lakeside Engineering Works — Renewal 2026,,Perception Analysis,2026-09-04,11165
+OPP000047,Thornton Components Group — Expansion 2026,ACC000047,Proposal/Price Quote,2026-09-05,
+OPP000048,Broadfield Production Inc. — New Business 2026,ACC000048,Negotiation/Review,2026-09-06,11439
+OPP000049,Sterling Assembly Systems — Upgrade 2026,,Closed Won,2026-09-07,
+OPP000050,Clearwater Industrial Corp. — Upsell 2026,ACC000050,Closed Lost,2026-09-08,11713
+OPP000051,Apex Industrial Systems — Renewal 2026,ACC000051,Prospecting,2026-09-09,
+OPP000052,Precision Components Ltd — Expansion 2026,,Qualification,2026-09-10,11987
+OPP000053,Granite Manufacturing Co. — New Business 2026,ACC000053,Needs Analysis,2026-09-11,
+OPP000054,Ironclad Production Group — Upgrade 2026,ACC000054,Value Proposition,2026-09-12,12261
+OPP000055,Velocity Parts & Assembly — Upsell 2026,,Id. Decision Makers,2026-09-13,
+OPP000056,Summit Engineering Works — Renewal 2026,ACC000056,Perception Analysis,2026-09-14,12535
+OPP000057,BlueForge Manufacturing — Expansion 2026,ACC000057,Proposal/Price Quote,2026-09-15,
+OPP000058,Strata Industrial Solutions — New Business 2026,,Negotiation/Review,2026-09-16,12809
+OPP000059,Crestline Fabrication Inc. — Upgrade 2026,ACC000059,Closed Won,2026-09-17,
+OPP000060,Meridian Parts Systems — Upsell 2026,ACC000060,Closed Lost,2026-09-18,13083
+OPP000061,Ridgeline Manufacturing Group — Renewal 2026,,Prospecting,2026-09-19,
+OPP000062,Cascade Production Works — Expansion 2026,ACC000062,Qualification,2026-09-20,13357
+OPP000063,CoreTech Assembly Co. — New Business 2026,ACC000063,Needs Analysis,2026-09-21,
+OPP000064,Highpoint Industrial Ltd — Upgrade 2026,,Value Proposition,2026-09-22,13631
+OPP000065,Streamline Parts & Components — Upsell 2026,ACC000065,Id. Decision Makers,2026-09-23,
+OPP000066,Keystone Manufacturing Alliance — Renewal 2026,ACC000066,Perception Analysis,2026-09-24,13905
+OPP000067,Pacific Fabrication Systems — Expansion 2026,,Proposal/Price Quote,2026-09-25,
+OPP000068,Pinnacle Parts Group — New Business 2026,ACC000068,Negotiation/Review,2026-09-26,14179
+OPP000069,Centennial Industrial Co. — Upgrade 2026,ACC000069,Closed Won,2026-09-27,
+OPP000070,Northgate Manufacturing Inc. — Upsell 2026,,Closed Lost,2026-09-28,14453
+OPP000071,Lakeside Engineering Works — Renewal 2026,ACC000071,Prospecting,2026-09-29,
+OPP000072,Thornton Components Group — Expansion 2026,ACC000072,Qualification,2026-09-30,14727
+OPP000073,Broadfield Production Inc. — New Business 2026,,Needs Analysis,2026-10-01,
+OPP000074,Sterling Assembly Systems — Upgrade 2026,ACC000074,Value Proposition,2026-10-02,15001
+OPP000075,Clearwater Industrial Corp. — Upsell 2026,ACC000075,Id. Decision Makers,2026-10-03,
+OPP000076,Apex Industrial Systems — Renewal 2026,,Perception Analysis,2026-10-04,15275
+OPP000077,Precision Components Ltd — Expansion 2026,ACC000077,Proposal/Price Quote,2026-10-05,
+OPP000078,Granite Manufacturing Co. — New Business 2026,ACC000078,Negotiation/Review,2026-10-06,15549
+OPP000079,Ironclad Production Group — Upgrade 2026,,Closed Won,2026-10-07,
+OPP000080,Velocity Parts & Assembly — Upsell 2026,ACC000080,Closed Lost,2026-10-08,15823
+OPP000081,Summit Engineering Works — Renewal 2026,ACC000081,Prospecting,2026-10-09,
+OPP000082,BlueForge Manufacturing — Expansion 2026,,Qualification,2026-10-10,16097
+OPP000083,Strata Industrial Solutions — New Business 2026,ACC000083,Needs Analysis,2026-10-11,
+OPP000084,Crestline Fabrication Inc. — Upgrade 2026,ACC000084,Value Proposition,2026-10-12,16371
+OPP000085,Meridian Parts Systems — Upsell 2026,,Id. Decision Makers,2026-10-13,
+OPP000086,Ridgeline Manufacturing Group — Renewal 2026,ACC000086,Perception Analysis,2026-10-14,16645
+OPP000087,Cascade Production Works — Expansion 2026,ACC000087,Proposal/Price Quote,2026-10-15,
+OPP000088,CoreTech Assembly Co. — New Business 2026,,Negotiation/Review,2026-10-16,16919
+OPP000089,Highpoint Industrial Ltd — Upgrade 2026,ACC000089,Closed Won,2026-10-17,
+OPP000090,Streamline Parts & Components — Upsell 2026,ACC000090,Closed Lost,2026-10-18,17193
+OPP000091,Keystone Manufacturing Alliance — Renewal 2026,,Prospecting,2026-10-19,
+OPP000092,Pacific Fabrication Systems — Expansion 2026,ACC000092,Qualification,2026-10-20,17467
+OPP000093,Pinnacle Parts Group — New Business 2026,ACC000093,Needs Analysis,2026-10-21,
+OPP000094,Centennial Industrial Co. — Upgrade 2026,,Value Proposition,2026-10-22,17741
+OPP000095,Northgate Manufacturing Inc. — Upsell 2026,ACC000095,Id. Decision Makers,2026-10-23,
+OPP000096,Lakeside Engineering Works — Renewal 2026,ACC000096,Perception Analysis,2026-10-24,18015
+OPP000097,Thornton Components Group — Expansion 2026,,Proposal/Price Quote,2026-10-25,
+OPP000098,Broadfield Production Inc. — New Business 2026,ACC000098,Negotiation/Review,2026-10-26,18289
+OPP000099,Sterling Assembly Systems — Upgrade 2026,ACC000099,Closed Won,2026-10-27,
+OPP000100,Clearwater Industrial Corp. — Upsell 2026,,Closed Lost,2026-10-28,18563
+OPP000101,Apex Industrial Systems — Renewal 2026,ACC000101,Prospecting,2026-10-29,
+OPP000102,Precision Components Ltd — Expansion 2026,ACC000102,Qualification,2026-10-30,18837
+OPP000103,Granite Manufacturing Co. — New Business 2026,,Needs Analysis,2026-10-31,
+OPP000104,Ironclad Production Group — Upgrade 2026,ACC000104,Value Proposition,2026-11-01,19111
+OPP000105,Velocity Parts & Assembly — Upsell 2026,ACC000105,Id. Decision Makers,2026-11-02,
+OPP000106,Summit Engineering Works — Renewal 2026,,Perception Analysis,2026-11-03,19385
+OPP000107,BlueForge Manufacturing — Expansion 2026,ACC000107,Proposal/Price Quote,2026-11-04,
+OPP000108,Strata Industrial Solutions — New Business 2026,ACC000108,Negotiation/Review,2026-11-05,19659
+OPP000109,Crestline Fabrication Inc. — Upgrade 2026,,Closed Won,2026-11-06,
+OPP000110,Meridian Parts Systems — Upsell 2026,ACC000110,Closed Lost,2026-11-07,19933
+OPP000111,Ridgeline Manufacturing Group — Renewal 2026,ACC000111,Prospecting,2026-11-08,
+OPP000112,Cascade Production Works — Expansion 2026,,Qualification,2026-11-09,20207
+OPP000113,CoreTech Assembly Co. — New Business 2026,ACC000113,Needs Analysis,2026-11-10,
+OPP000114,Highpoint Industrial Ltd — Upgrade 2026,ACC000114,Value Proposition,2026-11-11,20481
+OPP000115,Streamline Parts & Components — Upsell 2026,,Id. Decision Makers,2026-11-12,
+OPP000116,Keystone Manufacturing Alliance — Renewal 2026,ACC000116,Perception Analysis,2026-11-13,20755
+OPP000117,Pacific Fabrication Systems — Expansion 2026,ACC000117,Proposal/Price Quote,2026-11-14,
+OPP000118,Pinnacle Parts Group — New Business 2026,,Negotiation/Review,2026-11-15,21029
+OPP000119,Centennial Industrial Co. — Upgrade 2026,ACC000119,Closed Won,2026-11-16,
+OPP000120,Northgate Manufacturing Inc. — Upsell 2026,ACC000120,Closed Lost,2026-11-17,21303
+OPP000121,Lakeside Engineering Works — Renewal 2026,,Prospecting,2026-11-18,
+OPP000122,Thornton Components Group — Expansion 2026,ACC000122,Qualification,2026-11-19,21577
+OPP000123,Broadfield Production Inc. — New Business 2026,ACC000123,Needs Analysis,2026-11-20,
+OPP000124,Sterling Assembly Systems — Upgrade 2026,,Value Proposition,2026-11-21,21851
+OPP000125,Clearwater Industrial Corp. — Upsell 2026,ACC000125,Id. Decision Makers,2026-11-22,
+OPP000126,Apex Industrial Systems — Renewal 2026,ACC000126,Perception Analysis,2026-11-23,22125
+OPP000127,Precision Components Ltd — Expansion 2026,,Proposal/Price Quote,2026-11-24,
+OPP000128,Granite Manufacturing Co. — New Business 2026,ACC000128,Negotiation/Review,2026-11-25,22399
+OPP000129,Ironclad Production Group — Upgrade 2026,ACC000129,Closed Won,2026-11-26,
+OPP000130,Velocity Parts & Assembly — Upsell 2026,,Closed Lost,2026-11-27,22673
+OPP000131,Summit Engineering Works — Renewal 2026,ACC000131,Prospecting,2026-11-28,
+OPP000132,BlueForge Manufacturing — Expansion 2026,ACC000132,Qualification,2026-11-29,22947
+OPP000133,Strata Industrial Solutions — New Business 2026,,Needs Analysis,2026-11-30,
+OPP000134,Crestline Fabrication Inc. — Upgrade 2026,ACC000134,Value Proposition,2026-12-01,23221
+OPP000135,Meridian Parts Systems — Upsell 2026,ACC000135,Id. Decision Makers,2026-12-02,
+OPP000136,Ridgeline Manufacturing Group — Renewal 2026,,Perception Analysis,2026-12-03,23495
+OPP000137,Cascade Production Works — Expansion 2026,ACC000137,Proposal/Price Quote,2026-12-04,
+OPP000138,CoreTech Assembly Co. — New Business 2026,ACC000138,Negotiation/Review,2026-12-05,23769
+OPP000139,Highpoint Industrial Ltd — Upgrade 2026,,Closed Won,2026-12-06,
+OPP000140,Streamline Parts & Components — Upsell 2026,ACC000140,Closed Lost,2026-12-07,24043
+OPP000141,Keystone Manufacturing Alliance — Renewal 2026,ACC000141,Prospecting,2026-12-08,
+OPP000142,Pacific Fabrication Systems — Expansion 2026,,Qualification,2026-12-09,24317
+OPP000143,Pinnacle Parts Group — New Business 2026,ACC000143,Needs Analysis,2026-12-10,
+OPP000144,Centennial Industrial Co. — Upgrade 2026,ACC000144,Value Proposition,2026-12-11,24591
+OPP000145,Northgate Manufacturing Inc. — Upsell 2026,,Id. Decision Makers,2026-12-12,
+OPP000146,Lakeside Engineering Works — Renewal 2026,ACC000146,Perception Analysis,2026-12-13,24865
+OPP000147,Thornton Components Group — Expansion 2026,ACC000147,Proposal/Price Quote,2026-12-14,
+OPP000148,Broadfield Production Inc. — New Business 2026,,Negotiation/Review,2026-12-15,25139
+OPP000149,Sterling Assembly Systems — Upgrade 2026,ACC000149,Closed Won,2026-12-16,
+OPP000150,Clearwater Industrial Corp. — Upsell 2026,ACC000150,Closed Lost,2026-12-17,25413
+OPP000151,Apex Industrial Systems — Renewal 2026,,Prospecting,2026-12-18,
+OPP000152,Precision Components Ltd — Expansion 2026,ACC000152,Qualification,2026-12-19,25687
+OPP000153,Granite Manufacturing Co. — New Business 2026,ACC000153,Needs Analysis,2026-12-20,
+OPP000154,Ironclad Production Group — Upgrade 2026,,Value Proposition,2026-12-21,25961
+OPP000155,Velocity Parts & Assembly — Upsell 2026,ACC000155,Id. Decision Makers,2026-12-22,
+OPP000156,Summit Engineering Works — Renewal 2026,ACC000156,Perception Analysis,2026-12-23,26235
+OPP000157,BlueForge Manufacturing — Expansion 2026,,Proposal/Price Quote,2026-12-24,
+OPP000158,Strata Industrial Solutions — New Business 2026,ACC000158,Negotiation/Review,2026-12-25,26509
+OPP000159,Crestline Fabrication Inc. — Upgrade 2026,ACC000159,Closed Won,2026-12-26,
+OPP000160,Meridian Parts Systems — Upsell 2026,,Closed Lost,2026-12-27,26783
+OPP000161,Ridgeline Manufacturing Group — Renewal 2026,ACC000161,Prospecting,2026-12-28,
+OPP000162,Cascade Production Works — Expansion 2026,ACC000162,Qualification,2026-12-29,27057
+OPP000163,CoreTech Assembly Co. — New Business 2026,,Needs Analysis,2026-12-30,
+OPP000164,Highpoint Industrial Ltd — Upgrade 2026,ACC000164,Value Proposition,2026-12-31,27331
+OPP000165,Streamline Parts & Components — Upsell 2026,ACC000165,Id. Decision Makers,2027-01-01,
+OPP000166,Keystone Manufacturing Alliance — Renewal 2026,,Perception Analysis,2027-01-02,27605
+OPP000167,Pacific Fabrication Systems — Expansion 2026,ACC000167,Proposal/Price Quote,2027-01-03,
+OPP000168,Pinnacle Parts Group — New Business 2026,ACC000168,Negotiation/Review,2027-01-04,27879
+OPP000169,Centennial Industrial Co. — Upgrade 2026,,Closed Won,2027-01-05,
+OPP000170,Northgate Manufacturing Inc. — Upsell 2026,ACC000170,Closed Lost,2027-01-06,28153
+OPP000171,Lakeside Engineering Works — Renewal 2026,ACC000171,Prospecting,2027-01-07,
+OPP000172,Thornton Components Group — Expansion 2026,,Qualification,2027-01-08,28427
+OPP000173,Broadfield Production Inc. — New Business 2026,ACC000173,Needs Analysis,2027-01-09,
+OPP000174,Sterling Assembly Systems — Upgrade 2026,ACC000174,Value Proposition,2027-01-10,28701
+OPP000175,Clearwater Industrial Corp. — Upsell 2026,,Id. Decision Makers,2027-01-11,
+OPP000176,Apex Industrial Systems — Renewal 2026,ACC000176,Perception Analysis,2027-01-12,28975
+OPP000177,Precision Components Ltd — Expansion 2026,ACC000177,Proposal/Price Quote,2027-01-13,
+OPP000178,Granite Manufacturing Co. — New Business 2026,,Negotiation/Review,2027-01-14,29249
+OPP000179,Ironclad Production Group — Upgrade 2026,ACC000179,Closed Won,2027-01-15,
+OPP000180,Velocity Parts & Assembly — Upsell 2026,ACC000180,Closed Lost,2027-01-16,29523
+OPP000181,Summit Engineering Works — Renewal 2026,,Prospecting,2027-01-17,
+OPP000182,BlueForge Manufacturing — Expansion 2026,ACC000182,Qualification,2027-01-18,29797
+OPP000183,Strata Industrial Solutions — New Business 2026,ACC000183,Needs Analysis,2027-01-19,
+OPP000184,Crestline Fabrication Inc. — Upgrade 2026,,Value Proposition,2027-01-20,30071
+OPP000185,Meridian Parts Systems — Upsell 2026,ACC000185,Id. Decision Makers,2027-01-21,
+OPP000186,Ridgeline Manufacturing Group — Renewal 2026,ACC000186,Perception Analysis,2027-01-22,30345
+OPP000187,Cascade Production Works — Expansion 2026,,Proposal/Price Quote,2027-01-23,
+OPP000188,CoreTech Assembly Co. — New Business 2026,ACC000188,Negotiation/Review,2027-01-24,30619
+OPP000189,Highpoint Industrial Ltd — Upgrade 2026,ACC000189,Closed Won,2027-01-25,
+OPP000190,Streamline Parts & Components — Upsell 2026,,Closed Lost,2027-01-26,30893
+OPP000191,Keystone Manufacturing Alliance — Renewal 2026,ACC000191,Prospecting,2027-01-27,
+OPP000192,Pacific Fabrication Systems — Expansion 2026,ACC000192,Qualification,2027-01-28,31167
+OPP000193,Pinnacle Parts Group — New Business 2026,,Needs Analysis,2027-01-29,
+OPP000194,Centennial Industrial Co. — Upgrade 2026,ACC000194,Value Proposition,2027-01-30,31441
+OPP000195,Northgate Manufacturing Inc. — Upsell 2026,ACC000195,Id. Decision Makers,2027-01-31,
+OPP000196,Lakeside Engineering Works — Renewal 2026,,Perception Analysis,2027-02-01,31715
+OPP000197,Thornton Components Group — Expansion 2026,ACC000197,Proposal/Price Quote,2027-02-02,
+OPP000198,Broadfield Production Inc. — New Business 2026,ACC000198,Negotiation/Review,2027-02-03,31989
+OPP000199,Sterling Assembly Systems — Upgrade 2026,,Closed Won,2027-02-04,
+OPP000200,Clearwater Industrial Corp. — Upsell 2026,ACC000200,Closed Lost,2027-02-05,32263
+OPP000201,Apex Industrial Systems — Renewal 2026,ACC000201,Prospecting,2027-02-06,
+OPP000202,Precision Components Ltd — Expansion 2026,,Qualification,2027-02-07,32537
+OPP000203,Granite Manufacturing Co. — New Business 2026,ACC000203,Needs Analysis,2027-02-08,
+OPP000204,Ironclad Production Group — Upgrade 2026,ACC000204,Value Proposition,2027-02-09,32811
+OPP000205,Velocity Parts & Assembly — Upsell 2026,,Id. Decision Makers,2027-02-10,
+OPP000206,Summit Engineering Works — Renewal 2026,ACC000206,Perception Analysis,2027-02-11,33085
+OPP000207,BlueForge Manufacturing — Expansion 2026,ACC000207,Proposal/Price Quote,2027-02-12,
+OPP000208,Strata Industrial Solutions — New Business 2026,,Negotiation/Review,2027-02-13,33359
+OPP000209,Crestline Fabrication Inc. — Upgrade 2026,ACC000209,Closed Won,2027-02-14,
+OPP000210,Meridian Parts Systems — Upsell 2026,ACC000210,Closed Lost,2027-02-15,33633
+OPP000211,Ridgeline Manufacturing Group — Renewal 2026,,Prospecting,2027-02-16,
+OPP000212,Cascade Production Works — Expansion 2026,ACC000212,Qualification,2027-02-17,33907
+OPP000213,CoreTech Assembly Co. — New Business 2026,ACC000213,Needs Analysis,2027-02-18,
+OPP000214,Highpoint Industrial Ltd — Upgrade 2026,,Value Proposition,2027-02-19,34181
+OPP000215,Streamline Parts & Components — Upsell 2026,ACC000215,Id. Decision Makers,2027-02-20,
+OPP000216,Keystone Manufacturing Alliance — Renewal 2026,ACC000216,Perception Analysis,2027-02-21,34455
+OPP000217,Pacific Fabrication Systems — Expansion 2026,,Proposal/Price Quote,2027-02-22,
+OPP000218,Pinnacle Parts Group — New Business 2026,ACC000218,Negotiation/Review,2027-02-23,34729
+OPP000219,Centennial Industrial Co. — Upgrade 2026,ACC000219,Closed Won,2027-02-24,
+OPP000220,Northgate Manufacturing Inc. — Upsell 2026,,Closed Lost,2027-02-25,35003
+OPP000221,Lakeside Engineering Works — Renewal 2026,ACC000221,Prospecting,2027-02-26,
+OPP000222,Thornton Components Group — Expansion 2026,ACC000222,Qualification,2027-02-27,35277
+OPP000223,Broadfield Production Inc. — New Business 2026,,Needs Analysis,2027-02-28,
+OPP000224,Sterling Assembly Systems — Upgrade 2026,ACC000224,Value Proposition,2027-03-01,35551
+OPP000225,Clearwater Industrial Corp. — Upsell 2026,ACC000225,Id. Decision Makers,2027-03-02,
+OPP000226,Apex Industrial Systems — Renewal 2026,,Perception Analysis,2027-03-03,35825
+OPP000227,Precision Components Ltd — Expansion 2026,ACC000227,Proposal/Price Quote,2027-03-04,
+OPP000228,Granite Manufacturing Co. — New Business 2026,ACC000228,Negotiation/Review,2027-03-05,36099
+OPP000229,Ironclad Production Group — Upgrade 2026,,Closed Won,2027-03-06,
+OPP000230,Velocity Parts & Assembly — Upsell 2026,ACC000230,Closed Lost,2027-03-07,36373
+OPP000231,Summit Engineering Works — Renewal 2026,ACC000231,Prospecting,2027-03-08,
+OPP000232,BlueForge Manufacturing — Expansion 2026,,Qualification,2027-03-09,36647
+OPP000233,Strata Industrial Solutions — New Business 2026,ACC000233,Needs Analysis,2027-03-10,
+OPP000234,Crestline Fabrication Inc. — Upgrade 2026,ACC000234,Value Proposition,2027-03-11,36921
+OPP000235,Meridian Parts Systems — Upsell 2026,,Id. Decision Makers,2027-03-12,
+OPP000236,Ridgeline Manufacturing Group — Renewal 2026,ACC000236,Perception Analysis,2027-03-13,37195
+OPP000237,Cascade Production Works — Expansion 2026,ACC000237,Proposal/Price Quote,2027-03-14,
+OPP000238,CoreTech Assembly Co. — New Business 2026,,Negotiation/Review,2027-03-15,37469
+OPP000239,Highpoint Industrial Ltd — Upgrade 2026,ACC000239,Closed Won,2027-03-16,
+OPP000240,Streamline Parts & Components — Upsell 2026,ACC000240,Closed Lost,2027-03-17,37743
+OPP000241,Keystone Manufacturing Alliance — Renewal 2026,,Prospecting,2027-03-18,
+OPP000242,Pacific Fabrication Systems — Expansion 2026,ACC000242,Qualification,2027-03-19,38017
+OPP000243,Pinnacle Parts Group — New Business 2026,ACC000243,Needs Analysis,2027-03-20,
+OPP000244,Centennial Industrial Co. — Upgrade 2026,,Value Proposition,2027-03-21,38291
+OPP000245,Northgate Manufacturing Inc. — Upsell 2026,ACC000245,Id. Decision Makers,2027-03-22,
+OPP000246,Lakeside Engineering Works — Renewal 2026,ACC000246,Perception Analysis,2027-03-23,38565
+OPP000247,Thornton Components Group — Expansion 2026,,Proposal/Price Quote,2027-03-24,
+OPP000248,Broadfield Production Inc. — New Business 2026,ACC000248,Negotiation/Review,2027-03-25,38839
+OPP000249,Sterling Assembly Systems — Upgrade 2026,ACC000249,Closed Won,2027-03-26,
+OPP000250,Clearwater Industrial Corp. — Upsell 2026,,Closed Lost,2027-03-27,39113
+OPP000251,Apex Industrial Systems — Renewal 2026,ACC000251,Prospecting,2027-03-28,
+OPP000252,Precision Components Ltd — Expansion 2026,ACC000252,Qualification,2027-03-29,39387
+OPP000253,Granite Manufacturing Co. — New Business 2026,,Needs Analysis,2027-03-30,
+OPP000254,Ironclad Production Group — Upgrade 2026,ACC000254,Value Proposition,2027-03-31,39661
+OPP000255,Velocity Parts & Assembly — Upsell 2026,ACC000255,Id. Decision Makers,2027-04-01,
+OPP000256,Summit Engineering Works — Renewal 2026,,Perception Analysis,2027-04-02,39935
+OPP000257,BlueForge Manufacturing — Expansion 2026,ACC000257,Proposal/Price Quote,2027-04-03,
+OPP000258,Strata Industrial Solutions — New Business 2026,ACC000258,Negotiation/Review,2027-04-04,40209
+OPP000259,Crestline Fabrication Inc. — Upgrade 2026,,Closed Won,2027-04-05,
+OPP000260,Meridian Parts Systems — Upsell 2026,ACC000260,Closed Lost,2027-04-06,40483
+OPP000261,Ridgeline Manufacturing Group — Renewal 2026,ACC000261,Prospecting,2027-04-07,
+OPP000262,Cascade Production Works — Expansion 2026,,Qualification,2027-04-08,40757
+OPP000263,CoreTech Assembly Co. — New Business 2026,ACC000263,Needs Analysis,2027-04-09,
+OPP000264,Highpoint Industrial Ltd — Upgrade 2026,ACC000264,Value Proposition,2027-04-10,41031
+OPP000265,Streamline Parts & Components — Upsell 2026,,Id. Decision Makers,2027-04-11,
+OPP000266,Keystone Manufacturing Alliance — Renewal 2026,ACC000266,Perception Analysis,2027-04-12,41305
+OPP000267,Pacific Fabrication Systems — Expansion 2026,ACC000267,Proposal/Price Quote,2027-04-13,
+OPP000268,Pinnacle Parts Group — New Business 2026,,Negotiation/Review,2027-04-14,41579
+OPP000269,Centennial Industrial Co. — Upgrade 2026,ACC000269,Closed Won,2027-04-15,
+OPP000270,Northgate Manufacturing Inc. — Upsell 2026,ACC000270,Closed Lost,2027-04-16,41853
+OPP000271,Lakeside Engineering Works — Renewal 2026,,Prospecting,2027-04-17,
+OPP000272,Thornton Components Group — Expansion 2026,ACC000272,Qualification,2027-04-18,42127
+OPP000273,Broadfield Production Inc. — New Business 2026,ACC000273,Needs Analysis,2027-04-19,
+OPP000274,Sterling Assembly Systems — Upgrade 2026,,Value Proposition,2027-04-20,42401
+OPP000275,Clearwater Industrial Corp. — Upsell 2026,ACC000275,Id. Decision Makers,2027-04-21,
+OPP000276,Apex Industrial Systems — Renewal 2026,ACC000276,Perception Analysis,2027-04-22,42675
+OPP000277,Precision Components Ltd — Expansion 2026,,Proposal/Price Quote,2027-04-23,
+OPP000278,Granite Manufacturing Co. — New Business 2026,ACC000278,Negotiation/Review,2027-04-24,42949
+OPP000279,Ironclad Production Group — Upgrade 2026,ACC000279,Closed Won,2027-04-25,
+OPP000280,Velocity Parts & Assembly — Upsell 2026,,Closed Lost,2027-04-26,43223
+OPP000281,Summit Engineering Works — Renewal 2026,ACC000281,Prospecting,2027-04-27,
+OPP000282,BlueForge Manufacturing — Expansion 2026,ACC000282,Qualification,2027-04-28,43497
+OPP000283,Strata Industrial Solutions — New Business 2026,,Needs Analysis,2027-04-29,
+OPP000284,Crestline Fabrication Inc. — Upgrade 2026,ACC000284,Value Proposition,2027-04-30,43771
+OPP000285,Meridian Parts Systems — Upsell 2026,ACC000285,Id. Decision Makers,2027-05-01,
+OPP000286,Ridgeline Manufacturing Group — Renewal 2026,,Perception Analysis,2027-05-02,44045
+OPP000287,Cascade Production Works — Expansion 2026,ACC000287,Proposal/Price Quote,2027-05-03,
+OPP000288,CoreTech Assembly Co. — New Business 2026,ACC000288,Negotiation/Review,2027-05-04,44319
+OPP000289,Highpoint Industrial Ltd — Upgrade 2026,,Closed Won,2027-05-05,
+OPP000290,Streamline Parts & Components — Upsell 2026,ACC000290,Closed Lost,2027-05-06,44593
+OPP000291,Keystone Manufacturing Alliance — Renewal 2026,ACC000291,Prospecting,2027-05-07,
+OPP000292,Pacific Fabrication Systems — Expansion 2026,,Qualification,2027-05-08,44867
+OPP000293,Pinnacle Parts Group — New Business 2026,ACC000293,Needs Analysis,2027-05-09,
+OPP000294,Centennial Industrial Co. — Upgrade 2026,ACC000294,Value Proposition,2027-05-10,45141
+OPP000295,Northgate Manufacturing Inc. — Upsell 2026,,Id. Decision Makers,2027-05-11,
+OPP000296,Lakeside Engineering Works — Renewal 2026,ACC000296,Perception Analysis,2027-05-12,45415
+OPP000297,Thornton Components Group — Expansion 2026,ACC000297,Proposal/Price Quote,2027-05-13,
+OPP000298,Broadfield Production Inc. — New Business 2026,,Negotiation/Review,2027-05-14,45689
+OPP000299,Sterling Assembly Systems — Upgrade 2026,ACC000299,Closed Won,2027-05-15,
+OPP000300,Clearwater Industrial Corp. — Upsell 2026,ACC000300,Closed Lost,2027-05-16,45963
+OPP000301,Apex Industrial Systems — Renewal 2026,,Prospecting,2027-05-17,
+OPP000302,Precision Components Ltd — Expansion 2026,ACC000302,Qualification,2027-05-18,46237
+OPP000303,Granite Manufacturing Co. — New Business 2026,ACC000303,Needs Analysis,2027-05-19,
+OPP000304,Ironclad Production Group — Upgrade 2026,,Value Proposition,2027-05-20,46511
+OPP000305,Velocity Parts & Assembly — Upsell 2026,ACC000305,Id. Decision Makers,2027-05-21,
+OPP000306,Summit Engineering Works — Renewal 2026,ACC000306,Perception Analysis,2027-05-22,46785
+OPP000307,BlueForge Manufacturing — Expansion 2026,,Proposal/Price Quote,2027-05-23,
+OPP000308,Strata Industrial Solutions — New Business 2026,ACC000308,Negotiation/Review,2027-05-24,47059
+OPP000309,Crestline Fabrication Inc. — Upgrade 2026,ACC000309,Closed Won,2027-05-25,
+OPP000310,Meridian Parts Systems — Upsell 2026,,Closed Lost,2027-05-26,47333
+OPP000311,Ridgeline Manufacturing Group — Renewal 2026,ACC000311,Prospecting,2027-05-27,
+OPP000312,Cascade Production Works — Expansion 2026,ACC000312,Qualification,2027-05-28,47607
+OPP000313,CoreTech Assembly Co. — New Business 2026,,Needs Analysis,2027-05-29,
+OPP000314,Highpoint Industrial Ltd — Upgrade 2026,ACC000314,Value Proposition,2027-05-30,47881
+OPP000315,Streamline Parts & Components — Upsell 2026,ACC000315,Id. Decision Makers,2027-05-31,
+OPP000316,Keystone Manufacturing Alliance — Renewal 2026,,Perception Analysis,2027-06-01,48155
+OPP000317,Pacific Fabrication Systems — Expansion 2026,ACC000317,Proposal/Price Quote,2027-06-02,
+OPP000318,Pinnacle Parts Group — New Business 2026,ACC000318,Negotiation/Review,2027-06-03,48429
+OPP000319,Centennial Industrial Co. — Upgrade 2026,,Closed Won,2027-06-04,
+OPP000320,Northgate Manufacturing Inc. — Upsell 2026,ACC000320,Closed Lost,2027-06-05,48703
+OPP000321,Lakeside Engineering Works — Renewal 2026,ACC000321,Prospecting,2027-06-06,
+OPP000322,Thornton Components Group — Expansion 2026,,Qualification,2027-06-07,48977
+OPP000323,Broadfield Production Inc. — New Business 2026,ACC000323,Needs Analysis,2027-06-08,
+OPP000324,Sterling Assembly Systems — Upgrade 2026,ACC000324,Value Proposition,2027-06-09,49251
+OPP000325,Clearwater Industrial Corp. — Upsell 2026,,Id. Decision Makers,2027-06-10,
+OPP000326,Apex Industrial Systems — Renewal 2026,ACC000326,Perception Analysis,2027-06-11,49525
+OPP000327,Precision Components Ltd — Expansion 2026,ACC000327,Proposal/Price Quote,2027-06-12,
+OPP000328,Granite Manufacturing Co. — New Business 2026,,Negotiation/Review,2027-06-13,49799
+OPP000329,Ironclad Production Group — Upgrade 2026,ACC000329,Closed Won,2027-06-14,
+OPP000330,Velocity Parts & Assembly — Upsell 2026,ACC000330,Closed Lost,2027-06-15,50073
+OPP000331,Summit Engineering Works — Renewal 2026,,Prospecting,2027-06-16,
+OPP000332,BlueForge Manufacturing — Expansion 2026,ACC000332,Qualification,2027-06-17,50347
+OPP000333,Strata Industrial Solutions — New Business 2026,ACC000333,Needs Analysis,2027-06-18,
+OPP000334,Crestline Fabrication Inc. — Upgrade 2026,,Value Proposition,2027-06-19,50621
+OPP000335,Meridian Parts Systems — Upsell 2026,ACC000335,Id. Decision Makers,2027-06-20,
+OPP000336,Ridgeline Manufacturing Group — Renewal 2026,ACC000336,Perception Analysis,2027-06-21,50895
+OPP000337,Cascade Production Works — Expansion 2026,,Proposal/Price Quote,2027-06-22,
+OPP000338,CoreTech Assembly Co. — New Business 2026,ACC000338,Negotiation/Review,2027-06-23,51169
+OPP000339,Highpoint Industrial Ltd — Upgrade 2026,ACC000339,Closed Won,2027-06-24,
+OPP000340,Streamline Parts & Components — Upsell 2026,,Closed Lost,2027-06-25,51443
+OPP000341,Keystone Manufacturing Alliance — Renewal 2026,ACC000341,Prospecting,2027-06-26,
+OPP000342,Pacific Fabrication Systems — Expansion 2026,ACC000342,Qualification,2027-06-27,51717
+OPP000343,Pinnacle Parts Group — New Business 2026,,Needs Analysis,2027-06-28,
+OPP000344,Centennial Industrial Co. — Upgrade 2026,ACC000344,Value Proposition,2027-06-29,51991
+OPP000345,Northgate Manufacturing Inc. — Upsell 2026,ACC000345,Id. Decision Makers,2027-06-30,
+OPP000346,Lakeside Engineering Works — Renewal 2026,,Perception Analysis,2027-07-01,52265
+OPP000347,Thornton Components Group — Expansion 2026,ACC000347,Proposal/Price Quote,2027-07-02,
+OPP000348,Broadfield Production Inc. — New Business 2026,ACC000348,Negotiation/Review,2027-07-03,52539
+OPP000349,Sterling Assembly Systems — Upgrade 2026,,Closed Won,2027-07-04,
+OPP000350,Clearwater Industrial Corp. — Upsell 2026,ACC000350,Closed Lost,2027-07-05,52813
+OPP000351,Apex Industrial Systems — Renewal 2026,ACC000351,Prospecting,2027-07-06,
+OPP000352,Precision Components Ltd — Expansion 2026,,Qualification,2027-07-07,53087
+OPP000353,Granite Manufacturing Co. — New Business 2026,ACC000353,Needs Analysis,2027-07-08,
+OPP000354,Ironclad Production Group — Upgrade 2026,ACC000354,Value Proposition,2027-07-09,53361
+OPP000355,Velocity Parts & Assembly — Upsell 2026,,Id. Decision Makers,2027-07-10,
+OPP000356,Summit Engineering Works — Renewal 2026,ACC000356,Perception Analysis,2027-07-11,53635
+OPP000357,BlueForge Manufacturing — Expansion 2026,ACC000357,Proposal/Price Quote,2027-07-12,
+OPP000358,Strata Industrial Solutions — New Business 2026,,Negotiation/Review,2027-07-13,53909
+OPP000359,Crestline Fabrication Inc. — Upgrade 2026,ACC000359,Closed Won,2027-07-14,
+OPP000360,Meridian Parts Systems — Upsell 2026,ACC000360,Closed Lost,2027-07-15,54183
+OPP000361,Ridgeline Manufacturing Group — Renewal 2026,,Prospecting,2027-07-16,
+OPP000362,Cascade Production Works — Expansion 2026,ACC000362,Qualification,2027-07-17,54457
+OPP000363,CoreTech Assembly Co. — New Business 2026,ACC000363,Needs Analysis,2027-07-18,
+OPP000364,Highpoint Industrial Ltd — Upgrade 2026,,Value Proposition,2027-07-19,54731
+OPP000365,Streamline Parts & Components — Upsell 2026,ACC000365,Id. Decision Makers,2027-07-20,
+OPP000366,Keystone Manufacturing Alliance — Renewal 2026,ACC000366,Perception Analysis,2027-07-21,55005
+OPP000367,Pacific Fabrication Systems — Expansion 2026,,Proposal/Price Quote,2027-07-22,
+OPP000368,Pinnacle Parts Group — New Business 2026,ACC000368,Negotiation/Review,2027-07-23,55279
+OPP000369,Centennial Industrial Co. — Upgrade 2026,ACC000369,Closed Won,2027-07-24,
+OPP000370,Northgate Manufacturing Inc. — Upsell 2026,,Closed Lost,2027-07-25,55553
+OPP000371,Lakeside Engineering Works — Renewal 2026,ACC000371,Prospecting,2027-07-26,
+OPP000372,Thornton Components Group — Expansion 2026,ACC000372,Qualification,2027-07-27,55827
+OPP000373,Broadfield Production Inc. — New Business 2026,,Needs Analysis,2027-07-28,
+OPP000374,Sterling Assembly Systems — Upgrade 2026,ACC000374,Value Proposition,2027-07-29,56101
+OPP000375,Clearwater Industrial Corp. — Upsell 2026,ACC000375,Id. Decision Makers,2027-07-30,
+OPP000376,Apex Industrial Systems — Renewal 2026,,Perception Analysis,2027-07-31,56375
+OPP000377,Precision Components Ltd — Expansion 2026,ACC000377,Proposal/Price Quote,2027-08-01,
+OPP000378,Granite Manufacturing Co. — New Business 2026,ACC000378,Negotiation/Review,2027-08-02,56649
+OPP000379,Ironclad Production Group — Upgrade 2026,,Closed Won,2027-08-03,
+OPP000380,Velocity Parts & Assembly — Upsell 2026,ACC000380,Closed Lost,2027-08-04,56923
+OPP000381,Summit Engineering Works — Renewal 2026,ACC000381,Prospecting,2027-08-05,
+OPP000382,BlueForge Manufacturing — Expansion 2026,,Qualification,2027-08-06,57197
+OPP000383,Strata Industrial Solutions — New Business 2026,ACC000383,Needs Analysis,2027-08-07,
+OPP000384,Crestline Fabrication Inc. — Upgrade 2026,ACC000384,Value Proposition,2027-08-08,57471
+OPP000385,Meridian Parts Systems — Upsell 2026,,Id. Decision Makers,2027-08-09,
+OPP000386,Ridgeline Manufacturing Group — Renewal 2026,ACC000386,Perception Analysis,2027-08-10,57745
+OPP000387,Cascade Production Works — Expansion 2026,ACC000387,Proposal/Price Quote,2027-08-11,
+OPP000388,CoreTech Assembly Co. — New Business 2026,,Negotiation/Review,2027-08-12,58019
+OPP000389,Highpoint Industrial Ltd — Upgrade 2026,ACC000389,Closed Won,2027-08-13,
+OPP000390,Streamline Parts & Components — Upsell 2026,ACC000390,Closed Lost,2027-08-14,58293
+OPP000391,Keystone Manufacturing Alliance — Renewal 2026,,Prospecting,2027-08-15,
+OPP000392,Pacific Fabrication Systems — Expansion 2026,ACC000392,Qualification,2027-08-16,58567
+OPP000393,Pinnacle Parts Group — New Business 2026,ACC000393,Needs Analysis,2027-08-17,
+OPP000394,Centennial Industrial Co. — Upgrade 2026,,Value Proposition,2027-08-18,58841
+OPP000395,Northgate Manufacturing Inc. — Upsell 2026,ACC000395,Id. Decision Makers,2027-08-19,
+OPP000396,Lakeside Engineering Works — Renewal 2026,ACC000396,Perception Analysis,2027-08-20,59115
+OPP000397,Thornton Components Group — Expansion 2026,,Proposal/Price Quote,2027-08-21,
+OPP000398,Broadfield Production Inc. — New Business 2026,ACC000398,Negotiation/Review,2027-08-22,59389
+OPP000399,Sterling Assembly Systems — Upgrade 2026,ACC000399,Closed Won,2027-08-23,
+OPP000400,Clearwater Industrial Corp. — Upsell 2026,,Closed Lost,2027-08-24,59663
+OPP000401,Apex Industrial Systems — Renewal 2026,ACC000401,Prospecting,2027-08-25,
+OPP000402,Precision Components Ltd — Expansion 2026,ACC000402,Qualification,2027-08-26,59937
+OPP000403,Granite Manufacturing Co. — New Business 2026,,Needs Analysis,2027-08-27,
+OPP000404,Ironclad Production Group — Upgrade 2026,ACC000404,Value Proposition,2027-08-28,60211
+OPP000405,Velocity Parts & Assembly — Upsell 2026,ACC000405,Id. Decision Makers,2027-08-29,
+OPP000406,Summit Engineering Works — Renewal 2026,,Perception Analysis,2027-08-30,60485
+OPP000407,BlueForge Manufacturing — Expansion 2026,ACC000407,Proposal/Price Quote,2027-08-31,
+OPP000408,Strata Industrial Solutions — New Business 2026,ACC000408,Negotiation/Review,2027-09-01,60759
+OPP000409,Crestline Fabrication Inc. — Upgrade 2026,,Closed Won,2027-09-02,
+OPP000410,Meridian Parts Systems — Upsell 2026,ACC000410,Closed Lost,2027-09-03,61033
+OPP000411,Ridgeline Manufacturing Group — Renewal 2026,ACC000411,Prospecting,2027-09-04,
+OPP000412,Cascade Production Works — Expansion 2026,,Qualification,2027-09-05,61307
+OPP000413,CoreTech Assembly Co. — New Business 2026,ACC000413,Needs Analysis,2027-09-06,
+OPP000414,Highpoint Industrial Ltd — Upgrade 2026,ACC000414,Value Proposition,2027-09-07,61581
+OPP000415,Streamline Parts & Components — Upsell 2026,,Id. Decision Makers,2027-09-08,
+OPP000416,Keystone Manufacturing Alliance — Renewal 2026,ACC000416,Perception Analysis,2027-09-09,61855
+OPP000417,Pacific Fabrication Systems — Expansion 2026,ACC000417,Proposal/Price Quote,2027-09-10,
+OPP000418,Pinnacle Parts Group — New Business 2026,,Negotiation/Review,2027-09-11,62129
+OPP000419,Centennial Industrial Co. — Upgrade 2026,ACC000419,Closed Won,2027-09-12,
+OPP000420,Northgate Manufacturing Inc. — Upsell 2026,ACC000420,Closed Lost,2027-09-13,62403
+OPP000421,Lakeside Engineering Works — Renewal 2026,,Prospecting,2027-09-14,
+OPP000422,Thornton Components Group — Expansion 2026,ACC000422,Qualification,2027-09-15,62677
+OPP000423,Broadfield Production Inc. — New Business 2026,ACC000423,Needs Analysis,2027-09-16,
+OPP000424,Sterling Assembly Systems — Upgrade 2026,,Value Proposition,2027-09-17,62951
+OPP000425,Clearwater Industrial Corp. — Upsell 2026,ACC000425,Id. Decision Makers,2027-09-18,
+OPP000426,Apex Industrial Systems — Renewal 2026,ACC000426,Perception Analysis,2027-09-19,63225
+OPP000427,Precision Components Ltd — Expansion 2026,,Proposal/Price Quote,2027-09-20,
+OPP000428,Granite Manufacturing Co. — New Business 2026,ACC000428,Negotiation/Review,2027-09-21,63499
+OPP000429,Ironclad Production Group — Upgrade 2026,ACC000429,Closed Won,2027-09-22,
+OPP000430,Velocity Parts & Assembly — Upsell 2026,,Closed Lost,2027-09-23,63773
+OPP000431,Summit Engineering Works — Renewal 2026,ACC000431,Prospecting,2027-09-24,
+OPP000432,BlueForge Manufacturing — Expansion 2026,ACC000432,Qualification,2027-09-25,64047
+OPP000433,Strata Industrial Solutions — New Business 2026,,Needs Analysis,2027-09-26,
+OPP000434,Crestline Fabrication Inc. — Upgrade 2026,ACC000434,Value Proposition,2027-09-27,64321
+OPP000435,Meridian Parts Systems — Upsell 2026,ACC000435,Id. Decision Makers,2027-09-28,
+OPP000436,Ridgeline Manufacturing Group — Renewal 2026,,Perception Analysis,2027-09-29,64595
+OPP000437,Cascade Production Works — Expansion 2026,ACC000437,Proposal/Price Quote,2027-09-30,
+OPP000438,CoreTech Assembly Co. — New Business 2026,ACC000438,Negotiation/Review,2027-10-01,64869
+OPP000439,Highpoint Industrial Ltd — Upgrade 2026,,Closed Won,2027-10-02,
+OPP000440,Streamline Parts & Components — Upsell 2026,ACC000440,Closed Lost,2027-10-03,65143
+OPP000441,Keystone Manufacturing Alliance — Renewal 2026,ACC000441,Prospecting,2027-10-04,
+OPP000442,Pacific Fabrication Systems — Expansion 2026,,Qualification,2027-10-05,65417
+OPP000443,Pinnacle Parts Group — New Business 2026,ACC000443,Needs Analysis,2027-10-06,
+OPP000444,Centennial Industrial Co. — Upgrade 2026,ACC000444,Value Proposition,2027-10-07,65691
+OPP000445,Northgate Manufacturing Inc. — Upsell 2026,,Id. Decision Makers,2027-10-08,
+OPP000446,Lakeside Engineering Works — Renewal 2026,ACC000446,Perception Analysis,2027-10-09,65965
+OPP000447,Thornton Components Group — Expansion 2026,ACC000447,Proposal/Price Quote,2027-10-10,
+OPP000448,Broadfield Production Inc. — New Business 2026,,Negotiation/Review,2027-10-11,66239
+OPP000449,Sterling Assembly Systems — Upgrade 2026,ACC000449,Closed Won,2027-10-12,
+OPP000450,Clearwater Industrial Corp. — Upsell 2026,ACC000450,Closed Lost,2027-10-13,66513
+OPP000451,Apex Industrial Systems — Renewal 2026,,Prospecting,2027-10-14,
+OPP000452,Precision Components Ltd — Expansion 2026,ACC000452,Qualification,2027-10-15,66787
+OPP000453,Granite Manufacturing Co. — New Business 2026,ACC000453,Needs Analysis,2027-10-16,
+OPP000454,Ironclad Production Group — Upgrade 2026,,Value Proposition,2027-10-17,67061
+OPP000455,Velocity Parts & Assembly — Upsell 2026,ACC000455,Id. Decision Makers,2027-10-18,
+OPP000456,Summit Engineering Works — Renewal 2026,ACC000456,Perception Analysis,2027-10-19,67335
+OPP000457,BlueForge Manufacturing — Expansion 2026,,Proposal/Price Quote,2027-10-20,
+OPP000458,Strata Industrial Solutions — New Business 2026,ACC000458,Negotiation/Review,2027-10-21,67609
+OPP000459,Crestline Fabrication Inc. — Upgrade 2026,ACC000459,Closed Won,2027-10-22,
+OPP000460,Meridian Parts Systems — Upsell 2026,,Closed Lost,2027-10-23,67883
+OPP000461,Ridgeline Manufacturing Group — Renewal 2026,ACC000461,Prospecting,2027-10-24,
+OPP000462,Cascade Production Works — Expansion 2026,ACC000462,Qualification,2027-10-25,68157
+OPP000463,CoreTech Assembly Co. — New Business 2026,,Needs Analysis,2027-10-26,
+OPP000464,Highpoint Industrial Ltd — Upgrade 2026,ACC000464,Value Proposition,2027-10-27,68431
+OPP000465,Streamline Parts & Components — Upsell 2026,ACC000465,Id. Decision Makers,2027-10-28,
+OPP000466,Keystone Manufacturing Alliance — Renewal 2026,,Perception Analysis,2027-10-29,68705
+OPP000467,Pacific Fabrication Systems — Expansion 2026,ACC000467,Proposal/Price Quote,2027-10-30,
+OPP000468,Pinnacle Parts Group — New Business 2026,ACC000468,Negotiation/Review,2027-10-31,68979
+OPP000469,Centennial Industrial Co. — Upgrade 2026,,Closed Won,2027-11-01,
+OPP000470,Northgate Manufacturing Inc. — Upsell 2026,ACC000470,Closed Lost,2027-11-02,69253
+OPP000471,Lakeside Engineering Works — Renewal 2026,ACC000471,Prospecting,2027-11-03,
+OPP000472,Thornton Components Group — Expansion 2026,,Qualification,2027-11-04,69527
+OPP000473,Broadfield Production Inc. — New Business 2026,ACC000473,Needs Analysis,2027-11-05,
+OPP000474,Sterling Assembly Systems — Upgrade 2026,ACC000474,Value Proposition,2027-11-06,69801
+OPP000475,Clearwater Industrial Corp. — Upsell 2026,,Id. Decision Makers,2027-11-07,
+OPP000476,Apex Industrial Systems — Renewal 2026,ACC000476,Perception Analysis,2027-11-08,70075
+OPP000477,Precision Components Ltd — Expansion 2026,ACC000477,Proposal/Price Quote,2027-11-09,
+OPP000478,Granite Manufacturing Co. — New Business 2026,,Negotiation/Review,2027-11-10,70349
+OPP000479,Ironclad Production Group — Upgrade 2026,ACC000479,Closed Won,2027-11-11,
+OPP000480,Velocity Parts & Assembly — Upsell 2026,ACC000480,Closed Lost,2027-11-12,70623
+OPP000481,Summit Engineering Works — Renewal 2026,,Prospecting,2027-11-13,
+OPP000482,BlueForge Manufacturing — Expansion 2026,ACC000482,Qualification,2027-11-14,70897
+OPP000483,Strata Industrial Solutions — New Business 2026,ACC000483,Needs Analysis,2027-11-15,
+OPP000484,Crestline Fabrication Inc. — Upgrade 2026,,Value Proposition,2027-11-16,71171
+OPP000485,Meridian Parts Systems — Upsell 2026,ACC000485,Id. Decision Makers,2027-11-17,
+OPP000486,Ridgeline Manufacturing Group — Renewal 2026,ACC000486,Perception Analysis,2027-11-18,71445
+OPP000487,Cascade Production Works — Expansion 2026,,Proposal/Price Quote,2027-11-19,
+OPP000488,CoreTech Assembly Co. — New Business 2026,ACC000488,Negotiation/Review,2027-11-20,71719
+OPP000489,Highpoint Industrial Ltd — Upgrade 2026,ACC000489,Closed Won,2027-11-21,
+OPP000490,Streamline Parts & Components — Upsell 2026,,Closed Lost,2027-11-22,71993
+OPP000491,Keystone Manufacturing Alliance — Renewal 2026,ACC000491,Prospecting,2027-11-23,
+OPP000492,Pacific Fabrication Systems — Expansion 2026,ACC000492,Qualification,2027-11-24,72267
+OPP000493,Pinnacle Parts Group — New Business 2026,,Needs Analysis,2027-11-25,
+OPP000494,Centennial Industrial Co. — Upgrade 2026,ACC000494,Value Proposition,2027-11-26,72541
+OPP000495,Northgate Manufacturing Inc. — Upsell 2026,ACC000495,Id. Decision Makers,2027-11-27,
+OPP000496,Lakeside Engineering Works — Renewal 2026,,Perception Analysis,2027-11-28,72815
+OPP000497,Thornton Components Group — Expansion 2026,ACC000497,Proposal/Price Quote,2027-11-29,
+OPP000498,Broadfield Production Inc. — New Business 2026,ACC000498,Negotiation/Review,2027-11-30,73089
+OPP000499,Sterling Assembly Systems — Upgrade 2026,,Closed Won,2027-12-01,
+OPP000500,Clearwater Industrial Corp. — Upsell 2026,ACC000500,Closed Lost,2027-12-02,73363
+OPP000501,Apex Industrial Systems — Renewal 2026,ACC000001,Prospecting,2027-12-03,
+OPP000502,Precision Components Ltd — Expansion 2026,,Qualification,2027-12-04,73637
+OPP000503,Granite Manufacturing Co. — New Business 2026,ACC000003,Needs Analysis,2027-12-05,
+OPP000504,Ironclad Production Group — Upgrade 2026,ACC000004,Value Proposition,2027-12-06,73911
+OPP000505,Velocity Parts & Assembly — Upsell 2026,,Id. Decision Makers,2027-12-07,
+OPP000506,Summit Engineering Works — Renewal 2026,ACC000006,Perception Analysis,2027-12-08,74185
+OPP000507,BlueForge Manufacturing — Expansion 2026,ACC000007,Proposal/Price Quote,2027-12-09,
+OPP000508,Strata Industrial Solutions — New Business 2026,,Negotiation/Review,2027-12-10,74459
+OPP000509,Crestline Fabrication Inc. — Upgrade 2026,ACC000009,Closed Won,2027-12-11,
+OPP000510,Meridian Parts Systems — Upsell 2026,ACC000010,Closed Lost,2027-12-12,74733
+OPP000511,Ridgeline Manufacturing Group — Renewal 2026,,Prospecting,2027-12-13,
+OPP000512,Cascade Production Works — Expansion 2026,ACC000012,Qualification,2027-12-14,75007
+OPP000513,CoreTech Assembly Co. — New Business 2026,ACC000013,Needs Analysis,2027-12-15,
+OPP000514,Highpoint Industrial Ltd — Upgrade 2026,,Value Proposition,2027-12-16,75281
+OPP000515,Streamline Parts & Components — Upsell 2026,ACC000015,Id. Decision Makers,2027-12-17,
+OPP000516,Keystone Manufacturing Alliance — Renewal 2026,ACC000016,Perception Analysis,2027-12-18,75555
+OPP000517,Pacific Fabrication Systems — Expansion 2026,,Proposal/Price Quote,2027-12-19,
+OPP000518,Pinnacle Parts Group — New Business 2026,ACC000018,Negotiation/Review,2027-12-20,75829
+OPP000519,Centennial Industrial Co. — Upgrade 2026,ACC000019,Closed Won,2027-12-21,
+OPP000520,Northgate Manufacturing Inc. — Upsell 2026,,Closed Lost,2027-12-22,76103
+OPP000521,Lakeside Engineering Works — Renewal 2026,ACC000021,Prospecting,2027-12-23,
+OPP000522,Thornton Components Group — Expansion 2026,ACC000022,Qualification,2027-12-24,76377
+OPP000523,Broadfield Production Inc. — New Business 2026,,Needs Analysis,2027-12-25,
+OPP000524,Sterling Assembly Systems — Upgrade 2026,ACC000024,Value Proposition,2027-12-26,76651
+OPP000525,Clearwater Industrial Corp. — Upsell 2026,ACC000025,Id. Decision Makers,2027-12-27,
+OPP000526,Apex Industrial Systems — Renewal 2026,,Perception Analysis,2027-12-28,76925
+OPP000527,Precision Components Ltd — Expansion 2026,ACC000027,Proposal/Price Quote,2027-12-29,
+OPP000528,Granite Manufacturing Co. — New Business 2026,ACC000028,Negotiation/Review,2027-12-30,77199
+OPP000529,Ironclad Production Group — Upgrade 2026,,Closed Won,2027-12-31,
+OPP000530,Velocity Parts & Assembly — Upsell 2026,ACC000030,Closed Lost,2028-01-01,77473
+OPP000531,Summit Engineering Works — Renewal 2026,ACC000031,Prospecting,2028-01-02,
+OPP000532,BlueForge Manufacturing — Expansion 2026,,Qualification,2028-01-03,77747
+OPP000533,Strata Industrial Solutions — New Business 2026,ACC000033,Needs Analysis,2028-01-04,
+OPP000534,Crestline Fabrication Inc. — Upgrade 2026,ACC000034,Value Proposition,2028-01-05,78021
+OPP000535,Meridian Parts Systems — Upsell 2026,,Id. Decision Makers,2028-01-06,
+OPP000536,Ridgeline Manufacturing Group — Renewal 2026,ACC000036,Perception Analysis,2028-01-07,78295
+OPP000537,Cascade Production Works — Expansion 2026,ACC000037,Proposal/Price Quote,2028-01-08,
+OPP000538,CoreTech Assembly Co. — New Business 2026,,Negotiation/Review,2028-01-09,78569
+OPP000539,Highpoint Industrial Ltd — Upgrade 2026,ACC000039,Closed Won,2028-01-10,
+OPP000540,Streamline Parts & Components — Upsell 2026,ACC000040,Closed Lost,2028-01-11,78843
+OPP000541,Keystone Manufacturing Alliance — Renewal 2026,,Prospecting,2026-07-21,
+OPP000542,Pacific Fabrication Systems — Expansion 2026,ACC000042,Qualification,2026-07-22,79117
+OPP000543,Pinnacle Parts Group — New Business 2026,ACC000043,Needs Analysis,2026-07-23,
+OPP000544,Centennial Industrial Co. — Upgrade 2026,,Value Proposition,2026-07-24,79391
+OPP000545,Northgate Manufacturing Inc. — Upsell 2026,ACC000045,Id. Decision Makers,2026-07-25,
+OPP000546,Lakeside Engineering Works — Renewal 2026,ACC000046,Perception Analysis,2026-07-26,79665
+OPP000547,Thornton Components Group — Expansion 2026,,Proposal/Price Quote,2026-07-27,
+OPP000548,Broadfield Production Inc. — New Business 2026,ACC000048,Negotiation/Review,2026-07-28,79939
+OPP000549,Sterling Assembly Systems — Upgrade 2026,ACC000049,Closed Won,2026-07-29,
+OPP000550,Clearwater Industrial Corp. — Upsell 2026,,Closed Lost,2026-07-30,80213
+OPP000551,Apex Industrial Systems — Renewal 2026,ACC000051,Prospecting,2026-07-31,
+OPP000552,Precision Components Ltd — Expansion 2026,ACC000052,Qualification,2026-08-01,80487
+OPP000553,Granite Manufacturing Co. — New Business 2026,,Needs Analysis,2026-08-02,
+OPP000554,Ironclad Production Group — Upgrade 2026,ACC000054,Value Proposition,2026-08-03,80761
+OPP000555,Velocity Parts & Assembly — Upsell 2026,ACC000055,Id. Decision Makers,2026-08-04,
+OPP000556,Summit Engineering Works — Renewal 2026,,Perception Analysis,2026-08-05,81035
+OPP000557,BlueForge Manufacturing — Expansion 2026,ACC000057,Proposal/Price Quote,2026-08-06,
+OPP000558,Strata Industrial Solutions — New Business 2026,ACC000058,Negotiation/Review,2026-08-07,81309
+OPP000559,Crestline Fabrication Inc. — Upgrade 2026,,Closed Won,2026-08-08,
+OPP000560,Meridian Parts Systems — Upsell 2026,ACC000060,Closed Lost,2026-08-09,81583
+OPP000561,Ridgeline Manufacturing Group — Renewal 2026,ACC000061,Prospecting,2026-08-10,
+OPP000562,Cascade Production Works — Expansion 2026,,Qualification,2026-08-11,81857
+OPP000563,CoreTech Assembly Co. — New Business 2026,ACC000063,Needs Analysis,2026-08-12,
+OPP000564,Highpoint Industrial Ltd — Upgrade 2026,ACC000064,Value Proposition,2026-08-13,82131
+OPP000565,Streamline Parts & Components — Upsell 2026,,Id. Decision Makers,2026-08-14,
+OPP000566,Keystone Manufacturing Alliance — Renewal 2026,ACC000066,Perception Analysis,2026-08-15,82405
+OPP000567,Pacific Fabrication Systems — Expansion 2026,ACC000067,Proposal/Price Quote,2026-08-16,
+OPP000568,Pinnacle Parts Group — New Business 2026,,Negotiation/Review,2026-08-17,82679
+OPP000569,Centennial Industrial Co. — Upgrade 2026,ACC000069,Closed Won,2026-08-18,
+OPP000570,Northgate Manufacturing Inc. — Upsell 2026,ACC000070,Closed Lost,2026-08-19,82953
+OPP000571,Lakeside Engineering Works — Renewal 2026,,Prospecting,2026-08-20,
+OPP000572,Thornton Components Group — Expansion 2026,ACC000072,Qualification,2026-08-21,83227
+OPP000573,Broadfield Production Inc. — New Business 2026,ACC000073,Needs Analysis,2026-08-22,
+OPP000574,Sterling Assembly Systems — Upgrade 2026,,Value Proposition,2026-08-23,83501
+OPP000575,Clearwater Industrial Corp. — Upsell 2026,ACC000075,Id. Decision Makers,2026-08-24,
+OPP000576,Apex Industrial Systems — Renewal 2026,ACC000076,Perception Analysis,2026-08-25,83775
+OPP000577,Precision Components Ltd — Expansion 2026,,Proposal/Price Quote,2026-08-26,
+OPP000578,Granite Manufacturing Co. — New Business 2026,ACC000078,Negotiation/Review,2026-08-27,84049
+OPP000579,Ironclad Production Group — Upgrade 2026,ACC000079,Closed Won,2026-08-28,
+OPP000580,Velocity Parts & Assembly — Upsell 2026,,Closed Lost,2026-08-29,84323
+OPP000581,Summit Engineering Works — Renewal 2026,ACC000081,Prospecting,2026-08-30,
+OPP000582,BlueForge Manufacturing — Expansion 2026,ACC000082,Qualification,2026-08-31,84597
+OPP000583,Strata Industrial Solutions — New Business 2026,,Needs Analysis,2026-09-01,
+OPP000584,Crestline Fabrication Inc. — Upgrade 2026,ACC000084,Value Proposition,2026-09-02,84871
+OPP000585,Meridian Parts Systems — Upsell 2026,ACC000085,Id. Decision Makers,2026-09-03,
+OPP000586,Ridgeline Manufacturing Group — Renewal 2026,,Perception Analysis,2026-09-04,85145
+OPP000587,Cascade Production Works — Expansion 2026,ACC000087,Proposal/Price Quote,2026-09-05,
+OPP000588,CoreTech Assembly Co. — New Business 2026,ACC000088,Negotiation/Review,2026-09-06,85419
+OPP000589,Highpoint Industrial Ltd — Upgrade 2026,,Closed Won,2026-09-07,
+OPP000590,Streamline Parts & Components — Upsell 2026,ACC000090,Closed Lost,2026-09-08,85693
+OPP000591,Keystone Manufacturing Alliance — Renewal 2026,ACC000091,Prospecting,2026-09-09,
+OPP000592,Pacific Fabrication Systems — Expansion 2026,,Qualification,2026-09-10,85967
+OPP000593,Pinnacle Parts Group — New Business 2026,ACC000093,Needs Analysis,2026-09-11,
+OPP000594,Centennial Industrial Co. — Upgrade 2026,ACC000094,Value Proposition,2026-09-12,86241
+OPP000595,Northgate Manufacturing Inc. — Upsell 2026,,Id. Decision Makers,2026-09-13,
+OPP000596,Lakeside Engineering Works — Renewal 2026,ACC000096,Perception Analysis,2026-09-14,86515
+OPP000597,Thornton Components Group — Expansion 2026,ACC000097,Proposal/Price Quote,2026-09-15,
+OPP000598,Broadfield Production Inc. — New Business 2026,,Negotiation/Review,2026-09-16,86789
+OPP000599,Sterling Assembly Systems — Upgrade 2026,ACC000099,Closed Won,2026-09-17,
+OPP000600,Clearwater Industrial Corp. — Upsell 2026,ACC000100,Closed Lost,2026-09-18,87063
+OPP000601,Apex Industrial Systems — Renewal 2026,,Prospecting,2026-09-19,
+OPP000602,Precision Components Ltd — Expansion 2026,ACC000102,Qualification,2026-09-20,87337
+OPP000603,Granite Manufacturing Co. — New Business 2026,ACC000103,Needs Analysis,2026-09-21,
+OPP000604,Ironclad Production Group — Upgrade 2026,,Value Proposition,2026-09-22,87611
+OPP000605,Velocity Parts & Assembly — Upsell 2026,ACC000105,Id. Decision Makers,2026-09-23,
+OPP000606,Summit Engineering Works — Renewal 2026,ACC000106,Perception Analysis,2026-09-24,87885
+OPP000607,BlueForge Manufacturing — Expansion 2026,,Proposal/Price Quote,2026-09-25,
+OPP000608,Strata Industrial Solutions — New Business 2026,ACC000108,Negotiation/Review,2026-09-26,88159
+OPP000609,Crestline Fabrication Inc. — Upgrade 2026,ACC000109,Closed Won,2026-09-27,
+OPP000610,Meridian Parts Systems — Upsell 2026,,Closed Lost,2026-09-28,88433
+OPP000611,Ridgeline Manufacturing Group — Renewal 2026,ACC000111,Prospecting,2026-09-29,
+OPP000612,Cascade Production Works — Expansion 2026,ACC000112,Qualification,2026-09-30,88707
+OPP000613,CoreTech Assembly Co. — New Business 2026,,Needs Analysis,2026-10-01,
+OPP000614,Highpoint Industrial Ltd — Upgrade 2026,ACC000114,Value Proposition,2026-10-02,88981
+OPP000615,Streamline Parts & Components — Upsell 2026,ACC000115,Id. Decision Makers,2026-10-03,
+OPP000616,Keystone Manufacturing Alliance — Renewal 2026,,Perception Analysis,2026-10-04,89255
+OPP000617,Pacific Fabrication Systems — Expansion 2026,ACC000117,Proposal/Price Quote,2026-10-05,
+OPP000618,Pinnacle Parts Group — New Business 2026,ACC000118,Negotiation/Review,2026-10-06,89529
+OPP000619,Centennial Industrial Co. — Upgrade 2026,,Closed Won,2026-10-07,
+OPP000620,Northgate Manufacturing Inc. — Upsell 2026,ACC000120,Closed Lost,2026-10-08,89803
+OPP000621,Lakeside Engineering Works — Renewal 2026,ACC000121,Prospecting,2026-10-09,
+OPP000622,Thornton Components Group — Expansion 2026,,Qualification,2026-10-10,90077
+OPP000623,Broadfield Production Inc. — New Business 2026,ACC000123,Needs Analysis,2026-10-11,
+OPP000624,Sterling Assembly Systems — Upgrade 2026,ACC000124,Value Proposition,2026-10-12,90351
+OPP000625,Clearwater Industrial Corp. — Upsell 2026,,Id. Decision Makers,2026-10-13,
+OPP000626,Apex Industrial Systems — Renewal 2026,ACC000126,Perception Analysis,2026-10-14,90625
+OPP000627,Precision Components Ltd — Expansion 2026,ACC000127,Proposal/Price Quote,2026-10-15,
+OPP000628,Granite Manufacturing Co. — New Business 2026,,Negotiation/Review,2026-10-16,90899
+OPP000629,Ironclad Production Group — Upgrade 2026,ACC000129,Closed Won,2026-10-17,
+OPP000630,Velocity Parts & Assembly — Upsell 2026,ACC000130,Closed Lost,2026-10-18,91173
+OPP000631,Summit Engineering Works — Renewal 2026,,Prospecting,2026-10-19,
+OPP000632,BlueForge Manufacturing — Expansion 2026,ACC000132,Qualification,2026-10-20,91447
+OPP000633,Strata Industrial Solutions — New Business 2026,ACC000133,Needs Analysis,2026-10-21,
+OPP000634,Crestline Fabrication Inc. — Upgrade 2026,,Value Proposition,2026-10-22,91721
+OPP000635,Meridian Parts Systems — Upsell 2026,ACC000135,Id. Decision Makers,2026-10-23,
+OPP000636,Ridgeline Manufacturing Group — Renewal 2026,ACC000136,Perception Analysis,2026-10-24,91995
+OPP000637,Cascade Production Works — Expansion 2026,,Proposal/Price Quote,2026-10-25,
+OPP000638,CoreTech Assembly Co. — New Business 2026,ACC000138,Negotiation/Review,2026-10-26,92269
+OPP000639,Highpoint Industrial Ltd — Upgrade 2026,ACC000139,Closed Won,2026-10-27,
+OPP000640,Streamline Parts & Components — Upsell 2026,,Closed Lost,2026-10-28,92543
+OPP000641,Keystone Manufacturing Alliance — Renewal 2026,ACC000141,Prospecting,2026-10-29,
+OPP000642,Pacific Fabrication Systems — Expansion 2026,ACC000142,Qualification,2026-10-30,92817
+OPP000643,Pinnacle Parts Group — New Business 2026,,Needs Analysis,2026-10-31,
+OPP000644,Centennial Industrial Co. — Upgrade 2026,ACC000144,Value Proposition,2026-11-01,93091
+OPP000645,Northgate Manufacturing Inc. — Upsell 2026,ACC000145,Id. Decision Makers,2026-11-02,
+OPP000646,Lakeside Engineering Works — Renewal 2026,,Perception Analysis,2026-11-03,93365
+OPP000647,Thornton Components Group — Expansion 2026,ACC000147,Proposal/Price Quote,2026-11-04,
+OPP000648,Broadfield Production Inc. — New Business 2026,ACC000148,Negotiation/Review,2026-11-05,93639
+OPP000649,Sterling Assembly Systems — Upgrade 2026,,Closed Won,2026-11-06,
+OPP000650,Clearwater Industrial Corp. — Upsell 2026,ACC000150,Closed Lost,2026-11-07,93913
+OPP000651,Apex Industrial Systems — Renewal 2026,ACC000151,Prospecting,2026-11-08,
+OPP000652,Precision Components Ltd — Expansion 2026,,Qualification,2026-11-09,94187
+OPP000653,Granite Manufacturing Co. — New Business 2026,ACC000153,Needs Analysis,2026-11-10,
+OPP000654,Ironclad Production Group — Upgrade 2026,ACC000154,Value Proposition,2026-11-11,94461
+OPP000655,Velocity Parts & Assembly — Upsell 2026,,Id. Decision Makers,2026-11-12,
+OPP000656,Summit Engineering Works — Renewal 2026,ACC000156,Perception Analysis,2026-11-13,94735
+OPP000657,BlueForge Manufacturing — Expansion 2026,ACC000157,Proposal/Price Quote,2026-11-14,
+OPP000658,Strata Industrial Solutions — New Business 2026,,Negotiation/Review,2026-11-15,95009
+OPP000659,Crestline Fabrication Inc. — Upgrade 2026,ACC000159,Closed Won,2026-11-16,
+OPP000660,Meridian Parts Systems — Upsell 2026,ACC000160,Closed Lost,2026-11-17,95283
+OPP000661,Ridgeline Manufacturing Group — Renewal 2026,,Prospecting,2026-11-18,
+OPP000662,Cascade Production Works — Expansion 2026,ACC000162,Qualification,2026-11-19,95557
+OPP000663,CoreTech Assembly Co. — New Business 2026,ACC000163,Needs Analysis,2026-11-20,
+OPP000664,Highpoint Industrial Ltd — Upgrade 2026,,Value Proposition,2026-11-21,95831
+OPP000665,Streamline Parts & Components — Upsell 2026,ACC000165,Id. Decision Makers,2026-11-22,
+OPP000666,Keystone Manufacturing Alliance — Renewal 2026,ACC000166,Perception Analysis,2026-11-23,96105
+OPP000667,Pacific Fabrication Systems — Expansion 2026,,Proposal/Price Quote,2026-11-24,
+OPP000668,Pinnacle Parts Group — New Business 2026,ACC000168,Negotiation/Review,2026-11-25,96379
+OPP000669,Centennial Industrial Co. — Upgrade 2026,ACC000169,Closed Won,2026-11-26,
+OPP000670,Northgate Manufacturing Inc. — Upsell 2026,,Closed Lost,2026-11-27,96653
+OPP000671,Lakeside Engineering Works — Renewal 2026,ACC000171,Prospecting,2026-11-28,
+OPP000672,Thornton Components Group — Expansion 2026,ACC000172,Qualification,2026-11-29,96927
+OPP000673,Broadfield Production Inc. — New Business 2026,,Needs Analysis,2026-11-30,
+OPP000674,Sterling Assembly Systems — Upgrade 2026,ACC000174,Value Proposition,2026-12-01,97201
+OPP000675,Clearwater Industrial Corp. — Upsell 2026,ACC000175,Id. Decision Makers,2026-12-02,
+OPP000676,Apex Industrial Systems — Renewal 2026,,Perception Analysis,2026-12-03,97475
+OPP000677,Precision Components Ltd — Expansion 2026,ACC000177,Proposal/Price Quote,2026-12-04,
+OPP000678,Granite Manufacturing Co. — New Business 2026,ACC000178,Negotiation/Review,2026-12-05,97749
+OPP000679,Ironclad Production Group — Upgrade 2026,,Closed Won,2026-12-06,
+OPP000680,Velocity Parts & Assembly — Upsell 2026,ACC000180,Closed Lost,2026-12-07,98023
+OPP000681,Summit Engineering Works — Renewal 2026,ACC000181,Prospecting,2026-12-08,
+OPP000682,BlueForge Manufacturing — Expansion 2026,,Qualification,2026-12-09,98297
+OPP000683,Strata Industrial Solutions — New Business 2026,ACC000183,Needs Analysis,2026-12-10,
+OPP000684,Crestline Fabrication Inc. — Upgrade 2026,ACC000184,Value Proposition,2026-12-11,98571
+OPP000685,Meridian Parts Systems — Upsell 2026,,Id. Decision Makers,2026-12-12,
+OPP000686,Ridgeline Manufacturing Group — Renewal 2026,ACC000186,Perception Analysis,2026-12-13,98845
+OPP000687,Cascade Production Works — Expansion 2026,ACC000187,Proposal/Price Quote,2026-12-14,
+OPP000688,CoreTech Assembly Co. — New Business 2026,,Negotiation/Review,2026-12-15,99119
+OPP000689,Highpoint Industrial Ltd — Upgrade 2026,ACC000189,Closed Won,2026-12-16,
+OPP000690,Streamline Parts & Components — Upsell 2026,ACC000190,Closed Lost,2026-12-17,99393
+OPP000691,Keystone Manufacturing Alliance — Renewal 2026,,Prospecting,2026-12-18,
+OPP000692,Pacific Fabrication Systems — Expansion 2026,ACC000192,Qualification,2026-12-19,99667
+OPP000693,Pinnacle Parts Group — New Business 2026,ACC000193,Needs Analysis,2026-12-20,
+OPP000694,Centennial Industrial Co. — Upgrade 2026,,Value Proposition,2026-12-21,99941
+OPP000695,Northgate Manufacturing Inc. — Upsell 2026,ACC000195,Id. Decision Makers,2026-12-22,
+OPP000696,Lakeside Engineering Works — Renewal 2026,ACC000196,Perception Analysis,2026-12-23,100215
+OPP000697,Thornton Components Group — Expansion 2026,,Proposal/Price Quote,2026-12-24,
+OPP000698,Broadfield Production Inc. — New Business 2026,ACC000198,Negotiation/Review,2026-12-25,100489
+OPP000699,Sterling Assembly Systems — Upgrade 2026,ACC000199,Closed Won,2026-12-26,
+OPP000700,Clearwater Industrial Corp. — Upsell 2026,,Closed Lost,2026-12-27,100763
+OPP000701,Apex Industrial Systems — Renewal 2026,ACC000201,Prospecting,2026-12-28,
+OPP000702,Precision Components Ltd — Expansion 2026,ACC000202,Qualification,2026-12-29,101037
+OPP000703,Granite Manufacturing Co. — New Business 2026,,Needs Analysis,2026-12-30,
+OPP000704,Ironclad Production Group — Upgrade 2026,ACC000204,Value Proposition,2026-12-31,101311
+OPP000705,Velocity Parts & Assembly — Upsell 2026,ACC000205,Id. Decision Makers,2027-01-01,
+OPP000706,Summit Engineering Works — Renewal 2026,,Perception Analysis,2027-01-02,101585
+OPP000707,BlueForge Manufacturing — Expansion 2026,ACC000207,Proposal/Price Quote,2027-01-03,
+OPP000708,Strata Industrial Solutions — New Business 2026,ACC000208,Negotiation/Review,2027-01-04,101859
+OPP000709,Crestline Fabrication Inc. — Upgrade 2026,,Closed Won,2027-01-05,
+OPP000710,Meridian Parts Systems — Upsell 2026,ACC000210,Closed Lost,2027-01-06,102133
+OPP000711,Ridgeline Manufacturing Group — Renewal 2026,ACC000211,Prospecting,2027-01-07,
+OPP000712,Cascade Production Works — Expansion 2026,,Qualification,2027-01-08,102407
+OPP000713,CoreTech Assembly Co. — New Business 2026,ACC000213,Needs Analysis,2027-01-09,
+OPP000714,Highpoint Industrial Ltd — Upgrade 2026,ACC000214,Value Proposition,2027-01-10,102681
+OPP000715,Streamline Parts & Components — Upsell 2026,,Id. Decision Makers,2027-01-11,
+OPP000716,Keystone Manufacturing Alliance — Renewal 2026,ACC000216,Perception Analysis,2027-01-12,102955
+OPP000717,Pacific Fabrication Systems — Expansion 2026,ACC000217,Proposal/Price Quote,2027-01-13,
+OPP000718,Pinnacle Parts Group — New Business 2026,,Negotiation/Review,2027-01-14,103229
+OPP000719,Centennial Industrial Co. — Upgrade 2026,ACC000219,Closed Won,2027-01-15,
+OPP000720,Northgate Manufacturing Inc. — Upsell 2026,ACC000220,Closed Lost,2027-01-16,103503
+OPP000721,Lakeside Engineering Works — Renewal 2026,,Prospecting,2027-01-17,
+OPP000722,Thornton Components Group — Expansion 2026,ACC000222,Qualification,2027-01-18,103777
+OPP000723,Broadfield Production Inc. — New Business 2026,ACC000223,Needs Analysis,2027-01-19,
+OPP000724,Sterling Assembly Systems — Upgrade 2026,,Value Proposition,2027-01-20,104051
+OPP000725,Clearwater Industrial Corp. — Upsell 2026,ACC000225,Id. Decision Makers,2027-01-21,
+OPP000726,Apex Industrial Systems — Renewal 2026,ACC000226,Perception Analysis,2027-01-22,104325
+OPP000727,Precision Components Ltd — Expansion 2026,,Proposal/Price Quote,2027-01-23,
+OPP000728,Granite Manufacturing Co. — New Business 2026,ACC000228,Negotiation/Review,2027-01-24,104599
+OPP000729,Ironclad Production Group — Upgrade 2026,ACC000229,Closed Won,2027-01-25,
+OPP000730,Velocity Parts & Assembly — Upsell 2026,,Closed Lost,2027-01-26,104873
+OPP000731,Summit Engineering Works — Renewal 2026,ACC000231,Prospecting,2027-01-27,
+OPP000732,BlueForge Manufacturing — Expansion 2026,ACC000232,Qualification,2027-01-28,105147
+OPP000733,Strata Industrial Solutions — New Business 2026,,Needs Analysis,2027-01-29,
+OPP000734,Crestline Fabrication Inc. — Upgrade 2026,ACC000234,Value Proposition,2027-01-30,105421
+OPP000735,Meridian Parts Systems — Upsell 2026,ACC000235,Id. Decision Makers,2027-01-31,
+OPP000736,Ridgeline Manufacturing Group — Renewal 2026,,Perception Analysis,2027-02-01,105695
+OPP000737,Cascade Production Works — Expansion 2026,ACC000237,Proposal/Price Quote,2027-02-02,
+OPP000738,CoreTech Assembly Co. — New Business 2026,ACC000238,Negotiation/Review,2027-02-03,105969
+OPP000739,Highpoint Industrial Ltd — Upgrade 2026,,Closed Won,2027-02-04,
+OPP000740,Streamline Parts & Components — Upsell 2026,ACC000240,Closed Lost,2027-02-05,106243
+OPP000741,Keystone Manufacturing Alliance — Renewal 2026,ACC000241,Prospecting,2027-02-06,
+OPP000742,Pacific Fabrication Systems — Expansion 2026,,Qualification,2027-02-07,106517
+OPP000743,Pinnacle Parts Group — New Business 2026,ACC000243,Needs Analysis,2027-02-08,
+OPP000744,Centennial Industrial Co. — Upgrade 2026,ACC000244,Value Proposition,2027-02-09,106791
+OPP000745,Northgate Manufacturing Inc. — Upsell 2026,,Id. Decision Makers,2027-02-10,
+OPP000746,Lakeside Engineering Works — Renewal 2026,ACC000246,Perception Analysis,2027-02-11,107065
+OPP000747,Thornton Components Group — Expansion 2026,ACC000247,Proposal/Price Quote,2027-02-12,
+OPP000748,Broadfield Production Inc. — New Business 2026,,Negotiation/Review,2027-02-13,107339
+OPP000749,Sterling Assembly Systems — Upgrade 2026,ACC000249,Closed Won,2027-02-14,
+OPP000750,Clearwater Industrial Corp. — Upsell 2026,ACC000250,Closed Lost,2027-02-15,107613
+OPP000751,Apex Industrial Systems — Renewal 2026,,Prospecting,2027-02-16,
+OPP000752,Precision Components Ltd — Expansion 2026,ACC000252,Qualification,2027-02-17,107887
+OPP000753,Granite Manufacturing Co. — New Business 2026,ACC000253,Needs Analysis,2027-02-18,
+OPP000754,Ironclad Production Group — Upgrade 2026,,Value Proposition,2027-02-19,108161
+OPP000755,Velocity Parts & Assembly — Upsell 2026,ACC000255,Id. Decision Makers,2027-02-20,
+OPP000756,Summit Engineering Works — Renewal 2026,ACC000256,Perception Analysis,2027-02-21,108435
+OPP000757,BlueForge Manufacturing — Expansion 2026,,Proposal/Price Quote,2027-02-22,
+OPP000758,Strata Industrial Solutions — New Business 2026,ACC000258,Negotiation/Review,2027-02-23,108709
+OPP000759,Crestline Fabrication Inc. — Upgrade 2026,ACC000259,Closed Won,2027-02-24,
+OPP000760,Meridian Parts Systems — Upsell 2026,,Closed Lost,2027-02-25,108983
+OPP000761,Ridgeline Manufacturing Group — Renewal 2026,ACC000261,Prospecting,2027-02-26,
+OPP000762,Cascade Production Works — Expansion 2026,ACC000262,Qualification,2027-02-27,109257
+OPP000763,CoreTech Assembly Co. — New Business 2026,,Needs Analysis,2027-02-28,
+OPP000764,Highpoint Industrial Ltd — Upgrade 2026,ACC000264,Value Proposition,2027-03-01,109531
+OPP000765,Streamline Parts & Components — Upsell 2026,ACC000265,Id. Decision Makers,2027-03-02,
+OPP000766,Keystone Manufacturing Alliance — Renewal 2026,,Perception Analysis,2027-03-03,109805
+OPP000767,Pacific Fabrication Systems — Expansion 2026,ACC000267,Proposal/Price Quote,2027-03-04,
+OPP000768,Pinnacle Parts Group — New Business 2026,ACC000268,Negotiation/Review,2027-03-05,110079
+OPP000769,Centennial Industrial Co. — Upgrade 2026,,Closed Won,2027-03-06,
+OPP000770,Northgate Manufacturing Inc. — Upsell 2026,ACC000270,Closed Lost,2027-03-07,110353
+OPP000771,Lakeside Engineering Works — Renewal 2026,ACC000271,Prospecting,2027-03-08,
+OPP000772,Thornton Components Group — Expansion 2026,,Qualification,2027-03-09,110627
+OPP000773,Broadfield Production Inc. — New Business 2026,ACC000273,Needs Analysis,2027-03-10,
+OPP000774,Sterling Assembly Systems — Upgrade 2026,ACC000274,Value Proposition,2027-03-11,110901
+OPP000775,Clearwater Industrial Corp. — Upsell 2026,,Id. Decision Makers,2027-03-12,
+OPP000776,Apex Industrial Systems — Renewal 2026,ACC000276,Perception Analysis,2027-03-13,111175
+OPP000777,Precision Components Ltd — Expansion 2026,ACC000277,Proposal/Price Quote,2027-03-14,
+OPP000778,Granite Manufacturing Co. — New Business 2026,,Negotiation/Review,2027-03-15,111449
+OPP000779,Ironclad Production Group — Upgrade 2026,ACC000279,Closed Won,2027-03-16,
+OPP000780,Velocity Parts & Assembly — Upsell 2026,ACC000280,Closed Lost,2027-03-17,111723
+OPP000781,Summit Engineering Works — Renewal 2026,,Prospecting,2027-03-18,
+OPP000782,BlueForge Manufacturing — Expansion 2026,ACC000282,Qualification,2027-03-19,111997
+OPP000783,Strata Industrial Solutions — New Business 2026,ACC000283,Needs Analysis,2027-03-20,
+OPP000784,Crestline Fabrication Inc. — Upgrade 2026,,Value Proposition,2027-03-21,112271
+OPP000785,Meridian Parts Systems — Upsell 2026,ACC000285,Id. Decision Makers,2027-03-22,
+OPP000786,Ridgeline Manufacturing Group — Renewal 2026,ACC000286,Perception Analysis,2027-03-23,112545
+OPP000787,Cascade Production Works — Expansion 2026,,Proposal/Price Quote,2027-03-24,
+OPP000788,CoreTech Assembly Co. — New Business 2026,ACC000288,Negotiation/Review,2027-03-25,112819
+OPP000789,Highpoint Industrial Ltd — Upgrade 2026,ACC000289,Closed Won,2027-03-26,
+OPP000790,Streamline Parts & Components — Upsell 2026,,Closed Lost,2027-03-27,113093
+OPP000791,Keystone Manufacturing Alliance — Renewal 2026,ACC000291,Prospecting,2027-03-28,
+OPP000792,Pacific Fabrication Systems — Expansion 2026,ACC000292,Qualification,2027-03-29,113367
+OPP000793,Pinnacle Parts Group — New Business 2026,,Needs Analysis,2027-03-30,
+OPP000794,Centennial Industrial Co. — Upgrade 2026,ACC000294,Value Proposition,2027-03-31,113641
+OPP000795,Northgate Manufacturing Inc. — Upsell 2026,ACC000295,Id. Decision Makers,2027-04-01,
+OPP000796,Lakeside Engineering Works — Renewal 2026,,Perception Analysis,2027-04-02,113915
+OPP000797,Thornton Components Group — Expansion 2026,ACC000297,Proposal/Price Quote,2027-04-03,
+OPP000798,Broadfield Production Inc. — New Business 2026,ACC000298,Negotiation/Review,2027-04-04,114189
+OPP000799,Sterling Assembly Systems — Upgrade 2026,,Closed Won,2027-04-05,
+OPP000800,Clearwater Industrial Corp. — Upsell 2026,ACC000300,Closed Lost,2027-04-06,114463
