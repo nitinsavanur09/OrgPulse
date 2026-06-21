@@ -1,6 +1,30 @@
 # OrgPulse — Scan Configuration Guide
 
-OrgPulse scans a Salesforce org across 7 domains, scores them 0–100, and generates an interactive HTML report delivered via a 90-day signed URL. This guide covers every configuration option.
+OrgPulse scans a Salesforce org across 7 domains, scores them 0–100, and generates an interactive HTML report served via ngrok (Supabase kept as archive). This guide covers every configuration option.
+
+---
+
+## Contents
+
+- [Quick Start](#quick-start)
+- [Two Separate Configs](#two-separate-configs)
+- [1. client-intake.json — Business Context](#1-client-intakejson--business-context)
+  - [Field Reference](#field-reference)
+  - [Narrative Fields](#narrative-fields)
+  - [Negotiated Fees](#negotiated-fees)
+  - [Rebuild Report Without Re-scanning](#rebuild-report-without-re-scanning)
+  - [Use Case Examples](#use-case-examples)
+  - [licenseUnitCostMonthly — Common Values](#licenseunitcostmonthly--common-values)
+  - [clouds — Common Values](#clouds--common-values)
+  - [useCase Field](#usecase-field)
+- [2. Scan Use Case Presets — --use-case Flag](#2-scan-use-case-presets----use-case-flag)
+- [3. Custom Object Config — --config Flag](#3-custom-object-config----config-flag)
+- [4. Combining Flags](#4-combining-flags)
+- [5. Complete Workflow Per Engagement](#5-complete-workflow-per-engagement)
+- [6. Score Domains Reference](#6-score-domains-reference)
+- [Pre-delivery Checklist](#pre-delivery-checklist)
+- [QC Checklist](#qc-checklist)
+- [Common Issues](#common-issues)
 
 ---
 
@@ -13,6 +37,9 @@ npm run dev
 
 # 2. Run a scan
 npm run scan -- --org <orgId>
+
+# 3. After the stakeholder interview, update narrative fields and rebuild
+npm run rebuild-report -- --org <orgId>
 ```
 
 ---
@@ -23,7 +50,7 @@ There are two independent configuration files with different purposes:
 
 | File | Controls | Per client? |
 |------|----------|------------|
-| `client-intake.json` | Business context — org name, license count, cost inputs | Yes — one per client |
+| `client-intake.json` | Business context — org name, license count, cost inputs, narrative, fees | Yes — one per client |
 | `--config ./custom.json` | Which Salesforce objects and fields to scan | Only if non-standard objects needed |
 
 Most engagements only need `client-intake.json`. The `--config` flag is for clients with custom objects.
@@ -32,7 +59,7 @@ Most engagements only need `client-intake.json`. The `--config` flag is for clie
 
 ## 1. client-intake.json — Business Context
 
-Copy `client-intake.example.json` to `client-intake.json` and fill in before every scan. This file is gitignored.
+Copy `client-intake.example.json` to `client-intake.json` and fill in before every scan. This file is gitignored — it contains client-specific commercial data that must not be committed.
 
 ```json
 {
@@ -65,6 +92,82 @@ Copy `client-intake.example.json` to `client-intake.json` and fill in before eve
 | `handlingCostPerTransaction` | number \| null | `null` | $/transaction — unlocks the value projection and Flex Credit sections |
 | `handlingCostLabel` | string | `"per case"` | Label shown next to the cost figure in the report |
 | `monthlyTransactionVolume` | number \| null | `null` | Override the scanned case volume (use when the org has no real transaction data) |
+
+---
+
+### Narrative Fields
+
+Fill these in **after the stakeholder interview**, then run `npm run rebuild-report` — no re-scan needed.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `pilotReadyDate` | string | Named month shown in the roadmap footer e.g. `"October 2026"`. Auto-computes to today + 16 weeks if not set. |
+| `executiveSummary` | string \| null | Replaces the auto-generated headline paragraph on the cover. Write 1–2 sentences capturing the client's specific situation and verdict. |
+| `domainSummaries` | object | Per-domain narrative overrides. Each value replaces the auto-generated top finding in that domain card. Keys must match the domain display names exactly. |
+
+**`domainSummaries` key reference:**
+
+```json
+"domainSummaries": {
+  "Data quality & completeness":       "Your narrative here.",
+  "Automation health & conflicts":     null,
+  "Security & permission model":       null,
+  "Knowledge base & grounding":        null,
+  "Metadata & technical debt":         null,
+  "User adoption & process alignment": null,
+  "Platform limits & API headroom":    null
+}
+```
+
+Set a key to `null` to use the auto-generated finding from the scan. Set it to a string to override with your own text from the interview.
+
+---
+
+### Negotiated Fees
+
+Fill these in **after commercial agreement**. Defaults are Yukti Global list prices. Set `low` = `high` for a fixed fee. Leave as `null` to show the default range.
+
+| Field | Default | Description |
+|-------|---------|-------------|
+| `negotiatedFees.optionBLow` | `28000` | Option B (Yukti Global delivers) lower fee bound |
+| `negotiatedFees.optionBHigh` | `35000` | Option B upper fee bound — set equal to `optionBLow` for a fixed fee |
+| `negotiatedFees.optionCLow` | `15000` | Option C (Hybrid model) lower fee bound |
+| `negotiatedFees.optionCHigh` | `18000` | Option C upper fee bound — set equal to `optionCLow` for a fixed fee |
+| `negotiatedFees.monitoringRetainerMonthly` | `3000` | Monthly monitoring retainer shown in investment options |
+
+```json
+"negotiatedFees": {
+  "optionBLow":                30000,
+  "optionBHigh":               30000,
+  "optionCLow":                16000,
+  "optionCHigh":               16000,
+  "monitoringRetainerMonthly": 2500
+}
+```
+
+---
+
+### Rebuild Report Without Re-scanning
+
+After the stakeholder interview, you can regenerate the report from cached signals without re-running the full scan (which queries the live org):
+
+```bash
+npm run rebuild-report -- --org <orgId>
+```
+
+Signals are cached to `reports/{orgId}-signals.json` after every scan. `rebuild-report` reads that cache plus the current `client-intake.json` and regenerates the HTML and URL.
+
+**Use `rebuild-report` to:**
+- Add `executiveSummary` and `domainSummaries` after the interview call
+- Enter `negotiatedFees` after the commercial conversation
+- Adjust `pilotReadyDate` to a specific named month
+- Fix any wording in the report without waiting for a re-scan
+
+**Use `npm run scan` when:**
+- The client has made changes to their org since the last scan
+- You need fresh signals (e.g. after they've fixed data quality issues)
+
+---
 
 ### Use Case Examples
 
@@ -276,6 +379,7 @@ The JSON merges with the standard Tier 1 objects. You only need to specify what'
 ```json
 {
   "agentforceUseCase": "service",
+  "analysisWindowMonths": 12,
   "objects": [
     {
       "tier": "tier3",
@@ -310,6 +414,20 @@ The JSON merges with the standard Tier 1 objects. You only need to specify what'
 
 > **Constraint:** Only fields that support `COUNT()` in SOQL aggregate queries can be listed — standard text, lookup, picklist, and date fields work. Boolean fields (`IsActive`, `IsDeleted`) do not.
 
+### `analysisWindowMonths`
+
+Top-level field in the config JSON that controls the date window for GROUP BY queries (duplicate detection and case reason analysis). Default: `12` months.
+
+```json
+{
+  "analysisWindowMonths": 6,
+  "agentforceUseCase": "service",
+  "objects": [...]
+}
+```
+
+Set lower (e.g. `6`) for engagements where only very recent data is relevant. Field completeness and adoption metrics are not affected — completeness scans all records, adoption uses a fixed 90-day window.
+
 ---
 
 ## 4. Combining Flags
@@ -328,15 +446,16 @@ When `--config` is provided, the `agentforceUseCase` inside the JSON file takes 
 ## 5. Complete Workflow Per Engagement
 
 ```bash
-# Step 1 — Copy and fill in client intake
+# Step 1 — Copy and fill in client intake (business fields only)
 cp client-intake.example.json client-intake.json
-# Edit client-intake.json with org name, license count, cost inputs
+# Edit: orgName, licenseCount, clouds, licenseUnitCostMonthly,
+#       useCase, handlingCostPerTransaction, packageWaste
 
 # Step 2 — Connect the client org (requires ngrok + npm run dev)
 ngrok http 3000
-# Update SF Connected App callback URL + SF_REDIRECT_URI in .env
+# Update SF External Client App callback URL + SF_REDIRECT_URI in .env
 npm run dev
-# Send http://localhost:3000/auth/start to client
+# Send http://<ngrok-url>/auth/start to client
 
 # Step 3 — Confirm connection
 npm run test-conn
@@ -347,8 +466,16 @@ npm run scan -- --org <orgId> --use-case sales          # sales
 npm run scan -- --org <orgId> --use-case field_service  # field service
 npm run scan -- --org <orgId> --config ./acme.json      # custom objects
 
-# Step 5 — Open the signed URL in incognito and run QC checklist
-# Step 6 — Send URL to client
+# Step 5 — Review domain scores in terminal; open report URL in browser
+
+# Step 5.5 — After the stakeholder interview:
+# Fill in client-intake.json: executiveSummary, domainSummaries,
+#                             pilotReadyDate, negotiatedFees
+npm run rebuild-report -- --org <orgId>
+# No re-scan — regenerates HTML from cached signals + updated intake
+
+# Step 6 — Open the report URL in incognito and run QC checklist
+# Step 7 — Send URL to client
 ```
 
 ---
@@ -376,18 +503,18 @@ All use cases score the same 7 domains regardless of which objects are scanned:
 Run this before every client delivery — top to bottom, no shortcuts.
 
 1. `ngrok http 3000` — copy the new public URL
-2. Update the Connected App callback URL in Salesforce Setup → Apps → App Manager — wait 2 min for propagation
+2. Update the External Client App callback URL in Salesforce Setup → Apps → App Manager — wait 2 min for propagation
 3. Update `SF_REDIRECT_URI` in `.env` to match the new ngrok URL
 4. `npm run dev` — confirm "Server running on port 3000" in terminal
 5. Send `http://<ngrok-url>/auth/start` to the client with 3-sentence brief (see below)
 6. Client authorises — confirm token written to `.tokens.json` in terminal output
 7. `npm run test-conn` — must return a live user count without errors
-8. Copy `client-intake.example.json` → `client-intake.json`, fill in all fields for this client
+8. Copy `client-intake.example.json` → `client-intake.json`, fill in all business fields for this client
 9. `npm run scan -- --org <clientOrgId>` — wait for completion (target: under 4 minutes)
 10. Review all 7 domain scores in the terminal — can you explain every number?
-11. If you want to add executive summary context from the stakeholder interview, edit `client-intake.json` fields and re-run `generateReport + uploadReport` (`npm run scan` re-generates automatically on each run)
-12. Open the signed URL in an **incognito window** and run the QC checklist below
-13. Send the signed URL to the client
+11. After the stakeholder interview: fill in `executiveSummary`, `domainSummaries`, `pilotReadyDate`, and `negotiatedFees` in `client-intake.json`, then run `npm run rebuild-report -- --org <clientOrgId>` — no re-scan needed
+12. Open the report URL in an **incognito window** and run the QC checklist below
+13. Send the report URL to the client
 
 **Auth link brief (send to client):**
 > *"Click this link and log in with your Salesforce admin credentials. This grants read-only access — we cannot change anything in your org. Once you see a confirmation message, you're done. Takes 60 seconds."*
@@ -404,8 +531,8 @@ Run this on the report in incognito before sending to client. All 10 must pass.
 - [ ] Section 3 (Flex Credit): grid calculates from real case volume OR is cleanly suppressed when `handlingCostPerTransaction` is null
 - [ ] Section 4 (Agentforce Value): projection uses real data OR section is cleanly hidden
 - [ ] Section 5 (Roadmap): all roadmap items have an owner badge and effort label
-- [ ] Section 6 (ROI Calculator): sliders work and totals update live
-- [ ] Appendix: all 7 SOQL queries are displayed
+- [ ] Section 6 (ROI Calculator): sliders work and totals update live; investment option fees show negotiated prices if set
+- [ ] Appendix: all 7 SOQL queries are displayed with correct analysis window labels
 - [ ] No "Acme Corp" or "Your Organisation" placeholder text visible anywhere
 - [ ] No JavaScript errors in browser DevTools console (F12 → Console tab)
 
@@ -423,8 +550,12 @@ The Tooling API `ProcessDefinition` object (used to count legacy Process Builder
 
 ### LoginHistory — no Status filter
 
-SOQL does not support filtering `LoginHistory` on the `Status` field. The scan counts all login events in the last 90 days and approximates unique user count by dividing by 3 (heuristic: ~3 login events per active user per 90-day window). The resulting `loginRatePct` is an estimate. For precise counts, a Salesforce admin can pull this from the Setup audit trail.
+SOQL does not support filtering `LoginHistory` on the `Status` field. The scan counts all login events in the last 90 days and approximates unique user count by dividing by the number of months in the window (heuristic: ~1 login event per active user per month). The resulting `loginRatePct` is an estimate. For precise counts, a Salesforce admin can pull this from the Setup audit trail.
+
+### Duplicate detection and case reasons use a 12-month analysis window
+
+Both GROUP BY queries (duplicate detection and top case reasons) are scoped to `CreatedDate = LAST_N_MONTHS:12` by default. This prevents timeouts on large legacy orgs with millions of historical records and focuses the analysis on recently created data. The window is configurable via `analysisWindowMonths` in the scan config JSON. Field completeness scans all records regardless of this setting — Agentforce will encounter historical data, so completeness is always measured across the full dataset.
 
 ### Supabase Storage bucket missing
 
-If `uploadReport` logs "Bucket not found", the `reports` bucket has not been created. Go to Supabase Dashboard → Storage → New bucket → name it `reports` → set to Private. The pipeline falls back to saving the report locally in `reports/` while this is missing — signed URLs won't work until the bucket exists.
+If `uploadReport` logs "Bucket not found", the `reports` bucket has not been created. Go to Supabase Dashboard → Storage → New bucket → name it `reports` → set to Private. Reports are always saved locally in `reports/` and served via the ngrok URL — the Supabase upload is an archive copy only and does not affect report delivery.

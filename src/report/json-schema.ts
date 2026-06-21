@@ -21,6 +21,14 @@ export interface OrgMeta {
   pilotReadyDate?:    string                          // e.g. "September 2026"; default = today + 16 weeks
   executiveSummary?:  string                          // replaces auto-generated headlineFinding
   domainSummaries?:   Partial<Record<string, string>> // keyed by domain name e.g. "Data quality & completeness"
+  // Investment fee overrides — fill in after negotiation; defaults are Yukti Global list prices
+  negotiatedFees?: {
+    optionBLow?:               number  // default 28000
+    optionBHigh?:              number  // default 35000
+    optionCLow?:               number  // default 15000
+    optionCHigh?:              number  // default 18000
+    monitoringRetainerMonthly?: number  // default 3000
+  }
 }
 
 export interface ReportDataFinding {
@@ -64,12 +72,13 @@ export interface FlexCreditScenario {
 export interface ReportData {
   // Meta
   meta: {
-    orgName:       string
-    orgId:         string
-    licenseCount:  number
-    clouds:        string[]
-    scanDate:      string
-    reportVersion: string
+    orgName:              string
+    orgId:                string
+    licenseCount:         number
+    clouds:               string[]
+    scanDate:             string
+    reportVersion:        string
+    analysisWindowMonths: number
   }
   // Intake inputs
   intake: {
@@ -158,68 +167,78 @@ export interface ReportData {
 
 const DOT_COLOR = { critical: '#c0392b', warning: '#d4830a', info: '#1a7a4a' } as const
 
-const DOMAIN_META: Record<string, {
+function buildDomainMeta(w: number): Record<string, {
   num: number
   name: string
   statusLabel: (score: number) => string
   soql: string
-}> = {
-  data_quality: {
-    num: 1, name: 'Data quality & completeness',
-    statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Adequate',
-    soql: `SELECT COUNT(Id) total, COUNT(Email) has_email,
+}> {
+  return {
+    data_quality: {
+      num: 1, name: 'Data quality & completeness',
+      statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Adequate',
+      soql: `-- Field completeness (all records — Agentforce reads historical data)
+SELECT COUNT(Id) total, COUNT(Email) has_email,
   COUNT(Phone) has_phone, COUNT(AccountId) has_account
 FROM Contact
-WHERE IsDeleted = false`,
-  },
-  automation: {
-    num: 2, name: 'Automation health & conflicts',
-    statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Adequate',
-    soql: `SELECT TriggerObjectOrEventLabel, COUNT(Id) flow_count
+WHERE IsDeleted = false
+
+-- Duplicate detection (last ${w} months)
+SELECT COUNT(Id) cnt FROM Contact
+WHERE IsDeleted = false AND CreatedDate = LAST_N_MONTHS:${w}
+GROUP BY Name, Email HAVING COUNT(Id) > 1`,
+    },
+    automation: {
+      num: 2, name: 'Automation health & conflicts',
+      statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Adequate',
+      soql: `SELECT TriggerObjectOrEventLabel, COUNT(Id) flow_count
 FROM FlowVersionView
 WHERE Status = 'Active'
 GROUP BY TriggerObjectOrEventLabel
 ORDER BY flow_count DESC`,
-  },
-  security: {
-    num: 3, name: 'Security & permission model',
-    statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Adequate',
-    soql: `GET /services/data/v59.0/connect/security/health-check
+    },
+    security: {
+      num: 3, name: 'Security & permission model',
+      statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Adequate',
+      soql: `GET /services/data/v59.0/connect/security/health-check
 -- Returns: score (0-100), risks by severity, guest user flags`,
-  },
-  knowledge: {
-    num: 4, name: 'Knowledge base & grounding',
-    statusLabel: s => s < 50 ? 'Service blocker' : s < 70 ? 'At risk' : 'Adequate',
-    soql: `SELECT ArticleType, COUNT(Id) article_count,
-  MAX(LastPublishedDate) latest
+    },
+    knowledge: {
+      num: 4, name: 'Knowledge base & grounding',
+      statusLabel: s => s < 50 ? 'Service blocker' : s < 70 ? 'At risk' : 'Adequate',
+      soql: `-- Published articles (all — full coverage assessment)
+SELECT COUNT(Id) total, MAX(LastPublishedDate) latest
 FROM KnowledgeArticleVersion
-WHERE PublishStatus = 'Online'
-AND IsLatestVersion = true
-GROUP BY ArticleType`,
-  },
-  metadata: {
-    num: 5, name: 'Metadata & technical debt',
-    statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Adequate',
-    soql: `SELECT COUNT(Id) unmanaged_fields
+WHERE PublishStatus = 'Online' AND Language = 'en_US'
+
+-- Top case reasons (last ${w} months)
+SELECT Reason, COUNT(Id) cnt FROM Case
+WHERE Reason != null AND CreatedDate = LAST_N_MONTHS:${w}
+GROUP BY Reason ORDER BY COUNT(Id) DESC LIMIT 20`,
+    },
+    metadata: {
+      num: 5, name: 'Metadata & technical debt',
+      statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Adequate',
+      soql: `SELECT COUNT(Id) unmanaged_fields
 FROM CustomField
 WHERE ManageableState = 'unmanaged'
 -- Cross-referenced against flow, layout, Apex, report usage`,
-  },
-  adoption: {
-    num: 6, name: 'User adoption & process alignment',
-    statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'Adequate' : 'Adequate',
-    soql: `SELECT UserId, COUNT(Id) login_count
+    },
+    adoption: {
+      num: 6, name: 'User adoption & process alignment',
+      statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'Adequate' : 'Adequate',
+      soql: `-- Login rate (last 90 days — measures current active users)
+SELECT COUNT(Id) loginCount
 FROM LoginHistory
-WHERE LoginTime = LAST_N_DAYS:90
-GROUP BY UserId
-HAVING COUNT(Id) >= 3`,
-  },
-  limits: {
-    num: 7, name: 'Platform limits & API headroom',
-    statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Healthy',
-    soql: `GET /services/data/v59.0/limits/
+WHERE LoginTime = LAST_N_DAYS:90`,
+    },
+    limits: {
+      num: 7, name: 'Platform limits & API headroom',
+      statusLabel: s => s < 50 ? 'Hard blocker' : s < 70 ? 'At risk' : 'Healthy',
+      soql: `GET /services/data/v59.0/limits/
 -- Key: DailyApiRequests, DataStorageMB, FileStorageMB`,
-  },
+    },
+  }
 }
 
 function domainStatus(score: number): string {
@@ -351,6 +370,7 @@ export function buildReportData(
     pilotReadyDate:          pilotReadyDateOverride  = undefined,
     executiveSummary:        executiveSummaryOverride = undefined,
     domainSummaries:         domainSummariesOverride  = {},
+    negotiatedFees           = {} as NonNullable<OrgMeta['negotiatedFees']>,
   } = meta
 
   const cloudsArr: string[] = meta.clouds
@@ -434,8 +454,9 @@ export function buildReportData(
 
   // ── Domain objects ────────────────────────────────────────────────────────
   const allFindings = buildFindings(signals, scores)
+  const domainMeta = buildDomainMeta(signals.configUsed.analysisWindowMonths)
   const domainScores: ReportDataDomain[] = scores.domains.map(ds => {
-    const dm = DOMAIN_META[ds.domain]
+    const dm = domainMeta[ds.domain]
     if (!dm) throw new Error(`Unknown domain: ${ds.domain}`)
     const median = INDUSTRY_BENCHMARKS[ds.domain as keyof typeof INDUSTRY_BENCHMARKS] ?? 50
     const domainFindings = allFindings
@@ -463,6 +484,7 @@ export function buildReportData(
       clouds: cloudsArr,
       scanDate: new Date().toISOString().slice(0, 10),
       reportVersion: 'v2',
+      analysisWindowMonths: signals.configUsed.analysisWindowMonths,
     },
     intake: {
       useCase:                    useCase ?? null,
@@ -535,9 +557,9 @@ export function buildReportData(
     investmentOptions: {
       pilotReadyDate,
       optionA: { label: 'Internal team',         internalDays: 35, timelineMonths: 5  },
-      optionB: { label: 'Yukti Global delivers',  feeRangeLow: 28000, feeRangeHigh: 35000, timelineWeeks: 16 },
-      optionC: { label: 'Hybrid model',           feeRangeLow: 15000, feeRangeHigh: 18000, timelineWeeks: 20 },
-      monitoringRetainerMonthly: 3000,
+      optionB: { label: 'Yukti Global delivers',  feeRangeLow: negotiatedFees.optionBLow  ?? 28000, feeRangeHigh: negotiatedFees.optionBHigh ?? 35000, timelineWeeks: 16 },
+      optionC: { label: 'Hybrid model',           feeRangeLow: negotiatedFees.optionCLow  ?? 15000, feeRangeHigh: negotiatedFees.optionCHigh ?? 18000, timelineWeeks: 20 },
+      monitoringRetainerMonthly: negotiatedFees.monitoringRetainerMonthly ?? 3000,
     },
   }
 }

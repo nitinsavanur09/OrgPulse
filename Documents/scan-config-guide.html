@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OrgPulse — Scan Configuration Guide</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #22263a;
+    --border: #2e3348;
+    --accent: #5b6af0;
+    --accent-soft: #1e2340;
+    --green: #22c55e;
+    --green-soft: #14250e;
+    --yellow: #f59e0b;
+    --yellow-soft: #231a06;
+    --red: #ef4444;
+    --red-soft: #250d0d;
+    --text: #e2e8f0;
+    --muted: #8892a4;
+    --code-bg: #141720;
+    --code-border: #2a2f45;
+    --link: #818cf8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* Layout */
+  .layout { display: flex; min-height: 100vh; }
+
+  nav {
+    width: 260px;
+    flex-shrink: 0;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 24px 0 40px;
+  }
+
+  nav .logo {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+
+  nav .logo span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  nav .logo p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  nav ul { list-style: none; }
+
+  nav ul li a {
+    display: block;
+    padding: 5px 20px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+
+  nav ul li a:hover {
+    color: var(--text);
+    background: var(--surface2);
+    border-left-color: var(--border);
+  }
+
+  nav ul li.active > a {
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+
+  nav ul li.section > a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 14px;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  nav ul li.sub > a { padding-left: 32px; }
+
+  main {
+    flex: 1;
+    max-width: 860px;
+    padding: 48px 56px 80px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  h1 .sub { font-size: 17px; color: var(--muted); font-weight: 400; display: block; margin-top: 4px; }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 52px 0 16px;
+    padding-top: 52px;
+    border-top: 1px solid var(--border);
+  }
+
+  h2:first-of-type { margin-top: 32px; }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 32px 0 12px;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 24px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  p { margin-bottom: 14px; color: var(--text); }
+
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  strong { color: #fff; font-weight: 600; }
+
+  /* Code */
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, monospace;
+    font-size: 13px;
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    color: #a5b4fc;
+  }
+
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 16px 0;
+    position: relative;
+  }
+
+  pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #c9d1e9;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .lang-tag {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 7px;
+  }
+
+  /* Keyword colouring — applied via span in markup */
+  .kw-string { color: #86efac; }
+  .kw-num    { color: #fb923c; }
+  .kw-key    { color: #93c5fd; }
+  .kw-null   { color: #f87171; }
+  .kw-bool   { color: #c084fc; }
+  .kw-comment{ color: #6b7280; font-style: italic; }
+  .kw-cmd    { color: #34d399; }
+  .kw-flag   { color: #fbbf24; }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; margin: 16px 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  th {
+    text-align: left;
+    padding: 9px 14px;
+    background: var(--surface2);
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--surface2); }
+
+  td code { font-size: 12px; }
+
+  .tag-req  { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 1px 7px; border-radius: 3px; background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+  .tag-opt  { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 1px 7px; border-radius: 3px; background: rgba(107,114,128,0.15); color: #9ca3af; border: 1px solid rgba(107,114,128,0.3); }
+
+  /* Callouts */
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 13.5px;
+    color: #c7d2fe;
+  }
+
+  .callout.warn {
+    border-left-color: var(--yellow);
+    background: var(--yellow-soft);
+    color: #fde68a;
+  }
+
+  .callout.danger {
+    border-left-color: var(--red);
+    background: var(--red-soft);
+    color: #fca5a5;
+  }
+
+  .callout.success {
+    border-left-color: var(--green);
+    background: var(--green-soft);
+    color: #86efac;
+  }
+
+  /* Checklists */
+  .checklist { list-style: none; margin: 12px 0; }
+  .checklist li {
+    padding: 7px 0 7px 32px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 17px;
+    height: 17px;
+    border: 1.5px solid var(--border);
+    border-radius: 4px;
+    background: var(--code-bg);
+  }
+
+  /* Numbered steps */
+  ol.steps { list-style: none; counter-reset: step; margin: 12px 0; }
+  ol.steps li {
+    counter-increment: step;
+    padding: 10px 10px 10px 48px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  ol.steps li:last-child { border-bottom: none; }
+  ol.steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* Bullets */
+  ul.bullets { list-style: none; margin: 10px 0; }
+  ul.bullets li {
+    padding: 4px 0 4px 18px;
+    position: relative;
+    font-size: 14px;
+    color: var(--text);
+  }
+  ul.bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+  }
+
+  /* Domain table */
+  .domain-bar-wrap { width: 80px; }
+  .domain-bar {
+    height: 5px;
+    border-radius: 3px;
+    background: var(--border);
+    margin-top: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .domain-bar-fill { height: 100%; border-radius: 3px; background: var(--accent); }
+
+  .badge-weight {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid rgba(91,106,240,0.3);
+  }
+
+  .badge-blocker {
+    display: inline-block;
+    font-size: 11px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: rgba(239,68,68,0.1);
+    color: #f87171;
+    border: 1px solid rgba(239,68,68,0.2);
+  }
+
+  .badge-median {
+    display: inline-block;
+    font-size: 11px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: var(--surface2);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  /* Quick start card */
+  .quickstart {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin: 20px 0;
+  }
+
+  .quickstart .step-row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .quickstart .step-row:last-child { margin-bottom: 0; }
+
+  .step-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-body { flex: 1; }
+  .step-body p { margin-bottom: 6px; font-size: 14px; }
+  .step-body pre { margin: 6px 0 0; }
+
+  /* Config comparison */
+  .config-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
+
+  .config-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .config-card .title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .config-card .subtitle { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .config-card .pill {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  /* Divider */
+  hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  /* Source note */
+  .source-note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+  /* Header area */
+  .header-area {
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  .intro { color: var(--muted); font-size: 15px; margin-top: 10px; }
+
+  /* Scroll offset for sticky nav */
+  .anchor { scroll-margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- Sidebar nav -->
+<nav>
+  <div class="logo">
+    <span>OrgPulse</span>
+    <p>Scan Configuration Guide</p>
+  </div>
+  <ul>
+    <li><a href="#quick-start">Quick Start</a></li>
+    <li><a href="#two-configs">Two Separate Configs</a></li>
+
+    <li class="section"><a href="#">client-intake.json</a></li>
+    <li><a href="#client-intake">Overview</a></li>
+    <li class="sub"><a href="#field-reference">Field Reference</a></li>
+    <li class="sub"><a href="#narrative-fields">Narrative Fields</a></li>
+    <li class="sub"><a href="#negotiated-fees">Negotiated Fees</a></li>
+    <li class="sub"><a href="#rebuild-report">Rebuild Report</a></li>
+    <li class="sub"><a href="#use-case-examples">Use Case Examples</a></li>
+    <li class="sub"><a href="#license-costs">License Costs</a></li>
+    <li class="sub"><a href="#clouds-values">Clouds Values</a></li>
+    <li class="sub"><a href="#usecase-field">useCase Field</a></li>
+
+    <li class="section"><a href="#">Scan Config</a></li>
+    <li><a href="#use-case-presets">Use Case Presets</a></li>
+    <li><a href="#custom-config">Custom Object Config</a></li>
+    <li><a href="#combining-flags">Combining Flags</a></li>
+
+    <li class="section"><a href="#">Delivery</a></li>
+    <li><a href="#workflow">Complete Workflow</a></li>
+    <li><a href="#domains">Score Domains</a></li>
+    <li><a href="#predelivery">Pre-delivery Checklist</a></li>
+    <li><a href="#qc">QC Checklist</a></li>
+    <li><a href="#issues">Common Issues</a></li>
+  </ul>
+</nav>
+
+<!-- Main content -->
+<main>
+
+  <div class="header-area anchor" id="top">
+    <h1>OrgPulse <span class="sub">Scan Configuration Guide</span></h1>
+    <p class="intro">Scans a Salesforce org across 7 domains, scores them 0–100, and generates an interactive HTML report served via ngrok (Supabase kept as archive). This guide covers every configuration option.</p>
+  </div>
+
+  <!-- Quick Start -->
+  <h2 class="anchor" id="quick-start">Quick Start</h2>
+
+  <div class="quickstart">
+    <div class="step-row">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <p><strong>Connect your Salesforce org</strong> — one-time per org</p>
+        <pre><code><span class="kw-cmd">npm run dev</span>
+<span class="kw-comment"># Open http://localhost:3000/auth/start in your browser</span></code></pre>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <p><strong>Run a scan</strong></p>
+        <pre><code><span class="kw-cmd">npm run scan</span> -- --org &lt;orgId&gt;</code></pre>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <p><strong>After the stakeholder interview</strong> — update narrative fields and rebuild without re-scanning</p>
+        <pre><code><span class="kw-cmd">npm run rebuild-report</span> -- --org &lt;orgId&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two Separate Configs -->
+  <h2 class="anchor" id="two-configs">Two Separate Configs</h2>
+
+  <p>There are two independent configuration files with different purposes:</p>
+
+  <div class="config-grid">
+    <div class="config-card">
+      <div class="title"><code>client-intake.json</code></div>
+      <div class="subtitle">Business context — org name, license count, cost inputs, narrative, fees</div>
+      <span class="pill">Yes — one per client</span>
+    </div>
+    <div class="config-card">
+      <div class="title"><code>--config ./custom.json</code></div>
+      <div class="subtitle">Which Salesforce objects and fields to scan</div>
+      <span class="pill">Only if non-standard objects needed</span>
+    </div>
+  </div>
+
+  <p>Most engagements only need <code>client-intake.json</code>. The <code>--config</code> flag is for clients with custom objects.</p>
+
+  <!-- client-intake.json -->
+  <h2 class="anchor" id="client-intake">1. client-intake.json — Business Context</h2>
+
+  <p>Copy <code>client-intake.example.json</code> to <code>client-intake.json</code> and fill in before every scan. This file is gitignored — it contains client-specific commercial data that must not be committed.</p>
+
+  <pre><span class="lang-tag">json</span><code>{
+  <span class="kw-key">"orgName"</span>:                    <span class="kw-string">"Acme Corp"</span>,
+  <span class="kw-key">"licenseCount"</span>:               <span class="kw-num">180</span>,
+  <span class="kw-key">"clouds"</span>:                     [<span class="kw-string">"Sales Cloud"</span>, <span class="kw-string">"Service Cloud"</span>],
+
+  <span class="kw-key">"licenseUnitCostMonthly"</span>:     <span class="kw-num">165</span>,
+  <span class="kw-key">"packageWaste"</span>:               <span class="kw-num">6000</span>,
+  <span class="kw-key">"abandonedPackageCount"</span>:      <span class="kw-num">4</span>,
+
+  <span class="kw-key">"useCase"</span>:                    <span class="kw-string">"service"</span>,
+  <span class="kw-key">"handlingCostPerTransaction"</span>: <span class="kw-num">18</span>,
+  <span class="kw-key">"handlingCostLabel"</span>:          <span class="kw-string">"per case"</span>,
+  <span class="kw-key">"monthlyTransactionVolume"</span>:   <span class="kw-null">null</span>
+}</code></pre>
+
+  <h3 class="anchor" id="field-reference">Field Reference</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>orgName</code></td><td>string</td><td><code>"Your Organisation"</code></td><td>Client org name — appears on every page of the report</td></tr>
+        <tr><td><code>licenseCount</code></td><td>number</td><td><code>0</code></td><td>Total licensed users — drives inactive user waste calculation</td></tr>
+        <tr><td><code>clouds</code></td><td>string[]</td><td><code>["Salesforce"]</code></td><td>Salesforce clouds in use — shown on cover page</td></tr>
+        <tr><td><code>licenseUnitCostMonthly</code></td><td>number</td><td><code>165</code></td><td>$/user/month — defaults to Sales Cloud Professional list price</td></tr>
+        <tr><td><code>packageWaste</code></td><td>number</td><td><code>0</code></td><td>Annual $ cost of abandoned AppExchange packages (from stakeholder interview)</td></tr>
+        <tr><td><code>abandonedPackageCount</code></td><td>number</td><td>scan result</td><td>Number of abandoned packages — overrides scan if set</td></tr>
+        <tr><td><code>useCase</code></td><td>string</td><td><code>"service"</code></td><td>Report framing: <code>"service"</code>, <code>"sales"</code>, <code>"fieldService"</code>, or <code>"general"</code></td></tr>
+        <tr><td><code>handlingCostPerTransaction</code></td><td>number | null</td><td><code>null</code></td><td>$/transaction — unlocks the value projection and Flex Credit sections</td></tr>
+        <tr><td><code>handlingCostLabel</code></td><td>string</td><td><code>"per case"</code></td><td>Label shown next to the cost figure in the report</td></tr>
+        <tr><td><code>monthlyTransactionVolume</code></td><td>number | null</td><td><code>null</code></td><td>Override the scanned case volume (use when the org has no real transaction data)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Narrative Fields -->
+  <h3 class="anchor" id="narrative-fields">Narrative Fields</h3>
+
+  <p>Fill these in <strong>after the stakeholder interview</strong>, then run <code>npm run rebuild-report</code> — no re-scan needed.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>pilotReadyDate</code></td><td>string</td><td>Named month shown in the roadmap footer e.g. <code>"October 2026"</code>. Auto-computes to today + 16 weeks if not set.</td></tr>
+        <tr><td><code>executiveSummary</code></td><td>string | null</td><td>Replaces the auto-generated headline paragraph on the cover. Write 1–2 sentences capturing the client's specific situation and verdict.</td></tr>
+        <tr><td><code>domainSummaries</code></td><td>object</td><td>Per-domain narrative overrides. Each value replaces the auto-generated top finding in that domain card. Keys must match the domain display names exactly.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong><code>domainSummaries</code> key reference</strong> — set to <code>null</code> to use the auto-generated finding; set to a string to override with interview text:</p>
+
+  <pre><span class="lang-tag">json</span><code><span class="kw-key">"domainSummaries"</span>: {
+  <span class="kw-key">"Data quality &amp; completeness"</span>:       <span class="kw-string">"Your narrative here."</span>,
+  <span class="kw-key">"Automation health &amp; conflicts"</span>:     <span class="kw-null">null</span>,
+  <span class="kw-key">"Security &amp; permission model"</span>:       <span class="kw-null">null</span>,
+  <span class="kw-key">"Knowledge base &amp; grounding"</span>:        <span class="kw-null">null</span>,
+  <span class="kw-key">"Metadata &amp; technical debt"</span>:         <span class="kw-null">null</span>,
+  <span class="kw-key">"User adoption &amp; process alignment"</span>: <span class="kw-null">null</span>,
+  <span class="kw-key">"Platform limits &amp; API headroom"</span>:    <span class="kw-null">null</span>
+}</code></pre>
+
+  <!-- Negotiated Fees -->
+  <h3 class="anchor" id="negotiated-fees">Negotiated Fees</h3>
+
+  <p>Fill these in <strong>after commercial agreement</strong>. Defaults are Yukti Global list prices. Set <code>low</code> = <code>high</code> for a fixed fee. Leave as <code>null</code> to show the default range.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Field</th><th>Default</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>negotiatedFees.optionBLow</code></td><td><code>28000</code></td><td>Option B (Yukti Global delivers) lower fee bound</td></tr>
+        <tr><td><code>negotiatedFees.optionBHigh</code></td><td><code>35000</code></td><td>Option B upper fee bound — set equal to <code>optionBLow</code> for a fixed fee</td></tr>
+        <tr><td><code>negotiatedFees.optionCLow</code></td><td><code>15000</code></td><td>Option C (Hybrid model) lower fee bound</td></tr>
+        <tr><td><code>negotiatedFees.optionCHigh</code></td><td><code>18000</code></td><td>Option C upper fee bound — set equal to <code>optionCLow</code> for a fixed fee</td></tr>
+        <tr><td><code>negotiatedFees.monitoringRetainerMonthly</code></td><td><code>3000</code></td><td>Monthly monitoring retainer shown in investment options</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <pre><span class="lang-tag">json — fixed fee example</span><code><span class="kw-key">"negotiatedFees"</span>: {
+  <span class="kw-key">"optionBLow"</span>:                <span class="kw-num">30000</span>,
+  <span class="kw-key">"optionBHigh"</span>:               <span class="kw-num">30000</span>,  <span class="kw-comment">// equal = fixed fee, not a range</span>
+  <span class="kw-key">"optionCLow"</span>:                <span class="kw-num">16000</span>,
+  <span class="kw-key">"optionCHigh"</span>:               <span class="kw-num">16000</span>,
+  <span class="kw-key">"monitoringRetainerMonthly"</span>: <span class="kw-num">2500</span>
+}</code></pre>
+
+  <!-- Rebuild Report -->
+  <h3 class="anchor" id="rebuild-report">Rebuild Report Without Re-scanning</h3>
+
+  <p>After the stakeholder interview, regenerate the report from cached signals without re-querying the live org:</p>
+
+  <pre><code><span class="kw-cmd">npm run rebuild-report</span> -- --org &lt;orgId&gt;</code></pre>
+
+  <p>Signals are cached to <code>reports/{orgId}-signals.json</code> after every scan. <code>rebuild-report</code> reads that cache plus the current <code>client-intake.json</code> and regenerates the HTML and URL.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0;">
+    <div class="config-card">
+      <div class="title" style="color:var(--green);">Use rebuild-report to:</div>
+      <ul class="bullets" style="margin-top:10px;">
+        <li>Add <code>executiveSummary</code> / <code>domainSummaries</code> after the interview</li>
+        <li>Enter <code>negotiatedFees</code> after commercial agreement</li>
+        <li>Adjust <code>pilotReadyDate</code> to a named month</li>
+        <li>Fix report wording without waiting for a re-scan</li>
+      </ul>
+    </div>
+    <div class="config-card">
+      <div class="title" style="color:var(--yellow);">Use npm run scan when:</div>
+      <ul class="bullets" style="margin-top:10px;">
+        <li>The client has made org changes since the last scan</li>
+        <li>You need fresh signals after they've fixed data quality issues</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Use Case Examples -->
+  <h3 class="anchor" id="use-case-examples">Use Case Examples</h3>
+
+  <p>Copy the block that matches your client's primary Agentforce use case.</p>
+
+  <h4>Service Cloud — Case Deflection</h4>
+  <pre><span class="lang-tag">json</span><code>{
+  <span class="kw-key">"orgName"</span>:                    <span class="kw-string">"Acme Corp"</span>,
+  <span class="kw-key">"licenseCount"</span>:               <span class="kw-num">180</span>,
+  <span class="kw-key">"clouds"</span>:                     [<span class="kw-string">"Service Cloud"</span>],
+  <span class="kw-key">"licenseUnitCostMonthly"</span>:     <span class="kw-num">165</span>,
+  <span class="kw-key">"packageWaste"</span>:               <span class="kw-num">0</span>,
+  <span class="kw-key">"useCase"</span>:                    <span class="kw-string">"service"</span>,
+  <span class="kw-key">"handlingCostPerTransaction"</span>: <span class="kw-num">18</span>,
+  <span class="kw-key">"handlingCostLabel"</span>:          <span class="kw-string">"per case"</span>,
+  <span class="kw-key">"monthlyTransactionVolume"</span>:   <span class="kw-null">null</span>
+}</code></pre>
+  <div class="callout"><strong>handlingCostPerTransaction</strong> — average fully-loaded cost to handle one support case (agent time + overhead). Industry range: $12–$35. Get from CS ops or finance. <code>monthlyTransactionVolume</code> stays <code>null</code> — the scan pulls it from live Case counts.</div>
+
+  <h4>Sales Cloud — Deal Acceleration</h4>
+  <pre><span class="lang-tag">json</span><code>{
+  <span class="kw-key">"orgName"</span>:                    <span class="kw-string">"Acme Corp"</span>,
+  <span class="kw-key">"licenseCount"</span>:               <span class="kw-num">120</span>,
+  <span class="kw-key">"clouds"</span>:                     [<span class="kw-string">"Sales Cloud"</span>],
+  <span class="kw-key">"licenseUnitCostMonthly"</span>:     <span class="kw-num">165</span>,
+  <span class="kw-key">"packageWaste"</span>:               <span class="kw-num">0</span>,
+  <span class="kw-key">"useCase"</span>:                    <span class="kw-string">"sales"</span>,
+  <span class="kw-key">"handlingCostPerTransaction"</span>: <span class="kw-num">150</span>,
+  <span class="kw-key">"handlingCostLabel"</span>:          <span class="kw-string">"per qualified opportunity"</span>,
+  <span class="kw-key">"monthlyTransactionVolume"</span>:   <span class="kw-null">null</span>
+}</code></pre>
+  <div class="callout"><strong>handlingCostPerTransaction</strong> — cost of an SDR or AE handling one qualified opportunity (research, outreach, qualification calls). Industry range: $80–$300. Scan pulls live Opportunity counts.</div>
+
+  <h4>Field Service — Work Order Resolution</h4>
+  <pre><span class="lang-tag">json</span><code>{
+  <span class="kw-key">"orgName"</span>:                    <span class="kw-string">"Acme Corp"</span>,
+  <span class="kw-key">"licenseCount"</span>:               <span class="kw-num">90</span>,
+  <span class="kw-key">"clouds"</span>:                     [<span class="kw-string">"Field Service"</span>, <span class="kw-string">"Service Cloud"</span>],
+  <span class="kw-key">"licenseUnitCostMonthly"</span>:     <span class="kw-num">165</span>,
+  <span class="kw-key">"packageWaste"</span>:               <span class="kw-num">0</span>,
+  <span class="kw-key">"useCase"</span>:                    <span class="kw-string">"fieldService"</span>,
+  <span class="kw-key">"handlingCostPerTransaction"</span>: <span class="kw-num">220</span>,
+  <span class="kw-key">"handlingCostLabel"</span>:          <span class="kw-string">"per work order"</span>,
+  <span class="kw-key">"monthlyTransactionVolume"</span>:   <span class="kw-null">null</span>
+}</code></pre>
+  <div class="callout"><strong>handlingCostPerTransaction</strong> — average cost to dispatch and resolve one work order (technician time + travel + overhead). Industry range: $150–$500. Scan pulls live WorkOrder counts if the object exists.</div>
+
+  <h4>No Value Projection — suppress Flex Credit section</h4>
+  <pre><span class="lang-tag">json</span><code>{
+  <span class="kw-key">"orgName"</span>:                    <span class="kw-string">"Acme Corp"</span>,
+  <span class="kw-key">"licenseCount"</span>:               <span class="kw-num">200</span>,
+  <span class="kw-key">"clouds"</span>:                     [<span class="kw-string">"Sales Cloud"</span>, <span class="kw-string">"Service Cloud"</span>],
+  <span class="kw-key">"licenseUnitCostMonthly"</span>:     <span class="kw-num">165</span>,
+  <span class="kw-key">"packageWaste"</span>:               <span class="kw-num">0</span>,
+  <span class="kw-key">"useCase"</span>:                    <span class="kw-string">"service"</span>,
+  <span class="kw-key">"handlingCostPerTransaction"</span>: <span class="kw-null">null</span>,
+  <span class="kw-key">"handlingCostLabel"</span>:          <span class="kw-null">null</span>,
+  <span class="kw-key">"monthlyTransactionVolume"</span>:   <span class="kw-null">null</span>
+}</code></pre>
+  <div class="callout warn">Use this when you don't yet have cost-per-transaction data. The report renders without the value projection and Flex Credit sections — all other sections are unaffected.</div>
+
+  <!-- License costs -->
+  <h3 class="anchor" id="license-costs">licenseUnitCostMonthly — Common Values</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Edition</th><th>$/user/month (list price)</th></tr></thead>
+      <tbody>
+        <tr><td>Sales Cloud Starter</td><td>$25</td></tr>
+        <tr><td>Sales Cloud Professional</td><td>$80</td></tr>
+        <tr><td>Sales Cloud Enterprise</td><td>$165</td></tr>
+        <tr><td>Sales Cloud Unlimited</td><td>$330</td></tr>
+        <tr><td>Service Cloud Enterprise</td><td>$165</td></tr>
+        <tr><td>Service Cloud Unlimited</td><td>$330</td></tr>
+        <tr><td>Field Service (add-on)</td><td>$50</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">Use the client's actual contract price if known — it's almost always lower than list price. Ask the admin or procurement team.</div>
+
+  <!-- Clouds values -->
+  <h3 class="anchor" id="clouds-values">clouds — Common Values</h3>
+  <p>This field is display-only — it appears on the report cover page and does not affect scanning or scoring.</p>
+  <pre><span class="lang-tag">json</span><code>[<span class="kw-string">"Sales Cloud"</span>]
+[<span class="kw-string">"Service Cloud"</span>]
+[<span class="kw-string">"Field Service"</span>, <span class="kw-string">"Service Cloud"</span>]
+[<span class="kw-string">"Sales Cloud"</span>, <span class="kw-string">"Service Cloud"</span>]
+[<span class="kw-string">"Sales Cloud"</span>, <span class="kw-string">"Service Cloud"</span>, <span class="kw-string">"Experience Cloud"</span>]
+[<span class="kw-string">"Marketing Cloud"</span>, <span class="kw-string">"Sales Cloud"</span>]
+[<span class="kw-string">"Revenue Cloud"</span>, <span class="kw-string">"Sales Cloud"</span>]</code></pre>
+
+  <!-- useCase field -->
+  <h3 class="anchor" id="usecase-field">useCase Field</h3>
+  <p>Controls the value projection language in the report. Does <strong>not</strong> change which objects are scanned — use <code>--use-case</code> CLI flag for that.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Value</th><th>Report framing</th><th>handlingCostLabel suggestion</th></tr></thead>
+      <tbody>
+        <tr><td><code>"service"</code></td><td>Case deflection via Agentforce Service agent</td><td><code>"per case"</code></td></tr>
+        <tr><td><code>"sales"</code></td><td>Deal acceleration via Agentforce Sales agent</td><td><code>"per qualified opportunity"</code></td></tr>
+        <tr><td><code>"fieldService"</code></td><td>Work order resolution via Field Service agent</td><td><code>"per work order"</code></td></tr>
+        <tr><td><code>"general"</code></td><td>General productivity uplift</td><td><code>"per transaction"</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Use Case Presets -->
+  <h2 class="anchor" id="use-case-presets">2. Scan Use Case Presets — <code>--use-case</code> Flag</h2>
+
+  <p>Controls which <strong>Salesforce objects are scanned</strong> for data quality. Pass at runtime — no file needed.</p>
+
+  <pre><code><span class="kw-cmd">npm run scan</span> -- --org &lt;id&gt; <span class="kw-flag">--use-case service</span>       <span class="kw-comment"># default</span>
+<span class="kw-cmd">npm run scan</span> -- --org &lt;id&gt; <span class="kw-flag">--use-case sales</span>
+<span class="kw-cmd">npm run scan</span> -- --org &lt;id&gt; <span class="kw-flag">--use-case field_service</span></code></pre>
+
+  <h3>service (default)</h3>
+  <p>Scans 7 objects: the 5 Tier 1 standard objects plus Case (extended fields) and EmailMessage.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Object</th><th>Fields checked</th></tr></thead>
+      <tbody>
+        <tr><td>Contact</td><td>Email, Phone, Title, AccountId, FirstName, LastName</td></tr>
+        <tr><td>Account</td><td>Industry, Phone, BillingCity, BillingCountry, Website</td></tr>
+        <tr><td>Lead</td><td>Email, Phone, Company, LeadSource, Status</td></tr>
+        <tr><td>Opportunity</td><td>CloseDate, StageName, Amount, AccountId</td></tr>
+        <tr><td>Case</td><td>Reason, Status, ContactId, AccountId, Priority</td></tr>
+        <tr><td>Case <em>(Tier 2)</em></td><td>Reason, Status, Priority, ContactId</td></tr>
+        <tr><td>EmailMessage <em>(Tier 2)</em></td><td>Status, FromAddress</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>sales</h3>
+  <p>Scans 8 objects: the 5 Tier 1 objects plus Quote, Contract, and Product2.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Object</th><th>Fields checked</th></tr></thead>
+      <tbody>
+        <tr><td>Contact</td><td>Email, Phone, Title, AccountId, FirstName, LastName</td></tr>
+        <tr><td>Account</td><td>Industry, Phone, BillingCity, BillingCountry, Website</td></tr>
+        <tr><td>Lead</td><td>Email, Phone, Company, LeadSource, Status</td></tr>
+        <tr><td>Opportunity</td><td>CloseDate, StageName, Amount, AccountId</td></tr>
+        <tr><td>Case</td><td>Reason, Status, ContactId, AccountId, Priority</td></tr>
+        <tr><td>Quote <em>(Tier 2)</em></td><td>Status, ExpirationDate, AccountId</td></tr>
+        <tr><td>Contract <em>(Tier 2)</em></td><td>Status, StartDate, AccountId</td></tr>
+        <tr><td>Product2 <em>(Tier 2)</em></td><td>Family, ProductCode</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>field_service</h3>
+  <p>Scans 8 objects: the 5 Tier 1 objects plus WorkOrder, ServiceAppointment, and Asset.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Object</th><th>Fields checked</th></tr></thead>
+      <tbody>
+        <tr><td>Contact</td><td>Email, Phone, Title, AccountId, FirstName, LastName</td></tr>
+        <tr><td>Account</td><td>Industry, Phone, BillingCity, BillingCountry, Website</td></tr>
+        <tr><td>Lead</td><td>Email, Phone, Company, LeadSource, Status</td></tr>
+        <tr><td>Opportunity</td><td>CloseDate, StageName, Amount, AccountId</td></tr>
+        <tr><td>Case</td><td>Reason, Status, ContactId, AccountId, Priority</td></tr>
+        <tr><td>WorkOrder <em>(Tier 2)</em></td><td>Status, AccountId, ContactId</td></tr>
+        <tr><td>ServiceAppointment <em>(Tier 2)</em></td><td>Status, FSL__Scheduled_Start__c</td></tr>
+        <tr><td>Asset <em>(Tier 2)</em></td><td>Status, AccountId, SerialNumber</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Custom Config -->
+  <h2 class="anchor" id="custom-config">3. Custom Object Config — <code>--config</code> Flag</h2>
+
+  <p>For clients with custom objects or non-standard field requirements. Create a JSON file and pass it at runtime.</p>
+
+  <pre><code><span class="kw-cmd">npm run scan</span> -- --org &lt;id&gt; <span class="kw-flag">--config</span> ./configs/acme-corp.json</code></pre>
+
+  <p>The JSON merges with the standard Tier 1 objects. You only need to specify what's different:</p>
+
+  <pre><span class="lang-tag">json</span><code>{
+  <span class="kw-key">"agentforceUseCase"</span>:    <span class="kw-string">"service"</span>,
+  <span class="kw-key">"analysisWindowMonths"</span>: <span class="kw-num">12</span>,
+  <span class="kw-key">"objects"</span>: [
+    {
+      <span class="kw-key">"tier"</span>:       <span class="kw-string">"tier3"</span>,
+      <span class="kw-key">"apiName"</span>:    <span class="kw-string">"Customer_Feedback__c"</span>,
+      <span class="kw-key">"label"</span>:      <span class="kw-string">"Customer Feedback"</span>,
+      <span class="kw-key">"fields"</span>:     [<span class="kw-string">"Status__c"</span>, <span class="kw-string">"Rating__c"</span>, <span class="kw-string">"Contact__c"</span>],
+      <span class="kw-key">"minRecords"</span>: <span class="kw-num">100</span>
+    },
+    {
+      <span class="kw-key">"tier"</span>:             <span class="kw-string">"tier3"</span>,
+      <span class="kw-key">"apiName"</span>:          <span class="kw-string">"Support_Ticket__c"</span>,
+      <span class="kw-key">"label"</span>:            <span class="kw-string">"Support Ticket"</span>,
+      <span class="kw-key">"fields"</span>:           [<span class="kw-string">"Priority__c"</span>, <span class="kw-string">"Resolution__c"</span>, <span class="kw-string">"Account__c"</span>],
+      <span class="kw-key">"checkDuplicates"</span>:  <span class="kw-bool">false</span>,
+      <span class="kw-key">"minRecords"</span>:       <span class="kw-num">500</span>
+    }
+  ]
+}</code></pre>
+
+  <h3>Object Config Fields</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><code>tier</code></td><td><code>"tier3"</code></td><td><span class="tag-req">Required</span></td><td>Always <code>"tier3"</code> for custom objects in this file</td></tr>
+        <tr><td><code>apiName</code></td><td>string</td><td><span class="tag-req">Required</span></td><td>Salesforce API name e.g. <code>"Customer_Feedback__c"</code></td></tr>
+        <tr><td><code>label</code></td><td>string</td><td><span class="tag-req">Required</span></td><td>Human-readable name shown in findings</td></tr>
+        <tr><td><code>fields</code></td><td>string[]</td><td><span class="tag-req">Required</span></td><td>Fields to check for completeness — only non-boolean fields</td></tr>
+        <tr><td><code>checkDuplicates</code></td><td>boolean</td><td><span class="tag-opt">Optional</span></td><td>Whether to run duplicate detection (default: <code>false</code>)</td></tr>
+        <tr><td><code>duplicateFields</code></td><td>string[]</td><td><span class="tag-opt">Optional</span></td><td>Fields to GROUP BY for duplicate check e.g. <code>["Name", "Email__c"]</code></td></tr>
+        <tr><td><code>minRecords</code></td><td>number</td><td><span class="tag-opt">Optional</span></td><td>Skip this object if record count is below this threshold (default: <code>100</code>)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn"><strong>Constraint:</strong> Only fields that support <code>COUNT()</code> in SOQL aggregate queries — standard text, lookup, picklist, and date fields work. Boolean fields (<code>IsActive</code>, <code>IsDeleted</code>) do not.</div>
+
+  <h3>analysisWindowMonths</h3>
+  <p>Top-level field in the config JSON that controls the date window for GROUP BY queries (duplicate detection and case reason analysis). Default: <code>12</code> months.</p>
+
+  <pre><span class="lang-tag">json</span><code>{
+  <span class="kw-key">"analysisWindowMonths"</span>: <span class="kw-num">6</span>,
+  <span class="kw-key">"agentforceUseCase"</span>:    <span class="kw-string">"service"</span>,
+  <span class="kw-key">"objects"</span>: [...]
+}</code></pre>
+
+  <div class="callout">Set lower (e.g. <code>6</code>) for engagements where only very recent data is relevant. Field completeness and adoption metrics are unaffected — completeness scans all records, adoption uses a fixed 90-day window.</div>
+
+  <!-- Combining Flags -->
+  <h2 class="anchor" id="combining-flags">4. Combining Flags</h2>
+
+  <p>All three flags can be combined:</p>
+
+  <pre><code><span class="kw-comment"># Sales use case + custom objects + specific org</span>
+<span class="kw-cmd">npm run scan</span> -- --org 00DHs000001234 <span class="kw-flag">--use-case sales --config</span> ./configs/acme.json</code></pre>
+
+  <div class="callout warn">When <code>--config</code> is provided, the <code>agentforceUseCase</code> inside the JSON file takes precedence over <code>--use-case</code>.</div>
+
+  <!-- Complete Workflow -->
+  <h2 class="anchor" id="workflow">5. Complete Workflow Per Engagement</h2>
+
+  <pre><code><span class="kw-comment"># Step 1 — Copy and fill in client intake (business fields only)</span>
+cp client-intake.example.json client-intake.json
+<span class="kw-comment"># Edit: orgName, licenseCount, clouds, licenseUnitCostMonthly,</span>
+<span class="kw-comment">#       useCase, handlingCostPerTransaction, packageWaste</span>
+
+<span class="kw-comment"># Step 2 — Connect the client org (requires ngrok + npm run dev)</span>
+<span class="kw-cmd">ngrok http 3000</span>
+<span class="kw-comment"># Update SF External Client App callback URL + SF_REDIRECT_URI in .env</span>
+<span class="kw-cmd">npm run dev</span>
+<span class="kw-comment"># Send http://&lt;ngrok-url&gt;/auth/start to client</span>
+
+<span class="kw-comment"># Step 3 — Confirm connection</span>
+<span class="kw-cmd">npm run test-conn</span>
+
+<span class="kw-comment"># Step 4 — Run the scan</span>
+<span class="kw-cmd">npm run scan</span> -- --org &lt;orgId&gt;                           <span class="kw-comment"># service (default)</span>
+<span class="kw-cmd">npm run scan</span> -- --org &lt;orgId&gt; --use-case sales          <span class="kw-comment"># sales</span>
+<span class="kw-cmd">npm run scan</span> -- --org &lt;orgId&gt; --use-case field_service  <span class="kw-comment"># field service</span>
+<span class="kw-cmd">npm run scan</span> -- --org &lt;orgId&gt; --config ./acme.json      <span class="kw-comment"># custom objects</span>
+
+<span class="kw-comment"># Step 5 — Review domain scores in terminal; open report URL in browser</span>
+
+<span class="kw-comment"># Step 5.5 — After the stakeholder interview:</span>
+<span class="kw-comment"># Fill in client-intake.json: executiveSummary, domainSummaries,</span>
+<span class="kw-comment">#                             pilotReadyDate, negotiatedFees</span>
+<span class="kw-cmd">npm run rebuild-report</span> -- --org &lt;orgId&gt;
+<span class="kw-comment"># No re-scan — regenerates HTML from cached signals + updated intake</span>
+
+<span class="kw-comment"># Step 6 — Open the report URL in incognito and run QC checklist</span>
+<span class="kw-comment"># Step 7 — Send URL to client</span></code></pre>
+
+  <!-- Score Domains -->
+  <h2 class="anchor" id="domains">6. Score Domains Reference</h2>
+
+  <p>All use cases score the same 7 domains regardless of which objects are scanned:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Domain</th><th>Weight</th><th>Hard Blocker Below</th><th>Industry Median</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data Quality &amp; Completeness</td>
+          <td><span class="badge-weight">25%</span></td>
+          <td><span class="badge-blocker">&lt; 50</span></td>
+          <td><span class="badge-median">54</span></td>
+        </tr>
+        <tr>
+          <td>Automation Health &amp; Conflicts</td>
+          <td><span class="badge-weight">20%</span></td>
+          <td><span class="badge-blocker">&lt; 50</span></td>
+          <td><span class="badge-median">58</span></td>
+        </tr>
+        <tr>
+          <td>Security &amp; Permission Model</td>
+          <td><span class="badge-weight">15%</span></td>
+          <td><span class="badge-blocker">&lt; 50</span></td>
+          <td><span class="badge-median">69</span></td>
+        </tr>
+        <tr>
+          <td>Knowledge Base &amp; Grounding</td>
+          <td><span class="badge-weight">15%</span></td>
+          <td><span class="badge-blocker">&lt; 50</span></td>
+          <td><span class="badge-median">38</span></td>
+        </tr>
+        <tr>
+          <td>Metadata &amp; Technical Debt</td>
+          <td><span class="badge-weight">10%</span></td>
+          <td><span class="badge-blocker">&lt; 50</span></td>
+          <td><span class="badge-median">55</span></td>
+        </tr>
+        <tr>
+          <td>User Adoption &amp; Process Alignment</td>
+          <td><span class="badge-weight">10%</span></td>
+          <td><span class="badge-blocker">&lt; 50</span></td>
+          <td><span class="badge-median">68</span></td>
+        </tr>
+        <tr>
+          <td>Platform Limits &amp; API Headroom</td>
+          <td><span class="badge-weight">5%</span></td>
+          <td><span class="badge-blocker">&lt; 50</span></td>
+          <td><span class="badge-median">77</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="source-note">Source: IBM IBV 2025–26, 150–300 user orgs</p>
+
+  <!-- Pre-delivery Checklist -->
+  <h2 class="anchor" id="predelivery">Pre-delivery Checklist</h2>
+
+  <p>Run this before every client delivery — top to bottom, no shortcuts.</p>
+
+  <ol class="steps">
+    <li><code>ngrok http 3000</code> — copy the new public URL</li>
+    <li>Update the External Client App callback URL in Salesforce Setup → Apps → App Manager — wait 2 min for propagation</li>
+    <li>Update <code>SF_REDIRECT_URI</code> in <code>.env</code> to match the new ngrok URL</li>
+    <li><code>npm run dev</code> — confirm "Server running on port 3000" in terminal</li>
+    <li>Send <code>http://&lt;ngrok-url&gt;/auth/start</code> to the client with 3-sentence brief (see below)</li>
+    <li>Client authorises — confirm token written to <code>.tokens.json</code> in terminal output</li>
+    <li><code>npm run test-conn</code> — must return a live user count without errors</li>
+    <li>Copy <code>client-intake.example.json</code> → <code>client-intake.json</code>, fill in all business fields for this client</li>
+    <li><code>npm run scan -- --org &lt;clientOrgId&gt;</code> — wait for completion (target: under 4 minutes)</li>
+    <li>Review all 7 domain scores in the terminal — can you explain every number?</li>
+    <li>After the stakeholder interview: fill in <code>executiveSummary</code>, <code>domainSummaries</code>, <code>pilotReadyDate</code>, and <code>negotiatedFees</code> in <code>client-intake.json</code>, then run <code>npm run rebuild-report -- --org &lt;clientOrgId&gt;</code> — no re-scan needed</li>
+    <li>Open the report URL in an <strong>incognito window</strong> and run the QC checklist below</li>
+    <li>Send the report URL to the client</li>
+  </ol>
+
+  <div class="callout" style="margin-top:20px;">
+    <strong>Auth link brief (send to client):</strong><br>
+    <em>"Click this link and log in with your Salesforce admin credentials. This grants read-only access — we cannot change anything in your org. Once you see a confirmation message, you're done. Takes 60 seconds."</em>
+  </div>
+
+  <!-- QC Checklist -->
+  <h2 class="anchor" id="qc">QC Checklist</h2>
+
+  <p>Run this on the report in incognito before sending to client. All 10 must pass.</p>
+
+  <ul class="checklist">
+    <li>Cover page: org name, score ring, and pilot-ready date are all present and correct</li>
+    <li>Section 1 (Cost of Inaction): 3 COI boxes show calculated figures, not zero or placeholder</li>
+    <li>Section 2 (Domain Scores): all 7 domains render with score bars and benchmark markers</li>
+    <li>Section 3 (Flex Credit): grid calculates from real case volume OR is cleanly suppressed when <code>handlingCostPerTransaction</code> is null</li>
+    <li>Section 4 (Agentforce Value): projection uses real data OR section is cleanly hidden</li>
+    <li>Section 5 (Roadmap): all roadmap items have an owner badge and effort label</li>
+    <li>Section 6 (ROI Calculator): sliders work and totals update live; investment option fees show negotiated prices if set</li>
+    <li>Appendix: all 7 SOQL queries are displayed with correct analysis window labels</li>
+    <li>No "Acme Corp" or "Your Organisation" placeholder text visible anywhere</li>
+    <li>No JavaScript errors in browser DevTools console (F12 → Console tab)</li>
+  </ul>
+
+  <!-- Common Issues -->
+  <h2 class="anchor" id="issues">Common Issues</h2>
+
+  <h3>Security Health Check returns 0 in Dev Edition</h3>
+  <p>The <code>/connect/security/health-check</code> endpoint returns HTTP 404 on Salesforce Developer Edition orgs. The scan catches this gracefully via the <code>safe()</code> wrapper and scores Security at 0 (hard blocker). This is expected on Dev Edition — client orgs on Enterprise or Unlimited editions return real data.</p>
+
+  <h3>ProcessDefinition not available in Dev Edition</h3>
+  <p>The Tooling API <code>ProcessDefinition</code> object (used to count legacy Process Builder automations) is not accessible in Developer Edition. The <code>legacyAutomationCount</code> signal stays at 0. Client orgs return real counts.</p>
+
+  <h3>LoginHistory — no Status filter</h3>
+  <p>SOQL does not support filtering <code>LoginHistory</code> on the <code>Status</code> field. The scan counts all login events in the last 90 days and approximates unique user count by dividing by the number of months in the window (heuristic: ~1 login event per active user per month). The resulting <code>loginRatePct</code> is an estimate. For precise counts, a Salesforce admin can pull this from the Setup audit trail.</p>
+
+  <h3>Duplicate detection and case reasons use a 12-month analysis window</h3>
+  <p>Both GROUP BY queries (duplicate detection and top case reasons) are scoped to <code>CreatedDate = LAST_N_MONTHS:12</code> by default. This prevents timeouts on large legacy orgs with millions of historical records and focuses the analysis on recently created data. The window is configurable via <code>analysisWindowMonths</code> in the scan config JSON. Field completeness scans all records regardless of this setting — Agentforce will encounter historical data, so completeness is always measured across the full dataset.</p>
+
+  <h3>Supabase Storage bucket missing</h3>
+  <p>If <code>uploadReport</code> logs "Bucket not found", the <code>reports</code> bucket has not been created. Go to Supabase Dashboard → Storage → New bucket → name it <code>reports</code> → set to Private. Reports are always saved locally in <code>reports/</code> and served via the ngrok URL — the Supabase upload is an archive copy only and does not affect report delivery.</p>
+
+</main>
+</div>
+
+<script>
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('.anchor[id]')
+  const navLinks = document.querySelectorAll('nav ul li a[href^="#"]')
+
+  function setActive() {
+    let current = ''
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 60) current = s.id
+    })
+    navLinks.forEach(a => {
+      const li = a.parentElement
+      li.classList.toggle('active', a.getAttribute('href') === '#' + current)
+    })
+  }
+
+  window.addEventListener('scroll', setActive, { passive: true })
+  setActive()
+</script>
+</body>
+</html>

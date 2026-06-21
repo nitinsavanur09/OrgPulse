@@ -68,8 +68,8 @@ function dataQualityFindings(signals: AllSignals, score: number): Finding[] {
       domain:      'data_quality',
       severity:    sev,
       title:       `Duplicate records detected in ${worst.objectName}`,
-      description: `${worst.objectName} contains a ${worst.duplicateRate.toFixed(1)}% duplication rate (${worst.duplicateCount.toLocaleString()} records) — Agentforce agents will surface conflicting or redundant data during customer interactions.`,
-      evidence:    `GROUP BY duplicate fields HAVING COUNT > 1: ${worst.duplicateCount.toLocaleString()} duplicate records in ${worst.objectName}`,
+      description: `${worst.objectName} has a ${worst.duplicateRate.toFixed(1)}% duplication rate (${worst.duplicateCount.toLocaleString()} records created in the last ${signals.configUsed.analysisWindowMonths} months) — Agentforce agents will surface conflicting or redundant data during customer interactions.`,
+      evidence:    `GROUP BY duplicate fields HAVING COUNT > 1 (last ${signals.configUsed.analysisWindowMonths} months): ${worst.duplicateCount.toLocaleString()} duplicate records in ${worst.objectName}`,
       effortDays:  5,
       impactScore: sev === 'critical' ? 8 : 5,
     })
@@ -78,8 +78,8 @@ function dataQualityFindings(signals: AllSignals, score: number): Finding[] {
       domain:      'data_quality',
       severity:    'info',
       title:       'Duplicate record rates within acceptable limits',
-      description: `All ${signals.duplicates.length > 0 ? signals.duplicates.length : 'scanned'} object${signals.duplicates.length !== 1 ? 's' : ''} show duplicate rates below 5% — deduplication is not a blocker for Agentforce deployment.`,
-      evidence:    `Duplicate scan across ${signals.duplicates.length} object${signals.duplicates.length !== 1 ? 's' : ''}: max duplicate rate ${signals.duplicates.length > 0 ? Math.max(...signals.duplicates.map(d => d.duplicateRate)).toFixed(1) : '0'}%`,
+      description: `All ${signals.duplicates.length > 0 ? signals.duplicates.length : 'scanned'} object${signals.duplicates.length !== 1 ? 's' : ''} show duplicate rates below 5% in the last ${signals.configUsed.analysisWindowMonths} months — deduplication is not a blocker for Agentforce deployment.`,
+      evidence:    `Duplicate scan (last ${signals.configUsed.analysisWindowMonths} months) across ${signals.duplicates.length} object${signals.duplicates.length !== 1 ? 's' : ''}: max duplicate rate ${signals.duplicates.length > 0 ? Math.max(...signals.duplicates.map(d => d.duplicateRate)).toFixed(1) : '0'}%`,
       effortDays:  0,
       impactScore: 1,
     })
@@ -217,8 +217,8 @@ function knowledgeFindings(signals: AllSignals, score: number): Finding[] {
       domain:      'knowledge',
       severity:    'critical',
       title:       `${topCaseReasons.length} case reason categor${topCaseReasons.length !== 1 ? 'ies' : 'y'} with 0% article coverage`,
-      description: `All ${topCaseReasons.length} top case reason${topCaseReasons.length !== 1 ? 's' : ''} identified from recent cases have no corresponding Knowledge article — Agentforce deflection rate will be 0% at launch.`,
-      evidence:    `Case GROUP BY Reason: ${topCaseReasons.length} distinct reasons; KnowledgeArticleVersion count: 0`,
+      description: `All ${topCaseReasons.length} top case reason${topCaseReasons.length !== 1 ? 's' : ''} from the last ${signals.configUsed.analysisWindowMonths} months have no corresponding Knowledge article — Agentforce deflection rate will be 0% at launch.`,
+      evidence:    `Case GROUP BY Reason (last ${signals.configUsed.analysisWindowMonths} months): ${topCaseReasons.length} distinct reasons; KnowledgeArticleVersion count: 0`,
       effortDays:  30,
       impactScore: 10,
     })
@@ -239,8 +239,8 @@ function knowledgeFindings(signals: AllSignals, score: number): Finding[] {
       domain:      'knowledge',
       severity:    sev,
       title:       `${coverageGapCount} of ${topCaseReasons.length} top case reasons lack a Knowledge article`,
-      description: `${coverageGapCount} of the top ${topCaseReasons.length} case reason${topCaseReasons.length !== 1 ? 's' : ''} have no matching published article — these case types will not benefit from Agentforce deflection until articles are created.`,
-      evidence:    `Top case reasons from Case GROUP BY Reason: ${topCaseReasons.length} categories; matching articles: ${topCaseReasons.length - coverageGapCount}`,
+      description: `${coverageGapCount} of the top ${topCaseReasons.length} case reason${topCaseReasons.length !== 1 ? 's' : ''} (last ${signals.configUsed.analysisWindowMonths} months) have no matching published article — these case types will not benefit from Agentforce deflection until articles are created.`,
+      evidence:    `Case GROUP BY Reason (last ${signals.configUsed.analysisWindowMonths} months): ${topCaseReasons.length} categories; matching articles: ${topCaseReasons.length - coverageGapCount}`,
       effortDays:  coverageGapCount * 1,
       impactScore: sev === 'critical' ? 8 : sev === 'warning' ? 5 : 2,
     })

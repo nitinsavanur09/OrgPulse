@@ -13,12 +13,14 @@ export interface ScanConfig {
   objects:              ObjectScanConfig[]
   maxCustomObjects:     number
   adoptionLookbackDays: number
+  analysisWindowMonths: number  // window for GROUP BY queries (duplicates, case reasons); default 12
 }
 
 export const DEFAULT_CONFIG: ScanConfig = {
   agentforceUseCase:    'service',
   maxCustomObjects:     20,
   adoptionLookbackDays: 90,
+  analysisWindowMonths: 12,
   objects: [
     // Tier 1 — always scanned, every use case
     {

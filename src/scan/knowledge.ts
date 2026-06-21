@@ -17,7 +17,7 @@ interface AggregateRecord {
 
 const STALE_MONTHS = 18
 
-export async function scanKnowledge(conn: Connection): Promise<KnowledgeSignal> {
+export async function scanKnowledge(conn: Connection, windowMonths: number): Promise<KnowledgeSignal> {
   const staleDate = new Date()
   staleDate.setMonth(staleDate.getMonth() - STALE_MONTHS)
   const staleDateStr = staleDate.toISOString().slice(0, 10)
@@ -41,7 +41,7 @@ export async function scanKnowledge(conn: Connection): Promise<KnowledgeSignal> 
 
   let reasonRaw = await conn.query<CaseReasonRecord>(
     `SELECT Reason, COUNT(Id) cnt FROM Case
-     WHERE Reason != null
+     WHERE Reason != null AND CreatedDate = LAST_N_MONTHS:${windowMonths}
      GROUP BY Reason
      ORDER BY COUNT(Id) DESC
      LIMIT 20`

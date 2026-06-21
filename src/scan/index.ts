@@ -69,7 +69,7 @@ export async function runAllScans(
     safe('limits',      () => scanLimits(conn),      defaultLimits()),
     safe('security',    () => scanSecurity(conn),     defaultSecurity()),
     safe('adoption',    () => scanAdoption(conn),     defaultAdoption()),
-    safe('knowledge',   () => scanKnowledge(conn),    defaultKnowledge()),
+    safe('knowledge',   () => scanKnowledge(conn, resolvedConfig.analysisWindowMonths),    defaultKnowledge()),
     safe('caseVolume',  () => scanCaseVolume(conn),   defaultCaseVolume()),
   ])
 
@@ -89,7 +89,7 @@ export async function runAllScans(
     if (objConfig.checkDuplicates && objConfig.duplicateFields?.length) {
       const dup = await safe(
         `duplicates:${objConfig.apiName}`,
-        () => scanDuplicateRate(conn, objConfig),
+        () => scanDuplicateRate(conn, objConfig, resolvedConfig.analysisWindowMonths),
         null
       )
       if (dup) duplicates.push(dup)

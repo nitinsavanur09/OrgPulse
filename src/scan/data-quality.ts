@@ -37,15 +37,16 @@ export async function scanFieldCompleteness(
 
 export async function scanDuplicateRate(
   conn: Connection,
-  objConfig: ObjectScanConfig
+  objConfig: ObjectScanConfig,
+  windowMonths: number
 ): Promise<DuplicateSignal> {
   const dupFields = objConfig.duplicateFields ?? []
   const groupBy = dupFields.join(', ')
 
-  const soql = `SELECT COUNT(Id) cnt FROM ${objConfig.apiName} WHERE IsDeleted = false GROUP BY ${groupBy} HAVING COUNT(Id) > 1`
+  const soql = `SELECT COUNT(Id) cnt FROM ${objConfig.apiName} WHERE IsDeleted = false AND CreatedDate = LAST_N_MONTHS:${windowMonths} GROUP BY ${groupBy} HAVING COUNT(Id) > 1`
 
-  // Also fetch total for rate calculation
-  let totalRaw = await conn.query<AggregateRecord>(`SELECT COUNT(Id) total FROM ${objConfig.apiName} WHERE IsDeleted = false`)
+  // Also fetch total for rate calculation — same window so the rate % is accurate within scope
+  let totalRaw = await conn.query<AggregateRecord>(`SELECT COUNT(Id) total FROM ${objConfig.apiName} WHERE IsDeleted = false AND CreatedDate = LAST_N_MONTHS:${windowMonths}`)
   const total = Number(totalRaw.records[0]?.['total'] ?? 0)
   totalRaw = null as any
 

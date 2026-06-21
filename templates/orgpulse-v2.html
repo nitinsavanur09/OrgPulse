@@ -24,9 +24,13 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
 .cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:48px 56px;background:var(--ink);position:relative;overflow:hidden}
 .cover::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%)}
 .cover::after{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%)}
-.cover-top{display:flex;justify-content:space-between;align-items:flex-start}
-.cover-logo{font-family:var(--display);font-size:18px;color:rgba(255,255,255,0.9);font-weight:400;letter-spacing:-.02em}
-.cover-date{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:.06em}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.cover-logo-wrap{display:flex;flex-direction:column;gap:6px}
+.cover-logo{font-family:var(--display);font-size:24px;color:rgba(255,255,255,0.95);font-weight:400;letter-spacing:-.03em}
+.cover-tagline{font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.28);letter-spacing:.14em;text-transform:uppercase}
+.cover-date-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.cover-date{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.42);letter-spacing:.05em}
+.cover-version{font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.2);letter-spacing:.08em;text-transform:uppercase}
 .cover-mid{position:relative;z-index:1;padding:60px 0 40px}
 .cover-label{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
 .cover-title{font-family:var(--display);font-size:clamp(42px,6vw,64px);font-weight:300;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:8px}
@@ -168,6 +172,47 @@ input[type=range]{width:200px;accent-color:var(--green);cursor:pointer}
 .tb{background:var(--blue-dim);color:var(--blue)}
 .v2-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;padding:3px 9px;border-radius:20px;background:var(--green-dim);color:var(--green);border:1px solid var(--green-border);margin-left:8px;vertical-align:middle}
 
+@media(max-width:768px){
+  .report{padding:0 24px 60px}
+  .cover{padding:36px 28px}
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .value-add{grid-template-columns:repeat(2,1fr)}
+  .roi-output{grid-template-columns:repeat(2,1fr)}
+  .roadmap-cols{grid-template-columns:1fr 1fr}
+  .cover-meta{gap:20px}
+  .cover-score-wrap{gap:24px}
+  #investment-options{grid-template-columns:1fr!important}
+  .appendix-hdr{flex-wrap:wrap;row-gap:4px;column-gap:8px!important}
+  .appendix-hdr>div:first-child{order:1}
+  .appendix-hdr>.dr-status{order:2;margin-left:auto!important}
+  .appendix-hdr>.ct{order:3;width:100%;font-size:14px;font-weight:600}
+  .appendix-hdr>div:nth-child(4){order:4}
+  .appendix-hdr>div:nth-child(5){order:5}
+}
+@media(max-width:480px){
+  .report{padding:0 16px 48px}
+  .cover{padding:28px 20px;min-height:auto}
+  .cover-score-wrap{flex-direction:column;align-items:flex-start;gap:16px}
+  .cover-meta{flex-direction:column;gap:10px}
+  .coi-grid{grid-template-columns:1fr}
+  .kpi-row{grid-template-columns:1fr 1fr}
+  .dd-grid{grid-template-columns:1fr}
+  .roadmap-cols{grid-template-columns:1fr}
+  .value-add{grid-template-columns:repeat(2,1fr)}
+  .fc-grid{grid-template-columns:1fr}
+  .roi-output{grid-template-columns:1fr 1fr}
+  .domain-row{flex-wrap:wrap;gap:6px 8px}
+  .dr-num{order:1}
+  .dr-name{order:2;flex:1;min-width:0;font-size:12px}
+  .dr-status{order:3}
+  .dr-chevron{order:4}
+  .dr-bar-wrap{order:5;width:100%;max-width:none;margin-top:2px}
+  input[type=range]{width:100%}
+  .ns-option{min-width:0;width:100%}
+  .ns-options{flex-direction:column}
+  .roi-slider-wrap{flex-direction:column}
+  .next-step-card{flex-direction:column;gap:16px}
+}
 @media print{.cover{page-break-after:always}.section-break{page-break-before:always}.domain-detail{display:block!important}}
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
@@ -178,8 +223,14 @@ input[type=range]{width:200px;accent-color:var(--green);cursor:pointer}
 <!-- COVER -->
 <div class="cover">
   <div class="cover-top">
-    <div class="cover-logo">OrgPulse</div>
-    <div class="cover-date" id="cover-date"></div>
+    <div class="cover-logo-wrap">
+      <div class="cover-logo">OrgPulse</div>
+      <div class="cover-tagline">Agentforce Readiness Platform &nbsp;·&nbsp; Yukti Global</div>
+    </div>
+    <div class="cover-date-wrap">
+      <div class="cover-date" id="cover-date"></div>
+      <div class="cover-version">V2 Report &nbsp;·&nbsp; Confidential</div>
+    </div>
   </div>
   <div class="cover-mid">
     <div class="cover-label">Agentforce AI Readiness Assessment</div>
@@ -589,7 +640,7 @@ const txLabel        = sm.monthlyTransactionVolumeObject || 'cases';
 
 // ─── Cover ────────────────────────────────────────────────────────────────────
 document.title = `OrgPulse — AI Readiness Assessment V2 · ${R.meta.orgName}`;
-document.getElementById('cover-date').textContent = `Assessment date: ${R.assessmentDate} · V2 Report`;
+document.getElementById('cover-date').textContent = R.assessmentDate;
 document.getElementById('cover-title').innerHTML = `Your Salesforce org scores<br><em>${R.aiReadinessIndex} out of 100.</em>`;
 document.getElementById('cover-client').textContent =
   `Prepared for ${R.meta.orgName} · ${R.meta.licenseCount} Salesforce licenses · ${Array.isArray(R.meta.clouds) ? R.meta.clouds.join(' + ') : R.meta.clouds}`;
@@ -907,7 +958,7 @@ R.domainScores.forEach(d => {
   div.className = 'card';
   div.style.marginBottom = '12px';
   div.innerHTML = `
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+    <div class="appendix-hdr" style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
       <div style="font-family:var(--mono);font-size:11px;color:var(--dim)">Domain ${d.num}</div>
       <div class="ct" style="margin:0">${d.name}</div>
       <div class="dr-status s-${d.status}" style="margin-left:auto">${d.statusLabel}</div>

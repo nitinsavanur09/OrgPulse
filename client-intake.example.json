@@ -12,18 +12,27 @@
   "useCase":                    "service",
   "handlingCostPerTransaction": 18,
   "handlingCostLabel":          "per case",
-  "monthlyTransactionVolume":   null,
+  "monthlyTransactionVolume":   850,
 
   "_narrative_note": "Fill these in after the stakeholder interview, then run `npm run rebuild-report`.",
   "pilotReadyDate":             "October 2026",
-  "executiveSummary":           null,
+  "executiveSummary":           "Acme Corp has a mature Salesforce implementation with strong process coverage across Service Cloud. The assessment identified data quality gaps in Contact records and an under-developed Knowledge base as the two blockers preventing a reliable Agentforce deployment. Both are addressable within a 12-week sprint.",
   "domainSummaries": {
-    "Data quality & completeness":       null,
-    "Automation health & conflicts":     null,
-    "Security & permission model":       null,
-    "Knowledge base & grounding":        null,
-    "Metadata & technical debt":         null,
-    "User adoption & process alignment": null,
-    "Platform limits & API headroom":    null
+    "Data quality & completeness":       "Contact email completion has improved over the last 12 months but 28% of records remain missing email addresses, largely from a legacy import in 2021. The team is aware and a bulk enrichment project is in the backlog.",
+    "Automation health & conflicts":     "The org has 47 active flows with good coverage across the lead-to-case lifecycle. 6 flows are missing fault paths — these were built before fault connectors were standard practice and can be fixed in a single admin sprint.",
+    "Security & permission model":       "The Security Health Check endpoint is not available on this org edition. On the client's production org this will return live data. The admin confirmed MFA is enforced org-wide.",
+    "Knowledge base & grounding":        "The knowledge base has 12 published articles covering billing queries. The top case reasons — returns, delivery issues, and product faults — have no corresponding articles. This is the primary gap to close before the Agentforce pilot.",
+    "Metadata & technical debt":         "340 unused custom fields accumulated from a 2019 CPQ implementation that was subsequently retired. The admin team has a scheduled clean-up in Q3 2026 — this work is already planned and does not require additional effort from the roadmap.",
+    "User adoption & process alignment": "Login rate is high at 92% — all service reps are actively using the platform daily. Task logging is below the industry median, which the service manager confirmed is by design: a third-party telephony integration logs call outcomes directly to Case, not Task.",
+    "Platform limits & API headroom":    "API usage is at 4% of the daily limit. Data storage is at 12%. There is significant headroom to absorb the additional API calls and storage that Agentforce agents will generate at full deployment scale."
+  },
+
+  "_fees_note": "Fill these in after negotiation. Defaults are Yukti Global list prices. Set low = high for a fixed fee; leave null to use the default range.",
+  "negotiatedFees": {
+    "optionBLow":                30000,
+    "optionBHigh":               30000,
+    "optionCLow":                16000,
+    "optionCHigh":               16000,
+    "monitoringRetainerMonthly": 2500
   }
 }
