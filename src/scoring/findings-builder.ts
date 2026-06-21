@@ -348,6 +348,128 @@ function limitsFindings(signals: AllSignals, score: number): Finding[] {
 
 // ── Public API ────────────────────────────────────────────────────────────────
 
+export function buildDomainSummaries(signals: AllSignals, _scores: ScoredResult): Record<string, string> {
+  // ── Data quality ───────────────────────────────────────────────────────────
+  const dqObjects = signals.dataQuality.filter(dq => dq.totalRecords > 0)
+  let dqSummary: string
+  if (dqObjects.length === 0) {
+    dqSummary = 'No data quality signals were collected — ensure the org has records in the configured objects.'
+  } else {
+    let totalWeight = 0, weightedSum = 0
+    for (const dq of dqObjects) {
+      const rates = Object.values(dq.completionRates)
+      if (!rates.length) continue
+      const avg = rates.reduce((a, b) => a + b, 0) / rates.length
+      weightedSum += avg * dq.totalRecords
+      totalWeight += dq.totalRecords
+    }
+    const avgCompletion = totalWeight > 0 ? Math.round(weightedSum / totalWeight) : 0
+
+    const primary = dqObjects.find(o => o.objectName === 'Contact') ?? dqObjects[0]!
+    let worstField = '', worstRate = 101
+    for (const [field, rate] of Object.entries(primary.completionRates)) {
+      if (rate < worstRate && rate < 100) { worstRate = rate; worstField = field }
+    }
+
+    const maxDup = signals.duplicates.length > 0
+      ? signals.duplicates.reduce((a, b) => a.duplicateRate > b.duplicateRate ? a : b)
+      : null
+
+    dqSummary = `Field completion averages ${avgCompletion}% across ${dqObjects.length} scanned object${dqObjects.length !== 1 ? 's' : ''}.`
+    if (worstField && worstRate < 90) {
+      dqSummary += ` ${primary.objectName} ${worstField} has the widest gap at ${worstRate}% — blank fields limit Agentforce's ability to personalise responses.`
+    }
+    if (maxDup) {
+      dqSummary += maxDup.duplicateRate > 10
+        ? ` ${maxDup.objectName} duplicate rate is ${maxDup.duplicateRate.toFixed(1)}% — exceeds the 10% penalty threshold.`
+        : ` Duplicate rates are within acceptable range — ${maxDup.objectName} at ${maxDup.duplicateRate.toFixed(1)}%.`
+    }
+  }
+
+  // ── Automation ─────────────────────────────────────────────────────────────
+  const { totalActiveFlows, flowsWithNoFaultPath, legacyAutomationCount, apexCoveragePct } = signals.automation
+  const faultPct = totalActiveFlows > 0 ? Math.round(flowsWithNoFaultPath / totalActiveFlows * 100) : 0
+  let autoSummary = `${totalActiveFlows} active flow${totalActiveFlows !== 1 ? 's' : ''} in the org`
+  autoSummary += flowsWithNoFaultPath > 0
+    ? `, ${flowsWithNoFaultPath} (${faultPct}%) missing fault connectors.`
+    : ' — all have fault connectors configured.'
+  if (legacyAutomationCount > 0) {
+    autoSummary += ` ${legacyAutomationCount} Process Builder automation${legacyAutomationCount !== 1 ? 's' : ''} remain active and need migration to Flow before Agentforce deployment.`
+  }
+  autoSummary += ` Apex test coverage is ${apexCoveragePct}%${apexCoveragePct < 75 ? ' — below the 75% minimum required for safe deployments' : ' — above the 75% deployment threshold'}.`
+
+  // ── Security ───────────────────────────────────────────────────────────────
+  const { healthCheckScore, failingCheckCount, criticalCheckCount, guestUserRisk } = signals.security
+  let secSummary: string
+  if (healthCheckScore === 0) {
+    secSummary = 'Security Health Check data was not available for this org edition — review the security posture manually before Agentforce deployment.'
+  } else {
+    secSummary = `Security Health Check scored ${healthCheckScore}/100 with ${failingCheckCount} failing check${failingCheckCount !== 1 ? 's' : ''}`
+    if (criticalCheckCount > 0) secSummary += `, including ${criticalCheckCount} critical`
+    secSummary += '.'
+    secSummary += guestUserRisk
+      ? ' Guest user security risks detected — resolve before enabling Agentforce on any public-facing channel.'
+      : ' No guest user risks identified — public channel deployment is unblocked from a security perspective.'
+  }
+
+  // ── Knowledge ──────────────────────────────────────────────────────────────
+  const { articleCount, staleArticleCount, topCaseReasons, coverageGapCount } = signals.knowledge
+  const w = signals.configUsed.analysisWindowMonths
+  let kbSummary: string
+  if (articleCount === 0) {
+    kbSummary = `No published Knowledge articles found. ${topCaseReasons.length} case reason categor${topCaseReasons.length !== 1 ? 'ies' : 'y'} identified from the last ${w} months — Agentforce deflection rate will be 0% without articles to draw from. This is a hard blocker.`
+  } else {
+    const covered = topCaseReasons.length - coverageGapCount
+    kbSummary = `${articleCount} published article${articleCount !== 1 ? 's' : ''} cover${articleCount === 1 ? 's' : ''} ${covered} of ${topCaseReasons.length} top case reason${topCaseReasons.length !== 1 ? 's' : ''} — ${coverageGapCount} categor${coverageGapCount !== 1 ? 'ies' : 'y'} have no coverage.`
+    if (staleArticleCount > 0) {
+      const stalePct = Math.round(staleArticleCount / articleCount * 100)
+      kbSummary += ` ${staleArticleCount} article${staleArticleCount !== 1 ? 's' : ''} (${stalePct}%) were last updated over 18 months ago and may surface outdated guidance.`
+    }
+  }
+
+  // ── Metadata ───────────────────────────────────────────────────────────────
+  const { unusedFieldCount, abandonedPackageCount } = signals.metadata
+  const fieldThresholdMsg = unusedFieldCount > 200
+    ? `${unusedFieldCount.toLocaleString()} unmanaged custom fields — exceeds the 200-field ceiling where schema complexity begins to affect Agentforce context window efficiency.`
+    : `${unusedFieldCount.toLocaleString()} unmanaged custom fields — within the 200-field recommended ceiling.`
+  const pkgMsg = abandonedPackageCount === 0
+    ? 'No installed packages flagged.'
+    : `${abandonedPackageCount} managed package${abandonedPackageCount !== 1 ? 's' : ''} installed — each adds automation surface and potential conflict risk.`
+  const metaSummary = `${fieldThresholdMsg} ${pkgMsg}`
+
+  // ── Adoption ───────────────────────────────────────────────────────────────
+  const { loginRatePct, avgActivitiesPerUser } = signals.adoption
+  const inactivePct = 100 - loginRatePct
+  let adoptionSummary = `${loginRatePct}% of licensed users were active in the last 90 days`
+  adoptionSummary += inactivePct > 0 ? ` — ${inactivePct}% of seats unused.` : '.'
+  adoptionSummary += ` Average task activity is ${avgActivitiesPerUser} per user vs the ${ACTIVITY_MEDIAN_PER_90_DAYS}-activity industry median`
+  adoptionSummary += avgActivitiesPerUser >= ACTIVITY_MEDIAN_PER_90_DAYS
+    ? ' — Agentforce context from prior interactions will be well-populated.'
+    : ' — sparse activity logs will limit Agentforce contextual recall.'
+
+  // ── Limits ─────────────────────────────────────────────────────────────────
+  const { apiUsagePct, storageUsagePct, fileUsagePct } = signals.limits
+  const maxPct = Math.max(apiUsagePct, storageUsagePct, fileUsagePct)
+  let limitsSummary = `API usage: ${apiUsagePct}%, data storage: ${storageUsagePct}%, file storage: ${fileUsagePct}%.`
+  if (maxPct >= 70) {
+    limitsSummary += ` Peak utilisation at ${maxPct}% — review capacity before Agentforce rollout adds additional API and storage load.`
+  } else if (maxPct >= 40) {
+    limitsSummary += ' Headroom is adequate but should be monitored as Agentforce agent traffic increases.'
+  } else {
+    limitsSummary += ' All limits well within range — sufficient headroom for Agentforce at full deployment scale.'
+  }
+
+  return {
+    'Data quality & completeness':      dqSummary,
+    'Automation health & conflicts':     autoSummary,
+    'Security & permission model':       secSummary,
+    'Knowledge base & grounding':        kbSummary,
+    'Metadata & technical debt':         metaSummary,
+    'User adoption & process alignment': adoptionSummary,
+    'Platform limits & API headroom':    limitsSummary,
+  }
+}
+
 export function buildFindings(signals: AllSignals, scores: ScoredResult): Finding[] {
   const scoreMap = new Map(scores.domains.map(d => [d.domain, d.score]))
 
