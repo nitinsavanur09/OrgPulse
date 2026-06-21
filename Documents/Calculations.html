@@ -696,22 +696,22 @@ deflectedCount    <span class="op">=</span> ROUND(monthlyVolume <span class="op"
 monthlyCreditCost <span class="op">=</span> ROUND(deflectedCount <span class="op">×</span> creditsPerTransaction <span class="op">×</span> creditCostUSD)
 monthlyNetSaving  <span class="op">=</span> ROUND(deflectedCount <span class="op">×</span> (handlingCostPerTransaction <span class="op">−</span> flexCreditCostPerTransaction))
 
-<span class="comment">// Example (Conservative, 2,840 cases/mo, $18/case):</span>
-<span class="comment">// deflectedCount    = ROUND(2840 × 0.30) = 852</span>
-<span class="comment">// monthlyCreditCost = ROUND(852 × 4.5 × 0.10) = $383</span>
-<span class="comment">// monthlyNetSaving  = ROUND(852 × (18 − 0.45)) = $14,953</span>
+<span class="comment">// Example (NovaStar Insurance — 2,400 cases/mo, $22/case):</span>
+<span class="comment">// Conservative: deflectedCount = ROUND(2400 × 0.30) = 720</span>
+<span class="comment">//               monthlyCreditCost = ROUND(720 × 4.5 × 0.10) = $324</span>
+<span class="comment">//               monthlyNetSaving  = ROUND(720 × (22 − 0.45)) = $15,516</span>
       </div>
     </div>
 
     <table class="threshold-table" style="margin-top:16px">
       <thead><tr><th>Scenario</th><th>Rate</th><th>Tag</th><th>Monthly credit cost (2,840 cases)</th><th>Monthly net saving</th></tr></thead>
       <tbody>
-        <tr><td>Conservative</td><td>30%</td><td><span class="tag-pill tp-amber">Conservative</span></td><td>$383</td><td>$14,953</td></tr>
-        <tr><td>Likely</td><td>40%</td><td><span class="tag-pill tp-green">Likely</span></td><td>$511</td><td>$19,937</td></tr>
-        <tr><td>Optimistic</td><td>55%</td><td><span class="tag-pill tp-blue">Optimistic</span></td><td>$703</td><td>$27,412</td></tr>
+        <tr><td>Conservative</td><td>30%</td><td><span class="tag-pill tp-amber">Conservative</span></td><td>$324</td><td>$15,516</td></tr>
+        <tr><td>Likely</td><td>40%</td><td><span class="tag-pill tp-green">Likely</span></td><td>$432</td><td>$20,688</td></tr>
+        <tr><td>Optimistic</td><td>55%</td><td><span class="tag-pill tp-blue">Optimistic</span></td><td>$594</td><td>$28,446</td></tr>
       </tbody>
     </table>
-    <div class="note" style="margin-top:12px">All three scenarios are pre-computed in <code style="font-family:var(--mono);font-size:11px">buildReportData()</code> and stored in <code style="font-family:var(--mono);font-size:11px">valueProjection.flexCreditScenarios[]</code> — the template renders them directly, no calculations in the browser.</div>
+    <div class="note" style="margin-top:12px">All three scenarios are pre-computed in <code style="font-family:var(--mono);font-size:11px">buildReportData()</code> and stored in <code style="font-family:var(--mono);font-size:11px">valueProjection.flexCreditScenarios[]</code> — the template renders them directly, no calculations in the browser. Example figures shown: NovaStar Insurance Group (2,400 cases/mo, $22/case handling cost).</div>
   </div>
 
   <!-- ══ 7. ROI CALCULATOR ══ -->
