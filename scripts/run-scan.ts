@@ -101,35 +101,37 @@ async function main() {
   console.log('🖨️  Generating HTML...')
   const html = generateReport(reportData)
 
-  // Step 7: Upload (with local fallback)
-  console.log('☁️  Uploading to Supabase Storage...')
-  let signedUrl = ''
+  // Step 7: Save locally + upload to Supabase for archival
   const reportsDir = path.join(process.cwd(), 'reports')
   if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir)
   const localFilename = `${orgId}-${Date.now()}.html`
-  const localPath = path.join(reportsDir, localFilename)
+  const localPath     = path.join(reportsDir, localFilename)
+  fs.writeFileSync(localPath, html, 'utf8')
 
+  // Build the report URL from the ngrok base (server must be running via `npm run dev`)
+  const ngrokBase = (process.env.SF_REDIRECT_URI ?? '').replace('/auth/callback', '')
+  const reportUrl = ngrokBase
+    ? `${ngrokBase}/reports/${localFilename}`
+    : `file://${localPath}`
+
+  // Archive to Supabase Storage (best-effort — not used as the served URL)
+  console.log('☁️  Archiving to Supabase Storage...')
+  let archiveUrl = ''
   try {
     const result = await uploadReport(orgId, html)
-    signedUrl = result.signedUrl
+    archiveUrl = result.signedUrl
   } catch (err) {
-    console.error('   ⚠️  Upload failed:', err instanceof Error ? err.message : err)
-    fs.writeFileSync(localPath, html, 'utf8')
-    console.log(`   Report saved locally: ${localPath}`)
-    console.log('   Re-run with `--upload` flag after fixing storage config, or use test-report.ts.')
+    console.error('   ⚠️  Archive upload failed (non-critical):', err instanceof Error ? err.message : err)
   }
 
   // Step 8: Save results to DB
   console.log('💾 Saving results to database...')
-  await saveResults(orgId, scores, findings, signedUrl)
+  await saveResults(orgId, scores, findings, reportUrl)
 
   // Done
   console.log(`\n✅ Done! AI Readiness Index: ${scores.overallIndex}/100`)
-  if (signedUrl) {
-    console.log(`📎 Report URL (90 days): ${signedUrl}`)
-  } else {
-    console.log(`📁 Report saved locally: ${localPath}`)
-  }
+  console.log(`📎 Report URL: ${reportUrl}`)
+  if (archiveUrl) console.log(`📦 Supabase archive: ${archiveUrl}`)
 }
 
 main().catch(err => {

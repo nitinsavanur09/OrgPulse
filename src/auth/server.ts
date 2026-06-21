@@ -31,6 +31,13 @@ function saveTokenStore(store: Record<string, StoredTokens>): void {
   fs.writeFileSync(TOKENS_FILE, JSON.stringify(store, null, 2))
 }
 
+// Serve generated reports — browsers render these correctly from Express
+const REPORTS_DIR = path.resolve(process.cwd(), 'reports')
+if (!fs.existsSync(REPORTS_DIR)) fs.mkdirSync(REPORTS_DIR)
+app.use('/reports', express.static(REPORTS_DIR, { setHeaders: (res) => {
+  res.setHeader('Content-Type', 'text/html; charset=utf-8')
+}}))
+
 // GET /auth/start — redirect browser to Salesforce login
 app.get('/auth/start', (_req, res) => {
   const url = oauth2.getAuthorizationUrl({ scope: 'api refresh_token offline_access' })

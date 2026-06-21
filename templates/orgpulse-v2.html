@@ -313,21 +313,53 @@ input[type=range]{width:200px;accent-color:var(--green);cursor:pointer}
 
     <div class="card" style="border-color:var(--border2)">
       <div class="ct">ROI payback calculator <span class="v2-badge">Interactive</span></div>
-      <div class="cb" id="roi-card-body" style="margin-bottom:16px"></div>
+
+      <!-- How to use -->
+      <div style="background:var(--bg3);border-radius:8px;padding:14px 18px;margin-bottom:18px;font-size:12px;color:var(--muted);line-height:1.7">
+        <strong style="color:var(--text);display:block;margin-bottom:4px">How to use this calculator</strong>
+        This calculator answers one question: <em>how quickly does the engagement pay for itself?</em>
+        It adds two types of annual benefit and divides by the fee you choose.<br><br>
+        <span style="display:inline-flex;align-items:center;gap:6px;margin-right:12px">
+          <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green)"></span>
+          <strong style="color:var(--text)">Tier 1 — Verified savings</strong> (fixed): derived directly from your scan — inactive licence cost + abandoned package subscriptions. This number does not change.
+        </span><br>
+        <span style="display:inline-flex;align-items:center;gap:6px;margin-top:6px">
+          <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--blue)"></span>
+          <strong style="color:var(--text)">Tier 2 — Agentforce value</strong> (adjustable): projected annual value from case deflection. Use the slider to set a conservative or optimistic estimate.
+        </span>
+      </div>
+
+      <!-- Total annual benefit summary row -->
+      <div id="roi-benefit-row" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px;padding:14px 16px;background:var(--bg);border:1px solid var(--border);border-radius:10px"></div>
+
+      <!-- Sliders -->
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px">
+        <strong style="color:var(--text)">Step 1</strong> — Set the engagement fee to match your chosen option (A, B, or C above).
+      </div>
       <div class="roi-slider-wrap">
         <div class="roi-slider-group">
-          <div class="roi-slider-label">Engagement fee</div>
+          <div class="roi-slider-label">Engagement fee (Options B / C range)</div>
           <input type="range" id="fee-slider" min="15000" max="35000" step="1000" oninput="updateROI()">
           <div class="roi-slider-val" id="fee-val"></div>
         </div>
         <div class="roi-slider-group">
-          <div class="roi-slider-label">Annual Agentforce value (case deflection)</div>
+          <div class="roi-slider-label">Annual Agentforce value — adjust to your comfort level</div>
           <input type="range" id="val-slider" min="50000" max="300000" step="5000" oninput="updateROI()">
           <div class="roi-slider-val" id="val-val"></div>
         </div>
       </div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:16px">
+        <strong style="color:var(--text)">Step 2</strong> — Adjust the Agentforce value slider. The default is calculated from your actual case volume. Move it left for a conservative view, right for optimistic. The outputs below update live.
+      </div>
+
+      <!-- Output boxes -->
       <div class="roi-output" id="roi-output"></div>
-      <div id="roi-disclaimer" style="margin-top:12px;padding:10px 14px;background:var(--bg3);border-radius:6px;font-family:var(--mono);font-size:10px;color:var(--dim);line-height:1.6"></div>
+
+      <!-- Formula reference -->
+      <div id="roi-disclaimer" style="margin-top:16px;padding:12px 16px;background:var(--bg3);border-radius:8px;font-size:11px;color:var(--muted);line-height:1.8">
+        <strong style="color:var(--text);display:block;margin-bottom:6px">How each number is calculated</strong>
+        <span id="roi-formula-lines"></span>
+      </div>
     </div>
   </div>
 
@@ -606,7 +638,9 @@ document.getElementById('kpi-row').innerHTML = `
 // ─── Section 3 — Flex Credit cost model ──────────────────────────────────────
 document.getElementById('flex-sub').textContent = vp.available && vp.transactionVolume
   ? `Based on your actual volume of ${fmt.num(vp.transactionVolume)} ${txLabel}/month. Three deflection scenarios at current Salesforce Flex Credit list pricing ($0.10/credit). Source: ${vp.deflectionRateSource}.`
-  : 'Flex Credit projections require transaction volume and handling cost — add these to your intake form.';
+  : vp.available
+    ? 'No transaction volume found in org scan — set monthlyTransactionVolume in client-intake.json to enable projections.'
+    : 'Flex Credit projections require transaction volume and handling cost — add both to your intake form.';
 
 const flexGrid = document.getElementById('flex-credit-grid');
 flexGrid.innerHTML = '';
@@ -634,7 +668,9 @@ if (vp.available && vp.flexCreditScenarios?.length) {
     `The net saving per deflected ${txLabel.replace(/s$/,'')} exceeds <strong>${fmt.dollar(Math.floor((vp.handlingCostPerTransaction||0)-(vp.flexCreditCostPerTransaction||0)))}</strong> in every scenario. ` +
     `Salesforce benchmark source: ${vp.deflectionRateSource}.`;
 } else {
-  document.getElementById('flex-economics').textContent = 'Add handling cost to your intake form to see Flex Credit economics.';
+  document.getElementById('flex-economics').textContent = vp.available
+    ? 'Set monthlyTransactionVolume in client-intake.json to enable Flex Credit projections.'
+    : 'Add handlingCostPerTransaction to your intake form to see Flex Credit economics.';
 }
 
 // ─── Section 4 — Value projection / Agentforce value ─────────────────────────
@@ -713,8 +749,8 @@ document.getElementById('roadmap-improvement').textContent   = `+${R.targetScore
   if (!io) return;
   const opts = [
     {label:'Option A', sublabel:null, name:io.optionA.label,
-     price:`~${io.optionA.internalDays} internal days`,
-     body:`Your admin and developer handle all remediation using this roadmap. Yukti Global provides a monthly monitoring retainer to track progress. Timeline: ${io.optionA.timelineMonths}–${io.optionA.timelineMonths+1} months to pilot.`,
+     price:`~${io.optionA.internalDays} person-days of effort`,
+     body:`Your admin and developer handle all remediation using this roadmap. The ~${io.optionA.internalDays} person-days is total effort across all tasks — spread part-time alongside BAU, this translates to a ${io.optionA.timelineMonths}–${io.optionA.timelineMonths+1} month calendar timeline to pilot. Yukti Global provides a monthly monitoring retainer to track progress and unblock issues.`,
      highlight:false},
     {label:'Option B', sublabel:'Recommended', name:io.optionB.label,
      price:`${fmt.dollar(io.optionB.feeRangeLow)}–${fmt.dollar(io.optionB.feeRangeHigh)} fixed fee`,
@@ -734,19 +770,30 @@ document.getElementById('roadmap-improvement').textContent   = `+${R.targetScore
     </div>`).join('');
 })();
 
-document.getElementById('roi-card-body').innerHTML =
-  `Adjust the engagement fee to match your chosen option. ` +
-  `<strong>Verified savings</strong> (${fmt.dollar(totalWaste)}/yr) are derived directly from scan data — ${coi.licenseWasteFormula}${coi.packageWaste?' plus $'+coi.packageWaste.toLocaleString()+' package waste':''}.` +
-  (vp.available
-    ? ` <strong>Projected agent value</strong> (${fmt.dollar(vp.annualCapacityValueDollars)}/yr) is modelled from your ${txLabel} volume and ${vp.deflectionRateSource}. Adjust both sliders independently.`
-    : ' Projected agent value requires handling cost from your intake form.');
-
 if (io) {
   document.getElementById('fee-slider').min   = io.optionB.feeRangeLow;
   document.getElementById('fee-slider').max   = io.optionB.feeRangeHigh;
   document.getElementById('fee-slider').value = io.optionB.feeRangeLow;
 }
 document.getElementById('val-slider').value = vp.annualCapacityValueDollars || 245000;
+
+// Populate benefit summary row (static — does not change with sliders)
+document.getElementById('roi-benefit-row').innerHTML = `
+  <div>
+    <div style="font-family:var(--mono);font-size:9px;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">⬤ Tier 1 — Verified (fixed)</div>
+    <div style="font-family:var(--display);font-size:22px;font-weight:300;color:var(--green)">${fmt.dollar(totalWaste)}</div>
+    <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:3px">Annual savings — from scan data<br>${coi.licenseWasteFormula}</div>
+  </div>
+  <div>
+    <div style="font-family:var(--mono);font-size:9px;color:var(--blue);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">⬤ Tier 2 — Agentforce value (adjustable)</div>
+    <div style="font-family:var(--display);font-size:22px;font-weight:300;color:var(--blue)">${vp.available ? fmt.dollar(vp.annualCapacityValueDollars) : 'N/A'}</div>
+    <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:3px">${vp.available ? 'Annual capacity value — case deflection projection<br>'+fmt.num(vp.deflectedTransactionsPerMonth)+' '+txLabel+'/mo deflected × '+fmt.dollar(vp.handlingCostPerTransaction)+' × 12' : 'Add handlingCostPerTransaction to intake to unlock'}</div>
+  </div>
+  <div>
+    <div style="font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">Total annual benefit</div>
+    <div style="font-family:var(--display);font-size:22px;font-weight:300;color:var(--text)">${fmt.dollar(totalWaste + (vp.annualCapacityValueDollars || 0))}</div>
+    <div style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:3px">Tier 1 + Tier 2 combined<br>This is what goes into the payback formula</div>
+  </div>`;
 
 // ─── ROI calculator ───────────────────────────────────────────────────────────
 function updateROI() {
@@ -761,29 +808,34 @@ function updateROI() {
   const roi3yr      = fee > 0 ? Math.round(((totalAnnual * 3 - fee) / fee) * 100) : null;
 
   document.getElementById('roi-output').innerHTML = `
-    <div class="coi-box" style="border-top:3px solid var(--green)">
+    <div class="coi-box" style="border-top:3px solid var(--border2)">
       <div class="coi-num" style="color:var(--text);font-size:24px">${fmt.dollar(fee)}</div>
-      <div class="coi-label">Engagement fee<br><span style="font-size:11px">Adjust slider above</span></div>
+      <div class="coi-label"><strong>Engagement fee</strong><br>
+        <span style="font-size:11px;color:var(--muted)">Your one-time investment — set with the slider above</span></div>
     </div>
     <div class="coi-box" style="border-top:3px solid var(--green)">
-      <div class="coi-num" style="color:var(--green);font-size:24px">${paybackMo?paybackMo+' mo':'—'}</div>
-      <div class="coi-label">Payback period<br><span style="font-size:11px">Verified savings + projected value</span></div>
+      <div class="coi-num" style="color:var(--green);font-size:24px">${paybackMo ? paybackMo + ' months' : '—'}</div>
+      <div class="coi-label"><strong>Payback period</strong><br>
+        <span style="font-size:11px;color:var(--muted)">How many months until the engagement pays for itself.<br>Formula: fee ÷ (total annual benefit ÷ 12)</span></div>
     </div>
     <div class="coi-box" style="border-top:3px solid var(--green)">
-      <div class="coi-num" style="color:var(--green);font-size:24px">${fmt.dollar(yr1Net)}</div>
-      <div class="coi-label">Year 1 net benefit<br><span style="font-size:11px">After engagement fee</span></div>
+      <div class="coi-num" style="color:${yr1Net>=0?'var(--green)':'var(--red)'};font-size:24px">${fmt.dollar(yr1Net)}</div>
+      <div class="coi-label"><strong>Year 1 net benefit</strong><br>
+        <span style="font-size:11px;color:var(--muted)">Total annual benefit minus the engagement fee — what you are ahead by after 12 months.<br>Formula: ${fmt.dollar(totalAnnual)} − ${fmt.dollar(fee)}</span></div>
     </div>
     <div class="coi-box" style="border-top:3px solid var(--green)">
-      <div class="coi-num" style="color:var(--green);font-size:24px">${roi3yr!=null?roi3yr+'%':'—'}</div>
-      <div class="coi-label">3-year ROI</div>
+      <div class="coi-num" style="color:var(--green);font-size:24px">${roi3yr != null ? roi3yr + '%' : '—'}</div>
+      <div class="coi-label"><strong>3-year ROI</strong><br>
+        <span style="font-size:11px;color:var(--muted)">Total benefit over 3 years minus the fee, expressed as a % of the fee.<br>Formula: (${fmt.dollar(totalAnnual)} × 3 − ${fmt.dollar(fee)}) ÷ ${fmt.dollar(fee)}</span></div>
     </div>`;
 
-  const disc = document.getElementById('roi-disclaimer');
-  if (disc) disc.textContent =
-    `VERIFIED SAVINGS: ${fmt.dollar(totalWaste)}/yr — ${coi.licenseWasteFormula}. Source: ${coi.licenseUnitCostSource}.` +
-    (vp.available
-      ? ` PROJECTED VALUE: ${fmt.dollar(vp.annualCapacityValueDollars)}/yr — ${vp.deflectionRateSource}.`
-      : ' PROJECTED VALUE: not available — provide handling cost in intake form.');
+  const formulaLines = document.getElementById('roi-formula-lines');
+  if (formulaLines) formulaLines.innerHTML =
+    `<strong>Payback period:</strong> ${fmt.dollar(fee)} fee ÷ (${fmt.dollar(totalAnnual)}/yr ÷ 12) = ${paybackMo ? paybackMo + ' months' : '—'}<br>` +
+    `<strong>Year 1 net benefit:</strong> ${fmt.dollar(totalAnnual)} annual benefit − ${fmt.dollar(fee)} fee = ${fmt.dollar(yr1Net)}<br>` +
+    `<strong>3-year ROI:</strong> (${fmt.dollar(totalAnnual)} × 3 − ${fmt.dollar(fee)}) ÷ ${fmt.dollar(fee)} = ${roi3yr != null ? roi3yr + '%' : '—'}<br>` +
+    `<strong>Verified savings source:</strong> ${coi.licenseWasteFormula}. ${coi.licenseUnitCostSource}.<br>` +
+    (vp.available ? `<strong>Agentforce value source:</strong> ${fmt.num(vp.deflectedTransactionsPerMonth)} ${txLabel}/mo × ${fmt.dollar(vp.handlingCostPerTransaction)} handling cost × 12 months. Deflection rate: ${Math.round(vp.deflectionRate*100)}% (${vp.deflectionRateSource}).` : '');
 }
 updateROI();
 

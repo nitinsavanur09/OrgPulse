@@ -10,9 +10,9 @@
 
 ## Current State
 
-**Active phase:** Phase 6 — Hardening
-**Last session:** 19 June 2026
-**Next task:** P6.1 — Edge case testing (zero Knowledge articles, all users active, security at 100, SOQL permission failure, org with no custom objects)
+**Active phase:** Phase 7 — First Pilot Delivery
+**Last session:** 21 June 2026
+**Next task:** P7.1 — Connect client org (ngrok fresh session, send auth link, confirm `npm run test-conn`)
 
 ---
 
@@ -25,12 +25,28 @@
 | Phase 3 — Scoring Engine | ✅ Complete | All 7 domain scorers pass; gate: 57/100 on Dev Edition, 3 expected hard blockers |
 | Phase 4 — Report Generator | ✅ Complete | `reports/test.html` generated; score 57/100 from Dev Edition confirmed |
 | Phase 5 — Full Pipeline | ✅ Complete | 3 clean runs; DB rows confirmed; storage bucket needs creating in Supabase dashboard |
-| Phase 6 — Hardening | 🔲 Not started | |
+| Phase 6 — Hardening | ✅ Complete | 2 wording fixes in findings-builder.ts; README runbook written; all other edge cases already handled |
 | Phase 7 — First Pilot Delivery | 🔲 Not started | |
 
 ---
 
 ## Completed Tasks
+
+### Phase 6 (post-completion polish — 21 June 2026)
+
+- [x] **ROI calculator** — `templates/orgpulse-v2.html` rebuilt: "How to use" explanation box with Tier 1 (green, fixed) / Tier 2 (blue, adjustable) legend; `roi-benefit-row` 3-column grid showing verified savings + projected value + total before sliders; Step 1/Step 2 guidance labels; each output box now has a bold title + formula sub-label with live dollar values; `roi-formula-lines` reference panel shows all 3 formulas spelled out with live numbers
+- [x] **Report serving** — Supabase Storage blocked HTML rendering (content-type: text/plain + CSP sandbox). Fix: added Express static route in `src/auth/server.ts` (`/reports` → `reports/` dir, `text/html` header); `scripts/run-scan.ts` derives URL from `SF_REDIRECT_URI` ngrok base. Supabase kept as archive only.
+- [x] **Section 3 fix** — "What Agentforce will cost to run" was blank on Dev Edition (0 Cases → monthlyVolume null → flexCreditScenarios empty). Fix: set `monthlyTransactionVolume: 500` in `client-intake.json`; improved template fallback messages to distinguish missing-handling-cost vs missing-volume cases.
+- [x] **Option A wording** — Clarified "35 person-days" (total effort) vs "5–6 months" (calendar time at part-time cadence). Updated body copy in `orgpulse-v2.html`.
+
+### Phase 6
+
+- [x] **P6.1** — Edge case analysis: zero Knowledge articles (already handled — `scoreKnowledge` returns 15, `knowledgeFindings` has explicit 0-article branch), SOQL permission failure (safe() wrapper handles), no custom objects (DEFAULT_CONFIG is tier1-only), large org (COUNT aggregate is fast)
+- [x] **P6.1 Fix 1** — `src/scoring/findings-builder.ts` `adoptionFindings`: fixed contradictory wording "0% inactive seats, representing wasted spend" — now shows positive message when all users are active
+- [x] **P6.1 Fix 2** — `src/scoring/findings-builder.ts` `securityFindings`: fixed wording "requires 70+ minimum" always showing — now shows "excellent posture" message when score = 100
+- [x] **P6.2** — `README.md` — added 13-step pre-delivery checklist, 10-point QC checklist, and common issues section (Security 404, ProcessDefinition, LoginHistory, Supabase bucket)
+- [x] **P6.3** — `CLAUDE.md` updated with Security Health Check fallback, LoginHistory heuristic, and token persistence decision
+- [x] **P6.3** — `Documents/Progress.md` updated to mark Phase 6 complete
 
 ### Phase 5
 
@@ -87,16 +103,15 @@
 
 ## In Progress
 
-**Phase 6 next: P6.1 — Edge case testing**
+**Phase 7 — P7.1 next: Connect client org**
 
-See Phase 6 task list in `Implementation.md`. Key scenarios: zero Knowledge articles, all-active adoption, security at 100, SOQL permission failure, no custom objects.
+Run `npm run dev`, start ngrok, send auth link to client, confirm `npm run test-conn` passes before running scan.
 
 ---
 
 ## Blockers & Notes
 
-- **Supabase Storage bucket missing:** `uploadReport` returns "Bucket not found". The `reports` bucket must be created manually: Supabase Dashboard → Storage → New bucket → name `reports` → Private. Pipeline handles this gracefully (local fallback), but signed URLs won't work until the bucket exists.
-- **`Product2.IsActive` not COUNT-able in SOQL:** Boolean fields can't use `COUNT()` aggregate. Affects `--use-case sales` scan of Product2 — object is skipped via `safe()` fallback. Pre-existing config issue; fix in Phase 6 by changing `IsActive` to a non-boolean field (e.g. `ProductCode`).
+- **`Product2.IsActive` not COUNT-able in SOQL:** Boolean fields can't use `COUNT()` aggregate. Affects `--use-case sales` scan of Product2 — object is skipped via `safe()` fallback. Fixed in Phase 6 config by changing to `['Family', 'ProductCode']`.
 
 
 
@@ -155,4 +170,4 @@ Claude Code will orient itself and pick up exactly where you left off.
 
 ---
 
-_Last updated: 19 June 2026 — Phase 5 complete. `npm run scan` pipeline wired end-to-end: `getConnection → runAllScans → scoreFindings → buildFindings → buildReportData → generateReport → uploadReport (with local fallback) → saveResults`. Three clean runs confirmed: 62/100, 7 domains, 14 findings. DB rows created each run. Storage bucket missing — needs manual creation in Supabase dashboard before signed URLs work. Starting Phase 6 next._
+_Last updated: 21 June 2026 — Between-session work complete. ROI payback calculator section in `templates/orgpulse-v2.html` fully rebuilt for clarity: added "How to use" explanation box with green/blue dot legend, static Tier 1 / Tier 2 / Total annual benefit summary row (populated from scan data), Step 1 / Step 2 slider guidance labels, live formula sub-labels inside each output box, and a "How each number is calculated" reference panel at the bottom that updates with actual dollar values as sliders move. Also fixed Supabase Storage HTML rendering (serves as text/plain — switched to Express static route via ngrok as primary URL; Supabase kept as archive only). Fixed Section 3 "What Agentforce will cost to run" not populating on Dev Edition (set monthlyTransactionVolume: 500 in client-intake.json; improved template fallback messages). Report confirmed rendering correctly at ngrok URL. Starting Phase 7 (first pilot delivery) next._

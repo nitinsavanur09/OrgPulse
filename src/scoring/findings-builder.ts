@@ -93,11 +93,15 @@ function securityFindings(signals: AllSignals, score: number): Finding[] {
   const sev = severity(score)
   const { healthCheckScore, failingCheckCount, criticalCheckCount, guestUserRisk } = signals.security
 
+  const secNote = healthCheckScore >= 100
+    ? '— org security posture is excellent; no remediation needed before Agentforce deployment.'
+    : '— Agentforce requires a minimum posture of 70+ to meet enterprise security baselines.'
+
   findings.push({
     domain:      'security',
     severity:    sev,
     title:       `Security Health Check score: ${healthCheckScore}/100`,
-    description: `Salesforce Security Health Check returned ${healthCheckScore}/100 with ${failingCheckCount} failing check${failingCheckCount !== 1 ? 's' : ''} (${criticalCheckCount} critical) — Agentforce requires a minimum posture of 70+ to meet enterprise security baselines.`,
+    description: `Salesforce Security Health Check returned ${healthCheckScore}/100 with ${failingCheckCount} failing check${failingCheckCount !== 1 ? 's' : ''} (${criticalCheckCount} critical) ${secNote}`,
     evidence:    `GET /connect/security/health-check: score=${healthCheckScore}, failing=${failingCheckCount}, critical=${criticalCheckCount}`,
     effortDays:  healthCheckScore < 50 ? 15 : 5,
     impactScore: sev === 'critical' ? 9 : sev === 'warning' ? 6 : 2,
@@ -278,12 +282,17 @@ function adoptionFindings(signals: AllSignals, score: number): Finding[] {
   const sev = severity(score)
   const { loginRatePct, avgActivitiesPerUser } = signals.adoption
 
+  const inactivePct = 100 - loginRatePct
+  const inactiveNote = inactivePct > 0
+    ? ` — ${inactivePct}% of seats are inactive, representing wasted licence spend and indicating that Agentforce will serve a smaller active user base than the org is licensed for`
+    : ' — all licensed users are active; the full licence base is available for Agentforce rollout'
+
   return [
     {
       domain:      'adoption',
       severity:    sev,
       title:       `${loginRatePct}% of users active in the last 90 days`,
-      description: `${loginRatePct}% of licensed Salesforce users logged in during the past 90 days — ${100 - loginRatePct}% of seats are inactive, representing wasted license spend and indicating that Agentforce will serve a smaller active user base than the org is licensed for.`,
+      description: `${loginRatePct}% of licensed Salesforce users logged in during the past 90 days${inactiveNote}.`,
       evidence:    `LoginHistory WHERE LoginTime = LAST_N_DAYS:90: estimated ${loginRatePct}% unique user activity rate`,
       effortDays:  3,
       impactScore: sev === 'critical' ? 7 : sev === 'warning' ? 4 : 2,

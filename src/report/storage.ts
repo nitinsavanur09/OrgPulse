@@ -10,16 +10,17 @@ export interface UploadResult {
 
 export async function uploadReport(orgId: string, html: string): Promise<UploadResult> {
   const filename = `${orgId}-${Date.now()}.html`
+  const buffer = Buffer.from(html, 'utf-8')
 
   const { error: uploadError } = await supabase.storage
     .from(BUCKET)
-    .upload(filename, html, { contentType: 'text/html', upsert: false })
+    .upload(filename, buffer, { contentType: 'text/html; charset=utf-8', upsert: false })
 
   if (uploadError) throw new Error(`Storage upload failed: ${uploadError.message}`)
 
   const { data: urlData, error: urlError } = await supabase.storage
     .from(BUCKET)
-    .createSignedUrl(filename, SIGNED_URL_EXPIRY)
+    .createSignedUrl(filename, SIGNED_URL_EXPIRY, { download: false })
 
   if (urlError || !urlData?.signedUrl) {
     throw new Error(`Signed URL creation failed: ${urlError?.message ?? 'no URL returned'}`)

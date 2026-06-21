@@ -368,3 +368,63 @@ All use cases score the same 7 domains regardless of which objects are scanned:
 | Platform Limits & API Headroom | 5% | 50 | 77 |
 
 *Source: IBM IBV 2025–26, 150–300 user orgs*
+
+---
+
+## Pre-delivery Checklist
+
+Run this before every client delivery — top to bottom, no shortcuts.
+
+1. `ngrok http 3000` — copy the new public URL
+2. Update the Connected App callback URL in Salesforce Setup → Apps → App Manager — wait 2 min for propagation
+3. Update `SF_REDIRECT_URI` in `.env` to match the new ngrok URL
+4. `npm run dev` — confirm "Server running on port 3000" in terminal
+5. Send `http://<ngrok-url>/auth/start` to the client with 3-sentence brief (see below)
+6. Client authorises — confirm token written to `.tokens.json` in terminal output
+7. `npm run test-conn` — must return a live user count without errors
+8. Copy `client-intake.example.json` → `client-intake.json`, fill in all fields for this client
+9. `npm run scan -- --org <clientOrgId>` — wait for completion (target: under 4 minutes)
+10. Review all 7 domain scores in the terminal — can you explain every number?
+11. If you want to add executive summary context from the stakeholder interview, edit `client-intake.json` fields and re-run `generateReport + uploadReport` (`npm run scan` re-generates automatically on each run)
+12. Open the signed URL in an **incognito window** and run the QC checklist below
+13. Send the signed URL to the client
+
+**Auth link brief (send to client):**
+> *"Click this link and log in with your Salesforce admin credentials. This grants read-only access — we cannot change anything in your org. Once you see a confirmation message, you're done. Takes 60 seconds."*
+
+---
+
+## QC Checklist
+
+Run this on the report in incognito before sending to client. All 10 must pass.
+
+- [ ] Cover page: org name, score ring, and pilot-ready date are all present and correct
+- [ ] Section 1 (Cost of Inaction): 3 COI boxes show calculated figures, not zero or placeholder
+- [ ] Section 2 (Domain Scores): all 7 domains render with score bars and benchmark markers
+- [ ] Section 3 (Flex Credit): grid calculates from real case volume OR is cleanly suppressed when `handlingCostPerTransaction` is null
+- [ ] Section 4 (Agentforce Value): projection uses real data OR section is cleanly hidden
+- [ ] Section 5 (Roadmap): all roadmap items have an owner badge and effort label
+- [ ] Section 6 (ROI Calculator): sliders work and totals update live
+- [ ] Appendix: all 7 SOQL queries are displayed
+- [ ] No "Acme Corp" or "Your Organisation" placeholder text visible anywhere
+- [ ] No JavaScript errors in browser DevTools console (F12 → Console tab)
+
+---
+
+## Common Issues
+
+### Security Health Check returns 0 in Dev Edition
+
+The `/connect/security/health-check` endpoint returns HTTP 404 on Salesforce Developer Edition orgs. The scan catches this gracefully via the `safe()` wrapper and scores Security at 0 (hard blocker). This is expected on Dev Edition — client orgs on Enterprise or Unlimited editions return real data.
+
+### ProcessDefinition not available in Dev Edition
+
+The Tooling API `ProcessDefinition` object (used to count legacy Process Builder automations) is not accessible in Developer Edition. The `legacyAutomationCount` signal stays at 0. Client orgs return real counts.
+
+### LoginHistory — no Status filter
+
+SOQL does not support filtering `LoginHistory` on the `Status` field. The scan counts all login events in the last 90 days and approximates unique user count by dividing by 3 (heuristic: ~3 login events per active user per 90-day window). The resulting `loginRatePct` is an estimate. For precise counts, a Salesforce admin can pull this from the Setup audit trail.
+
+### Supabase Storage bucket missing
+
+If `uploadReport` logs "Bucket not found", the `reports` bucket has not been created. Go to Supabase Dashboard → Storage → New bucket → name it `reports` → set to Private. The pipeline falls back to saving the report locally in `reports/` while this is missing — signed URLs won't work until the bucket exists.

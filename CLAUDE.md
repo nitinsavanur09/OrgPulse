@@ -169,6 +169,9 @@ DB stores only: integers, percentages, ENUM values, human-written finding string
 | `tsx` for dev, `tsc` for prod | Fast iteration vs. compiled output for Render. |
 | `window.REPORT_DATA` injection | One template works for both sample and live reports — no templating engine. |
 | Anthropic DPA required | Must sign DPA + enable Zero Data Retention before any EU client engagement. |
+| Security Health Check 404 on Dev Edition | `/connect/security/health-check` returns 404 on Developer Edition — `safe()` catches it, Security scores 0. Client orgs on Enterprise/Unlimited return real data. |
+| LoginHistory no Status filter | SOQL doesn't support filtering `LoginHistory` on `Status`. Scan counts all events in 90 days and divides by 3 as a unique-user heuristic. |
+| Token persistence via `.tokens.json` | Pilot is single-client — `.tokens.json` (gitignored) lets `test-conn` run as a separate process from the dev server. Upgrade to Supabase Vault when managing multiple simultaneous client tokens. |
 
 ## Last Updated
-16 June 2026
+19 June 2026
