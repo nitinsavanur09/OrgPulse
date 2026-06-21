@@ -73,6 +73,12 @@ async function main() {
   const objectCount = signals.configUsed.objects.length
   console.log(`   Scanned ${objectCount} object${objectCount !== 1 ? 's' : ''} across 7 domains`)
 
+  // Persist signals so rebuild-report can regenerate HTML without re-scanning
+  const reportsDir = path.join(process.cwd(), 'reports')
+  if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir)
+  const signalsPath = path.join(reportsDir, `${orgId}-signals.json`)
+  fs.writeFileSync(signalsPath, JSON.stringify({ orgId, signals }, null, 2), 'utf8')
+
   // Step 3: Score
   console.log('📊 Scoring domains...')
   const scores = scoreFindings(signals)
@@ -102,8 +108,6 @@ async function main() {
   const html = generateReport(reportData)
 
   // Step 7: Save locally + upload to Supabase for archival
-  const reportsDir = path.join(process.cwd(), 'reports')
-  if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir)
   const localFilename = `${orgId}-${Date.now()}.html`
   const localPath     = path.join(reportsDir, localFilename)
   fs.writeFileSync(localPath, html, 'utf8')

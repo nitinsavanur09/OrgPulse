@@ -1,5 +1,5 @@
 {
-  "_instructions": "Copy this file to client-intake.json, fill in the fields, then run npm run test-report. client-intake.json is gitignored.",
+  "_instructions": "Copy this file to client-intake.json and fill in the fields. client-intake.json is gitignored. Run `npm run scan` first, then fill in narrative fields and run `npm run rebuild-report` to regenerate HTML without re-scanning.",
 
   "orgName":                    "Acme Corp",
   "licenseCount":               180,
@@ -12,5 +12,18 @@
   "useCase":                    "service",
   "handlingCostPerTransaction": 18,
   "handlingCostLabel":          "per case",
-  "monthlyTransactionVolume":   null
+  "monthlyTransactionVolume":   null,
+
+  "_narrative_note": "Fill these in after the stakeholder interview, then run `npm run rebuild-report`.",
+  "pilotReadyDate":             "October 2026",
+  "executiveSummary":           null,
+  "domainSummaries": {
+    "Data quality & completeness":       null,
+    "Automation health & conflicts":     null,
+    "Security & permission model":       null,
+    "Knowledge base & grounding":        null,
+    "Metadata & technical debt":         null,
+    "User adoption & process alignment": null,
+    "Platform limits & API headroom":    null
+  }
 }

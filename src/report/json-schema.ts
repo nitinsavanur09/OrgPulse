@@ -17,6 +17,10 @@ export interface OrgMeta {
   handlingCostLabel?:           string
   monthlyTransactionVolume?:    number  // override scan result (use when scan org has no real data)
   useCase?:                     'service' | 'sales' | 'fieldService' | 'general' | null
+  // Narrative overrides — fill in client-intake.json after stakeholder interview
+  pilotReadyDate?:    string                          // e.g. "September 2026"; default = today + 16 weeks
+  executiveSummary?:  string                          // replaces auto-generated headlineFinding
+  domainSummaries?:   Partial<Record<string, string>> // keyed by domain name e.g. "Data quality & completeness"
 }
 
 export interface ReportDataFinding {
@@ -344,6 +348,9 @@ export function buildReportData(
     handlingCostLabel        = 'per case',
     monthlyTransactionVolume: monthlyTransactionVolumeOverride = undefined,
     useCase                  = 'service',
+    pilotReadyDate:          pilotReadyDateOverride  = undefined,
+    executiveSummary:        executiveSummaryOverride = undefined,
+    domainSummaries:         domainSummariesOverride  = {},
   } = meta
 
   const cloudsArr: string[] = meta.clouds
@@ -351,7 +358,7 @@ export function buildReportData(
     : ['Salesforce']
 
   const { verdict, verdictColor, verdictSub } = scoreVerdict(scores.overallIndex)
-  const pilotReadyDate = computePilotDate()
+  const pilotReadyDate = pilotReadyDateOverride ?? computePilotDate()
   const assessmentDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
   const hardBlockerCount  = scores.hardBlockers.length
@@ -415,7 +422,7 @@ export function buildReportData(
     : []
 
   // ── Headline finding ──────────────────────────────────────────────────────
-  const headlineFinding = `${orgName} has a Salesforce investment that is well-used at the process level. The scan found ` +
+  const autoHeadlineFinding = `${orgName} has a Salesforce investment that is well-used at the process level. The scan found ` +
     (totalVerifiedWaste > 0 ? `<strong>$${totalVerifiedWaste.toLocaleString()} in verified annual waste</strong> and ` : '') +
     (hardBlockerCount > 0
       ? `${hardBlockerCount} domain${hardBlockerCount !== 1 ? 's' : ''} below the hard-blocker threshold`
@@ -423,6 +430,7 @@ export function buildReportData(
     (riskCount > 0 ? `, plus ${riskCount} domain${riskCount !== 1 ? 's' : ''} at risk` : '') +
     `. Every blocker on this list is fixable. Complete the roadmap in Section 5 and your index moves from ${scores.overallIndex} to ${targetScore}+ in 12–16 weeks. ` +
     `<strong>Start remediation now and a monitored pilot agent can be live by ${pilotReadyDate}.</strong>`
+  const headlineFinding = executiveSummaryOverride ?? autoHeadlineFinding
 
   // ── Domain objects ────────────────────────────────────────────────────────
   const allFindings = buildFindings(signals, scores)
@@ -441,7 +449,7 @@ export function buildReportData(
       benchmark: median, benchmarkLabel: benchmarkLabel(ds.domain, ds.score),
       status: domainStatus(ds.score), statusLabel: dm.statusLabel(ds.score),
       color: domainColor(ds.score), barColor: domainColor(ds.score),
-      summary: topFinding, findings: domainFindings, soql: dm.soql,
+      summary: domainSummariesOverride[dm.name] ?? topFinding, findings: domainFindings, soql: dm.soql,
     }
   }).sort((a, b) => a.num - b.num)
 

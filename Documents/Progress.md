@@ -12,7 +12,7 @@
 
 **Active phase:** Phase 7 — First Pilot Delivery
 **Last session:** 21 June 2026
-**Next task:** P7.1 — Connect client org (ngrok fresh session, send auth link, confirm `npm run test-conn`)
+**Next task:** P7.1 — Connect client org (ngrok fresh session, update SF callback URL + `.env`, send auth link, confirm `npm run test-conn`)
 
 ---
 
@@ -26,11 +26,20 @@
 | Phase 4 — Report Generator | ✅ Complete | `reports/test.html` generated; score 57/100 from Dev Edition confirmed |
 | Phase 5 — Full Pipeline | ✅ Complete | 3 clean runs; DB rows confirmed; storage bucket needs creating in Supabase dashboard |
 | Phase 6 — Hardening | ✅ Complete | 2 wording fixes in findings-builder.ts; README runbook written; all other edge cases already handled |
-| Phase 7 — First Pilot Delivery | 🔲 Not started | |
+| Phase 7 — First Pilot Delivery | 🔄 In progress | P7.0 code prep complete; P7.1 (connect client org) next |
 
 ---
 
 ## Completed Tasks
+
+### Phase 7 — P7.0 Code prep (21 June 2026)
+
+- [x] **Narrative overrides in `OrgMeta`** — added `pilotReadyDate`, `executiveSummary`, `domainSummaries` to `src/report/json-schema.ts`; all three flow through `buildReportData()` → `ReportData` (override auto-generated values when provided)
+- [x] **Signal caching** — `scripts/run-scan.ts` now writes `reports/{orgId}-signals.json` after every scan
+- [x] **`scripts/rebuild-report.ts`** — new script: loads cached signals + current `client-intake.json`, regenerates HTML without re-scanning; `npm run rebuild-report` added to `package.json`
+- [x] **`client-intake.example.json`** — updated with narrative fields (`pilotReadyDate`, `executiveSummary`, `domainSummaries` with all 7 domain name keys)
+- [x] **`what-i-rebuilt-manually.md`** — created; log to be filled during pilot delivery
+- [x] **Verified**: clean `tsc --noEmit`, full pipeline run at 62/100, `reports/00DHs00000TTYgAMAX-signals.json` confirmed written
 
 ### Phase 6 (post-completion polish — 21 June 2026)
 
@@ -101,12 +110,6 @@
 
 ---
 
-## In Progress
-
-**Phase 7 — P7.1 next: Connect client org**
-
-Run `npm run dev`, start ngrok, send auth link to client, confirm `npm run test-conn` passes before running scan.
-
 ---
 
 ## Blockers & Notes
@@ -125,10 +128,28 @@ Run `npm run dev`, start ngrok, send auth link to client, confirm `npm run test-
 
 ---
 
+## In Progress
+
+**Phase 7 — P7.1 next: Connect client org**
+
+1. `ngrok http 3000` → copy new URL
+2. Update Salesforce External Client App callback URL (wait 2 min)
+3. Update `SF_REDIRECT_URI` in `.env`
+4. `npm run dev` → confirm server running
+5. Send auth link to client: `{ngrokUrl}/auth/start`
+6. Confirm token in terminal → `npm run test-conn`
+
+Then: `npm run scan -- --org [clientOrgId]` → fill `client-intake.json` → `npm run rebuild-report`
+
+---
+
 ## Decisions Made This Session
 
 | Decision | Rationale |
 |----------|-----------|
+| Signal caching to `reports/{orgId}-signals.json` | Allows `rebuild-report` to regenerate HTML from narrative edits without re-scanning the org — critical for post-interview report refinement |
+| `domainSummaries` keyed by display name not domain key | Template renders `d.name` (display name), so intake JSON should match what a human sees in the report |
+| `executiveSummary` overrides `headlineFinding` entirely | Auto-generated headline always works as fallback; client-specific story replaces it only when explicitly set |
 | jsforce `^3.0.0` instead of `^2.0.0` | jsforce skipped v2 stable; v3 is current and type-compatible |
 | Token persistence via `.tokens.json` | `test-conn` runs as a separate process — in-memory global not shared; Vault comes in Phase 6 |
 | External Client App instead of Connected App | Salesforce Dev Edition (Summer '25+) replaced Connected Apps with External Client Apps in the UI; OAuth flow is unchanged |
@@ -170,4 +191,4 @@ Claude Code will orient itself and pick up exactly where you left off.
 
 ---
 
-_Last updated: 21 June 2026 — Between-session work complete. ROI payback calculator section in `templates/orgpulse-v2.html` fully rebuilt for clarity: added "How to use" explanation box with green/blue dot legend, static Tier 1 / Tier 2 / Total annual benefit summary row (populated from scan data), Step 1 / Step 2 slider guidance labels, live formula sub-labels inside each output box, and a "How each number is calculated" reference panel at the bottom that updates with actual dollar values as sliders move. Also fixed Supabase Storage HTML rendering (serves as text/plain — switched to Express static route via ngrok as primary URL; Supabase kept as archive only). Fixed Section 3 "What Agentforce will cost to run" not populating on Dev Edition (set monthlyTransactionVolume: 500 in client-intake.json; improved template fallback messages). Report confirmed rendering correctly at ngrok URL. Starting Phase 7 (first pilot delivery) next._
+_Last updated: 21 June 2026 — Phase 7 P7.0 code prep complete. Added narrative override fields (`pilotReadyDate`, `executiveSummary`, `domainSummaries`) to `OrgMeta` in `json-schema.ts`; signals now cached to `reports/{orgId}-signals.json` after each scan; new `scripts/rebuild-report.ts` regenerates HTML from cached signals without re-scanning (`npm run rebuild-report`); `client-intake.example.json` updated with all 7 domain name keys. Full pipeline run confirmed: 62/100, 2 hard blockers (security, knowledge), 14 findings, signals cache written. Next: P7.1 — connect client org._

@@ -9,8 +9,9 @@
     "start":     "node dist/auth/server.js",
     "scan":      "tsx scripts/run-scan.ts",
     "test-conn":   "tsx scripts/test-connection.ts",
-    "test-report": "tsx scripts/test-report.ts",
-    "lint":        "tsc --noEmit"
+    "test-report":    "tsx scripts/test-report.ts",
+    "rebuild-report": "tsx scripts/rebuild-report.ts",
+    "lint":           "tsc --noEmit"
   },
   "dependencies": {
     "jsforce":               "^3.0.0",
