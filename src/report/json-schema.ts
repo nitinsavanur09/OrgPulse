@@ -1,7 +1,7 @@
 import type { AllSignals } from '../scan/types'
 import type { ScoredResult } from '../scoring/rubric'
 import { INDUSTRY_BENCHMARKS } from '../scoring/rubric'
-import { buildFindings } from '../scoring/findings-builder'
+import { buildFindings, buildDomainSummaries } from '../scoring/findings-builder'
 
 // ─── Public types ─────────────────────────────────────────────────────────────
 
@@ -454,6 +454,7 @@ export function buildReportData(
 
   // ── Domain objects ────────────────────────────────────────────────────────
   const allFindings = buildFindings(signals, scores)
+  const autoSummaries = buildDomainSummaries(signals, scores)
   const domainMeta = buildDomainMeta(signals.configUsed.analysisWindowMonths)
   const domainScores: ReportDataDomain[] = scores.domains.map(ds => {
     const dm = domainMeta[ds.domain]
@@ -470,7 +471,7 @@ export function buildReportData(
       benchmark: median, benchmarkLabel: benchmarkLabel(ds.domain, ds.score),
       status: domainStatus(ds.score), statusLabel: dm.statusLabel(ds.score),
       color: domainColor(ds.score), barColor: domainColor(ds.score),
-      summary: domainSummariesOverride[dm.name] ?? topFinding, findings: domainFindings, soql: dm.soql,
+      summary: domainSummariesOverride[dm.name] ?? autoSummaries[dm.name] ?? topFinding, findings: domainFindings, soql: dm.soql,
     }
   }).sort((a, b) => a.num - b.num)
 
